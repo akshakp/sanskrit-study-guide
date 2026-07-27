@@ -1,15 +1,8 @@
 # 🙏 Sanskrit Study Guide
 
-Welcome to your interactive Sanskrit learning companion. This guide covers alphabets, grammar, vocabulary, and conversation — all organized for self-paced study.
-
-!!! tip "🔍 Powerful Search"
-    Press `Ctrl+K` (or `Cmd+K`) from any page to search the entire site — Sanskrit words, English meanings, Gujarati translations, and grammar rules are all indexed. On the **Vocabulary** page, use the dedicated filter bar to search by language or gender.
-
-## 📚 What's Inside
-
 <div class="grid cards" markdown>
 
--   :material-alphabetical:{ .lg .middle } __Alphabets__
+-   🔤 **Alphabets**
 
     ---
 
@@ -17,7 +10,7 @@ Welcome to your interactive Sanskrit learning companion. This guide covers alpha
 
     [:octicons-arrow-right-24: Start Learning](alphabets.md)
 
--   :material-book-open-variant:{ .lg .middle } __Grammar Fundamentals__
+-   📖 **Grammar Fundamentals**
 
     ---
 
@@ -25,7 +18,7 @@ Welcome to your interactive Sanskrit learning companion. This guide covers alpha
 
     [:octicons-arrow-right-24: Explore Grammar](grammar-fundamentals.md)
 
--   :material-numeric:{ .lg .middle } __Nouns & Cases__
+-   🔢 **Nouns & Cases**
 
     ---
 
@@ -33,7 +26,7 @@ Welcome to your interactive Sanskrit learning companion. This guide covers alpha
 
     [:octicons-arrow-right-24: Study Cases](nouns.md)
 
--   :material-run:{ .lg .middle } __Verbs__
+-   🏃 **Verbs**
 
     ---
 
@@ -41,7 +34,7 @@ Welcome to your interactive Sanskrit learning companion. This guide covers alpha
 
     [:octicons-arrow-right-24: Conjugate Verbs](verbs.md)
 
--   :material-chat:{ .lg .middle } __Conversation__
+-   💬 **Conversation**
 
     ---
 
@@ -49,7 +42,7 @@ Welcome to your interactive Sanskrit learning companion. This guide covers alpha
 
     [:octicons-arrow-right-24: Start Speaking](conversation.md)
 
--   :material-translate:{ .lg .middle } __Vocabulary__
+-   📚 **Vocabulary**
 
     ---
 
@@ -57,7 +50,7 @@ Welcome to your interactive Sanskrit learning companion. This guide covers alpha
 
     [:octicons-arrow-right-24: Build Vocabulary](vocabulary.md)
 
--   :material-source-branch:{ .lg .middle } __Verb Roots (धातु)__
+-   🌿 **Verb Roots (धातु)**
 
     ---
 
@@ -66,16 +59,3 @@ Welcome to your interactive Sanskrit learning companion. This guide covers alpha
     [:octicons-arrow-right-24: View Roots](dhatu.md)
 
 </div>
-
-## 🚀 How to Use This Guide
-
-1. **Follow the order** — Start with Alphabets, then Grammar, then Nouns/Verbs
-2. **Use the search bar** — Press `Ctrl+K` (or `Cmd+K`) to instantly find any topic across all pages
-3. **Search vocabulary** — On the Vocabulary page, type any word in Sanskrit, English, or Gujarati to filter instantly
-4. **Practice daily** — Each section includes examples you can recite aloud
-
----
-
-> *"संस्कृतं नाम दैवी वाग् अन्वाख्याता महर्षिणा"*
-> 
-> *Sanskrit is the divine language revealed by the great sages.*

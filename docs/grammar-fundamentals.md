@@ -6,11 +6,11 @@ A Sanskrit sentence is built from meaningful word types. The two most essential 
 
 | Sanskrit | English | Function | Example |
 |----------|---------|----------|---------|
-| **संज्ञा / नाम** | Noun | Names a person, place, thing, or idea | रामः, पुस्तकम् |
-| **क्रियापदम्** | Verb | Shows action, occurrence, or state | पठति, गच्छति |
+| **[संज्ञा / नाम](nouns.md)** | Noun | Names a person, place, thing, or idea | रामः, पुस्तकम् |
+| **[क्रियापदम्](verbs.md)** | Verb | Shows action, occurrence, or state | पठति, गच्छति |
 | **विशेषणम्** | Adjective | Describes a noun | सुन्दरः, स्वस्थः |
 | **सर्वनाम** | Pronoun | Stands in place of noun | सः, सा, तत् |
-| **अव्ययम्** | Indeclinable | Does not change due to लिङ्ग, वचन or विभक्ति | अत्र, तत्र, च, न, अन्यत्र |
+| **[अव्ययम्](vocabulary.md#adverbs-particles)** | Indeclinable | Does not change due to लिङ्ग, वचन or विभक्ति | अत्र, तत्र, च, न, अन्यत्र |
 
 ---
 
@@ -57,6 +57,3 @@ Every Sanskrit noun has grammatical gender. Adjectives and many pronouns must ag
 | **प्रथम Neuter** | तत् | ते | तानि |
 | **मध्यम** | त्वम् | युवाम् | यूयम् |
 | **उत्तम** | अहम् | आवाम् | वयम् |
-
-!!! tip "Memory Tip"
-    Notice that **Dual** forms often look similar across genders in the third person (ते for masc/neut, ते for fem).

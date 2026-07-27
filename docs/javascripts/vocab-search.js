@@ -1,15 +1,22 @@
-// Vocabulary Search & Filter
-// Searches Sanskrit, English, and Gujarati across all tables on the page
+// Vocabulary / Dhatu Search & Filter
+// Works on any page that has a search input with id="vocabSearch" or id="dhatuSearch"
 
 document.addEventListener('DOMContentLoaded', function() {
-  if (!document.querySelector('.vocab-search-box')) return;
+  // Detect which page we're on
+  var searchInput = document.getElementById('vocabSearch') || document.getElementById('dhatuSearch');
+  if (!searchInput) return;
 
-  const searchInput = document.getElementById('vocabSearch');
-  const filterBtns = document.querySelectorAll('.vocab-filter-btn');
-  const sections = document.querySelectorAll('.vocab-section');
-  const resultCount = document.getElementById('vocabResultCount');
+  var filterBtns = document.querySelectorAll('.vocab-filter-btn');
+  var resultCount = document.getElementById('vocabResultCount') || document.getElementById('dhatuResultCount');
 
-  let currentFilter = 'all';
+  // Find all tables within the main content area
+  var contentArea = document.querySelector('.md-content__inner')
+    || document.querySelector('.md-typeset')
+    || document.querySelector('article')
+    || document.body;
+  var tables = contentArea.querySelectorAll('table');
+
+  var currentFilter = 'all';
 
   function normalize(text) {
     if (!text) return '';
@@ -19,18 +26,17 @@ document.addEventListener('DOMContentLoaded', function() {
       .replace(/[ūŪ]/g, 'u')
       .replace(/[ṛṚ]/g, 'ri')
       .replace(/[ḷḶ]/g, 'li')
-      .replace(/[ṃṅñṇn]/g, 'n')
+      .replace(/[ṃṁṅñṇn]/g, 'n')
       .replace(/[ḥ]/g, 'h')
       .replace(/[śṣs]/g, 'sh')
       .replace(/[čć]/g, 'ch')
-      .replace(/[ǎ]/g, 'a')
       .trim();
   }
 
   function getGender(row) {
-    const cells = row.querySelectorAll('td');
-    for (let cell of cells) {
-      const t = cell.textContent.trim();
+    var cells = row.querySelectorAll('td');
+    for (var i = 0; i < cells.length; i++) {
+      var t = cells[i].textContent.trim();
       if (t === 'M' || t === '♂') return 'masc';
       if (t === 'F' || t === '♀') return 'fem';
       if (t === 'N' || t === '⚲') return 'neut';
@@ -38,78 +44,95 @@ document.addEventListener('DOMContentLoaded', function() {
     return '';
   }
 
+  function hasGujarati(cell) {
+    return /[\u0A80-\u0AFF]/.test(cell.textContent);
+  }
+
+  function isEnglishCell(cell) {
+    var txt = cell.textContent.trim();
+    return /^[A-Za-z][A-Za-z\s\-/;,.()]+$/.test(txt) && txt.length < 50;
+  }
+
+  function findHeading(table) {
+    var el = table.previousElementSibling;
+    while (el) {
+      if (el.tagName === 'H2') return el;
+      if (el.querySelector && el.querySelector('h2')) return el.querySelector('h2');
+      el = el.previousElementSibling;
+    }
+    return null;
+  }
+
   function doSearch() {
-    const query = normalize(searchInput.value);
-    let totalVisible = 0;
-    let totalRows = 0;
+    var query = normalize(searchInput.value);
+    var totalVisible = 0;
+    var totalRows = 0;
 
-    sections.forEach(section => {
-      const table = section.querySelector('table');
-      if (!table) return;
-      const rows = table.querySelectorAll('tbody tr');
-      let sectionVisible = 0;
+    for (var t = 0; t < tables.length; t++) {
+      var table = tables[t];
+      var rows = table.querySelectorAll('tbody tr');
+      var sectionVisible = 0;
 
-      rows.forEach(row => {
-        const cells = row.querySelectorAll('td');
-        if (cells.length < 2) return;
-
-        const rowText = normalize(row.textContent);
-        const gender = getGender(row);
+      for (var r = 0; r < rows.length; r++) {
+        var row = rows[r];
+        var cells = row.querySelectorAll('td');
+        if (cells.length < 2) continue;
 
         totalRows++;
 
-        const matchesQuery = !query || rowText.includes(query);
+        var sanskritText = '';
+        var englishText = '';
+        var gujaratiText = '';
+        var allText = '';
+        var gender = getGender(row);
 
-        let matchesFilter = currentFilter === 'all';
-        if (!matchesFilter) {
-          if (['masc','fem','neut'].includes(currentFilter)) {
-            matchesFilter = gender === currentFilter;
-          } else if (currentFilter === 'sans') {
-            // First cell is likely Sanskrit
-            matchesFilter = normalize(cells[0].textContent).includes(query);
-          } else if (currentFilter === 'eng') {
-            // Try to find English meaning cell (usually 2nd or 3rd)
-            for (let c of cells) {
-              const txt = c.textContent.trim();
-              if (/^[A-Za-z][A-Za-z\s\/]+$/.test(txt) && txt.length < 40) {
-                matchesFilter = normalize(txt).includes(query);
-                if (matchesFilter) break;
-              }
-            }
-            if (!matchesFilter) {
-              // fallback: search all cells except first
-              for (let i = 1; i < cells.length; i++) {
-                if (normalize(cells[i].textContent).includes(query)) {
-                  matchesFilter = true; break;
-                }
-              }
-            }
-          } else if (currentFilter === 'guj') {
-            // Gujarati text contains specific Unicode range
-            for (let c of cells) {
-              const txt = c.textContent;
-              if (/[઀-૿]/.test(txt)) {
-                matchesFilter = normalize(txt).includes(query);
-                if (matchesFilter) break;
-              }
-            }
+        for (var c = 0; c < cells.length; c++) {
+          var txt = cells[c].textContent;
+          allText += ' ' + txt;
+
+          if (c === 0) {
+            sanskritText += ' ' + txt;
+          } else if (hasGujarati(cells[c])) {
+            gujaratiText += ' ' + txt;
+          } else if (isEnglishCell(cells[c])) {
+            englishText += ' ' + txt;
+          } else {
+            sanskritText += ' ' + txt;
           }
         }
 
-        const visible = matchesQuery && matchesFilter;
-        row.style.display = visible ? '' : 'none';
-        if (visible) sectionVisible++;
-      });
+        var q = query;
+        var matchesQuery = !q || normalize(allText).indexOf(q) !== -1;
+        var matchesFilter = currentFilter === 'all';
+
+        if (!matchesFilter) {
+          if (['masc', 'fem', 'neut'].indexOf(currentFilter) !== -1) {
+            matchesFilter = gender === currentFilter;
+          } else if (currentFilter === 'sans') {
+            matchesFilter = normalize(sanskritText).indexOf(q) !== -1;
+          } else if (currentFilter === 'eng') {
+            matchesFilter = normalize(englishText).indexOf(q) !== -1;
+          } else if (currentFilter === 'guj') {
+            matchesFilter = normalize(gujaratiText).indexOf(q) !== -1;
+          }
+        }
+
+        var visible = matchesQuery && matchesFilter;
+        if (visible) {
+          row.style.display = '';
+          sectionVisible++;
+        } else {
+          row.style.display = 'none';
+        }
+      }
 
       totalVisible += sectionVisible;
 
-      // Show/hide section heading based on visible rows
-      const heading = section.previousElementSibling;
-      if (heading && (heading.tagName === 'H2' || heading.tagName === 'H3')) {
+      var heading = findHeading(table);
+      if (heading) {
         heading.style.display = sectionVisible > 0 ? '' : 'none';
       }
-      section.style.display = sectionVisible > 0 ? '' : 'none';
-    });
+    }
 
     if (resultCount) {
       if (!query && currentFilter === 'all') {
@@ -124,23 +147,20 @@ document.addEventListener('DOMContentLoaded', function() {
 
   if (searchInput) {
     searchInput.addEventListener('input', doSearch);
-    searchInput.addEventListener('focus', function() {
-      this.parentElement.classList.add('focused');
-    });
-    searchInput.addEventListener('blur', function() {
-      this.parentElement.classList.remove('focused');
-    });
   }
 
-  filterBtns.forEach(btn => {
-    btn.addEventListener('click', function() {
-      filterBtns.forEach(b => b.classList.remove('active'));
-      this.classList.add('active');
-      currentFilter = this.dataset.filter;
-      doSearch();
-    });
-  });
+  for (var b = 0; b < filterBtns.length; b++) {
+    (function(btn) {
+      btn.addEventListener('click', function() {
+        for (var i = 0; i < filterBtns.length; i++) {
+          filterBtns[i].classList.remove('active');
+        }
+        btn.classList.add('active');
+        currentFilter = btn.dataset.filter;
+        doSearch();
+      });
+    })(filterBtns[b]);
+  }
 
-  // Initial count
   doSearch();
 });

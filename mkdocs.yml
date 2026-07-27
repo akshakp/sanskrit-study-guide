@@ -1,6 +1,11 @@
+# ============================================
+# STEP 1: Replace 'yourusername' with your actual GitHub username
+# STEP 2: Make sure your repo is named exactly: sanskrit-study-guide
+# ============================================
 site_name: Sanskrit Study Guide
-site_url: https://akshakp.github.io/sanskrit-study-guide
+site_url: https://yourusername.github.io/sanskrit-study-guide
 site_author: Sanskrit Learner
+
 theme:
   name: material
   palette:
@@ -17,10 +22,10 @@ theme:
         icon: material/brightness-4
         name: Switch to light mode
   features:
-    - navigation.tabs
     - navigation.sections
     - navigation.expand
     - navigation.top
+    - toc.integrate
     - search.suggest
     - search.highlight
     - search.share
@@ -28,6 +33,18 @@ theme:
     - content.tabs.link
   icon:
     logo: material/book-open-variant
+
+# Explicit navigation order for left sidebar
+nav:
+  - Home: index.md
+  - Alphabets: alphabets.md
+  - Grammar:
+    - Fundamentals: grammar-fundamentals.md
+    - Nouns & Cases (संज्ञा): nouns.md
+    - Verbs(क्रियापद): verbs.md
+  - Conversation (संभाषण): conversation.md
+  - Vocabulary: vocabulary.md
+  - Verb Roots (धातु): dhatu.md
 
 plugins:
   - search:
@@ -46,7 +63,7 @@ extra_javascript:
   - javascripts/vocab-search.js
 
 extra_css:
-  - stylesheets/vocab-search.css
+  - stylesheets/main.css
 
 extra:
   social:
@@ -68,3 +85,8 @@ markdown_extensions:
   - pymdownx.details
   - toc:
       permalink: true
+  - attr_list
+  - pymdownx.emoji:
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
+  - pymdownx.superfences
