@@ -1,0 +1,1325 @@
+{
+   "title":"लेखननियमाः — Recognition (Level 1)",
+   "questions":[
+      {
+         "id":"WRITE-001",
+         "type":"recognition",
+         "question":"Which spelling is correct when <strong>रामम्</strong> is followed by a consonant?",
+         "options":[
+            "रामम् नमामि",
+            "रामं नमामि",
+            "रामः नमामि",
+            "रामन नमामि"
+         ],
+         "correct":1,
+         "explanation":"Before a consonant, final म् changes to anusvāra (ं)."
+      },
+      {
+         "id":"WRITE-002",
+         "type":"recognition",
+         "question":"Which spelling is correct when <strong>भक्तम्</strong> is followed by a vowel?",
+         "options":[
+            "भक्तं अवति",
+            "भक्तमवति",
+            "भक्तम् अवति",
+            "Both 2 and 3"
+         ],
+         "correct":3,
+         "explanation":"Before a vowel, म् remains unchanged and may either stay separate or join with the following vowel. Both forms are accepted in the handbook."
+      },
+      {
+         "id":"WRITE-003",
+         "type":"recognition",
+         "question":"Which sentence is written correctly at the end of a sentence?",
+         "options":[
+            "नमामि रामं",
+            "नमामि रामम्",
+            "नमामि रामः",
+            "नमामि राम"
+         ],
+         "correct":1,
+         "explanation":"At the end of a sentence, final म् remains unchanged."
+      },
+      {
+         "id":"WRITE-004",
+         "type":"recognition",
+         "question":"Which form correctly follows the णत्व rule?",
+         "options":[
+            "रामेन",
+            "रामेण",
+            "रामेनः",
+            "रामेनम्"
+         ],
+         "correct":1,
+         "explanation":"रामेण is the correct form after applying the णत्व rule."
+      },
+      {
+         "id":"WRITE-005",
+         "type":"recognition",
+         "question":"Which word is written correctly?",
+         "options":[
+            "रामानाम्",
+            "रामाणाम्",
+            "रामाणम्",
+            "रामानम्"
+         ],
+         "correct":1,
+         "explanation":"The षष्ठी बहुवचन form is रामाणाम्."
+      },
+      {
+         "id":"WRITE-006",
+         "type":"recognition",
+         "question":"Which spelling correctly shows परसवर्ण?",
+         "options":[
+            "सन्गच्छति",
+            "संगच्छति",
+            "सनगच्छति",
+            "संगचछति"
+         ],
+         "correct":1,
+         "explanation":"The nasal changes according to the following consonant group."
+      },
+      {
+         "id":"WRITE-007",
+         "type":"recognition",
+         "question":"Which sentence is correctly written?",
+         "options":[
+            "रामः सूर्यं नमति।",
+            "सूर्यं रामः नमति।",
+            "नमति रामः सूर्यं।",
+            "All of the above"
+         ],
+         "correct":3,
+         "explanation":"According to the handbook, Sanskrit word order does not change the meaning of the sentence."
+      },
+      {
+         "id":"WRITE-008",
+         "type":"recognition",
+         "question":"Which word correctly follows the णत्व rule?",
+         "options":[
+            "नृपेन",
+            "नृपेण",
+            "नृपेनः",
+            "नृपाणः"
+         ],
+         "correct":1,
+         "explanation":"नृपेण is the correct तृतीया एकवचन form."
+      },
+      {
+         "id":"WRITE-009",
+         "type":"recognition",
+         "question":"Which word is written correctly?",
+         "options":[
+            "परिश्रमेन",
+            "परिश्रमेण",
+            "परिश्रमाण",
+            "परिश्रमान"
+         ],
+         "correct":1,
+         "explanation":"परिश्रमेण correctly applies the णत्व rule."
+      },
+      {
+         "id":"WRITE-010",
+         "type":"recognition",
+         "question":"Which spelling correctly follows the writing rules?",
+         "options":[
+            "रामं गच्छति",
+            "रामम् गच्छति",
+            "रामन गच्छति",
+            "रामः गच्छति"
+         ],
+         "correct":0,
+         "explanation":"When रामम् is followed by the consonant ग, final म् changes to anusvāra (ं)."
+      },
+      {
+         "id":"WRITE-011",
+         "type":"rule-analysis",
+         "question":"Why is <strong>रामम् नमति</strong> written as <strong>रामं नमति</strong>?",
+         "options":[
+            "Final म् changes to अनुस्वार before a consonant.",
+            "The णत्व rule applies.",
+            "The परसवर्ण rule applies.",
+            "It is a Sandhi rule."
+         ],
+         "correct":0,
+         "explanation":"When a word ending in म् is followed by a consonant, the म् is written as अनुस्वार (ं)."
+      },
+      {
+         "id":"WRITE-012",
+         "type":"rule-analysis",
+         "question":"Why does <strong>रामेण</strong> contain <strong>ण</strong> instead of <strong>न</strong>?",
+         "options":[
+            "Because of the णत्व rule.",
+            "Because of Sandhi.",
+            "Because of परसवर्ण.",
+            "Because it is plural."
+         ],
+         "correct":0,
+         "explanation":"The preceding र triggers the णत्व rule in this form."
+      },
+      {
+         "id":"WRITE-013",
+         "type":"rule-analysis",
+         "question":"Why does <strong>रामाणाम्</strong> use <strong>ण</strong>?",
+         "options":[
+            "णत्व applies in the षष्ठी बहुवचन form.",
+            "Because it is masculine.",
+            "Because of Sandhi.",
+            "Because it is a pronoun."
+         ],
+         "correct":0,
+         "explanation":"The र before न causes न to become ण according to the णत्व rule."
+      },
+      {
+         "id":"WRITE-014",
+         "type":"rule-analysis",
+         "question":"In <strong>शङ्कर</strong>, why is <strong>ङ्</strong> used?",
+         "options":[
+            "Because of परसवर्ण.",
+            "Because of णत्व.",
+            "Because of vowel Sandhi.",
+            "Because it is optional."
+         ],
+         "correct":0,
+         "explanation":"Before a क-वर्ग consonant, the anusvāra becomes ङ् according to the परसवर्ण rule."
+      },
+      {
+         "id":"WRITE-015",
+         "type":"rule-analysis",
+         "question":"In <strong>सञ्जय</strong>, why is <strong>ञ्</strong> used?",
+         "options":[
+            "Because of परसवर्ण.",
+            "Because of Sandhi.",
+            "Because of णत्व.",
+            "Because of word order."
+         ],
+         "correct":0,
+         "explanation":"Before a च-वर्ग consonant, the anusvāra changes to ञ्."
+      },
+      {
+         "id":"WRITE-016",
+         "type":"rule-analysis",
+         "question":"Why does <strong>संसार</strong> remain written with <strong>ं</strong> instead of another nasal?",
+         "options":[
+            "Because the following consonant does not belong to a consonant group requiring परसवर्ण.",
+            "Because of णत्व.",
+            "Because of Sandhi.",
+            "Because the word is indeclinable."
+         ],
+         "correct":0,
+         "explanation":"When the following consonant is not one of the grouped consonants, the anusvāra remains unchanged."
+      },
+      {
+         "id":"WRITE-017",
+         "type":"rule-analysis",
+         "question":"Why do all of these sentences have the same meaning?<br><br>रामः सूर्यं नमति।<br>सूर्यं रामः नमति।<br>नमति रामः सूर्यं।",
+         "options":[
+            "Because Sanskrit word order is flexible.",
+            "Because of Sandhi.",
+            "Because of णत्व.",
+            "Because the verb changes."
+         ],
+         "correct":0,
+         "explanation":"The handbook explains that changing word order does not change the meaning of a Sanskrit sentence."
+      },
+      {
+         "id":"WRITE-018",
+         "type":"rule-analysis",
+         "question":"Which rule explains the change from <strong>संकर</strong> to <strong>शङ्कर</strong>?",
+         "options":[
+            "परसवर्ण",
+            "णत्व",
+            "Sandhi",
+            "Word-order rule"
+         ],
+         "correct":0,
+         "explanation":"The nasal changes according to the consonant group that follows."
+      },
+      {
+         "id":"WRITE-019",
+         "type":"rule-analysis",
+         "question":"Which writing rule is responsible for the change from <strong>रामेन</strong> to <strong>रामेण</strong>?",
+         "options":[
+            "णत्व",
+            "परसवर्ण",
+            "Sandhi",
+            "Final म् rule"
+         ],
+         "correct":0,
+         "explanation":"The preceding र causes न to become ण."
+      },
+      {
+         "id":"WRITE-020",
+         "type":"mixed-analysis",
+         "question":"Which of the following changes is caused by a different writing rule than the others?",
+         "options":[
+            "रामेन → रामेण",
+            "रामानाम् → रामाणाम्",
+            "संजय → सञ्जय",
+            "नृपेन → नृपेण"
+         ],
+         "correct":2,
+         "explanation":"The first, second, and fourth changes are due to णत्व. The third is due to परसवर्ण."
+      },
+      {
+         "id":"WRITE-021",
+         "type":"comparison",
+         "question":"Which pair of words demonstrates the same writing rule?",
+         "options":[
+            "रामेण, नृपेण",
+            "रामेण, सञ्जय",
+            "सञ्जय, शङ्कर",
+            "रामं नमति, रामेण"
+         ],
+         "correct":0,
+         "explanation":"Both रामेण and नृपेण follow the णत्व rule."
+      },
+      {
+         "id":"WRITE-022",
+         "type":"comparison",
+         "question":"Which word is written using a different writing rule than the others?",
+         "options":[
+            "रामेण",
+            "रामाणाम्",
+            "नृपेण",
+            "संगच्छति"
+         ],
+         "correct":3,
+         "explanation":"The first three use णत्व. संगच्छति illustrates the final म्/अनुस्वार writing rule."
+      },
+      {
+         "id":"WRITE-023",
+         "type":"analysis",
+         "question":"In which situation does a final <strong>म्</strong> remain unchanged?",
+         "options":[
+            "Before a consonant",
+            "Before a vowel",
+            "Before क",
+            "Before च"
+         ],
+         "correct":1,
+         "explanation":"A final म् remains unchanged before a vowel."
+      },
+      {
+         "id":"WRITE-024",
+         "type":"analysis",
+         "question":"Which statement about Sanskrit word order is correct?",
+         "options":[
+            "Changing the word order always changes the meaning.",
+            "Only the subject may change position.",
+            "Word order is generally flexible without changing the meaning.",
+            "The verb must always come last."
+         ],
+         "correct":2,
+         "explanation":"The handbook explains that Sanskrit word order is generally flexible."
+      },
+      {
+         "id":"WRITE-025",
+         "type":"analysis",
+         "question":"Why do रामेण and रामाणाम् both contain <strong>ण</strong>?",
+         "options":[
+            "Both follow the णत्व rule.",
+            "Both are examples of Sandhi.",
+            "Both are examples of परसवर्ण.",
+            "Both are plural forms."
+         ],
+         "correct":0,
+         "explanation":"In both words, the preceding र causes न to become ण."
+      },
+      {
+         "id":"WRITE-026",
+         "type":"comparison",
+         "question":"Which pair illustrates two different writing rules?",
+         "options":[
+            "रामेण, नृपेण",
+            "रामाणाम्, परिश्रमेण",
+            "रामेण, सञ्जय",
+            "रामाणाम्, नृपेण"
+         ],
+         "correct":2,
+         "explanation":"रामेण demonstrates णत्व, while सञ्जय demonstrates परसवर्ण."
+      },
+      {
+         "id":"WRITE-027",
+         "type":"analysis",
+         "question":"What is the primary purpose of the परसवर्ण rule?",
+         "options":[
+            "To change a nasal sound so it matches the following consonant group.",
+            "To replace every न with ण.",
+            "To combine two vowels.",
+            "To change word order."
+         ],
+         "correct":0,
+         "explanation":"परसवर्ण adjusts the nasal to match the consonant that follows."
+      },
+      {
+         "id":"WRITE-028",
+         "type":"analysis",
+         "question":"Which writing rule affects the spelling of <strong>रामं गच्छति</strong>?",
+         "options":[
+            "Final म् rule",
+            "णत्व",
+            "परसवर्ण",
+            "Word order"
+         ],
+         "correct":0,
+         "explanation":"The final म् becomes अनुस्वार before the consonant ग."
+      },
+      {
+         "id":"WRITE-029",
+         "type":"comparison",
+         "question":"Which two words illustrate the same writing principle?",
+         "options":[
+            "शङ्कर, सञ्जय",
+            "रामेण, शङ्कर",
+            "रामाणाम्, सञ्जय",
+            "रामं, रामेण"
+         ],
+         "correct":0,
+         "explanation":"Both शङ्कर and सञ्जय are examples of परसवर्ण."
+      },
+      {
+         "id":"WRITE-030",
+         "type":"reasoning",
+         "question":"Which feature best distinguishes the णत्व rule from the परसवर्ण rule?",
+         "options":[
+            "णत्व changes न to ण under specific conditions, while परसवर्ण changes the nasal sound to match the following consonant group.",
+            "Both rules always produce the same spelling change.",
+            "परसवर्ण applies only to verbs.",
+            "णत्व applies only at the end of a sentence."
+         ],
+         "correct":0,
+         "explanation":"The two rules affect different letters and are triggered by different conditions."
+      },
+      {
+         "id":"WRITE-031",
+         "type":"apply-rule",
+         "question":"Complete the sentence correctly:<br><br>रामम् + गच्छति →",
+         "options":[
+            "रामम् गच्छति",
+            "रामं गच्छति",
+            "रामन गच्छति",
+            "रामः गच्छति"
+         ],
+         "correct":1,
+         "explanation":"A final म् becomes अनुस्वार (ं) before a consonant."
+      },
+      {
+         "id":"WRITE-032",
+         "type":"error-correction",
+         "question":"Which word is written incorrectly?",
+         "options":[
+            "रामेण",
+            "परिश्रमेण",
+            "रामेन",
+            "नृपेण"
+         ],
+         "correct":2,
+         "explanation":"रामेन should be written as रामेण according to the णत्व rule."
+      },
+      {
+         "id":"WRITE-033",
+         "type":"complete-word",
+         "question":"Choose the correct completion.",
+         "sentence":"रामा___ (षष्ठी बहुवचन)",
+         "options":[
+            "नाम्",
+            "णाम्",
+            "नम्",
+            "णम्"
+         ],
+         "correct":1,
+         "explanation":"The correct form is रामाणाम्."
+      },
+      {
+         "id":"WRITE-034",
+         "type":"error-correction",
+         "question":"Which sentence follows the writing rules correctly?",
+         "options":[
+            "रामम् नमति।",
+            "रामं नमति।",
+            "रामन नमति।",
+            "रामः नमति।"
+         ],
+         "correct":1,
+         "explanation":"Before a consonant, final म् is written as अनुस्वार."
+      },
+      {
+         "id":"WRITE-035",
+         "type":"complete-word",
+         "question":"Complete the word correctly.",
+         "sentence":"नृपे__",
+         "options":[
+            "न",
+            "ण",
+            "म्",
+            "ं"
+         ],
+         "correct":1,
+         "explanation":"The correct form is नृपेण."
+      },
+      {
+         "id":"WRITE-036",
+         "type":"choose-correction",
+         "question":"A student writes <strong>रामानाम्</strong>. What is the correct spelling?",
+         "options":[
+            "रामानाम्",
+            "रामाणाम्",
+            "रामाणम्",
+            "रामानम्"
+         ],
+         "correct":1,
+         "explanation":"The णत्व rule changes न to ण."
+      },
+      {
+         "id":"WRITE-037",
+         "type":"apply-rule",
+         "question":"Choose the correctly written word.",
+         "options":[
+            "संगच्छति",
+            "सन्गच्छति",
+            "सनगच्छति",
+            "संगचछति"
+         ],
+         "correct":0,
+         "explanation":"The spelling follows the writing rule for final म्/अनुस्वार before a consonant."
+      },
+      {
+         "id":"WRITE-038",
+         "type":"error-detection",
+         "question":"Only one of these words is written incorrectly. Which one?",
+         "options":[
+            "रामेण",
+            "नृपेण",
+            "परिश्रमेन",
+            "रामाणाम्"
+         ],
+         "correct":2,
+         "explanation":"The correct form is परिश्रमेण."
+      },
+      {
+         "id":"WRITE-039",
+         "type":"multiple-correction",
+         "question":"Which sentence needs correction?",
+         "options":[
+            "रामं गच्छति।",
+            "नृपेण सह गच्छति।",
+            "रामेन नमति।",
+            "रामाणाम् पुस्तकम्।"
+         ],
+         "correct":2,
+         "explanation":"रामेन should be written as रामेण."
+      },
+      {
+         "id":"WRITE-040",
+         "type":"mixed-application",
+         "question":"Which option follows all applicable writing rules?",
+         "options":[
+            "रामं गच्छति।",
+            "रामम् गच्छति।",
+            "रामेन गच्छति।",
+            "रामानाम् पुस्तकानि।"
+         ],
+         "correct":0,
+         "explanation":"रामं गच्छति correctly applies the final म् writing rule. The other options contain writing-rule errors."
+      },
+      {
+         "id":"WRITE-041",
+         "type":"error-correction",
+         "question":"A student writes <strong>नृपेन</strong>. Which is the correct form?",
+         "options":[
+            "नृपेन",
+            "नृपेण",
+            "नृपेनः",
+            "नृपेणः"
+         ],
+         "correct":1,
+         "explanation":"The preceding र causes न to become ण according to the णत्व rule."
+      },
+      {
+         "id":"WRITE-042",
+         "type":"complete-sentence",
+         "question":"Complete the sentence correctly:<br><br>बालकम् + पश्यति →",
+         "options":[
+            "बालकम् पश्यति",
+            "बालकं पश्यति",
+            "बालकन पश्यति",
+            "बालकः पश्यति"
+         ],
+         "correct":1,
+         "explanation":"A final म् changes to अनुस्वार before the consonant प."
+      },
+      {
+         "id":"WRITE-043",
+         "type":"multiple-error",
+         "question":"Which word contains a writing-rule error?",
+         "options":[
+            "रामेण",
+            "रामाणाम्",
+            "परिश्रमेण",
+            "परिश्रमेन"
+         ],
+         "correct":3,
+         "explanation":"The correct form is परिश्रमेण."
+      },
+      {
+         "id":"WRITE-044",
+         "type":"apply-rule",
+         "question":"Choose the correctly written sentence.",
+         "options":[
+            "बालकम् पठति।",
+            "बालकं पठति।",
+            "बालकन पठति।",
+            "बालकः पठति।"
+         ],
+         "correct":1,
+         "explanation":"Before the consonant प, final म् is written as अनुस्वार."
+      },
+      {
+         "id":"WRITE-045",
+         "type":"odd-one-out",
+         "question":"Which word follows a different writing rule from the other three?",
+         "options":[
+            "रामेण",
+            "रामाणाम्",
+            "नृपेण",
+            "रामं"
+         ],
+         "correct":3,
+         "explanation":"रामं illustrates the final म् → अनुस्वार rule, while the others demonstrate णत्व."
+      },
+      {
+         "id":"WRITE-046",
+         "type":"correction",
+         "question":"Which correction is required?",
+         "sentence":"रामानाम् पुस्तकम् अस्ति।",
+         "options":[
+            "रामाणाम्",
+            "रामानम्",
+            "रामेण",
+            "No correction"
+         ],
+         "correct":0,
+         "explanation":"The षष्ठी बहुवचन form is रामाणाम्."
+      },
+      {
+         "id":"WRITE-047",
+         "type":"mixed-application",
+         "question":"Which sentence is written correctly?",
+         "options":[
+            "रामेन गच्छति।",
+            "रामेण गच्छति।",
+            "रामेनः गच्छति।",
+            "रामेणः गच्छति।"
+         ],
+         "correct":1,
+         "explanation":"रामेण is the correct form after applying the णत्व rule."
+      },
+      {
+         "id":"WRITE-048",
+         "type":"error-detection",
+         "question":"Which word should be corrected?",
+         "options":[
+            "संगच्छति",
+            "रामेण",
+            "रामाणाम्",
+            "रामेन"
+         ],
+         "correct":3,
+         "explanation":"रामेन should be written as रामेण."
+      },
+      {
+         "id":"WRITE-049",
+         "type":"apply-rule",
+         "question":"Complete the expression correctly:<br><br>फलम् + खादति →",
+         "options":[
+            "फलम् खादति",
+            "फलं खादति",
+            "फलन खादति",
+            "फलः खादति"
+         ],
+         "correct":1,
+         "explanation":"Before the consonant ख, final म् is written as अनुस्वार."
+      },
+      {
+         "id":"WRITE-050",
+         "type":"mixed-correction",
+         "question":"Which option is completely free of writing-rule errors?",
+         "options":[
+            "रामेण, रामाणाम्",
+            "रामेन, रामाणाम्",
+            "रामेण, रामानाम्",
+            "रामेन, रामानाम्"
+         ],
+         "correct":0,
+         "explanation":"Both रामेण and रामाणाम् are correctly written."
+      },
+      {
+         "id":"WRITE-051",
+         "type":"application",
+         "question":"Choose the correctly written word.",
+         "options":[
+            "वनेन",
+            "वनेन",
+            "वनैन",
+            "वनेन्"
+         ],
+         "correct":0,
+         "explanation":"णत्व does not apply. Correct form is वनेन."
+      },
+      {
+         "id":"WRITE-052",
+         "type":"application",
+         "question":"Choose the correctly written word.",
+         "options":[
+            "फलेन",
+            "फलेन",
+            "फलैन",
+            "फलेन्"
+         ],
+         "correct":0,
+         "explanation":"Correct spelling is फलेन."
+      },
+      {
+         "id":"WRITE-053",
+         "type":"application",
+         "question":"Which word is written correctly?",
+         "options":[
+            "पुस्तकेन",
+            "पुस्तकेण",
+            "पुस्तकैन",
+            "पुस्तकेन्"
+         ],
+         "correct":0,
+         "explanation":"No णत्व applies."
+      },
+      {
+         "id":"WRITE-054",
+         "type":"application",
+         "question":"Choose the correctly written word.",
+         "options":[
+            "जलेन",
+            "जलेण",
+            "जलैन",
+            "जलेन्"
+         ],
+         "correct":0,
+         "explanation":"Correct spelling is जलेन."
+      },
+      {
+         "id":"WRITE-055",
+         "type":"application",
+         "question":"Find the incorrectly written word.",
+         "options":[
+            "मालया",
+            "वनेन",
+            "फलेन",
+            "पत्रेण"
+         ],
+         "correct":3,
+         "explanation":"पत्रेण is correct because र triggers णत्व. It should be पत्रेण, not पत्रेन."
+      },
+      {
+         "id":"WRITE-056",
+         "type":"application",
+         "question":"Choose the correct spelling.",
+         "options":[
+            "पत्रेण",
+            "पत्रेन",
+            "पत्रैण",
+            "पत्रेन्"
+         ],
+         "correct":0,
+         "explanation":"र causes णत्व."
+      },
+      {
+         "id":"WRITE-057",
+         "type":"application",
+         "question":"Choose the correct spelling.",
+         "options":[
+            "मालायाः",
+            "मालायाः",
+            "मालायास्",
+            "मालाय:"
+         ],
+         "correct":0,
+         "explanation":"Correct feminine षष्ठी/पञ्चमी singular."
+      },
+      {
+         "id":"WRITE-058",
+         "type":"application",
+         "question":"Which sentence is written correctly?",
+         "options":[
+            "अहं वनं गच्छामि।",
+            "अहम् वनम् गच्छामि।",
+            "अहम् वनं गच्छामि।",
+            "अहं वनम् गच्छामि।"
+         ],
+         "correct":0,
+         "explanation":"Final म् before a consonant becomes अनुस्वार in normal writing."
+      },
+      {
+         "id":"WRITE-059",
+         "type":"application",
+         "question":"Choose the correctly written sentence.",
+         "options":[
+            "अहं मालया लिखामि।",
+            "अहम् मालया लिखामि।",
+            "अहं मालया लिखामि",
+            "अहम् मालया लिखामि"
+         ],
+         "correct":0,
+         "explanation":"Correct writing of final म्."
+      },
+      {
+         "id":"WRITE-060",
+         "type":"application",
+         "question":"Choose the correctly written word.",
+         "options":[
+            "मित्रेण",
+            "मित्रेन",
+            "मित्रैण",
+            "मित्रेन्"
+         ],
+         "correct":0,
+         "explanation":"र triggers णत्व."
+      },
+      {
+         "id":"WRITE-061",
+         "type":"application",
+         "question":"Choose the correctly written word.",
+         "options":[
+            "गृहेन",
+            "गृहेण",
+            "गृहैन",
+            "गृहेन्"
+         ],
+         "correct":0,
+         "explanation":"No णत्व applies."
+      },
+      {
+         "id":"WRITE-062",
+         "type":"application",
+         "question":"Find the spelling mistake.",
+         "options":[
+            "मित्रेन",
+            "मालया",
+            "वनेन",
+            "फलेन"
+         ],
+         "correct":0,
+         "explanation":"It should be मित्रेण."
+      },
+      {
+         "id":"WRITE-063",
+         "type":"application",
+         "question":"Choose the correctly written plural.",
+         "options":[
+            "पत्राणाम्",
+            "पत्रानाम्",
+            "पत्रनाम्",
+            "पत्रणाम्"
+         ],
+         "correct":0,
+         "explanation":"Correct षष्ठी बहुवचन."
+      },
+      {
+         "id":"WRITE-064",
+         "type":"application",
+         "question":"Choose the correctly written plural.",
+         "options":[
+            "मित्राणाम्",
+            "मित्रानाम्",
+            "मित्रनाम्",
+            "मित्रणाम्"
+         ],
+         "correct":0,
+         "explanation":"र causes णत्व."
+      },
+      {
+         "id":"WRITE-065",
+         "type":"application",
+         "question":"Choose the correctly written word.",
+         "options":[
+            "नेत्रेण",
+            "नेत्रेन",
+            "नेत्रैण",
+            "नेत्रेन्"
+         ],
+         "correct":0,
+         "explanation":"Correct णत्व after र."
+      },
+      {
+         "id":"WRITE-066",
+         "type":"application",
+         "question":"Find the incorrect spelling.",
+         "options":[
+            "नेत्रेन",
+            "फलेन",
+            "वनेन",
+            "मालया"
+         ],
+         "correct":0,
+         "explanation":"Should be नेत्रेण."
+      },
+      {
+         "id":"WRITE-067",
+         "type":"application",
+         "question":"Choose the correctly written sentence.",
+         "options":[
+            "माला गृहे अस्ति।",
+            "माला गृहे अस्ति",
+            "माला गृहे अस्ति।",
+            "माला गृहम् अस्ति।"
+         ],
+         "correct":0,
+         "explanation":"Correct spelling and punctuation."
+      },
+      {
+         "id":"WRITE-068",
+         "type":"application",
+         "question":"Choose the correctly written sentence.",
+         "options":[
+            "फलं पुस्तके अस्ति।",
+            "फलम् पुस्तके अस्ति।",
+            "फलम् पुस्तके अस्ति",
+            "फलं पुस्तकम् अस्ति।"
+         ],
+         "correct":0,
+         "explanation":"Correct final म् writing."
+      },
+      {
+         "id":"WRITE-069",
+         "type":"application",
+         "question":"Choose the correctly written word.",
+         "options":[
+            "पत्रेषु",
+            "पत्रेषु",
+            "पत्रेशु",
+            "पत्रैषु"
+         ],
+         "correct":1,
+         "explanation":"Correct सप्तमी plural."
+      },
+      {
+         "id":"WRITE-070",
+         "type":"application",
+         "question":"Which sentence follows all writing rules correctly?",
+         "options":[
+            "अहं मित्रेण सह वनं गच्छामि।",
+            "अहम् मित्रेन सह वनम् गच्छामि।",
+            "अहम् मित्रेण सह वनं गच्छामि।",
+            "अहं मित्रेन सह वनम् गच्छामि।"
+         ],
+         "correct":0,
+         "explanation":"Both अनुस्वार and णत्व are applied correctly."
+      },
+      {
+         "id":"WRITE-071",
+         "type":"sentence_correction",
+         "question":"Choose the correctly written sentence.",
+         "sentence":"बालकः वनम् गच्छति।",
+         "options":[
+            "बालकः वनः गच्छति।",
+            "बालकः वनं गच्छति।",
+            "बालकः वनन् गच्छति।",
+            "बालकः वने गच्छति।"
+         ],
+         "correct":1,
+         "explanation":"वनम् is followed by the consonant ग्, so final म् is written as अनुस्वार: वनं गच्छति."
+      },
+      {
+         "id":"WRITE-072",
+         "type":"sentence_correction",
+         "question":"Choose the correctly written sentence.",
+         "sentence":"बालकः पुस्तकम् पठति।",
+         "options":[
+            "बालकः पुस्तकं पठति।",
+            "बालकः पुस्तकः पठति।",
+            "बालकः पुस्तकन् पठति।",
+            "बालकः पुस्तके पठति।"
+         ],
+         "correct":0,
+         "explanation":"Because पुस्तकम् is followed by प्, final म् becomes अनुस्वार: पुस्तकं पठति."
+      },
+      {
+         "id":"WRITE-073",
+         "type":"find_error",
+         "question":"Which word contains a writing-rule error?",
+         "sentence":"बालिका मालाम् धारयति।",
+         "options":[
+            "बालिका",
+            "मालाम्",
+            "धारयति",
+            "No mistake"
+         ],
+         "correct":1,
+         "explanation":"Before the consonant ध्, मालाम् should be written मालां."
+      },
+      {
+         "id":"WRITE-074",
+         "type":"sentence_correction",
+         "question":"Choose the correctly written sentence.",
+         "sentence":"बालिका मालाम् धारयति।",
+         "options":[
+            "बालिका मालां धारयति।",
+            "बालिका मालान् धारयति।",
+            "बालिका मालाः धारयति।",
+            "बालिका मालया धारयति।"
+         ],
+         "correct":0,
+         "explanation":"Final म् becomes अनुस्वार before ध्: मालां धारयति."
+      },
+      {
+         "id":"WRITE-075",
+         "type":"sentence_correction",
+         "question":"Choose the correctly written sentence.",
+         "sentence":"फलम् खादति।",
+         "options":[
+            "फलः खादति।",
+            "फलं खादति।",
+            "फलन् खादति।",
+            "फले खादति।"
+         ],
+         "correct":1,
+         "explanation":"फलम् is followed by ख्, so final म् changes to अनुस्वार: फलं खादति."
+      },
+      {
+         "id":"WRITE-076",
+         "type":"find_error",
+         "question":"Which part should be corrected?",
+         "sentence":"बालकः मित्रम् पश्यति।",
+         "options":[
+            "बालकः",
+            "मित्रम्",
+            "पश्यति",
+            "No correction"
+         ],
+         "correct":1,
+         "explanation":"मित्रम् is followed by प्, so it should be written मित्रं."
+      },
+      {
+         "id":"WRITE-077",
+         "type":"sentence_correction",
+         "question":"Choose the correctly written sentence.",
+         "sentence":"बालकः मित्रम् पश्यति।",
+         "options":[
+            "बालकः मित्रः पश्यति।",
+            "बालकः मित्रे पश्यति।",
+            "बालकः मित्रं पश्यति।",
+            "बालकः मित्रन् पश्यति।"
+         ],
+         "correct":2,
+         "explanation":"Before प्, final म् becomes अनुस्वार: मित्रं पश्यति."
+      },
+      {
+         "id":"WRITE-078",
+         "type":"rule_application",
+         "question":"Which sentence correctly keeps final म् unchanged before a vowel?",
+         "options":[
+            "वनं अस्ति।",
+            "वनम् अस्ति।",
+            "वनन् अस्ति।",
+            "वनः अस्ति।"
+         ],
+         "correct":1,
+         "explanation":"Before the vowel अ, final म् remains unchanged: वनम् अस्ति."
+      },
+      {
+         "id":"WRITE-079",
+         "type":"rule_application",
+         "question":"Choose the correctly written sentence.",
+         "options":[
+            "फलम् अस्ति।",
+            "फलं अस्ति।",
+            "फलन् अस्ति।",
+            "फलः अस्ति।"
+         ],
+         "correct":0,
+         "explanation":"Final म् remains unchanged before the vowel अ."
+      },
+      {
+         "id":"WRITE-080",
+         "type":"sentence_correction",
+         "question":"Choose the correctly written sentence.",
+         "sentence":"बालिका मालां आनयति।",
+         "options":[
+            "बालिका मालाम् आनयति।",
+            "बालिका मालाः आनयति।",
+            "बालिका मालया आनयति।",
+            "बालिका मालान् आनयति।"
+         ],
+         "correct":0,
+         "explanation":"आनयति begins with a vowel, so final म् remains unchanged: मालाम् आनयति."
+      },
+      {
+         "id":"WRITE-081",
+         "type":"find_error",
+         "question":"Which word is incorrectly written?",
+         "sentence":"बालकः पत्रेन लिखति।",
+         "options":[
+            "बालकः",
+            "पत्रेन",
+            "लिखति",
+            "No mistake"
+         ],
+         "correct":1,
+         "explanation":"Because पत्र contains र्, णत्व applies. पत्रेन should be पत्रेण."
+      },
+      {
+         "id":"WRITE-082",
+         "type":"sentence_correction",
+         "question":"Choose the correctly written sentence.",
+         "sentence":"बालकः पत्रेन लिखति।",
+         "options":[
+            "बालकः पत्रेण लिखति।",
+            "बालकः पत्रैण लिखति।",
+            "बालकः पत्रेन् लिखति।",
+            "बालकः पत्रे लिखति।"
+         ],
+         "correct":0,
+         "explanation":"णत्व changes न to ण in पत्रेण."
+      },
+      {
+         "id":"WRITE-083",
+         "type":"find_error",
+         "question":"Which form violates the णत्व rule?",
+         "options":[
+            "वनेन",
+            "फलेन",
+            "मित्रेन",
+            "पुस्तकेन"
+         ],
+         "correct":2,
+         "explanation":"मित्रेन should be मित्रेण because र् triggers णत्व."
+      },
+      {
+         "id":"WRITE-084",
+         "type":"application",
+         "question":"Choose the correctly written form.",
+         "options":[
+            "मित्रेन",
+            "मित्रेण",
+            "मित्रैण",
+            "मित्रेन्"
+         ],
+         "correct":1,
+         "explanation":"The correct तृतीया एकवचन form is मित्रेण."
+      },
+      {
+         "id":"WRITE-085",
+         "type":"find_error",
+         "question":"Which word is incorrectly written?",
+         "options":[
+            "नेत्रेण",
+            "पत्रेण",
+            "वनेन",
+            "गृहेण"
+         ],
+         "correct":3,
+         "explanation":"गृह does not contain a valid णत्व trigger in this form. The correct form is गृहेन."
+      },
+      {
+         "id":"WRITE-086",
+         "type":"application",
+         "question":"Choose the correctly written form.",
+         "options":[
+            "नेत्रेन",
+            "नेत्रेण",
+            "नेत्रैण",
+            "नेत्रेन्"
+         ],
+         "correct":1,
+         "explanation":"Because नेत्र contains र्, णत्व produces नेत्रेण."
+      },
+      {
+         "id":"WRITE-087",
+         "type":"application",
+         "question":"Choose the correctly written षष्ठी बहुवचन form.",
+         "options":[
+            "पत्रानाम्",
+            "पत्राणाम्",
+            "पत्रणाम्",
+            "पत्रनाम्"
+         ],
+         "correct":1,
+         "explanation":"Because र् precedes the न of the ending, णत्व produces पत्राणाम्."
+      },
+      {
+         "id":"WRITE-088",
+         "type":"application",
+         "question":"Choose the correctly written षष्ठी बहुवचन form.",
+         "options":[
+            "मित्रानाम्",
+            "मित्राणाम्",
+            "मित्रणाम्",
+            "मित्रनाम्"
+         ],
+         "correct":1,
+         "explanation":"णत्व changes न to ण, giving मित्राणाम्."
+      },
+      {
+         "id":"WRITE-089",
+         "type":"find_error",
+         "question":"Which form should NOT contain ण?",
+         "options":[
+            "पत्रेण",
+            "मित्रेण",
+            "नेत्रेण",
+            "वनेण"
+         ],
+         "correct":3,
+         "explanation":"वन has no णत्व trigger. The correct form is वनेन."
+      },
+      {
+         "id":"WRITE-090",
+         "type":"sentence_correction",
+         "question":"Choose the correctly written sentence.",
+         "sentence":"बालकः वनेण फलम् खादति।",
+         "options":[
+            "बालकः वनेन फलं खादति।",
+            "बालकः वनेण फलं खादति।",
+            "बालकः वनेन फलम् खादति।",
+            "बालकः वनैण फलन् खादति।"
+         ],
+         "correct":0,
+         "explanation":"वन takes वनेन, not वनेण. फलम् before ख् becomes फलं."
+      },
+      {
+         "id":"WRITE-091",
+         "type":"multiple_correction",
+         "question":"Choose the completely corrected sentence.",
+         "sentence":"अहम् मित्रेन सह वनम् गच्छामि।",
+         "options":[
+            "अहं मित्रेण सह वनं गच्छामि।",
+            "अहम् मित्रेण सह वनं गच्छामि।",
+            "अहं मित्रेन सह वनम् गच्छामि।",
+            "अहम् मित्रेन सह वनं गच्छामि।"
+         ],
+         "correct":0,
+         "explanation":"अहम् and वनम् are followed by consonants, so they become अहं and वनं. मित्रेन must become मित्रेण by णत्व."
+      },
+      {
+         "id":"WRITE-092",
+         "type":"multiple_correction",
+         "question":"Choose the completely corrected sentence.",
+         "sentence":"बालिका मालाम् धारयति तथा पत्रेन लिखति।",
+         "options":[
+            "बालिका मालां धारयति तथा पत्रेण लिखति।",
+            "बालिका मालाम् धारयति तथा पत्रेण लिखति।",
+            "बालिका मालां धारयति तथा पत्रेन लिखति।",
+            "बालिका मालाः धारयति तथा पत्रेण लिखति।"
+         ],
+         "correct":0,
+         "explanation":"मालाम् before ध् becomes मालां, and पत्रेन becomes पत्रेण by णत्व."
+      },
+      {
+         "id":"WRITE-093",
+         "type":"find_error",
+         "question":"Which word should be corrected?",
+         "sentence":"पुष्पम् मालायाम् अस्ति।",
+         "options":[
+            "पुष्पम्",
+            "मालायाम्",
+            "अस्ति",
+            "No mistake"
+         ],
+         "correct":3,
+         "explanation":"Both words are correctly written. पुष्पम् is followed by the consonant म्, but in careful पद-separated writing your course may retain the underlying form. Use the convention consistently."
+      },
+      {
+         "id":"WRITE-094",
+         "type":"sentence_correction",
+         "question":"Following the final म् rule used in the quiz, choose the preferred continuous-writing form.",
+         "sentence":"पुष्पम् मालायाम् अस्ति।",
+         "options":[
+            "पुष्पं मालायाम् अस्ति।",
+            "पुष्पन् मालायाम् अस्ति।",
+            "पुष्पः मालायाम् अस्ति।",
+            "पुष्पे मालायाम् अस्ति।"
+         ],
+         "correct":0,
+         "explanation":"Before the consonant म्, final म् is written as अनुस्वार: पुष्पं मालायाम्."
+      },
+      {
+         "id":"WRITE-095",
+         "type":"find_error",
+         "question":"Which form is written incorrectly?",
+         "options":[
+            "वनानाम्",
+            "फलानाम्",
+            "पुस्तकाणाम्",
+            "मित्राणाम्"
+         ],
+         "correct":2,
+         "explanation":"पुस्तक has no णत्व trigger. The correct form is पुस्तकानाम्."
+      },
+      {
+         "id":"WRITE-096",
+         "type":"application",
+         "question":"Choose the correctly written group.",
+         "options":[
+            "वनाणाम्, फलाणाम्, पुस्तकाणाम्",
+            "वनानाम्, फलानाम्, पुस्तकानाम्",
+            "वननाम्, फलनाम्, पुस्तकनाम्",
+            "वनाणाम्, फलानाम्, पुस्तकाणाम्"
+         ],
+         "correct":1,
+         "explanation":"None of these words contains a णत्व trigger, so all retain न: वनानाम्, फलानाम्, पुस्तकानाम्."
+      },
+      {
+         "id":"WRITE-097",
+         "type":"application",
+         "question":"Which pair correctly contrasts णत्व and non-णत्व forms?",
+         "options":[
+            "मित्रेण — वनेन",
+            "मित्रेन — वनेण",
+            "मित्रेण — वनेण",
+            "मित्रेन — वनेन"
+         ],
+         "correct":0,
+         "explanation":"मित्रेण undergoes णत्व because of र्, while वनेन does not."
+      },
+      {
+         "id":"WRITE-098",
+         "type":"multiple_correction",
+         "question":"Choose the completely corrected sentence.",
+         "sentence":"अहम् पुस्तकम् पठामि तथा मालाम् आनयामि।",
+         "options":[
+            "अहं पुस्तकं पठामि तथा मालाम् आनयामि।",
+            "अहम् पुस्तकं पठामि तथा मालां आनयामि।",
+            "अहं पुस्तकम् पठामि तथा मालां आनयामि।",
+            "अहम् पुस्तकम् पठामि तथा मालाम् आनयामि।"
+         ],
+         "correct":0,
+         "explanation":"अहम् and पुस्तकम् are followed by consonants, so they become अहं and पुस्तकं. मालाम् remains unchanged before the vowel आ."
+      },
+      {
+         "id":"WRITE-099",
+         "type":"multiple_correction",
+         "question":"Choose the completely corrected sentence.",
+         "sentence":"बालकः नेत्रेन पत्रम् पश्यति।",
+         "options":[
+            "बालकः नेत्रेण पत्रं पश्यति।",
+            "बालकः नेत्रेन पत्रं पश्यति।",
+            "बालकः नेत्रेण पत्रम् पश्यति।",
+            "बालकः नेत्रेण पत्रः पश्यति।"
+         ],
+         "correct":0,
+         "explanation":"नेत्रेन becomes नेत्रेण by णत्व. पत्रम् before प् becomes पत्रं."
+      },
+      {
+         "id":"WRITE-100",
+         "type":"multiple_correction",
+         "question":"Choose the sentence in which all writing rules are applied correctly.",
+         "options":[
+            "अहं मित्रेण सह वनं गच्छामि तथा मालाम् आनयामि।",
+            "अहम् मित्रेन सह वनम् गच्छामि तथा मालां आनयामि।",
+            "अहं मित्रेन सह वनं गच्छामि तथा मालां आनयामि।",
+            "अहम् मित्रेण सह वनम् गच्छामि तथा मालाम् आनयामि।"
+         ],
+         "correct":0,
+         "explanation":"अहं and वनं correctly apply the final म् rule; मित्रेण correctly applies णत्व; मालाम् remains unchanged before the vowel आ."
+      }
+   ]
+}

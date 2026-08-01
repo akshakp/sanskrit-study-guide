@@ -41,27 +41,7 @@ A consonant is pronounced with the help of a vowel before or after. Total count:
 | **कण्ठतालु (Throat + Palate)** | —                        | ए ऐ    |
 | **कण्ठोष्ठ (Throat + Lips)**   | —                        | ओ औ    |
 | **दन्तोष्ठ (Teeth + Lips)**    | व्                       | —      |
-| **नासिका (Nostrils)**          | Anunāsika sounds         | —      |
+| **नासिका (Nostrils)**          | (ं) Anunāsika sounds         | —      |
 
 !!! tip "Anunāsika (अनुनासिक)"
     Letters marked in **bold** in the original notes are called **Anunāsika** because they use the nostrils for pronunciation.
-
----
-
-## परसवर्ण नियम (Reciprocal Law)
-
-This rule explains how an **anusvāra (ं)** changes before grouped consonants.
-
-**Rule:**
-
-- If the sound after anusvāra belongs to a consonant group → replace the anusvāra with the nasal letter of that same group
-- If the following sound is not grouped → keep the anusvāra as a bindu (ं)
-
-| Following Group | Anunāsik  | Example                |
-| --------------- | --------- | ---------------------- |
-| कु group        | ङ्        | शंकर → **शङ्कर**       |
-| चु group        | ञ्        | संजय → **सञ्जय**       |
-| टु group        | ण्        | मार्कंड → **मार्कण्ड** |
-| तु group        | न्        | कंदर्प → **कन्दर्प**   |
-| पु group        | म्        | अंबरीष → **अम्बरीष**   |
-| Not grouped     | ं remains | संसार, हंस, संस्कार    |

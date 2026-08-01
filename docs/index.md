@@ -6,7 +6,7 @@
 
     ---
 
-    Master Sanskrit vowels (स्वर), consonants (व्यञ्जन), and pronunciation rules including the reciprocal law (परसवर्ण नियम).
+    Master Sanskrit vowels (स्वर), consonants (व्यञ्जन), and pronunciation.
 
     [:octicons-arrow-right-24: Start Learning](alphabets.md)
 
@@ -33,6 +33,14 @@
     Conjugate verbs in present tense, understand verb classes (धातुगण), and master special verb usage rules.
 
     [:octicons-arrow-right-24: Conjugate Verbs](verbs.md)
+
+-   📝 **Rules of writing**
+
+    ---
+
+    Sanskrit orthography — sandhi rules (संधि नियम), punctuation, and proper sentence structure.
+
+    [:octicons-arrow-right-24: Learn Rules](writing-rules.md)
 
 -   💬 **Conversation**
 

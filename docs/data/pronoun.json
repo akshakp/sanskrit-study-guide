@@ -1,0 +1,135 @@
+{
+  "title": "सर्वनाम — Recognition (Level 1)",
+  "questions": [
+    {
+      "id": "PRON-001",
+      "type": "recognition",
+      "question": "Which of the following is a सर्वनाम?",
+      "options": [
+        "रामः",
+        "सः",
+        "गजः",
+        "बालकः"
+      ],
+      "correct": 1,
+      "explanation": "सः is a pronoun (सर्वनाम)."
+    },
+    {
+      "id": "PRON-002",
+      "type": "recognition",
+      "question": "Which word means <strong>'this (masculine)'</strong>?",
+      "options": [
+        "सः",
+        "एषः",
+        "तत्",
+        "सा"
+      ],
+      "correct": 1,
+      "explanation": "एषः means 'this' (masculine singular)."
+    },
+    {
+      "id": "PRON-003",
+      "type": "recognition",
+      "question": "Which word means <strong>'that (feminine)'</strong>?",
+      "options": [
+        "एषा",
+        "सा",
+        "तत्",
+        "एतत्"
+      ],
+      "correct": 1,
+      "explanation": "सा means 'that' (feminine singular)."
+    },
+    {
+      "id": "PRON-004",
+      "type": "recognition",
+      "question": "Which word means <strong>'this (neuter)'</strong>?",
+      "options": [
+        "तत्",
+        "एतत्",
+        "एषः",
+        "सा"
+      ],
+      "correct": 1,
+      "explanation": "एतत् is the neuter form meaning 'this'."
+    },
+    {
+      "id": "PRON-005",
+      "type": "recognition",
+      "question": "Which pronoun means <strong>'who?'</strong>?",
+      "options": [
+        "यः",
+        "कः",
+        "सः",
+        "एषः"
+      ],
+      "correct": 1,
+      "explanation": "कः is the interrogative pronoun 'who?'."
+    },
+    {
+      "id": "PRON-006",
+      "type": "recognition",
+      "question": "Which pronoun means <strong>'who/which (relative)'</strong>?",
+      "options": [
+        "यः",
+        "कः",
+        "सः",
+        "एषः"
+      ],
+      "correct": 0,
+      "explanation": "यः is the relative pronoun."
+    },
+    {
+      "id": "PRON-007",
+      "type": "recognition",
+      "question": "Choose the feminine form of <strong>एषः</strong>.",
+      "options": [
+        "सा",
+        "एषा",
+        "तत्",
+        "एतत्"
+      ],
+      "correct": 1,
+      "explanation": "The feminine singular of एषः is एषा."
+    },
+    {
+      "id": "PRON-008",
+      "type": "recognition",
+      "question": "Choose the neuter form of <strong>सः</strong>.",
+      "options": [
+        "सा",
+        "एषः",
+        "तत्",
+        "ते"
+      ],
+      "correct": 2,
+      "explanation": "The neuter singular form is तत्."
+    },
+    {
+      "id": "PRON-009",
+      "type": "recognition",
+      "question": "Which sentence uses a pronoun?",
+      "options": [
+        "रामः गच्छति।",
+        "सः गच्छति।",
+        "बालकः पठति।",
+        "गजः धावति।"
+      ],
+      "correct": 1,
+      "explanation": "सः is the pronoun in the sentence."
+    },
+    {
+      "id": "PRON-010",
+      "type": "recognition",
+      "question": "Which pair contains only pronouns?",
+      "options": [
+        "सः, एषः",
+        "रामः, सः",
+        "बालकः, एषः",
+        "गजः, तत्"
+      ],
+      "correct": 0,
+      "explanation": "Both सः and एषः are pronouns."
+    }
+  ]
+}

@@ -1,0 +1,1537 @@
+{
+   "title":"विभक्ति अभ्यासः — Vibhakti Identification (Part 1)",
+   "questions":[
+      {
+         "id":"VIB-001",
+         "type":"identify",
+         "question":"Identify the विभक्ति and वचन of <strong>देवस्य</strong>.",
+         "options":[
+            "षष्ठी एकवचन",
+            "षष्ठी बहुवचन",
+            "सप्तमी एकवचन",
+            "प्रथमा एकवचन"
+         ],
+         "correct":0,
+         "explanation":"<strong>देवस्य</strong> ends in <em>-स्य</em>, the षष्ठी (genitive) singular ending of अकारान्त पुल्लिङ्ग nouns. It answers the question <strong>कस्य?</strong> (whose?)."
+      },
+      {
+         "id":"VIB-002",
+         "type":"identify",
+         "question":"Identify the विभक्ति and वचन of <strong>विद्यालये</strong>.",
+         "options":[
+            "सप्तमी एकवचन",
+            "तृतीया एकवचन",
+            "पञ्चमी एकवचन",
+            "चतुर्थी एकवचन"
+         ],
+         "correct":0,
+         "explanation":"<strong>विद्यालये</strong> ends in <em>-े</em>, the सप्तमी (locative) singular ending. It answers <strong>कुत्र?</strong> (where?)."
+      },
+      {
+         "id":"VIB-003",
+         "type":"grammar-meaning",
+         "question":"Which option best expresses the meaning of <strong>रामाय</strong>?",
+         "options":[
+            "by Rama",
+            "to/for Rama",
+            "from Rama",
+            "of Rama"
+         ],
+         "correct":1,
+         "explanation":"<strong>रामाय</strong> is चतुर्थी एकवचन and answers <strong>कस्मै?</strong>, meaning 'to' or 'for Rama'."
+      },
+      {
+         "id":"VIB-004",
+         "type":"sentence-analysis",
+         "question":"<strong>बालकः विद्यालये पठति।</strong><br><br>Which word is in सप्तमी विभक्ति?",
+         "options":[
+            "बालकः",
+            "विद्यालये",
+            "पठति",
+            "None of the above"
+         ],
+         "correct":1,
+         "explanation":"<strong>विद्यालये</strong> is सप्तमी because it indicates location ('in the school')."
+      },
+      {
+         "id":"VIB-005",
+         "type":"question-word",
+         "question":"Which question word correctly identifies <strong>गुरुणा</strong>?",
+         "options":[
+            "कस्य?",
+            "केन?",
+            "कस्मै?",
+            "कस्मात्?"
+         ],
+         "correct":1,
+         "explanation":"<strong>गुरुणा</strong> is तृतीया एकवचन and answers the question <strong>केन?</strong> (by whom? with whom?)."
+      },
+      {
+         "id":"VIB-006",
+         "type":"find-error",
+         "question":"Which word is <strong>NOT</strong> in पञ्चमी विभक्ति?",
+         "options":[
+            "ग्रामात्",
+            "वृक्षात्",
+            "रामात्",
+            "रामाय"
+         ],
+         "correct":3,
+         "explanation":"The first three are पञ्चमी एकवचन ('from'). <strong>रामाय</strong> is चतुर्थी ('to/for Rama')."
+      },
+      {
+         "id":"VIB-007",
+         "type":"sentence-analysis",
+         "question":"<strong>रामः मित्राय पुस्तकम् ददाति।</strong><br><br>Which word is in चतुर्थी विभक्ति?",
+         "options":[
+            "रामः",
+            "मित्राय",
+            "पुस्तकम्",
+            "ददाति"
+         ],
+         "correct":1,
+         "explanation":"<strong>मित्राय</strong> is चतुर्थी because it indicates the recipient ('to the friend')."
+      },
+      {
+         "id":"VIB-008",
+         "type":"choose-correct",
+         "question":"Which word answers the question <strong>कस्य?</strong>",
+         "options":[
+            "रामस्य",
+            "रामेण",
+            "रामात्",
+            "रामाय"
+         ],
+         "correct":0,
+         "explanation":"<strong>रामस्य</strong> is षष्ठी विभक्ति and answers 'whose?'."
+      },
+      {
+         "id":"VIB-009",
+         "type":"sentence-analysis",
+         "question":"<strong>शिष्यः ग्रन्थात् श्लोकं पठति।</strong><br><br>Which word is in पञ्चमी विभक्ति?",
+         "options":[
+            "शिष्यः",
+            "ग्रन्थात्",
+            "श्लोकम्",
+            "पठति"
+         ],
+         "correct":1,
+         "explanation":"<strong>ग्रन्थात्</strong> is पञ्चमी and expresses source ('from the book')."
+      },
+      {
+         "id":"VIB-010",
+         "type":"best-answer",
+         "question":"Which pair has the <strong>same विभक्ति and वचन</strong>?",
+         "options":[
+            "रामस्य, देवस्य",
+            "रामेण, रामस्य",
+            "ग्रामात्, रामस्य",
+            "विद्यालये, रामाय"
+         ],
+         "correct":0,
+         "explanation":"Both <strong>रामस्य</strong> and <strong>देवस्य</strong> are षष्ठी एकवचन forms. The other pairs belong to different cases."
+      },
+      {
+         "id":"VIB-011",
+         "type":"sentence-analysis",
+         "question":"<strong>गुरुः शिष्याय ग्रन्थं ददाति।</strong><br><br>Which word is in चतुर्थी विभक्ति?",
+         "options":[
+            "गुरुः",
+            "शिष्याय",
+            "ग्रन्थम्",
+            "ददाति"
+         ],
+         "correct":1,
+         "explanation":"<strong>शिष्याय</strong> is चतुर्थी एकवचन because it indicates the recipient ('to the student')."
+      },
+      {
+         "id":"VIB-012",
+         "type":"identify",
+         "question":"Identify the विभक्ति and वचन of <strong>देवेन</strong>.",
+         "options":[
+            "तृतीया एकवचन",
+            "पञ्चमी एकवचन",
+            "षष्ठी एकवचन",
+            "सप्तमी एकवचन"
+         ],
+         "correct":0,
+         "explanation":"<strong>देवेन</strong> ends in <em>-ेन</em>, indicating तृतीया एकवचन (instrumental singular)."
+      },
+      {
+         "id":"VIB-013",
+         "type":"grammar-meaning",
+         "question":"Which is the best meaning of <strong>वने</strong>?",
+         "options":[
+            "from the forest",
+            "to the forest",
+            "in the forest",
+            "of the forest"
+         ],
+         "correct":2,
+         "explanation":"<strong>वने</strong> is सप्तमी एकवचन and expresses location: 'in the forest'."
+      },
+      {
+         "id":"VIB-014",
+         "type":"question-word",
+         "question":"Which question correctly identifies <strong>ग्रामात्</strong>?",
+         "options":[
+            "केन?",
+            "कस्य?",
+            "कस्मात्?",
+            "कस्मै?"
+         ],
+         "correct":2,
+         "explanation":"पञ्चमी विभक्ति answers <strong>कस्मात्?</strong> (from whom/from what?)."
+      },
+      {
+         "id":"VIB-015",
+         "type":"sentence-analysis",
+         "question":"<strong>बालकः उद्याने क्रीडति।</strong><br><br>Which word answers <strong>कुत्र?</strong>",
+         "options":[
+            "बालकः",
+            "उद्याने",
+            "क्रीडति",
+            "None"
+         ],
+         "correct":1,
+         "explanation":"<strong>उद्याने</strong> is सप्तमी and answers the question 'Where?'."
+      },
+      {
+         "id":"VIB-016",
+         "type":"find-error",
+         "question":"Which word is NOT in षष्ठी विभक्ति?",
+         "options":[
+            "रामस्य",
+            "देवस्य",
+            "गुरोः",
+            "रामाय"
+         ],
+         "correct":3,
+         "explanation":"<strong>रामाय</strong> is चतुर्थी. The other three are possessive (genitive) forms."
+      },
+      {
+         "id":"VIB-017",
+         "type":"best-answer",
+         "question":"Complete the sentence.<br><br><strong>बालकः _____ गच्छति।</strong><br><br>(to the village)",
+         "options":[
+            "ग्रामात्",
+            "ग्रामस्य",
+            "ग्रामाय",
+            "ग्रामे"
+         ],
+         "correct":2,
+         "explanation":"Movement toward a destination uses चतुर्थी in the grammar covered by your course. Therefore <strong>ग्रामाय</strong> is the expected answer."
+      },
+      {
+         "id":"VIB-018",
+         "type":"sentence-analysis",
+         "question":"<strong>रामः मित्रेण सह विद्यालयं गच्छति।</strong><br><br>Which word is in तृतीया विभक्ति?",
+         "options":[
+            "रामः",
+            "मित्रेण",
+            "विद्यालयम्",
+            "गच्छति"
+         ],
+         "correct":1,
+         "explanation":"<strong>मित्रेण</strong> is तृतीया and is used with <strong>सह</strong> ('with a friend')."
+      },
+      {
+         "id":"VIB-019",
+         "type":"identify",
+         "question":"Identify the विभक्ति and वचन of <strong>पुस्तकस्य</strong>.",
+         "options":[
+            "षष्ठी एकवचन",
+            "द्वितीया एकवचन",
+            "सप्तमी एकवचन",
+            "चतुर्थी एकवचन"
+         ],
+         "correct":0,
+         "explanation":"<strong>पुस्तकस्य</strong> ends in <em>-स्य</em>, indicating षष्ठी एकवचन ('of the book')."
+      },
+      {
+         "id":"VIB-020",
+         "type":"multi-analysis",
+         "question":"<strong>शिष्यः गुरवे नमति।</strong><br><br>Which word answers the question <strong>कस्मै?</strong>",
+         "options":[
+            "शिष्यः",
+            "गुरवे",
+            "नमति",
+            "None"
+         ],
+         "correct":1,
+         "explanation":"<strong>गुरवे</strong> is the dative (चतुर्थी) form of गुरु and answers <strong>कस्मै?</strong> ('to whom?')."
+      },
+      {
+         "id":"VIB-021",
+         "type":"sentence-analysis",
+         "question":"<strong>रामः वृक्षात् फलम् आनयति।</strong><br><br>Which word is in पञ्चमी विभक्ति?",
+         "options":[
+            "रामः",
+            "वृक्षात्",
+            "फलम्",
+            "आनयति"
+         ],
+         "correct":1,
+         "explanation":"<strong>वृक्षात्</strong> is पञ्चमी एकवचन and answers <strong>कस्मात्?</strong> ('from where?')."
+      },
+      {
+         "id":"VIB-022",
+         "type":"identify",
+         "question":"Identify the विभक्ति and वचन of <strong>शिष्येण</strong>.",
+         "options":[
+            "तृतीया एकवचन",
+            "चतुर्थी एकवचन",
+            "षष्ठी एकवचन",
+            "सप्तमी एकवचन"
+         ],
+         "correct":0,
+         "explanation":"The ending <strong>-ेण</strong> indicates तृतीया एकवचन."
+      },
+      {
+         "id":"VIB-023",
+         "type":"grammar-meaning",
+         "question":"What is the best meaning of <strong>देवेन</strong>?",
+         "options":[
+            "by the god",
+            "to the god",
+            "of the god",
+            "from the god"
+         ],
+         "correct":0,
+         "explanation":"<strong>देवेन</strong> is तृतीया एकवचन and commonly means 'by the god' or 'with the god'."
+      },
+      {
+         "id":"VIB-024",
+         "type":"question-word",
+         "question":"Which question identifies <strong>आश्रमे</strong>?",
+         "options":[
+            "केन?",
+            "कस्य?",
+            "कुत्र?",
+            "कस्मात्?"
+         ],
+         "correct":2,
+         "explanation":"<strong>आश्रमे</strong> is सप्तमी and answers the question <strong>कुत्र?</strong>"
+      },
+      {
+         "id":"VIB-025",
+         "type":"sentence-analysis",
+         "question":"<strong>मुनिः आश्रमे वसति।</strong><br><br>Which word is in सप्तमी विभक्ति?",
+         "options":[
+            "मुनिः",
+            "आश्रमे",
+            "वसति",
+            "None"
+         ],
+         "correct":1,
+         "explanation":"<strong>आश्रमे</strong> indicates location and is therefore सप्तमी."
+      },
+      {
+         "id":"VIB-026",
+         "type":"find-error",
+         "question":"Which word does NOT answer <strong>केन?</strong>",
+         "options":[
+            "रामेण",
+            "गुरुणा",
+            "बालकेन",
+            "रामस्य"
+         ],
+         "correct":3,
+         "explanation":"<strong>रामस्य</strong> answers <strong>कस्य?</strong> (whose?), not <strong>केन?</strong>"
+      },
+      {
+         "id":"VIB-027",
+         "type":"sentence-analysis",
+         "question":"<strong>शिष्यः गुरोः वचनं शृणोति।</strong><br><br>Which word is in षष्ठी विभक्ति?",
+         "options":[
+            "शिष्यः",
+            "गुरोः",
+            "वचनम्",
+            "शृणोति"
+         ],
+         "correct":1,
+         "explanation":"<strong>गुरोः</strong> is षष्ठी एकवचन of गुरु and answers <strong>कस्य?</strong>"
+      },
+      {
+         "id":"VIB-028",
+         "type":"choose-correct",
+         "question":"Which pair belongs to the same विभक्ति?",
+         "options":[
+            "रामेण, देवेन",
+            "रामस्य, देवेन",
+            "ग्रामात्, रामेण",
+            "आश्रमे, देवस्य"
+         ],
+         "correct":0,
+         "explanation":"Both <strong>रामेण</strong> and <strong>देवेन</strong> are तृतीया एकवचन forms."
+      },
+      {
+         "id":"VIB-029",
+         "type":"sentence-analysis",
+         "question":"<strong>बालकः आम्रात् फलम् गृह्णाति।</strong><br><br>Which word expresses the source?",
+         "options":[
+            "बालकः",
+            "आम्रात्",
+            "फलम्",
+            "गृह्णाति"
+         ],
+         "correct":1,
+         "explanation":"<strong>आम्रात्</strong> is पञ्चमी and expresses 'from the mango tree'."
+      },
+      {
+         "id":"VIB-030",
+         "type":"best-answer",
+         "question":"Which word answers <strong>कस्य?</strong>",
+         "options":[
+            "ग्रन्थस्य",
+            "ग्रन्थेन",
+            "ग्रन्थात्",
+            "ग्रन्थाय"
+         ],
+         "correct":0,
+         "explanation":"<strong>ग्रन्थस्य</strong> is षष्ठी and answers 'whose?' or 'of what?'."
+      },
+      {
+         "id":"VIB-031",
+         "type":"sentence-analysis",
+         "question":"<strong>गुरुः शिष्येण सह आश्रमे वसति।</strong><br><br>Which word is in तृतीया विभक्ति?",
+         "options":[
+            "गुरुः",
+            "शिष्येण",
+            "आश्रमे",
+            "वसति"
+         ],
+         "correct":1,
+         "explanation":"<strong>शिष्येण</strong> is तृतीया एकवचन and is used with <strong>सह</strong> ('with the student')."
+      },
+      {
+         "id":"VIB-032",
+         "type":"sentence-analysis",
+         "question":"<strong>बालकः वृक्षस्य समीपे तिष्ठति।</strong><br><br>Which word is in षष्ठी विभक्ति?",
+         "options":[
+            "बालकः",
+            "वृक्षस्य",
+            "समीपे",
+            "तिष्ठति"
+         ],
+         "correct":1,
+         "explanation":"<strong>वृक्षस्य</strong> is षष्ठी एकवचन and answers <strong>कस्य?</strong>"
+      },
+      {
+         "id":"VIB-033",
+         "type":"identify",
+         "question":"Identify the विभक्ति and वचन of <strong>परिश्रमेण</strong>.",
+         "options":[
+            "तृतीया एकवचन",
+            "चतुर्थी एकवचन",
+            "पञ्चमी एकवचन",
+            "षष्ठी एकवचन"
+         ],
+         "correct":0,
+         "explanation":"The ending <strong>-ेण</strong> identifies तृतीया एकवचन. The ण appears because of the णत्व rule."
+      },
+      {
+         "id":"VIB-034",
+         "type":"grammar-meaning",
+         "question":"Which is the best meaning of <strong>मोक्षाय</strong>?",
+         "options":[
+            "from liberation",
+            "for liberation",
+            "by liberation",
+            "of liberation"
+         ],
+         "correct":1,
+         "explanation":"<strong>मोक्षाय</strong> is चतुर्थी एकवचन and expresses purpose or recipient: 'for liberation'."
+      },
+      {
+         "id":"VIB-035",
+         "type":"question-word",
+         "question":"Which question identifies <strong>परिश्रमेण</strong>?",
+         "options":[
+            "केन?",
+            "कस्य?",
+            "कस्मै?",
+            "कस्मात्?"
+         ],
+         "correct":0,
+         "explanation":"तृतीया विभक्ति answers the question <strong>केन?</strong>"
+      },
+      {
+         "id":"VIB-036",
+         "type":"find-error",
+         "question":"Which word does NOT answer <strong>कुत्र?</strong>",
+         "options":[
+            "गृहे",
+            "विद्यालये",
+            "आश्रमे",
+            "ग्रामात्"
+         ],
+         "correct":3,
+         "explanation":"<strong>ग्रामात्</strong> is पञ्चमी ('from the village'). The other three are सप्तमी forms answering 'Where?'."
+      },
+      {
+         "id":"VIB-037",
+         "type":"sentence-analysis",
+         "question":"<strong>मुनिः ग्रन्थात् श्लोकं पठति।</strong><br><br>Which word answers <strong>कस्मात्?</strong>",
+         "options":[
+            "मुनिः",
+            "ग्रन्थात्",
+            "श्लोकम्",
+            "पठति"
+         ],
+         "correct":1,
+         "explanation":"<strong>ग्रन्थात्</strong> is पञ्चमी and answers 'From what?'."
+      },
+      {
+         "id":"VIB-038",
+         "type":"best-answer",
+         "question":"<strong>रामः मित्राय फलं ददाति।</strong><br><br>Which word indicates the recipient of the action?",
+         "options":[
+            "रामः",
+            "मित्राय",
+            "फलम्",
+            "ददाति"
+         ],
+         "correct":1,
+         "explanation":"The recipient receives something. <strong>मित्राय</strong> is चतुर्थी and indicates 'to the friend'."
+      },
+      {
+         "id":"VIB-039",
+         "type":"sentence-analysis",
+         "question":"<strong>रामः मित्रेण सह ग्रामं गच्छति।</strong><br><br>Which word answers <strong>केन?</strong>",
+         "options":[
+            "रामः",
+            "मित्रेण",
+            "ग्रामम्",
+            "गच्छति"
+         ],
+         "correct":1,
+         "explanation":"<strong>मित्रेण</strong> is in तृतीया विभक्ति and answers the question <strong>केन?</strong>"
+      },
+      {
+         "id":"VIB-040",
+         "type":"multi-analysis",
+         "question":"<strong>हे गुरो! शिष्यः कण्ठेन श्लोकं पठति।</strong><br><br>Which word is in सम्बोधन विभक्ति?",
+         "options":[
+            "गुरो",
+            "शिष्यः",
+            "कण्ठेन",
+            "श्लोकम्"
+         ],
+         "correct":0,
+         "explanation":"<strong>हे गुरो!</strong> is सम्बोधन (vocative), used when directly addressing someone."
+      },
+      {
+         "id":"VIB-041",
+         "type":"sentence-analysis",
+         "question":"<strong>बालकः वृक्षात् फलम् आनयति।</strong><br><br>Which word answers <strong>किम्?</strong>",
+         "options":[
+            "बालकः",
+            "वृक्षात्",
+            "फलम्",
+            "आनयति"
+         ],
+         "correct":2,
+         "explanation":"Ask 'What does the boy bring?' The answer is <strong>फलम्</strong>, which is the कर्म (द्वितीया)."
+      },
+      {
+         "id":"VIB-042",
+         "type":"sentence-analysis",
+         "question":"<strong>बालकः वृक्षात् फलम् आनयति।</strong><br><br>Which word answers <strong>कस्मात्?</strong>",
+         "options":[
+            "बालकः",
+            "वृक्षात्",
+            "फलम्",
+            "आनयति"
+         ],
+         "correct":1,
+         "explanation":"<strong>वृक्षात्</strong> is पञ्चमी and indicates the source ('from the tree')."
+      },
+      {
+         "id":"VIB-043",
+         "type":"sentence-analysis",
+         "question":"<strong>बालकः वृक्षात् फलम् आनयति।</strong><br><br>Which word is in द्वितीया विभक्ति?",
+         "options":[
+            "बालकः",
+            "वृक्षात्",
+            "फलम्",
+            "आनयति"
+         ],
+         "correct":2,
+         "explanation":"<strong>फलम्</strong> is the object of the verb and is therefore in द्वितीया."
+      },
+      {
+         "id":"VIB-044",
+         "type":"sentence-analysis",
+         "question":"<strong>रामः आश्रमे श्लोकं पठति।</strong><br><br>Which word answers <strong>कुत्र?</strong>",
+         "options":[
+            "रामः",
+            "आश्रमे",
+            "श्लोकम्",
+            "पठति"
+         ],
+         "correct":1,
+         "explanation":"<strong>आश्रमे</strong> is सप्तमी and answers 'Where?'."
+      },
+      {
+         "id":"VIB-045",
+         "type":"sentence-analysis",
+         "question":"<strong>रामः आश्रमे श्लोकं पठति।</strong><br><br>Which word is the कर्म?",
+         "options":[
+            "रामः",
+            "आश्रमे",
+            "श्लोकम्",
+            "पठति"
+         ],
+         "correct":2,
+         "explanation":"<strong>श्लोकम्</strong> is what is being read, making it the कर्म."
+      },
+      {
+         "id":"VIB-046",
+         "type":"sentence-analysis",
+         "question":"<strong>रामः आश्रमे श्लोकं पठति।</strong><br><br>Which word is in प्रथमा विभक्ति?",
+         "options":[
+            "रामः",
+            "आश्रमे",
+            "श्लोकम्",
+            "पठति"
+         ],
+         "correct":0,
+         "explanation":"<strong>रामः</strong> is the subject (कर्ता) and is therefore in प्रथमा."
+      },
+      {
+         "id":"VIB-047",
+         "type":"pattern-recognition",
+         "question":"Which pair answers <strong>कुत्र?</strong>",
+         "options":[
+            "आश्रमे, विद्यालये",
+            "रामस्य, देवस्य",
+            "रामेण, देवेन",
+            "ग्रामात्, वृक्षात्"
+         ],
+         "correct":0,
+         "explanation":"Both words are सप्तमी forms expressing location."
+      },
+      {
+         "id":"VIB-048",
+         "type":"pattern-recognition",
+         "question":"Which pair answers <strong>कस्मात्?</strong>",
+         "options":[
+            "ग्रामात्, वृक्षात्",
+            "रामाय, देवाय",
+            "रामस्य, देवस्य",
+            "रामेण, देवेन"
+         ],
+         "correct":0,
+         "explanation":"Both words are पञ्चमी forms expressing source."
+      },
+      {
+         "id":"VIB-049",
+         "type":"best-answer",
+         "question":"<strong>शिष्यः ______ श्लोकं पठति।</strong><br><br>Choose the word meaning <strong>'in the hermitage'</strong>.",
+         "options":[
+            "आश्रमात्",
+            "आश्रमे",
+            "आश्रमस्य",
+            "आश्रमाय"
+         ],
+         "correct":1,
+         "explanation":"<strong>आश्रमे</strong> is सप्तमी and means 'in the hermitage'."
+      },
+      {
+         "id":"VIB-050",
+         "type":"find-error",
+         "question":"Which word does NOT answer <strong>कस्य?</strong>",
+         "options":[
+            "रामस्य",
+            "देवस्य",
+            "ग्रन्थस्य",
+            "देवेन"
+         ],
+         "correct":3,
+         "explanation":"<strong>देवेन</strong> is तृतीया, not षष्ठी."
+      },
+      {
+         "id":"VIB-051",
+         "type":"multi-analysis",
+         "question":"<strong>हे राम! बालकः विद्यालये ग्रन्थं पठति।</strong><br><br>Which word is in सम्बोधन विभक्ति?",
+         "options":[
+            "राम",
+            "बालकः",
+            "विद्यालये",
+            "ग्रन्थम्"
+         ],
+         "correct":0,
+         "explanation":"<strong>हे राम!</strong> is सम्बोधन because Rama is being directly addressed."
+      },
+      {
+         "id":"VIB-052",
+         "type":"multi-analysis",
+         "question":"<strong>हे राम! बालकः विद्यालये ग्रन्थं पठति।</strong><br><br>Which word answers <strong>कुत्र?</strong>",
+         "options":[
+            "राम",
+            "बालकः",
+            "विद्यालये",
+            "ग्रन्थम्"
+         ],
+         "correct":2,
+         "explanation":"<strong>विद्यालये</strong> is सप्तमी indicating location."
+      },
+      {
+         "id":"VIB-053",
+         "type":"multi-analysis",
+         "question":"<strong>हे राम! बालकः विद्यालये ग्रन्थं पठति।</strong><br><br>Which word is the कर्म?",
+         "options":[
+            "राम",
+            "बालकः",
+            "विद्यालये",
+            "ग्रन्थम्"
+         ],
+         "correct":3,
+         "explanation":"<strong>ग्रन्थम्</strong> is what is being read."
+      },
+      {
+         "id":"VIB-054",
+         "type":"identify",
+         "question":"Which word is in तृतीया विभक्ति?",
+         "options":[
+            "रामस्य",
+            "रामेण",
+            "रामाय",
+            "रामात्"
+         ],
+         "correct":1,
+         "explanation":"<strong>रामेण</strong> is तृतीया एकवचन."
+      },
+      {
+         "id":"VIB-055",
+         "type":"identify",
+         "question":"Which word is in चतुर्थी विभक्ति?",
+         "options":[
+            "मोक्षाय",
+            "मोक्षस्य",
+            "मोक्षात्",
+            "मोक्षे"
+         ],
+         "correct":0,
+         "explanation":"<strong>मोक्षाय</strong> is चतुर्थी and expresses purpose or recipient."
+      },
+      {
+         "id":"VIB-056",
+         "type":"identify",
+         "question":"Which word is in पञ्चमी विभक्ति?",
+         "options":[
+            "ग्रामे",
+            "ग्रामात्",
+            "ग्रामस्य",
+            "ग्रामाय"
+         ],
+         "correct":1,
+         "explanation":"<strong>ग्रामात्</strong> is पञ्चमी and answers 'from where?'."
+      },
+      {
+         "id":"VIB-057",
+         "type":"identify",
+         "question":"Which word is in सप्तमी विभक्ति?",
+         "options":[
+            "आश्रमे",
+            "आश्रमस्य",
+            "आश्रमात्",
+            "आश्रमाय"
+         ],
+         "correct":0,
+         "explanation":"<strong>आश्रमे</strong> is सप्तमी and answers 'where?'."
+      },
+      {
+         "id":"VIB-058",
+         "type":"pattern-recognition",
+         "question":"Which group contains only तृतीया forms?",
+         "options":[
+            "रामेण, देवेन, बालकेन",
+            "रामस्य, देवस्य, बालकस्य",
+            "रामाय, देवाय, बालकाय",
+            "रामात्, देवात्, बालकात्"
+         ],
+         "correct":0,
+         "explanation":"All three words end in the instrumental singular ending."
+      },
+      {
+         "id":"VIB-059",
+         "type":"pattern-recognition",
+         "question":"Which group contains only षष्ठी forms?",
+         "options":[
+            "रामस्य, देवस्य, ग्रन्थस्य",
+            "रामेण, देवेन, ग्रन्थेन",
+            "रामात्, देवात्, ग्रन्थात्",
+            "रामे, देवे, ग्रन्थे"
+         ],
+         "correct":0,
+         "explanation":"Each word answers <strong>कस्य?</strong>"
+      },
+      {
+         "id":"VIB-060",
+         "type":"sentence-analysis",
+         "question":"<strong>हे यज्ञेश! प्रातःकाले मुनिवरस्य आश्रमे शिष्यः मोक्षाय कण्ठेन ग्रन्थात् श्लोकं रटति।</strong><br><br>Which word is in चतुर्थी विभक्ति?",
+         "options":[
+            "मुनिवरस्य",
+            "मोक्षाय",
+            "ग्रन्थात्",
+            "कण्ठेन"
+         ],
+         "correct":1,
+         "explanation":"<strong>मोक्षाय</strong> is चतुर्थी and expresses purpose ('for liberation')."
+      },
+      {
+         "id":"VIB-061",
+         "type":"application",
+         "question":"Choose the correct sentence.",
+         "options":[
+            "देवः वनम् पश्यति।",
+            "देवम् वनः पश्यति।",
+            "वनः देवम् पश्यति।",
+            "देवौ वनः पश्यति।"
+         ],
+         "correct":0,
+         "explanation":"Subject is प्रथमा, object is द्वितीया."
+      },
+      {
+         "id":"VIB-062",
+         "type":"application",
+         "question":"Complete: अहं ____ गच्छामि। (to the forest)",
+         "options":[
+            "वनम्",
+            "वनाय",
+            "वने",
+            "वनेन"
+         ],
+         "correct":0,
+         "explanation":"Destination with गच्छ requires द्वितीया in your current syllabus."
+      },
+      {
+         "id":"VIB-063",
+         "type":"application",
+         "question":"Which form means 'with the garland'?",
+         "options":[
+            "मालायै",
+            "मालया",
+            "मालाम्",
+            "मालायाः"
+         ],
+         "correct":1,
+         "explanation":"तृतीया = instrument."
+      },
+      {
+         "id":"VIB-064",
+         "type":"application",
+         "question":"Choose the correct form: 'in the garland'",
+         "options":[
+            "मालायाम्",
+            "मालाम्",
+            "मालया",
+            "मालायै"
+         ],
+         "correct":0,
+         "explanation":"सप्तमी."
+      },
+      {
+         "id":"VIB-065",
+         "type":"application",
+         "question":"Choose the correct form: 'from the god'",
+         "options":[
+            "देवात्",
+            "देवाय",
+            "देवेन",
+            "देवस्य"
+         ],
+         "correct":0,
+         "explanation":"पञ्चमी."
+      },
+      {
+         "id":"VIB-066",
+         "type":"application",
+         "question":"Choose the correct form: 'of the forest'",
+         "options":[
+            "वनेन",
+            "वनस्य",
+            "वनाय",
+            "वने"
+         ],
+         "correct":1,
+         "explanation":"षष्ठी."
+      },
+      {
+         "id":"VIB-067",
+         "type":"application",
+         "question":"Choose the correct sentence.",
+         "options":[
+            "बालकः मालया लिखति।",
+            "बालकः मालाम् लिखति।",
+            "बालकः मालायाः लिखति।",
+            "बालकः माले लिखति।"
+         ],
+         "correct":0,
+         "explanation":"Instrument = तृतीया."
+      },
+      {
+         "id":"VIB-068",
+         "type":"application",
+         "question":"Which form means 'to the garland'?",
+         "options":[
+            "मालायै",
+            "मालायाः",
+            "मालया",
+            "मालाम्"
+         ],
+         "correct":0,
+         "explanation":"चतुर्थी."
+      },
+      {
+         "id":"VIB-069",
+         "type":"application",
+         "question":"Choose the correct sentence.",
+         "options":[
+            "हे माले!",
+            "हे मालाम्!",
+            "हे मालया!",
+            "हे मालायै!"
+         ],
+         "correct":0,
+         "explanation":"Vocative singular."
+      },
+      {
+         "id":"VIB-070",
+         "type":"application",
+         "question":"Which pair belongs to the same विभक्ति?",
+         "options":[
+            "देवेन • वनेन",
+            "देवेन • वनस्य",
+            "देवस्य • वनेन",
+            "देवात् • वनस्य"
+         ],
+         "correct":0,
+         "explanation":"Both are तृतीया एकवचन."
+      },
+      {
+         "id":"VIB-071",
+         "type":"application",
+         "question":"Complete the sentence: बालकः ____ पठति। (the book)",
+         "options":[
+            "पुस्तकम्",
+            "पुस्तके",
+            "पुस्तकेन",
+            "पुस्तकस्य"
+         ],
+         "correct":0,
+         "explanation":"The book is the object, so use द्वितीया."
+      },
+      {
+         "id":"VIB-072",
+         "type":"application",
+         "question":"Complete: बालकः ____ लिखति। (with a pen)",
+         "options":[
+            "लेखन्या",
+            "लेखनी",
+            "लेखन्याम्",
+            "लेखन्यै"
+         ],
+         "correct":0,
+         "explanation":"Instrument takes तृतीया."
+      },
+      {
+         "id":"VIB-073",
+         "type":"application",
+         "question":"Which sentence is grammatically correct?",
+         "options":[
+            "बालकः वनम् गच्छति।",
+            "बालकम् वनः गच्छति।",
+            "वनम् बालकः गच्छन्ति।",
+            "बालकेन वनः गच्छति।"
+         ],
+         "correct":0,
+         "explanation":"Subject is प्रथमा, destination uses द्वितीया."
+      },
+      {
+         "id":"VIB-074",
+         "type":"application",
+         "question":"Choose the correct word: 'The teacher lives in the forest.'",
+         "sentence":"शिक्षकः ____ वसति।",
+         "options":[
+            "वने",
+            "वनम्",
+            "वनस्य",
+            "वनेन"
+         ],
+         "correct":0,
+         "explanation":"Location requires सप्तमी."
+      },
+      {
+         "id":"VIB-075",
+         "type":"application",
+         "question":"Choose the correct word: 'The student comes from the temple.'",
+         "sentence":"छात्रः ____ आगच्छति।",
+         "options":[
+            "मन्दिरात्",
+            "मन्दिरम्",
+            "मन्दिरे",
+            "मन्दिरेण"
+         ],
+         "correct":0,
+         "explanation":"Source requires पञ्चमी."
+      },
+      {
+         "id":"VIB-076",
+         "type":"application",
+         "question":"Choose the correct form: 'This is the teacher's book.'",
+         "sentence":"एतत् ____ पुस्तकम्।",
+         "options":[
+            "शिक्षकस्य",
+            "शिक्षकेन",
+            "शिक्षकाय",
+            "शिक्षकात्"
+         ],
+         "correct":0,
+         "explanation":"Possession uses षष्ठी."
+      },
+      {
+         "id":"VIB-077",
+         "type":"application",
+         "question":"Choose the correct greeting.",
+         "options":[
+            "हे देव!",
+            "देवस्य",
+            "देवेन",
+            "देवात्"
+         ],
+         "correct":0,
+         "explanation":"Addressing someone uses सम्बोधन."
+      },
+      {
+         "id":"VIB-078",
+         "type":"application",
+         "question":"Complete: बालिका ____ पुष्पं ददाति। (to Sita)",
+         "options":[
+            "सीतायै",
+            "सीताम्",
+            "सीतया",
+            "सीतायाः"
+         ],
+         "correct":0,
+         "explanation":"Recipient uses चतुर्थी."
+      },
+      {
+         "id":"VIB-079",
+         "type":"application",
+         "question":"Choose the correct sentence.",
+         "options":[
+            "बालकः देवालये अस्ति।",
+            "बालकः देवालयम् अस्ति।",
+            "बालकः देवालयेन अस्ति।",
+            "बालकः देवालयस्य अस्ति।"
+         ],
+         "correct":0,
+         "explanation":"Location uses सप्तमी."
+      },
+      {
+         "id":"VIB-080",
+         "type":"application",
+         "question":"Which word completes the sentence?",
+         "sentence":"रामः ____ जलं पिबति।",
+         "options":[
+            "चषकेन",
+            "चषकम्",
+            "चषकस्य",
+            "चषकात्"
+         ],
+         "correct":0,
+         "explanation":"Drinking with a cup uses तृतीया."
+      },
+      {
+         "id":"VIB-081",
+         "type":"application",
+         "question":"Choose the correct form.",
+         "sentence":"बालकः ____ खादति। (the fruit)",
+         "options":[
+            "फलम्",
+            "फले",
+            "फलेन",
+            "फलस्य"
+         ],
+         "correct":0,
+         "explanation":"Object uses द्वितीया."
+      },
+      {
+         "id":"VIB-082",
+         "type":"application",
+         "question":"Choose the correct sentence.",
+         "options":[
+            "माला मेजे अस्ति।",
+            "माला मेजम् अस्ति।",
+            "माला मेजेन अस्ति।",
+            "माला मेजस्य अस्ति।"
+         ],
+         "correct":0,
+         "explanation":"Location uses सप्तमी."
+      },
+      {
+         "id":"VIB-083",
+         "type":"application",
+         "question":"Choose the correct form.",
+         "sentence":"अहं ____ नमामि। (to the teacher)",
+         "options":[
+            "शिक्षकाय",
+            "शिक्षकम्",
+            "शिक्षकेन",
+            "शिक्षकस्य"
+         ],
+         "correct":0,
+         "explanation":"Recipient uses चतुर्थी."
+      },
+      {
+         "id":"VIB-084",
+         "type":"application",
+         "question":"Which sentence is correct?",
+         "options":[
+            "बालिका मालया क्रीडति।",
+            "बालिका मालाम् क्रीडति।",
+            "बालिका मालायाः क्रीडति।",
+            "बालिका मालायै क्रीडति।"
+         ],
+         "correct":0,
+         "explanation":"Instrument uses तृतीया."
+      },
+      {
+         "id":"VIB-085",
+         "type":"application",
+         "question":"Choose the correct form.",
+         "sentence":"एषः श्लोकः ____ अस्ति। (in the book)",
+         "options":[
+            "ग्रन्थे",
+            "ग्रन्थम्",
+            "ग्रन्थस्य",
+            "ग्रन्थेन"
+         ],
+         "correct":0,
+         "explanation":"Location uses सप्तमी."
+      },
+      {
+         "id":"VIB-086",
+         "type":"sentence_correction",
+         "question":"Choose the correctly corrected sentence.",
+         "sentence":"बालकः पुस्तकः पठति।",
+         "options":[
+            "बालकः पुस्तके पठति।",
+            "बालकः पुस्तकम् पठति।",
+            "बालकम् पुस्तकः पठति।",
+            "बालकेन पुस्तकम् पठति।"
+         ],
+         "correct":1,
+         "explanation":"पुस्तकम् is the object of पठति, so it must be in द्वितीया एकवचन."
+      },
+      {
+         "id":"VIB-087",
+         "type":"sentence_correction",
+         "question":"Choose the correctly corrected sentence.",
+         "sentence":"बालकः वनम् वसति।",
+         "options":[
+            "बालकः वने वसति।",
+            "बालकः वनात् वसति।",
+            "बालकः वनेन वसति।",
+            "बालकः वनस्य वसति।"
+         ],
+         "correct":0,
+         "explanation":"The forest is the location, so वन must be सप्तमी एकवचन: वने."
+      },
+      {
+         "id":"VIB-088",
+         "type":"find_error",
+         "question":"Which word is in the wrong विभक्ति?",
+         "sentence":"छात्रः मन्दिरेण पठति।",
+         "options":[
+            "छात्रः",
+            "मन्दिरेण",
+            "पठति",
+            "No mistake"
+         ],
+         "correct":1,
+         "explanation":"A place where the action occurs requires सप्तमी. मन्दिरेण should be मन्दिरे."
+      },
+      {
+         "id":"VIB-089",
+         "type":"sentence_correction",
+         "question":"Choose the correct sentence.",
+         "sentence":"बालिका माला धारयति।",
+         "options":[
+            "बालिकाम् माला धारयति।",
+            "बालिका मालया धारयति।",
+            "बालिका मालाम् धारयति।",
+            "बालिका मालायाम् धारयति।"
+         ],
+         "correct":2,
+         "explanation":"माला is the object of धारयति, so the correct द्वितीया form is मालाम्."
+      },
+      {
+         "id":"VIB-090",
+         "type":"sentence_correction",
+         "question":"Choose the correctly corrected sentence.",
+         "sentence":"पुष्पम् माला अस्ति।",
+         "options":[
+            "पुष्पम् मालया अस्ति।",
+            "पुष्पम् मालायाम् अस्ति।",
+            "पुष्पम् मालायै अस्ति।",
+            "पुष्पम् मालायाः अस्ति।"
+         ],
+         "correct":1,
+         "explanation":"The flower is in the garland, so माला takes सप्तमी एकवचन: मालायाम्."
+      },
+      {
+         "id":"VIB-091",
+         "type":"missing_form",
+         "question":"Choose the correct form to complete the sentence.",
+         "sentence":"बालिका ____ पुष्पं गृह्णाति। (from the garland)",
+         "options":[
+            "मालाम्",
+            "मालया",
+            "मालायाः",
+            "मालायै"
+         ],
+         "correct":2,
+         "explanation":"Source or separation requires पञ्चमी. The correct form is मालायाः."
+      },
+      {
+         "id":"VIB-092",
+         "type":"missing_form",
+         "question":"Choose the correct form to complete the sentence.",
+         "sentence":"बालकः ____ जलम् आनयति। (from the forest)",
+         "options":[
+            "वने",
+            "वनात्",
+            "वनस्य",
+            "वनेन"
+         ],
+         "correct":1,
+         "explanation":"The source is expressed by पञ्चमी एकवचन: वनात्."
+      },
+      {
+         "id":"VIB-093",
+         "type":"find_error",
+         "question":"Which word should be corrected?",
+         "sentence":"माला बालिकायाः हस्तेन अस्ति।",
+         "options":[
+            "माला",
+            "बालिकायाः",
+            "हस्तेन",
+            "अस्ति"
+         ],
+         "correct":2,
+         "explanation":"To express location in the hand, हस्तेन should be replaced by हस्ते."
+      },
+      {
+         "id":"VIB-094",
+         "type":"sentence_correction",
+         "question":"Choose the correct sentence.",
+         "sentence":"शिक्षकः छात्रम् पुस्तकम् ददाति।",
+         "options":[
+            "शिक्षकः छात्रे पुस्तकम् ददाति।",
+            "शिक्षकः छात्रस्य पुस्तकम् ददाति।",
+            "शिक्षकः छात्राय पुस्तकम् ददाति।",
+            "शिक्षकः छात्रेण पुस्तकम् ददाति।"
+         ],
+         "correct":2,
+         "explanation":"The student is the recipient, so छात्र takes चतुर्थी एकवचन: छात्राय."
+      },
+      {
+         "id":"VIB-095",
+         "type":"sentence_correction",
+         "question":"Choose the correct sentence.",
+         "sentence":"बालिका सीताम् पुष्पं ददाति।",
+         "options":[
+            "बालिका सीतायै पुष्पं ददाति।",
+            "बालिका सीतया पुष्पं ददाति।",
+            "बालिका सीतायाः पुष्पं ददाति।",
+            "बालिका सीतायाम् पुष्पं ददाति।"
+         ],
+         "correct":0,
+         "explanation":"सीता is the recipient, so the correct चतुर्थी form is सीतायै."
+      },
+      {
+         "id":"VIB-096",
+         "type":"find_error",
+         "question":"Which word is in the wrong form?",
+         "sentence":"बालकः चषकम् जलं पिबति।",
+         "options":[
+            "बालकः",
+            "चषकम्",
+            "जलम्",
+            "पिबति"
+         ],
+         "correct":1,
+         "explanation":"The cup is the instrument, so चषकम् should be चषकेण."
+      },
+      {
+         "id":"VIB-097",
+         "type":"sentence_correction",
+         "question":"Choose the correctly corrected sentence.",
+         "sentence":"बालिका माला क्रीडति।",
+         "options":[
+            "बालिका मालायै क्रीडति।",
+            "बालिका मालायाः क्रीडति।",
+            "बालिका मालया क्रीडति।",
+            "बालिका मालायाम् क्रीडति।"
+         ],
+         "correct":2,
+         "explanation":"The garland is used as the instrument, so मालया is required."
+      },
+      {
+         "id":"VIB-098",
+         "type":"missing_form",
+         "question":"Choose the correct form.",
+         "sentence":"____ वर्णः सुन्दरः अस्ति। (the color of the garland)",
+         "options":[
+            "मालाम्",
+            "मालया",
+            "मालायाः",
+            "मालायाम्"
+         ],
+         "correct":2,
+         "explanation":"Possession or relation requires षष्ठी. मालायाः means 'of the garland.'"
+      },
+      {
+         "id":"VIB-099",
+         "type":"missing_form",
+         "question":"Choose the correct form.",
+         "sentence":"____ वृक्षाः सन्ति। (trees of the forest)",
+         "options":[
+            "वनस्य",
+            "वनात्",
+            "वनेन",
+            "वने"
+         ],
+         "correct":0,
+         "explanation":"The relation 'of the forest' requires षष्ठी एकवचन: वनस्य."
+      },
+      {
+         "id":"VIB-100",
+         "type":"multiple_correction",
+         "question":"Choose the completely corrected sentence.",
+         "sentence":"बालिका माला पुष्पः स्थापयति।",
+         "options":[
+            "बालिका मालया पुष्पः स्थापयति।",
+            "बालिका मालायाम् पुष्पं स्थापयति।",
+            "बालिकाम् मालायाम् पुष्पः स्थापयति।",
+            "बालिका मालाम् पुष्पे स्थापयति।"
+         ],
+         "correct":1,
+         "explanation":"The flower is the object, so पुष्पम् becomes पुष्पं before the consonant. The garland is the location, so use मालायाम्."
+      },
+      {
+         "id":"VIB-101",
+         "type":"multiple_correction",
+         "question":"Choose the completely corrected sentence.",
+         "sentence":"बालकम् वनेन फलः खादति।",
+         "options":[
+            "बालकः वने फलम् खादति।",
+            "बालकेन वनात् फलम् खादति।",
+            "बालकः वनस्य फले खादति।",
+            "बालकम् वने फलात् खादति।"
+         ],
+         "correct":0,
+         "explanation":"The subject is बालकः, the location is वने, and the object is फलम्."
+      },
+      {
+         "id":"VIB-102",
+         "type":"find_error",
+         "question":"Which word is incorrect?",
+         "sentence":"बालिका मालायै पुष्पं स्थापयति।",
+         "options":[
+            "बालिका",
+            "मालायै",
+            "पुष्पम्",
+            "स्थापयति"
+         ],
+         "correct":1,
+         "explanation":"The flower is placed in the garland, so मालायै should be मालायाम्."
+      },
+      {
+         "id":"VIB-103",
+         "type":"sentence_correction",
+         "question":"Choose the correct sentence.",
+         "sentence":"फलः वने अस्ति।",
+         "options":[
+            "फलम् वने अस्ति।",
+            "फले वनम् अस्ति।",
+            "फलेन वने अस्ति।",
+            "फलस्य वनात् अस्ति।"
+         ],
+         "correct":0,
+         "explanation":"फल is neuter, so its प्रथमा एकवचन form is फलम्."
+      },
+      {
+         "id":"VIB-104",
+         "type":"sentence_correction",
+         "question":"Choose the correct sentence.",
+         "sentence":"मालाम् सुन्दरा अस्ति।",
+         "options":[
+            "मालया सुन्दरा अस्ति।",
+            "मालायाः सुन्दरा अस्ति।",
+            "माला सुन्दरा अस्ति।",
+            "मालायाम् सुन्दरा अस्ति।"
+         ],
+         "correct":2,
+         "explanation":"माला is the subject, so it must be in प्रथमा एकवचन."
+      },
+      {
+         "id":"VIB-105",
+         "type":"find_error",
+         "question":"Which word should be corrected?",
+         "sentence":"वनस्य विशालम् अस्ति।",
+         "options":[
+            "वनस्य",
+            "विशालम्",
+            "अस्ति",
+            "No mistake"
+         ],
+         "correct":0,
+         "explanation":"वन is the subject, so वनस्य should be वनम्."
+      },
+      {
+         "id":"VIB-106",
+         "type":"missing_form",
+         "question":"Choose the correct form to complete the sentence.",
+         "sentence":"बालिका ____ गच्छति। (to the assembly)",
+         "options":[
+            "सभया",
+            "सभायाः",
+            "सभाम्",
+            "सभायाम्"
+         ],
+         "correct":2,
+         "explanation":"The destination is expressed by द्वितीया: सभाम्."
+      },
+      {
+         "id":"VIB-107",
+         "type":"missing_form",
+         "question":"Choose the correct form to complete the sentence.",
+         "sentence":"भक्ताः ____ उपविशन्ति। (in the assembly)",
+         "options":[
+            "सभाम्",
+            "सभया",
+            "सभायाम्",
+            "सभायै"
+         ],
+         "correct":2,
+         "explanation":"Location requires सप्तमी. The correct form is सभायाम्."
+      },
+      {
+         "id":"VIB-108",
+         "type":"sentence_correction",
+         "question":"Choose the correct sentence.",
+         "sentence":"बालिका सभा आगच्छति।",
+         "options":[
+            "बालिका सभया आगच्छति।",
+            "बालिका सभात् आगच्छति।",
+            "बालिका सभायाः आगच्छति।",
+            "बालिका सभाम् आगच्छति।"
+         ],
+         "correct":2,
+         "explanation":"Coming from the assembly requires पञ्चमी. For सभा, the form is सभायाः."
+      },
+      {
+         "id":"VIB-109",
+         "type":"multiple_correction",
+         "question":"Choose the completely corrected sentence.",
+         "sentence":"बालकम् मन्दिरम् देवं नमति।",
+         "options":[
+            "बालकः मन्दिरे देवम् नमति।",
+            "बालकेन मन्दिरात् देवः नमति।",
+            "बालकः मन्दिरस्य देवे नमति।",
+            "बालकम् मन्दिरेण देवाय नमति।"
+         ],
+         "correct":0,
+         "explanation":"बालकः is the subject, मन्दिरे is the location, and देवम् is connected with नमति as the object in this course pattern."
+      },
+      {
+         "id":"VIB-110",
+         "type":"find_error",
+         "question":"Which word is in the wrong विभक्ति?",
+         "sentence":"बालिका वनस्य पुष्पं गृह्णाति।",
+         "options":[
+            "बालिका",
+            "वनस्य",
+            "पुष्पम्",
+            "गृह्णाति"
+         ],
+         "correct":1,
+         "explanation":"The flower is taken from the forest, so वनस्य should be वनात्."
+      },
+      {
+         "id":"VIB-111",
+         "type":"sentence_correction",
+         "question":"Choose the correct sentence.",
+         "sentence":"बालकः माला पुष्पं गृह्णाति।",
+         "options":[
+            "बालकः मालाम् पुष्पं गृह्णाति।",
+            "बालकः मालया पुष्पं गृह्णाति।",
+            "बालकः मालायाः पुष्पं गृह्णाति।",
+            "बालकः मालायै पुष्पं गृह्णाति।"
+         ],
+         "correct":2,
+         "explanation":"The flower is taken from the garland, so माला takes पञ्चमी: मालायाः."
+      },
+      {
+         "id":"VIB-112",
+         "type":"multiple_correction",
+         "question":"Choose the completely corrected sentence.",
+         "sentence":"बालिका मालया पुष्पः देवाय ददाति।",
+         "options":[
+            "बालिका मालाम् पुष्पं देवम् ददाति।",
+            "बालिका मालायाः पुष्पं देवाय ददाति।",
+            "बालिकाम् मालायाः पुष्पः देवाय ददाति।",
+            "बालिका मालायाम् पुष्पे देवस्य ददाति।"
+         ],
+         "correct":1,
+         "explanation":"The flower comes from the garland, so use मालायाः. पुष्पम् is the thing given, and देवाय is the recipient."
+      },
+      {
+         "id":"VIB-113",
+         "type":"missing_form",
+         "question":"Choose the correct form.",
+         "sentence":"____ नमः। (O garland!)",
+         "options":[
+            "हे माला",
+            "हे मालाम्",
+            "हे माले",
+            "हे मालया"
+         ],
+         "correct":2,
+         "explanation":"The सम्बोधन एकवचन of माला is हे माले."
+      },
+      {
+         "id":"VIB-114",
+         "type":"sentence_correction",
+         "question":"Choose the correct sentence.",
+         "sentence":"हे वनम्! त्वं सुन्दरम् अस्ति।",
+         "options":[
+            "हे वने! वनम् सुन्दरम् अस्ति।",
+            "हे वन! वनम् सुन्दरम् अस्ति।",
+            "हे वनात्! वनं सुन्दरम् अस्ति।",
+            "हे वनेन! वनस्य सुन्दरम् अस्ति।"
+         ],
+         "correct":1,
+         "explanation":"The सम्बोधन singular of वनम् is हे वन. वनम् is the neuter subject."
+      },
+      {
+         "id":"VIB-115",
+         "type":"multiple_correction",
+         "question":"Choose the completely corrected sentence.",
+         "sentence":"बालिकाम् वनस्य माला धारयति।",
+         "options":[
+            "बालिका वने मालाम् धारयति।",
+            "बालिका वनात् माला धारयति।",
+            "बालिकया वने मालायाः धारयति।",
+            "बालिका वनेन मालायै धारयति।"
+         ],
+         "correct":0,
+         "explanation":"बालिका is the subject, वने identifies the location, and मालाम् is the object of धारयति."
+      }
+   ]
+}

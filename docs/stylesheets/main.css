@@ -1,160 +1,134 @@
 /* ============================================================
-   SANSKRIT STUDY GUIDE — Unified Stylesheet
-   Merged: vocab-search.css + main.css enhancements
-   Compatible with MkDocs Material
+   SANSKRIT STUDY GUIDE — Main Stylesheet
+   Merged: vocab-search.css + enhancements
    ============================================================ */
 
 /* ── 1. FONT IMPORTS ───────────────────────────────────────── */
-@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+Devanagari:wght@400;500;600;700&family=Noto+Sans+Gujarati:wght@400;500;600;700&family=Inter:wght@400;500;600;700&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Devanagari:wght@400;500;600;700&family=Noto+Sans+Gujarati:wght@400;500;600;700&family=Inter:wght@400;500;600;700&display=swap');
 
-/* ── 2. CSS CUSTOM PROPERTIES ────────────────────────────── */
-:root {
-  --ssg-primary: #7c4dff;
-  --ssg-primary-light: #b388ff;
-  --ssg-primary-dark: #651fff;
-  --ssg-accent: #ff6e40;
-  --ssg-transition: 0.25s cubic-bezier(0.4, 0, 0.2, 1);
-  --ssg-font-sans:
-    "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-  --ssg-font-deva: "Noto Sans Devanagari", "Sanskrit 2003", "Mangal", serif;
-  --ssg-font-guj: "Noto Sans Gujarati", "Shruti", sans-serif;
+/* ── 2. SANSKRIT / GUJARATI FONT ASSIGNMENTS ─────────────── */
+.md-typeset :is([lang="sa"], [lang="gu"], [lang="hi"]),
+.md-typeset td:first-child,
+.md-typeset th:first-child {
+  font-family: 'Noto Sans Devanagari', 'Sanskrit 2003', 'Mangal', serif;
 }
 
-/* ── 3. BASE TYPOGRAPHY ──────────────────────────────────── */
+.md-typeset td:nth-child(3),
+.md-typeset th:nth-child(3) {
+  font-family: 'Noto Sans Gujarati', 'Shruti', sans-serif;
+}
+
+/* ── 3. OCTICONS ARROW FALLBACK ──────────────────────────── */
+.octicons-arrow-right-24:empty::before,
+.md-typeset .octicons-arrow-right-24:empty::before {
+  content: "→";
+  font-size: 1em;
+  line-height: 1;
+}
+
+a:hover .octicons-arrow-right-24,
+.md-typeset a:hover .octicons-arrow-right-24 {
+  transform: translateX(3px);
+}
+
+/* ── 4. TWEMOJI / EMOJI IN CARDS ─────────────────────────── */
+.md-typeset .grid.cards .twemoji,
+.md-typeset .grid.cards img.twemoji {
+  display: inline-block;
+  width: 1.1em;
+  height: 1.1em;
+  vertical-align: -0.15em;
+  margin-right: 0.1em;
+}
+
+/* ============================================
+   Global Typography Rebalance + Search Styles
+   ============================================ */
+
+/* ---- Base: compact for desktop, readable ---- */
 .md-typeset {
-  font-family: var(--ssg-font-sans);
-  font-size: 1.15rem;
-  line-height: 1.75;
+  font-size: 0.95rem;
+  line-height: 1.65;
 }
 
 .md-typeset h1 {
-  font-size: 1.9rem;
+  font-size: 1.5rem;
   font-weight: 600;
-  margin-bottom: 0.6rem;
+  margin-bottom: 0.5rem;
   color: var(--md-default-fg-color);
 }
 
 .md-typeset h2 {
-  font-size: 1.45rem;
+  font-size: 1.2rem;
   font-weight: 600;
-  margin-top: 2.2rem;
-  margin-bottom: 0.8rem;
-  padding-bottom: 0.35rem;
+  margin-top: 1.8rem;
+  margin-bottom: 0.6rem;
+  padding-bottom: 0.25rem;
   border-bottom: 1px solid var(--md-default-fg-color--lightest);
 }
 
 .md-typeset h3 {
-  font-size: 1.2rem;
+  font-size: 1.05rem;
   font-weight: 600;
-  margin-top: 1.6rem;
-  margin-bottom: 0.5rem;
+  margin-top: 1.4rem;
+  margin-bottom: 0.4rem;
 }
 
 .md-typeset p,
 .md-typeset li {
-  font-size: 1.05rem;
-  line-height: 1.75;
+  font-size: 0.95rem;
+  line-height: 1.65;
 }
 
-/* Sanskrit & Gujarati text */
-.md-typeset :is([lang="sa"], [lang="gu"], [lang="hi"]) {
-  font-family: var(--ssg-font-deva);
-  line-height: 1.7;
+/* ---- TABLES: compact but readable ---- */
+.md-typeset .md-typeset__table {
+  display: block;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
 }
 
-/* Table first column: Sanskrit words — must override .md-typeset table td */
-.md-typeset table td:first-child,
-.md-typeset table th:first-child {
-  font-family: var(--ssg-font-deva);
-  font-size: 1.15rem;
-  line-height: 1.7;
-}
-
-.md-typeset table td:nth-child(3),
-.md-typeset table th:nth-child(3) {
-  font-family: var(--ssg-font-guj);
-  font-size: 1.15rem;
-  line-height: 1.7;
-}
-
-/* ── 4. TABLES ───────────────────────────────────────────── */
 .md-typeset table {
-  font-size: 1rem;
-  margin: 1rem 0 1.5rem;
-  display: table;
+  font-size: 0.88rem;
+  margin: 0.75rem 0 1.25rem;
   width: 100%;
-  border-radius: 0.5rem;
-  overflow: hidden;
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
-  border: 1px solid var(--md-default-fg-color--lightest);
 }
 
 .md-typeset table th,
 .md-typeset table td {
-  padding: 0.7rem 1rem;
-  line-height: 1.5;
-  border-bottom: 1px solid var(--md-default-fg-color--lightest);
+  padding: 0.45rem 0.6rem;
+  line-height: 1.4;
 }
 
 .md-typeset table th {
-  font-size: 0.95rem;
+  font-size: 0.82rem;
   font-weight: 600;
   background: var(--md-default-fg-color--lightest);
-  text-transform: uppercase;
-  letter-spacing: 0.03em;
+  white-space: nowrap;
 }
 
 .md-typeset table td {
-  font-size: 1rem;
+  font-size: 0.88rem;
+  word-break: break-word;
 }
 
-.md-typeset table tr:last-child td {
-  border-bottom: none;
-}
-
-.md-typeset table tbody tr {
-  transition: background 0.2s ease;
-}
-
-.md-typeset table tbody tr:hover {
-  background: var(--md-code-bg-color);
-}
-
-/* zebra striping */
+/* zebra striping for readability */
 .md-typeset table tbody tr:nth-child(odd) {
   background: var(--md-default-bg-color);
 }
-
 .md-typeset table tbody tr:nth-child(even) {
   background: var(--md-code-bg-color);
 }
 
-.md-typeset table tbody tr:nth-child(odd):hover,
-.md-typeset table tbody tr:nth-child(even):hover {
-  background: var(--md-default-fg-color--lightest);
-}
-
-/* bold text in tables (guna changes) */
-.md-typeset table td strong {
-  color: var(--ssg-primary);
-  font-weight: 600;
-}
-
-/* ── 5. ADMONITIONS / CALLOUTS ──────────────────────────── */
+/* ---- Admonitions ---- */
 .md-typeset .admonition {
-  font-size: 1rem;
-  border-radius: 0.5rem;
-  border-left-width: 4px;
+  font-size: 0.9rem;
 }
 
-.md-typeset .admonition-title {
-  font-weight: 600;
-  font-size: 1rem;
-}
-
-/* ── 6. LEFT SIDEBAR ─────────────────────────────────────── */
-.md-sidebar {
-  width: 16rem;
+/* ---- Left sidebar: compact (DESKTOP ONLY) ---- */
+@media screen and (min-width: 769px) {
+  .md-sidebar {
+    width: 14rem;
+  }
 }
 
 .md-sidebar__scrollwrap {
@@ -174,22 +148,10 @@
   padding-bottom: 0.3rem;
 }
 
-/* ── 7. OCTICONS ARROW ───────────────────────────────────── */
-/* Fallback if shortcodes fail to render */
-.octicons-arrow-right-24:empty::before,
-.md-typeset .octicons-arrow-right-24:empty::before {
-  content: "→";
-  font-size: 1em;
-  line-height: 1;
-}
+/* ============================================
+   Vocabulary / Dhatu Search Box
+   ============================================ */
 
-/* Hover slide effect */
-a:hover .octicons-arrow-right-24,
-.md-typeset a:hover .octicons-arrow-right-24 {
-  transform: translateX(3px);
-}
-
-/* ── 8. VOCABULARY / DHATU SEARCH BOX ───────────────────── */
 .vocab-search-box {
   background: var(--md-code-bg-color);
   border: 1px solid var(--md-default-fg-color--lightest);
@@ -224,9 +186,7 @@ a:hover .octicons-arrow-right-24,
   background: var(--md-default-bg-color);
   color: var(--md-default-fg-color);
   outline: none;
-  transition:
-    border-color 0.2s ease,
-    box-shadow 0.2s ease;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
   font-family: inherit;
 }
 
@@ -241,7 +201,7 @@ a:hover .octicons-arrow-right-24,
   color: var(--md-default-fg-color--lighter);
 }
 
-/* ── 9. FILTER BUTTONS ─────────────────────────────────────── */
+/* ---- Filter Buttons ---- */
 .vocab-filters {
   display: flex;
   flex-wrap: wrap;
@@ -280,241 +240,72 @@ a:hover .octicons-arrow-right-24,
   font-weight: 500;
 }
 
-/* ── 10. SCROLLBAR ───────────────────────────────────────── */
-::-webkit-scrollbar {
-  width: 6px;
-  height: 6px;
-}
+/* ============================================
+   Responsive: Mobile / Tablet (≤ 768px)
+   ============================================ */
 
-::-webkit-scrollbar-track {
-  background: transparent;
-}
-
-::-webkit-scrollbar-thumb {
-  background: var(--md-default-fg-color--light);
-  border-radius: 3px;
-}
-
-::-webkit-scrollbar-thumb:hover {
-  background: var(--md-default-fg-color--lighter);
-}
-
-/* ── 11. RESPONSIVE ──────────────────────────────────────── */
-
-/* Tablet (≤768px) */
-@media (max-width: 768px) {
+@media screen and (max-width: 768px) {
   .md-typeset {
     font-size: 0.95rem;
   }
-
-  .md-typeset h1 {
-    font-size: 1.5rem;
-  }
-
-  .md-typeset h2 {
-    font-size: 1.2rem;
-  }
-
-  .md-typeset h3 {
-    font-size: 1.05rem;
-  }
-
-  /* Tables: enable horizontal scroll */
-  .md-typeset table {
-    font-size: 0.85rem;
-    display: block;
-    overflow-x: auto;
-    white-space: nowrap;
-    -webkit-overflow-scrolling: touch;
-  }
-
-  .md-typeset table th,
-  .md-typeset table td {
-    padding: 0.5rem 0.6rem;
-    white-space: nowrap;
-  }
-
-  /* Sidebar: reduce width */
-  .md-sidebar {
-    width: 14rem;
-  }
-
-  /* Search box */
-  .vocab-search-box {
-    padding: 14px;
-    margin: 12px 0 20px;
-  }
-
-  #vocabSearch,
-  #dhatuSearch {
-    height: 44px;
-    font-size: 0.95rem;
-  }
-
-  /* Filters: smaller pills */
-  .vocab-filters {
-    gap: 6px;
-    margin-top: 10px;
-  }
-
-  .vocab-filter-btn {
-    padding: 5px 10px;
-    font-size: 0.82rem;
-  }
-
-  .vocab-result-count {
-    font-size: 0.85rem;
-  }
-}
-
-/* Mobile (≤600px) */
-@media (max-width: 600px) {
-  .md-typeset {
-    font-size: 0.9rem;
-  }
-
   .md-typeset h1 {
     font-size: 1.35rem;
   }
-
   .md-typeset h2 {
-    font-size: 1.15rem;
-    margin-top: 1.8rem;
+    font-size: 1.1rem;
   }
-
-  .md-typeset h3 {
-    font-size: 1rem;
-  }
-
-  /* Tables: smaller padding + scroll */
   .md-typeset table {
-    font-size: 0.82rem;
-    border-radius: 0.375rem;
+    font-size: 0.85rem;
   }
-
   .md-typeset table th,
   .md-typeset table td {
     padding: 0.4rem 0.5rem;
   }
-
-  /* Sanskrit/Gujarati in tables: slightly smaller but readable */
-  .md-typeset table td:first-child,
-  .md-typeset table th:first-child {
-    font-size: 1rem;
-  }
-
-  .md-typeset table td:nth-child(3),
-  .md-typeset table th:nth-child(3) {
-    font-size: 1rem;
-  }
-
-  /* Search: full width, compact */
   .vocab-search-box {
-    padding: 12px;
-    border-radius: 10px;
+    padding: 14px;
   }
-
-  .vocab-search-input-wrap svg {
-    width: 18px;
-    height: 18px;
-    left: 12px;
-  }
-
-  #vocabSearch,
-  #dhatuSearch {
-    height: 42px;
-    padding-left: 38px;
-    font-size: 0.9rem;
-  }
-
-  /* Filters: 2 per row layout */
   .vocab-filters {
-    gap: 5px;
-    margin-top: 8px;
+    gap: 6px;
   }
-
   .vocab-filter-btn {
-    padding: 4px 8px;
-    font-size: 0.78rem;
-    border-radius: 16px;
-  }
-
-  .vocab-result-count {
-    font-size: 0.8rem;
-    margin-top: 8px;
+    padding: 5px 10px;
+    font-size: 0.85rem;
   }
 }
 
-/* Small Mobile (≤480px) */
-@media (max-width: 480px) {
+/* ============================================
+   Responsive: Small Mobile (≤ 480px)
+   ============================================ */
+
+@media screen and (max-width: 480px) {
   .md-typeset h1 {
     font-size: 1.25rem;
   }
-
   .md-typeset h2 {
-    font-size: 1.1rem;
+    font-size: 1.05rem;
   }
-
-  /* Tables: minimal padding */
-  .md-typeset table th,
-  .md-typeset table td {
-    padding: 0.35rem 0.45rem;
+  .vocab-search-box {
+    padding: 12px;
   }
-
-  .md-typeset table td:first-child,
-  .md-typeset table th:first-child {
-    font-size: 0.95rem;
-  }
-
-  .md-typeset table td:nth-child(3),
-  .md-typeset table th:nth-child(3) {
-    font-size: 0.95rem;
-  }
-
-  /* Sidebar: collapse to icon-only if possible */
-  .md-sidebar {
-    width: 12rem;
-  }
-
-  /* Search: even more compact */
-  #vocabSearch,
-  #dhatuSearch {
-    height: 40px;
-    font-size: 0.85rem;
-  }
-
-  .vocab-filters {
-    gap: 4px;
-  }
-
   .vocab-filter-btn {
     padding: 4px 8px;
-    font-size: 0.75rem;
+    font-size: 0.78rem;
   }
 }
 
-/* Extra small (≤360px) */
-@media (max-width: 360px) {
-  .md-typeset {
-    font-size: 0.85rem;
-  }
+/* ── ADDITIONAL UTILITIES ─────────────────────────────────── */
 
-  .md-typeset h1 {
-    font-size: 1.15rem;
-  }
-
-  .md-typeset h2 {
-    font-size: 1rem;
-  }
-
-  .vocab-filter-btn {
-    padding: 3px 6px;
-    font-size: 0.72rem;
-    border-radius: 14px;
-  }
+::selection {
+  background: rgba(124, 77, 255, 0.25);
+  color: inherit;
 }
 
-/* ── 12. PRINT ───────────────────────────────────────────── */
+:focus-visible {
+  outline: 2px solid var(--md-primary-fg-color);
+  outline-offset: 2px;
+  border-radius: 2px;
+}
+
 @media print {
   .vocab-search-box,
   .vocab-filters,
@@ -523,15 +314,503 @@ a:hover .octicons-arrow-right-24,
   }
 }
 
-/* ── 13. SELECTION ───────────────────────────────────────── */
-::selection {
-  background: rgba(124, 77, 255, 0.25);
-  color: inherit;
+/* ==================================================
+   Larger font for expandable sections (??? details)
+   ================================================== */
+
+.md-typeset details {
+    font-size: 1rem;
 }
 
-/* ── 14. FOCUS VISIBLE ─────────────────────────────────── */
-:focus-visible {
-  outline: 2px solid var(--ssg-primary);
+.md-typeset details summary {
+    font-size: 0.9rem;
+    font-weight: 500;
+    line-height: 1.4;
+}
+
+.md-typeset details summary .md-ellipsis {
+    font-size: inherit;
+    font-weight: inherit;
+}
+
+/* .md-typeset details > div {
+    font-size: 1rem;
+} */
+
+/* Quiz Styling */
+
+/* ============================================
+   Interactive Quiz Styles
+   ============================================ */
+
+.quiz-section {
+  margin: 2rem 0;
+}
+
+.quiz-question {
+  background: var(--md-default-bg-color);
+  border: 1px solid var(--md-default-fg-color--lightest);
+  border-radius: 12px;
+  padding: 1.25rem;
+  margin: 1rem 0;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.06);
+  transition: box-shadow 0.2s ease;
+}
+
+.quiz-question:hover {
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.quiz-question-number {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  background: var(--md-primary-fg-color);
+  color: var(--md-primary-bg-color);
+  border-radius: 50%;
+  font-weight: 700;
+  font-size: 0.9rem;
+  margin-right: 0.75rem;
+  flex-shrink: 0;
+}
+
+.quiz-question-text {
+  font-size: 1.05rem;
+  font-weight: 500;
+  margin-bottom: 0.75rem;
+  display: flex;
+  align-items: flex-start;
+  line-height: 1.5;
+}
+
+.quiz-question-text .deva {
+  font-family: 'Noto Sans Devanagari', serif;
+  font-size: 1.15em;
+}
+
+.quiz-hint {
+  font-size: 0.85rem;
+  color: var(--md-default-fg-color--light);
+  margin-bottom: 1rem;
+  font-style: italic;
+}
+
+.quiz-options {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.quiz-option {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.75rem 1rem;
+  border: 2px solid var(--md-default-fg-color--lightest);
+  border-radius: 10px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  background: var(--md-default-bg-color);
+  font-size: 0.95rem;
+}
+
+.quiz-option:hover {
+  border-color: var(--md-primary-fg-color);
+  background: var(--md-primary-fg-color--transparent, rgba(124,77,255,0.05));
+}
+
+.quiz-option .opt-label {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 28px;
+  height: 28px;
+  border: 2px solid var(--md-default-fg-color--lightest);
+  border-radius: 50%;
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--md-default-fg-color--light);
+  flex-shrink: 0;
+  transition: all 0.2s ease;
+}
+
+.quiz-option:hover .opt-label {
+  border-color: var(--md-primary-fg-color);
+  color: var(--md-primary-fg-color);
+}
+
+.quiz-option .opt-text {
+  font-family: 'Noto Sans Devanagari', serif;
+  font-size: 1.1em;
+}
+
+/* Selected states */
+.quiz-option.correct {
+  border-color: #4caf50;
+  background: rgba(76, 175, 80, 0.08);
+}
+
+.quiz-option.correct .opt-label {
+  background: #4caf50;
+  border-color: #4caf50;
+  color: #fff;
+}
+
+.quiz-option.wrong {
+  border-color: #f44336;
+  background: rgba(244, 67, 54, 0.06);
+}
+
+.quiz-option.wrong .opt-label {
+  background: #f44336;
+  border-color: #f44336;
+  color: #fff;
+}
+
+/* Feedback */
+.quiz-feedback {
+  margin-top: 0.75rem;
+  padding: 0.6rem 1rem;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 0.9rem;
+  display: none;
+}
+
+.quiz-feedback.correct {
+  display: block;
+  background: rgba(76, 175, 80, 0.12);
+  color: #2e7d32;
+}
+
+.quiz-feedback.wrong {
+  display: block;
+  background: rgba(244, 67, 54, 0.1);
+  color: #c62828;
+}
+
+/* Explanation */
+.quiz-explanation {
+  display: none;
+  margin-top: 0.75rem;
+  padding: 0.75rem 1rem;
+  background: var(--md-code-bg-color);
+  border-radius: 8px;
+  border-left: 3px solid var(--md-primary-fg-color);
+  font-size: 0.9rem;
+  line-height: 1.6;
+}
+
+.quiz-explanation strong {
+  color: var(--md-primary-fg-color);
+}
+
+/* Score bar */
+.quiz-score-bar {
+  position: sticky;
+  top: 64px;
+  z-index: 10;
+  background: var(--md-default-bg-color);
+  border: 1px solid var(--md-default-fg-color--lightest);
+  border-radius: 10px;
+  padding: 0.75rem 1.25rem;
+  margin-bottom: 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+}
+
+.quiz-score-bar #quiz-score {
+  font-weight: 600;
+  font-size: 1rem;
+  color: var(--md-primary-fg-color);
+}
+
+.quiz-reset-btn {
+  padding: 0.4rem 1rem;
+  border: 1px solid var(--md-primary-fg-color);
+  border-radius: 20px;
+  background: transparent;
+  color: var(--md-primary-fg-color);
+  font-size: 0.85rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.quiz-reset-btn:hover {
+  background: var(--md-primary-fg-color);
+  color: var(--md-primary-bg-color);
+}
+
+/* Section header */
+.quiz-section-header {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin: 2.5rem 0 1rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 2px solid var(--md-primary-fg-color--light, #b388ff);
+}
+
+.quiz-section-header h2 {
+  margin: 0 !important;
+  border: none !important;
+  padding: 0 !important;
+  font-size: 1.3rem;
+}
+
+/* Animations */
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(8px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .quiz-question {
+    padding: 1rem;
+  }
+  .quiz-question-text {
+    font-size: 0.95rem;
+  }
+  .quiz-option {
+    padding: 0.6rem 0.75rem;
+    font-size: 0.9rem;
+  }
+  .quiz-score-bar {
+    top: 56px;
+    padding: 0.6rem 1rem;
+  }
+}
+
+/* Blank underline in questions */
+.quiz-blank {
+  display: inline-block;
+  min-width: 80px;
+  border-bottom: 2px dashed var(--md-default-fg-color--light);
+  text-align: center;
+  margin: 0 0.25rem;
+  color: var(--md-primary-fg-color);
+  font-weight: 600;
+}
+
+/* ── Quiz Progress Header ────────────────── */
+.quiz-progress {
+  background: var(--md-primary-fg-color--transparent, rgba(124,77,255,0.08));
+  border-left: 4px solid var(--md-primary-fg-color);
+  padding: 0.75rem 1rem;
+  margin-bottom: 1.5rem;
+  border-radius: 0 8px 8px 0;
+  font-size: 0.95rem;
+  color: var(--md-default-fg-color);
+}
+
+/* ── Quiz Summary (end of test) ────────────── */
+.quiz-summary {
+  background: var(--md-default-bg-color);
+  border: 2px solid var(--md-primary-fg-color);
+  border-radius: 12px;
+  padding: 1.5rem;
+  margin-top: 2rem;
+  text-align: center;
+  animation: fadeInUp 0.4s ease;
+}
+
+.quiz-summary h3 {
+  margin: 0 0 0.5rem;
+  color: var(--md-primary-fg-color);
+  font-size: 1.3rem;
+}
+
+.quiz-summary p {
+  margin: 0 0 1rem;
+  font-size: 1rem;
+}
+
+/* ── Quiz Error State ──────────────────────── */
+.quiz-error {
+  background: rgba(244, 67, 54, 0.08);
+  border: 1px solid #f44336;
+  border-radius: 10px;
+  padding: 1rem;
+  color: #c62828;
+}
+
+.quiz-error code {
+  background: rgba(0,0,0,0.05);
+  padding: 0.1rem 0.3rem;
+  border-radius: 4px;
+}
+
+/* ============================================================
+   Dynamic mixed-quiz enhancements
+   ============================================================ */
+
+.quiz-loading {
+  padding: 1rem 1.2rem;
+  border: 1px solid var(--md-default-fg-color--lightest);
+  border-radius: 10px;
+  background: var(--md-code-bg-color);
+  color: var(--md-default-fg-color--light);
+  text-align: center;
+}
+
+.quiz-progress > div:first-child {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.6rem;
+}
+
+.quiz-run-label,
+.quiz-source-chip,
+.quiz-source-label,
+.quiz-type-label {
+  display: inline-flex;
+  align-items: center;
+  border-radius: 999px;
+  white-space: nowrap;
+}
+
+.quiz-run-label {
+  padding: 0.1rem 0.5rem;
+  background: var(--md-primary-fg-color);
+  color: var(--md-primary-bg-color);
+  font-size: 0.75rem;
+  font-weight: 600;
+}
+
+.quiz-progress-detail {
+  margin-top: 0.25rem;
+  color: var(--md-default-fg-color--light);
+  font-size: 0.87rem;
+}
+
+.quiz-source-summary {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  margin-top: 0.65rem;
+}
+
+.quiz-source-chip {
+  padding: 0.18rem 0.55rem;
+  border: 1px solid var(--md-default-fg-color--lightest);
+  background: var(--md-default-bg-color);
+  font-family: 'Noto Sans Devanagari', Inter, sans-serif;
+  font-size: 0.78rem;
+  font-weight: 500;
+}
+
+.quiz-question-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  margin-bottom: 0.65rem;
+}
+
+.quiz-source-label,
+.quiz-type-label {
+  padding: 0.14rem 0.5rem;
+  font-size: 0.72rem;
+  line-height: 1.3;
+}
+
+.quiz-source-label {
+  background: var(--md-primary-fg-color--transparent, rgba(124, 77, 255, 0.09));
+  color: var(--md-primary-fg-color);
+  font-family: 'Noto Sans Devanagari', Inter, sans-serif;
+  font-weight: 600;
+}
+
+.quiz-type-label {
+  border: 1px solid var(--md-default-fg-color--lightest);
+  color: var(--md-default-fg-color--light);
+  text-transform: capitalize;
+}
+
+.quiz-question-content {
+  min-width: 0;
+  flex: 1;
+}
+
+.quiz-sentence {
+  margin: 0.75rem 0;
+  padding: 0.65rem 0.85rem;
+  border-left: 3px solid var(--md-primary-fg-color);
+  border-radius: 0 6px 6px 0;
+  background: var(--md-code-bg-color);
+  font-family: 'Noto Sans Devanagari', serif;
+  font-size: 1.08rem;
+}
+
+/* quiz-option is now a real button for keyboard and accessibility support */
+button.quiz-option {
+  width: 100%;
+  color: var(--md-default-fg-color);
+  font-family: inherit;
+  text-align: left;
+}
+
+button.quiz-option:focus-visible {
+  outline: 3px solid var(--md-primary-fg-color--transparent, rgba(124, 77, 255, 0.25));
   outline-offset: 2px;
-  border-radius: 2px;
+}
+
+button.quiz-option:disabled {
+  cursor: default;
+}
+
+.quiz-option.muted {
+  opacity: 0.58;
+}
+
+.quiz-warning {
+  margin-top: 0.75rem;
+  padding: 0.55rem 0.7rem;
+  border: 1px solid #ed9b2d;
+  border-radius: 7px;
+  background: rgba(237, 155, 45, 0.08);
+  font-size: 0.82rem;
+}
+
+.quiz-warning summary {
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.quiz-warning ul {
+  margin: 0.5rem 0 0 1rem;
+}
+
+.quiz-reset-btn:disabled {
+  opacity: 0.5;
+  cursor: wait;
+}
+
+@media (max-width: 600px) {
+  .quiz-score-bar {
+    gap: 0.75rem;
+  }
+
+  .quiz-score-bar #quiz-score {
+    font-size: 0.88rem;
+  }
+
+  .quiz-reset-btn {
+    padding: 0.38rem 0.7rem;
+    font-size: 0.78rem;
+  }
+
+  .quiz-source-summary {
+    gap: 0.3rem;
+  }
+
+  .quiz-source-chip {
+    font-size: 0.71rem;
+  }
 }

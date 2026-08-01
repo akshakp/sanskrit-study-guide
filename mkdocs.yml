@@ -22,8 +22,8 @@ theme:
         icon: material/brightness-4
         name: Switch to light mode
   features:
-    - navigation.sections
-    - navigation.expand
+    # - navigation.sections
+    # - navigation.expand
     - navigation.top
     - toc.integrate
     - search.suggest
@@ -42,9 +42,11 @@ nav:
     - Fundamentals: grammar-fundamentals.md
     - Nouns & Cases (संज्ञा): nouns.md
     - Verbs(क्रियापद): verbs.md
+  - Rules of writing: writing-rules.md
   - Conversation (संभाषण): conversation.md
   - Vocabulary: vocabulary.md
   - Verb Roots (धातु): dhatu.md
+  - Practice: quiz.md
 
 plugins:
   - search:
@@ -61,6 +63,7 @@ plugins:
 
 extra_javascript:
   - javascripts/vocab-search.js
+  - javascripts/quiz.js
 
 extra_css:
   - stylesheets/main.css

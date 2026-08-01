@@ -1,0 +1,612 @@
+{
+  "title": "अव्यय",
+  "questions": [
+    {
+      "id": "AVYAY-001",
+      "type": "meaning",
+      "question": "What is the meaning of <strong>च</strong>?",
+      "options": [
+        "and",
+        "but",
+        "or",
+        "because"
+      ],
+      "correct": 0,
+      "explanation": "च means 'and'."
+    },
+    {
+      "id": "AVYAY-002",
+      "type": "meaning",
+      "question": "What is the meaning of <strong>एव</strong>?",
+      "options": [
+        "only / indeed",
+        "also",
+        "never",
+        "there"
+      ],
+      "correct": 0,
+      "explanation": "एव emphasizes 'only' or 'indeed'."
+    },
+    {
+      "id": "AVYAY-003",
+      "type": "meaning",
+      "question": "What is the meaning of <strong>अपि</strong>?",
+      "options": [
+        "also",
+        "only",
+        "therefore",
+        "where"
+      ],
+      "correct": 0,
+      "explanation": "अपि means 'also' or 'too'."
+    },
+    {
+      "id": "AVYAY-004",
+      "type": "meaning",
+      "question": "What is the meaning of <strong>न</strong>?",
+      "options": [
+        "not",
+        "now",
+        "always",
+        "again"
+      ],
+      "correct": 0,
+      "explanation": "न is the standard negative particle."
+    },
+    {
+      "id": "AVYAY-005",
+      "type": "meaning",
+      "question": "What is the meaning of <strong>अत्र</strong>?",
+      "options": [
+        "here",
+        "there",
+        "everywhere",
+        "where?"
+      ],
+      "correct": 0,
+      "explanation": "अत्र means 'here'."
+    },
+    {
+      "id": "AVYAY-006",
+      "type": "meaning",
+      "question": "What is the meaning of <strong>तत्र</strong>?",
+      "options": [
+        "there",
+        "here",
+        "where?",
+        "now"
+      ],
+      "correct": 0,
+      "explanation": "तत्र means 'there'."
+    },
+    {
+      "id": "AVYAY-007",
+      "type": "meaning",
+      "question": "What is the meaning of <strong>अधुना</strong>?",
+      "options": [
+        "now",
+        "tomorrow",
+        "today",
+        "always"
+      ],
+      "correct": 0,
+      "explanation": "अधुना means 'now'."
+    },
+    {
+      "id": "AVYAY-008",
+      "type": "meaning",
+      "question": "What is the meaning of <strong>सर्वदा</strong>?",
+      "options": [
+        "always",
+        "sometimes",
+        "today",
+        "tomorrow"
+      ],
+      "correct": 0,
+      "explanation": "सर्वदा means 'always'."
+    },
+    {
+      "id": "AVYAY-009",
+      "type": "recognition",
+      "question": "Which of the following is an अव्यय?",
+      "options": [
+        "रामः",
+        "गच्छति",
+        "च",
+        "पुस्तकम्"
+      ],
+      "correct": 2,
+      "explanation": "च is an indeclinable (अव्यय)."
+    },
+    {
+      "id": "AVYAY-010",
+      "type": "recognition",
+      "question": "Which of the following is NOT an अव्यय?",
+      "options": [
+        "अत्र",
+        "एव",
+        "रामः",
+        "अपि"
+      ],
+      "correct": 2,
+      "explanation": "रामः is a noun, not an indeclinable."
+    },
+        {
+      "id": "AVYAY-011",
+      "type": "context",
+      "question": "रामः ___ सीता च विद्यालयं गच्छतः। Which avyaya correctly completes the sentence?",
+      "options": ["च", "एव", "अपि", "अत्र"],
+      "correct": 0,
+      "explanation": "च joins two nouns and means 'and'."
+    },
+    {
+      "id": "AVYAY-012",
+      "type": "context",
+      "question": "बालकः ___ पठति। बालिका अपि पठति। Which avyaya means 'also'?",
+      "options": ["एव", "अपि", "च", "न"],
+      "correct": 1,
+      "explanation": "अपि means 'also' or 'too'."
+    },
+    {
+      "id": "AVYAY-013",
+      "type": "analysis",
+      "question": "Which avyaya best emphasizes 'only' in the sentence?",
+      "options": ["एव", "अपि", "च", "न"],
+      "correct": 0,
+      "explanation": "एव adds emphasis meaning 'only' or 'indeed'."
+    },
+    {
+      "id": "AVYAY-014",
+      "type": "context",
+      "question": "विद्यालयः ___ अस्ति। (The school is here.)",
+      "options": ["तत्र", "अत्र", "कुत्र", "अन्यत्र"],
+      "correct": 1,
+      "explanation": "अत्र means 'here'."
+    },
+    {
+      "id": "AVYAY-015",
+      "type": "context",
+      "question": "मन्दिरम् ___ अस्ति। (The temple is there.)",
+      "options": ["तत्र", "अत्र", "सर्वत्र", "एकत्र"],
+      "correct": 0,
+      "explanation": "तत्र means 'there'."
+    },
+    {
+      "id": "AVYAY-016",
+      "type": "meaning",
+      "question": "Which pair has opposite meanings?",
+      "options": [
+        "अत्र – तत्र",
+        "अत्र – अन्यत्र",
+        "एव – अपि",
+        "च – अपि"
+      ],
+      "correct": 1,
+      "explanation": "अत्र means 'here' while अन्यत्र means 'elsewhere'."
+    },
+    {
+      "id": "AVYAY-017",
+      "type": "context",
+      "question": "___ पाठशाला अस्ति? (Where is the school?)",
+      "options": ["कुत्र", "कुतः", "अत्र", "तत्र"],
+      "correct": 0,
+      "explanation": "कुत्र means 'where?'."
+    },
+    {
+      "id": "AVYAY-018",
+      "type": "analysis",
+      "question": "Which avyaya asks 'from where?'",
+      "options": ["कुतः", "कुत्र", "अत्र", "इतः"],
+      "correct": 0,
+      "explanation": "कुतः means 'from where?'."
+    },
+    {
+      "id": "AVYAY-019",
+      "type": "context",
+      "question": "सः ___ आगच्छति। (He comes from here.)",
+      "options": ["इतः", "अत्र", "तत्र", "कुतः"],
+      "correct": 0,
+      "explanation": "इतः means 'from here'."
+    },
+    {
+      "id": "AVYAY-020",
+      "type": "analysis",
+      "question": "Which avyaya best completes the sentence?<br>सः ___ धावति। ततः विश्रामं करोति। (He runs, then rests.)",
+      "options": ["ऊर्ध्वम्", "एवम्", "अधुना", "पश्चात्"],
+      "correct": 3,
+      "explanation": "पश्चात् means 'afterwards' or 'then' and appears in your Avyaya list."
+    },
+        {
+      "id": "AVYAY-021",
+      "type": "context",
+      "question": "Which avyaya correctly completes the sentence?<br><br>शिष्याः ___ उपविशन्ति। (The students sit together.)",
+      "options": [
+        "एकत्र",
+        "सर्वत्र",
+        "अन्यत्र",
+        "अत्र"
+      ],
+      "correct": 0,
+      "explanation": "एकत्र means 'together' or 'at one place'."
+    },
+    {
+      "id": "AVYAY-022",
+      "type": "comparison",
+      "question": "Which pair has opposite meanings?",
+      "options": [
+        "अत्र — तत्र",
+        "अग्रे — पृष्ठे",
+        "एव — अपि",
+        "च — अपि"
+      ],
+      "correct": 1,
+      "explanation": "अग्रे means 'in front' and पृष्ठे means 'behind'."
+    },
+    {
+      "id": "AVYAY-023",
+      "type": "context",
+      "question": "___ गच्छसि? (Where are you going?)",
+      "options": [
+        "कुत्र",
+        "कुतः",
+        "किमर्थम्",
+        "अत्र"
+      ],
+      "correct": 0,
+      "explanation": "कुत्र asks 'where?'."
+    },
+    {
+      "id": "AVYAY-024",
+      "type": "context",
+      "question": "___ आगच्छसि? (Why are you coming?)",
+      "options": [
+        "कुतः",
+        "किमर्थम्",
+        "कुत्र",
+        "एवम्"
+      ],
+      "correct": 1,
+      "explanation": "किमर्थम् means 'for what reason?' or 'why?'."
+    },
+    {
+      "id": "AVYAY-025",
+      "type": "analysis",
+      "question": "Which avyaya indicates comparison?",
+      "options": [
+        "इव",
+        "एव",
+        "अपि",
+        "च"
+      ],
+      "correct": 0,
+      "explanation": "इव means 'like' or 'as'."
+    },
+    {
+      "id": "AVYAY-026",
+      "type": "context",
+      "question": "सः सिंहः ___ धावति। (He runs like a lion.)",
+      "options": [
+        "इव",
+        "एव",
+        "अपि",
+        "अन्यथा"
+      ],
+      "correct": 0,
+      "explanation": "इव is used to express comparison."
+    },
+    {
+      "id": "AVYAY-027",
+      "type": "analysis",
+      "question": "Which avyaya means 'otherwise'?",
+      "options": [
+        "अन्यथा",
+        "अन्यत्र",
+        "एवम्",
+        "अकस्मात्"
+      ],
+      "correct": 0,
+      "explanation": "अन्यथा means 'otherwise'."
+    },
+    {
+      "id": "AVYAY-028",
+      "type": "context",
+      "question": "सः ___ आगतः। (He came suddenly.)",
+      "options": [
+        "अधुना",
+        "अकस्मात्",
+        "सर्वदा",
+        "ईषत्"
+      ],
+      "correct": 1,
+      "explanation": "अकस्मात् means 'suddenly'."
+    },
+    {
+      "id": "AVYAY-029",
+      "type": "analysis",
+      "question": "Which avyaya means 'slightly'?",
+      "options": [
+        "ईषत्",
+        "एव",
+        "अपि",
+        "च"
+      ],
+      "correct": 0,
+      "explanation": "ईषत् means 'slightly' or 'a little'."
+    },
+    {
+      "id": "AVYAY-030",
+      "type": "comparison",
+      "question": "Which two avyayas both refer to place?",
+      "options": [
+        "अत्र, तत्र",
+        "एव, अपि",
+        "किमर्थम्, कुतः",
+        "इव, ईषत्"
+      ],
+      "correct": 0,
+      "explanation": "Both अत्र ('here') and तत्र ('there') indicate location."
+    },
+        {
+      "id": "AVYAY-031",
+      "type": "sentence-completion",
+      "question": "विद्यालयः ___ अस्ति। (The school is here.)",
+      "options": [
+        "अत्र",
+        "तत्र",
+        "कुत्र",
+        "अन्यत्र"
+      ],
+      "correct": 0,
+      "explanation": "अत्र means 'here'."
+    },
+    {
+      "id": "AVYAY-032",
+      "type": "sentence-completion",
+      "question": "पुस्तकालयः ___ अस्ति। (The library is there.)",
+      "options": [
+        "अत्र",
+        "तत्र",
+        "सर्वत्र",
+        "एकत्र"
+      ],
+      "correct": 1,
+      "explanation": "तत्र means 'there'."
+    },
+    {
+      "id": "AVYAY-033",
+      "type": "sentence-completion",
+      "question": "रामः सीता ___ विद्यालयं गच्छतः।",
+      "options": [
+        "च",
+        "एव",
+        "न",
+        "इव"
+      ],
+      "correct": 0,
+      "explanation": "च joins two nouns ('Rama and Sita')."
+    },
+    {
+      "id": "AVYAY-034",
+      "type": "sentence-completion",
+      "question": "अहम् ___ संस्कृतं पठामि। (I also study Sanskrit.)",
+      "options": [
+        "एव",
+        "अपि",
+        "च",
+        "न"
+      ],
+      "correct": 1,
+      "explanation": "अपि means 'also' or 'too'."
+    },
+    {
+      "id": "AVYAY-035",
+      "type": "best-choice",
+      "question": "Choose the best word:<br><br>___ गच्छसि?",
+      "options": [
+        "कुत्र",
+        "कुतः",
+        "कदा",
+        "कदापि"
+      ],
+      "correct": 0,
+      "explanation": "कुत्र asks 'Where are you going?'."
+    },
+    {
+      "id": "AVYAY-036",
+      "type": "best-choice",
+      "question": "Choose the best word:<br><br>___ आगच्छसि?",
+      "options": [
+        "कदा",
+        "किमर्थम्",
+        "कुतः",
+        "कुत्र"
+      ],
+      "correct": 2,
+      "explanation": "कुतः asks 'From where?'."
+    },
+    {
+      "id": "AVYAY-037",
+      "type": "sentence-completion",
+      "question": "सः सिंहः ___ धावति।",
+      "options": [
+        "इव",
+        "एव",
+        "अपि",
+        "बहुधा"
+      ],
+      "correct": 0,
+      "explanation": "इव means 'like'."
+    },
+    {
+      "id": "AVYAY-038",
+      "type": "sentence-completion",
+      "question": "वयं ___ मिलामः। (We meet together.)",
+      "options": [
+        "एकत्र",
+        "अन्यत्र",
+        "सर्वत्र",
+        "तत्र"
+      ],
+      "correct": 0,
+      "explanation": "एकत्र means 'together' or 'at one place'."
+    },
+    {
+      "id": "AVYAY-039",
+      "type": "context",
+      "question": "Choose the most suitable avyaya.<br><br>सः ___ आगतः। (He came suddenly.)",
+      "options": [
+        "अकस्मात्",
+        "प्रायः",
+        "अधुना",
+        "बहुधा"
+      ],
+      "correct": 0,
+      "explanation": "अकस्मात् means 'suddenly'."
+    },
+    {
+      "id": "AVYAY-040",
+      "type": "context",
+      "question": "Choose the best completion.<br><br>एषः ___ मम मित्रः। (He alone is my friend.)",
+      "options": [
+        "एव",
+        "अपि",
+        "च",
+        "इव"
+      ],
+      "correct": 0,
+      "explanation": "एव emphasizes 'only' or 'indeed'."
+    },
+        {
+      "id": "AVYAY-041",
+      "type": "best-choice",
+      "question": "Choose the correct avyaya.<br><br>अहं ___ संस्कृतम् अभ्यासामि। (I study Sanskrit every day.)",
+      "options": [
+        "प्रतिदिनम्",
+        "अधुना",
+        "अकस्मात्",
+        "बहुधा"
+      ],
+      "correct": 0,
+      "explanation": "प्रतिदिनम् means 'every day'."
+    },
+    {
+      "id": "AVYAY-042",
+      "type": "best-choice",
+      "question": "Choose the correct avyaya.<br><br>बालकः ___ धावति। (The boy is running now.)",
+      "options": [
+        "अधुना",
+        "सदा",
+        "प्रायः",
+        "पुनः"
+      ],
+      "correct": 0,
+      "explanation": "अधुना means 'now'."
+    },
+    {
+      "id": "AVYAY-043",
+      "type": "context",
+      "question": "रामः ___ विद्यालयं गच्छति। शनिवासरे न गच्छति।",
+      "options": [
+        "नित्यम्",
+        "अकस्मात्",
+        "ईषत्",
+        "कदापि"
+      ],
+      "correct": 0,
+      "explanation": "नित्यम् means 'daily' or 'regularly'."
+    },
+    {
+      "id": "AVYAY-044",
+      "type": "best-choice",
+      "question": "Choose the most suitable avyaya.<br><br>वृक्षः ___ अस्ति। (The tree is near.)",
+      "options": [
+        "समीपे",
+        "सर्वत्र",
+        "अन्यत्र",
+        "कुत्र"
+      ],
+      "correct": 0,
+      "explanation": "समीपे means 'near' or 'beside'."
+    },
+    {
+      "id": "AVYAY-045",
+      "type": "context",
+      "question": "___ बालकाः क्रीडन्ति। (Children are playing everywhere.)",
+      "options": [
+        "सर्वत्र",
+        "एकत्र",
+        "अत्र",
+        "तत्र"
+      ],
+      "correct": 0,
+      "explanation": "सर्वत्र means 'everywhere'."
+    },
+    {
+      "id": "AVYAY-046",
+      "type": "context",
+      "question": "सः ___ आगच्छति। (He comes again.)",
+      "options": [
+        "पुनः",
+        "अधुना",
+        "सदा",
+        "कदापि"
+      ],
+      "correct": 0,
+      "explanation": "पुनः means 'again'."
+    },
+    {
+      "id": "AVYAY-047",
+      "type": "context",
+      "question": "Choose the best completion.<br><br>___ गच्छ। (Go properly.)",
+      "options": [
+        "सम्यक्",
+        "मिथ्या",
+        "बहुधा",
+        "अतीव"
+      ],
+      "correct": 0,
+      "explanation": "सम्यक् means 'properly' or 'correctly'."
+    },
+    {
+      "id": "AVYAY-048",
+      "type": "best-choice",
+      "question": "Choose the correct avyaya.<br><br>सः ___ वदति। (He speaks falsely.)",
+      "options": [
+        "मिथ्या",
+        "सम्यक्",
+        "हि",
+        "एव"
+      ],
+      "correct": 0,
+      "explanation": "मिथ्या means 'falsely' or 'incorrectly'."
+    },
+    {
+      "id": "AVYAY-049",
+      "type": "context",
+      "question": "___ अहं कार्यं करिष्यामि। (Certainly I will do the work.)",
+      "options": [
+        "अवश्यम्",
+        "कदापि",
+        "पुनः",
+        "ईषत्"
+      ],
+      "correct": 0,
+      "explanation": "अवश्यम् means 'certainly' or 'definitely'."
+    },
+    {
+      "id": "AVYAY-050",
+      "type": "context",
+      "question": "रामः ___ सीता ___ विद्यालयं गच्छतः।",
+      "options": [
+        "च ... च",
+        "एव ... अपि",
+        "वा ... वा",
+        "किन्तु ... च"
+      ],
+      "correct": 0,
+      "explanation": "च is used to join two nouns: 'Rama and Sita'."
+    }
+  ]
+}
+
+

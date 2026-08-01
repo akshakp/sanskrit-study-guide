@@ -1,0 +1,1072 @@
+{
+   "title":"क्रियापदम् — Verb Analysis (Part 1)",
+   "questions":[
+      {
+         "id":"VERB-001",
+         "type":"verb-classification",
+         "question":"<strong>रामः पुस्तकं पठति।</strong><br><br>The verb <strong>पठति</strong> is:",
+         "options":[
+            "सकर्मक",
+            "अकर्मक",
+            "द्विकर्मक",
+            "Cannot determine"
+         ],
+         "correct":0,
+         "explanation":"पठति takes the object 'पुस्तकम्', so it is a सकर्मक (transitive) verb."
+      },
+      {
+         "id":"VERB-002",
+         "type":"verb-classification",
+         "question":"<strong>बालकः हसति।</strong><br><br>The verb <strong>हसति</strong> is:",
+         "options":[
+            "सकर्मक",
+            "अकर्मक",
+            "द्विकर्मक",
+            "Cannot determine"
+         ],
+         "correct":1,
+         "explanation":"हसति (laughs) does not require an object, so it is अकर्मक."
+      },
+      {
+         "id":"VERB-003",
+         "type":"verb-classification",
+         "question":"<strong>गुरुः शिष्याय पुस्तकं ददाति।</strong><br><br>The verb <strong>ददाति</strong> is:",
+         "options":[
+            "सकर्मक",
+            "अकर्मक",
+            "द्विकर्मक",
+            "Cannot determine"
+         ],
+         "correct":2,
+         "explanation":"ददाति involves two grammatical objects in the course framework (the thing given and the recipient), so it is classified as द्विकर्मक."
+      },
+      {
+         "id":"VERB-004",
+         "type":"purusha-vachana",
+         "question":"Identify the पुरुष and वचन of <strong>पठसि</strong>.",
+         "options":[
+            "प्रथम पुरुष, एकवचन",
+            "मध्यम पुरुष, एकवचन",
+            "उत्तम पुरुष, एकवचन",
+            "मध्यम पुरुष, बहुवचन"
+         ],
+         "correct":1,
+         "explanation":"The ending <strong>-सि</strong> indicates मध्यम पुरुष एकवचन."
+      },
+      {
+         "id":"VERB-005",
+         "type":"purusha-vachana",
+         "question":"Identify the पुरुष and वचन of <strong>गच्छामः</strong>.",
+         "options":[
+            "प्रथम पुरुष, बहुवचन",
+            "उत्तम पुरुष, बहुवचन",
+            "मध्यम पुरुष, बहुवचन",
+            "उत्तम पुरुष, द्विवचन"
+         ],
+         "correct":1,
+         "explanation":"The ending <strong>-आमः</strong> indicates उत्तम पुरुष बहुवचन."
+      },
+      {
+         "id":"VERB-006",
+         "type":"dhatu-recognition",
+         "question":"The verb <strong>गच्छति</strong> is formed from which धातु?",
+         "options":[
+            "गम्",
+            "भू",
+            "नम्",
+            "पठ्"
+         ],
+         "correct":0,
+         "explanation":"गच्छति is derived from the धातु <strong>गम्</strong>."
+      },
+      {
+         "id":"VERB-007",
+         "type":"dhatu-recognition",
+         "question":"The verb <strong>नमामि</strong> is formed from which धातु?",
+         "options":[
+            "भू",
+            "नम्",
+            "वद्",
+            "गम्"
+         ],
+         "correct":1,
+         "explanation":"नमामि is derived from the धातु <strong>नम्</strong>."
+      },
+      {
+         "id":"VERB-008",
+         "type":"gana-recognition",
+         "question":"The धातु <strong>भू</strong> belongs to which गण?",
+         "options":[
+            "भ्वादिगण",
+            "अदादिगण",
+            "जुहोत्यादिगण",
+            "तनादिगण"
+         ],
+         "correct":0,
+         "explanation":"According to the handbook, भू belongs to भ्वादिगण."
+      },
+      {
+         "id":"VERB-009",
+         "type":"meaning-context",
+         "question":"<strong>बालकः पुस्तकं पठति।</strong><br><br>What is the boy doing?",
+         "options":[
+            "Reading a book",
+            "Going to school",
+            "Sleeping",
+            "Writing a book"
+         ],
+         "correct":0,
+         "explanation":"The verb पठति means 'reads', so the sentence means 'The boy is reading a book.'"
+      },
+      {
+         "id":"VERB-010",
+         "type":"why",
+         "question":"<strong>गुरुः शिष्याय पुस्तकं ददाति।</strong><br><br>Why is <strong>ददाति</strong> classified as द्विकर्मक?",
+         "options":[
+            "Because it has no object.",
+            "Because it has one object.",
+            "Because it involves both the thing given and the recipient.",
+            "Because it is in प्रथम पुरुष."
+         ],
+         "correct":2,
+         "explanation":"In the grammar taught in your handbook, ददाति is द्विकर्मक because the action involves both the object being given (पुस्तकम्) and the recipient (शिष्याय)."
+      },
+      {
+         "id":"VERB-011",
+         "type":"dhatu-recognition",
+         "question":"The verb <strong>पठति</strong> is formed from which धातु?",
+         "options":[
+            "पठ्",
+            "गम्",
+            "भू",
+            "नम्"
+         ],
+         "correct":0,
+         "explanation":"पठति is derived from the धातु पठ्."
+      },
+      {
+         "id":"VERB-012",
+         "type":"dhatu-recognition",
+         "question":"The verb <strong>भवति</strong> is formed from which धातु?",
+         "options":[
+            "गम्",
+            "भू",
+            "वद्",
+            "कृ"
+         ],
+         "correct":1,
+         "explanation":"भवति is derived from the धातु भू."
+      },
+      {
+         "id":"VERB-013",
+         "type":"dhatu-recognition",
+         "question":"The verb <strong>वदति</strong> is formed from which धातु?",
+         "options":[
+            "पठ्",
+            "वद्",
+            "नम्",
+            "स्था"
+         ],
+         "correct":1,
+         "explanation":"वदति comes from the धातु वद्."
+      },
+      {
+         "id":"VERB-014",
+         "type":"verb-classification",
+         "question":"<strong>बालकः पुस्तकं पठति।</strong><br><br>The verb <strong>पठति</strong> is:",
+         "options":[
+            "सकर्मक",
+            "अकर्मक",
+            "द्विकर्मक",
+            "Cannot determine"
+         ],
+         "correct":0,
+         "explanation":"पठति takes the direct object पुस्तकम्, so it is सकर्मक."
+      },
+      {
+         "id":"VERB-015",
+         "type":"verb-classification",
+         "question":"<strong>बालकः हसति।</strong><br><br>The verb <strong>हसति</strong> is:",
+         "options":[
+            "सकर्मक",
+            "अकर्मक",
+            "द्विकर्मक",
+            "Cannot determine"
+         ],
+         "correct":1,
+         "explanation":"हसति does not require a direct object, so it is अकर्मक."
+      },
+      {
+         "id":"VERB-016",
+         "type":"verb-classification",
+         "question":"<strong>गुरुः शिष्याय पुस्तकं ददाति।</strong><br><br>The verb <strong>ददाति</strong> is:",
+         "options":[
+            "सकर्मक",
+            "अकर्मक",
+            "द्विकर्मक",
+            "Cannot determine"
+         ],
+         "correct":2,
+         "explanation":"According to the course classification, ददाति is द्विकर्मक."
+      },
+      {
+         "id":"VERB-017",
+         "type":"purusha-vachana",
+         "question":"Identify the पुरुष and वचन of <strong>भवामः</strong>.",
+         "options":[
+            "उत्तम पुरुष, बहुवचन",
+            "प्रथम पुरुष, बहुवचन",
+            "मध्यम पुरुष, बहुवचन",
+            "उत्तम पुरुष, द्विवचन"
+         ],
+         "correct":0,
+         "explanation":"The ending -आमः indicates उत्तम पुरुष बहुवचन."
+      },
+      {
+         "id":"VERB-018",
+         "type":"purusha-vachana",
+         "question":"Identify the पुरुष and वचन of <strong>वदथः</strong>.",
+         "options":[
+            "मध्यम पुरुष, द्विवचन",
+            "मध्यम पुरुष, बहुवचन",
+            "प्रथम पुरुष, द्विवचन",
+            "उत्तम पुरुष, द्विवचन"
+         ],
+         "correct":0,
+         "explanation":"The ending -थः indicates मध्यम पुरुष द्विवचन."
+      },
+      {
+         "id":"VERB-019",
+         "type":"meaning-context",
+         "question":"<strong>गुरुः सत्यं वदति।</strong><br><br>What is the teacher doing?",
+         "options":[
+            "Reading the truth",
+            "Speaking the truth",
+            "Going to the truth",
+            "Writing the truth"
+         ],
+         "correct":1,
+         "explanation":"वदति means 'speaks'."
+      },
+      {
+         "id":"VERB-020",
+         "type":"gana-recognition",
+         "question":"Which pair belongs to <strong>भ्वादिगण</strong> according to your handbook?",
+         "options":[
+            "भू, गम्",
+            "दा, कृ",
+            "जुहो, तन्",
+            "नी, ज्ञा"
+         ],
+         "correct":0,
+         "explanation":"According to the handbook, both भू and गम् belong to भ्वादिगण."
+      },
+      {
+         "id":"VERB-021",
+         "type":"verb-classification",
+         "question":"<strong>बालकः जलं पिबति।</strong><br><br>The verb <strong>पिबति</strong> is:",
+         "options":[
+            "सकर्मक",
+            "अकर्मक",
+            "द्विकर्मक",
+            "Cannot determine"
+         ],
+         "correct":0,
+         "explanation":"पिबति takes the object जलम्, so it is a सकर्मक verb."
+      },
+      {
+         "id":"VERB-022",
+         "type":"purusha-vachana",
+         "question":"Identify the पुरुष and वचन of <strong>नमथ</strong>.",
+         "options":[
+            "मध्यम पुरुष, बहुवचन",
+            "मध्यम पुरुष, द्विवचन",
+            "प्रथम पुरुष, बहुवचन",
+            "उत्तम पुरुष, बहुवचन"
+         ],
+         "correct":0,
+         "explanation":"The ending -थ indicates मध्यम पुरुष बहुवचन."
+      },
+      {
+         "id":"VERB-023",
+         "type":"dhatu-recognition",
+         "question":"The verb <strong>तिष्ठति</strong> is formed from which धातु?",
+         "options":[
+            "स्था",
+            "गम्",
+            "भू",
+            "पत्"
+         ],
+         "correct":0,
+         "explanation":"तिष्ठति is derived from the धातु स्था."
+      },
+      {
+         "id":"VERB-024",
+         "type":"meaning-context",
+         "question":"<strong>बालकाः उद्याने क्रीडन्ति।</strong><br><br>What are the boys doing?",
+         "options":[
+            "Reading",
+            "Playing",
+            "Sleeping",
+            "Going"
+         ],
+         "correct":1,
+         "explanation":"क्रीडन्ति means 'they play'."
+      },
+      {
+         "id":"VERB-025",
+         "type":"verb-classification",
+         "question":"<strong>राजा तिष्ठति।</strong><br><br>The verb <strong>तिष्ठति</strong> is:",
+         "options":[
+            "सकर्मक",
+            "अकर्मक",
+            "द्विकर्मक",
+            "Cannot determine"
+         ],
+         "correct":1,
+         "explanation":"तिष्ठति ('stands') does not require a direct object, so it is अकर्मक."
+      },
+      {
+         "id":"VERB-026",
+         "type":"gana-recognition",
+         "question":"The धातु <strong>पठ्</strong> belongs to which गण?",
+         "options":[
+            "भ्वादिगण",
+            "अदादिगण",
+            "तनादिगण",
+            "चुरादिगण"
+         ],
+         "correct":0,
+         "explanation":"According to your handbook, पठ् belongs to भ्वादिगण."
+      },
+      {
+         "id":"VERB-027",
+         "type":"purusha-vachana",
+         "question":"Identify the पुरुष and वचन of <strong>पठावः</strong>.",
+         "options":[
+            "उत्तम पुरुष, द्विवचन",
+            "उत्तम पुरुष, बहुवचन",
+            "मध्यम पुरुष, द्विवचन",
+            "प्रथम पुरुष, द्विवचन"
+         ],
+         "correct":0,
+         "explanation":"The ending -आवः indicates उत्तम पुरुष द्विवचन."
+      },
+      {
+         "id":"VERB-028",
+         "type":"reasoning",
+         "question":"<strong>रामः मित्रं पश्यति।</strong><br><br>Why is <strong>पश्यति</strong> classified as सकर्मक?",
+         "options":[
+            "Because it has a direct object.",
+            "Because it has no object.",
+            "Because it has two objects.",
+            "Because it is प्रथम पुरुष."
+         ],
+         "correct":0,
+         "explanation":"The verb acts on मित्रम्, which is its direct object."
+      },
+      {
+         "id":"VERB-029",
+         "type":"dhatu-recognition",
+         "question":"Which verb is derived from the धातु <strong>नम्</strong>?",
+         "options":[
+            "नमति",
+            "भवति",
+            "गच्छति",
+            "तिष्ठति"
+         ],
+         "correct":0,
+         "explanation":"नमति is formed from the धातु नम्."
+      },
+      {
+         "id":"VERB-030",
+         "type":"mixed-analysis",
+         "question":"<strong>गुरवः शिष्येभ्यः पाठं वदन्ति।</strong><br><br>Which statement is correct about <strong>वदन्ति</strong>?",
+         "options":[
+            "प्रथम पुरुष बहुवचन",
+            "मध्यम पुरुष बहुवचन",
+            "उत्तम पुरुष बहुवचन",
+            "प्रथम पुरुष द्विवचन"
+         ],
+         "correct":0,
+         "explanation":"The ending -न्ति indicates प्रथम पुरुष बहुवचन."
+      },
+      {
+         "id":"VERB-031",
+         "type":"analysis",
+         "question":"<strong>रामः पुस्तकं पठति।</strong><br><br>Why is <strong>पठति</strong> classified as सकर्मक?",
+         "options":[
+            "Because it has a direct object.",
+            "Because it has no object.",
+            "Because it has two objects.",
+            "Because it is प्रथम पुरुष."
+         ],
+         "correct":0,
+         "explanation":"पुस्तकम् is the direct object of पठति, making the verb सकर्मक."
+      },
+      {
+         "id":"VERB-032",
+         "type":"analysis",
+         "question":"<strong>बालकः हसति।</strong><br><br>Why is <strong>हसति</strong> classified as अकर्मक?",
+         "options":[
+            "Because it has two objects.",
+            "Because no direct object is required.",
+            "Because it is in बहुवचन.",
+            "Because it belongs to भ्वादिगण."
+         ],
+         "correct":1,
+         "explanation":"The meaning is complete without a direct object."
+      },
+      {
+         "id":"VERB-033",
+         "type":"analysis",
+         "question":"<strong>गुरुः शिष्याय पुस्तकं ददाति।</strong><br><br>Which two words make <strong>ददाति</strong> a द्विकर्मक verb?",
+         "options":[
+            "गुरुः, ददाति",
+            "शिष्याय, पुस्तकम्",
+            "गुरुः, पुस्तकम्",
+            "गुरुः, शिष्याय"
+         ],
+         "correct":1,
+         "explanation":"The action involves both the recipient (शिष्याय) and the thing given (पुस्तकम्)."
+      },
+      {
+         "id":"VERB-034",
+         "type":"analysis",
+         "question":"Which verb below is अकर्मक?",
+         "options":[
+            "पठति",
+            "पश्यति",
+            "हसति",
+            "पिबति"
+         ],
+         "correct":2,
+         "explanation":"हसति does not require a direct object."
+      },
+      {
+         "id":"VERB-035",
+         "type":"analysis",
+         "question":"<strong>गच्छथ</strong><br><br>How do you know this is मध्यम पुरुष?",
+         "options":[
+            "Because of -मि",
+            "Because of -थ",
+            "Because of -न्ति",
+            "Because of -ति"
+         ],
+         "correct":1,
+         "explanation":"The ending -थ identifies मध्यम पुरुष बहुवचन."
+      },
+      {
+         "id":"VERB-036",
+         "type":"analysis",
+         "question":"<strong>पठावः</strong><br><br>Which clue tells you it is द्विवचन?",
+         "options":[
+            "-ति",
+            "-थः",
+            "-आवः",
+            "-मः"
+         ],
+         "correct":2,
+         "explanation":"The ending -आवः marks उत्तम पुरुष द्विवचन."
+      },
+      {
+         "id":"VERB-037",
+         "type":"analysis",
+         "question":"<strong>बालकाः उद्याने क्रीडन्ति।</strong><br><br>What tells you the subject is plural?",
+         "options":[
+            "बालकाः",
+            "उद्याने",
+            "क्रीडन्ति",
+            "Both बालकाः and क्रीडन्ति"
+         ],
+         "correct":3,
+         "explanation":"Both the subject (बालकाः) and the verb ending (-न्ति) indicate बहुवचन."
+      },
+      {
+         "id":"VERB-038",
+         "type":"analysis",
+         "question":"<strong>भवामः</strong><br><br>Which part of the word helps identify the वचन?",
+         "options":[
+            "भ",
+            "व",
+            "-आमः",
+            "Cannot determine"
+         ],
+         "correct":2,
+         "explanation":"The ending -आमः indicates उत्तम पुरुष बहुवचन."
+      },
+      {
+         "id":"VERB-039",
+         "type":"analysis",
+         "question":"Which pair is derived from the same धातु?",
+         "options":[
+            "गच्छति, गच्छामः",
+            "गच्छति, भवति",
+            "नमति, पठति",
+            "वदति, तिष्ठति"
+         ],
+         "correct":0,
+         "explanation":"Both forms are derived from the धातु गम्."
+      },
+      {
+         "id":"VERB-040",
+         "type":"analysis",
+         "question":"<strong>गुरुः सत्यं वदति।</strong><br><br>Why is <strong>वदति</strong> classified as सकर्मक?",
+         "options":[
+            "Because सत्यम् is the direct object.",
+            "Because the sentence has a subject.",
+            "Because it belongs to भ्वादिगण.",
+            "Because it is singular."
+         ],
+         "correct":0,
+         "explanation":"The verb acts upon सत्यम्, making it a transitive (सकर्मक) verb."
+      },
+      {
+         "id":"VERB-041",
+         "type":"transformation",
+         "question":"<strong>रामः पुस्तकं पठति।</strong><br><br>Choose the correct sentence to mean <strong>'Rama and Lakshmana read the book.'</strong>",
+         "options":[
+            "रामः लक्ष्मणः पुस्तकं पठतः।",
+            "रामः लक्ष्मणश्च पुस्तकं पठतः।",
+            "रामः लक्ष्मणश्च पुस्तकं पठति।",
+            "रामौ लक्ष्मणौ पुस्तकं पठतः।"
+         ],
+         "correct":1,
+         "explanation":"रामः लक्ष्मणश्च is a compound subject (two individuals joined by च), so the verb becomes द्विवचन: पठतः."
+      },
+      {
+         "id":"VERB-042",
+         "type":"transformation",
+         "question":"<strong>बालकः विद्यालयं गच्छति।</strong><br><br>Select the correct sentence meaning <strong>'The boys go to school.'</strong>",
+         "options":[
+            "बालकाः विद्यालयं गच्छति।",
+            "बालकाः विद्यालयं गच्छन्ति।",
+            "बालकः विद्यालयं गच्छन्ति।",
+            "बालकौ विद्यालयं गच्छतः।"
+         ],
+         "correct":1,
+         "explanation":"Plural subject requires a plural verb."
+      },
+      {
+         "id":"VERB-043",
+         "type":"transformation",
+         "question":"<strong>अहं पुस्तकं पठामि।</strong><br><br>Select the sentence meaning <strong>'We read the book.'</strong>",
+         "options":[
+            "आवां पुस्तकं पठावः।",
+            "वयं पुस्तकं पठामः।",
+            "यूयं पुस्तकं पठथ।",
+            "ते पुस्तकं पठन्ति।"
+         ],
+         "correct":1,
+         "explanation":"वयं requires the verb पठामः."
+      },
+      {
+         "id":"VERB-044",
+         "type":"transformation",
+         "question":"<strong>त्वं सत्यं वदसि।</strong><br><br>Select the correct sentence meaning <strong>'You two speak the truth.'</strong>",
+         "options":[
+            "युवां सत्यं वदथः।",
+            "यूयं सत्यं वदथ।",
+            "युवां सत्यं वदसि।",
+            "ते सत्यं वदतः."
+         ],
+         "correct":0,
+         "explanation":"युवाम् (dual) requires वदथः."
+      },
+      {
+         "id":"VERB-045",
+         "type":"agreement",
+         "question":"<strong>रामः ग्रामं गच्छति।</strong><br><br>If the subject becomes <strong>रामौ</strong>, which verb is correct?",
+         "options":[
+            "गच्छन्ति",
+            "गच्छतः",
+            "गच्छसि",
+            "गच्छामि"
+         ],
+         "correct":1,
+         "explanation":"रामौ is dual, so the verb must also be dual."
+      },
+      {
+         "id":"VERB-046",
+         "type":"agreement",
+         "question":"<strong>बालकाः जलं पिबन्ति।</strong><br><br>If the subject becomes <strong>बालकः</strong>, which verb should replace <strong>पिबन्ति</strong>?",
+         "options":[
+            "पिबति",
+            "पिबथ",
+            "पिबावः",
+            "पिबसि"
+         ],
+         "correct":0,
+         "explanation":"Singular subject requires singular verb."
+      },
+      {
+         "id":"VERB-047",
+         "type":"transformation",
+         "question":"Which sentence correctly means <strong>'We bow to the teacher.'</strong>",
+         "options":[
+            "अहं गुरुं नमामि।",
+            "वयं गुरुं नमामः।",
+            "वयं गुरुं नमन्ति।",
+            "गुरुः वयं नमामः।"
+         ],
+         "correct":1,
+         "explanation":"वयं requires the verb नमामः."
+      },
+      {
+         "id":"VERB-048",
+         "type":"error-correction",
+         "question":"Which sentence has the correct subject–verb agreement?",
+         "options":[
+            "बालकौ क्रीडन्ति।",
+            "बालकाः क्रीडतः।",
+            "बालकौ क्रीडतः।",
+            "बालकः क्रीडन्ति।"
+         ],
+         "correct":2,
+         "explanation":"Dual subject must take a dual verb."
+      },
+      {
+         "id":"VERB-049",
+         "type":"transformation",
+         "question":"<strong>गुरुः शिष्याय पुस्तकं ददाति।</strong><br><br>Select the correct sentence meaning <strong>'The teachers give a book to the student.'</strong>",
+         "options":[
+            "गुरवः शिष्याय पुस्तकं ददति।",
+            "गुरवः शिष्याय पुस्तकं ददन्ति।",
+            "गुरुः शिष्याय पुस्तकं ददन्ति।",
+            "गुरवः शिष्याय पुस्तकं ददाति।"
+         ],
+         "correct":1,
+         "explanation":"Plural subject requires plural verb."
+      },
+      {
+         "id":"VERB-050",
+         "type":"multi-step",
+         "question":"<strong>रामः मित्रं पश्यति।</strong><br><br>Which sentence correctly changes the meaning to <strong>'Rama and Krishna see their friend.'</strong>",
+         "options":[
+            "रामः कृष्णश्च मित्रं पश्यति।",
+            "रामः कृष्णश्च मित्रं पश्यतः।",
+            "रामौ कृष्णौ मित्रं पश्यतः।",
+            "रामः कृष्णः मित्रं पश्यन्ति।"
+         ],
+         "correct":1,
+         "explanation":"रामः कृष्णश्च forms a dual compound subject, requiring the dual verb पश्यतः."
+      },
+      {
+         "id":"VERB-051",
+         "type":"sentence_correction",
+         "question":"Choose the correctly corrected sentence.",
+         "sentence":"अहं विद्यालयं गच्छति।",
+         "options":[
+            "अहं विद्यालयं गच्छामि।",
+            "अहं विद्यालयं गच्छसि।",
+            "अहं विद्यालयं गच्छन्ति।",
+            "अहं विद्यालयं गच्छथ।"
+         ],
+         "correct":0,
+         "explanation":"First person singular requires गच्छामि."
+      },
+      {
+         "id":"VERB-052",
+         "type":"sentence_correction",
+         "question":"Choose the correctly corrected sentence.",
+         "sentence":"बालकाः क्रीडति।",
+         "options":[
+            "बालकाः क्रीडन्ति।",
+            "बालकाः क्रीडसि।",
+            "बालकाः क्रीडामि।",
+            "बालकाः क्रीडथ।"
+         ],
+         "correct":0,
+         "explanation":"Plural subject takes क्रीडन्ति."
+      },
+      {
+         "id":"VERB-053",
+         "type":"find_error",
+         "question":"Which word is incorrect?",
+         "sentence":"त्वं पुस्तकं पठामि।",
+         "options":[
+            "त्वं",
+            "पुस्तकम्",
+            "पठामि",
+            "No mistake"
+         ],
+         "correct":2,
+         "explanation":"With त्वं, the verb should be पठसि."
+      },
+      {
+         "id":"VERB-054",
+         "type":"sentence_correction",
+         "question":"Choose the correct sentence.",
+         "sentence":"भवान् जलं पिबसि।",
+         "options":[
+            "भवान् जलं पिबति।",
+            "भवान् जलं पिबामि।",
+            "भवान् जलं पिबन्ति।",
+            "भवान् जलं पिबथ।"
+         ],
+         "correct":0,
+         "explanation":"भवान् takes third person singular."
+      },
+      {
+         "id":"VERB-055",
+         "type":"sentence_correction",
+         "question":"Choose the correct sentence.",
+         "sentence":"यूयं संस्कृतं पठसि।",
+         "options":[
+            "यूयं संस्कृतं पठथ।",
+            "यूयं संस्कृतं पठति।",
+            "यूयं संस्कृतं पठामि।",
+            "यूयं संस्कृतं पठन्ति।"
+         ],
+         "correct":0,
+         "explanation":"यूयं takes second person plural."
+      },
+      {
+         "id":"VERB-056",
+         "type":"find_error",
+         "question":"Which word is incorrect?",
+         "sentence":"बालिका गीतं गायन्ति।",
+         "options":[
+            "बालिका",
+            "गीतम्",
+            "गायन्ति",
+            "No mistake"
+         ],
+         "correct":2,
+         "explanation":"Singular subject requires गायति."
+      },
+      {
+         "id":"VERB-057",
+         "type":"sentence_correction",
+         "question":"Choose the correct sentence.",
+         "sentence":"ते फलं खादसि।",
+         "options":[
+            "ते फलं खादन्ति।",
+            "ते फलं खादामि।",
+            "ते फलं खादति।",
+            "ते फलं खादथ।"
+         ],
+         "correct":0,
+         "explanation":"ते requires third person plural."
+      },
+      {
+         "id":"VERB-058",
+         "type":"sentence_correction",
+         "question":"Choose the correct sentence.",
+         "sentence":"आवाम् वनं गच्छति।",
+         "options":[
+            "आवाम् वनं गच्छावः।",
+            "आवाम् वनं गच्छामि।",
+            "आवाम् वनं गच्छथ।",
+            "आवाम् वनं गच्छन्ति।"
+         ],
+         "correct":0,
+         "explanation":"आवाम् requires first person dual."
+      },
+      {
+         "id":"VERB-059",
+         "type":"sentence_correction",
+         "question":"Choose the correct sentence.",
+         "sentence":"वयं रामं नमति।",
+         "options":[
+            "वयं रामं नमामः।",
+            "वयं रामं नमसि।",
+            "वयं रामं नमन्ति।",
+            "वयं रामं नमथ।"
+         ],
+         "correct":0,
+         "explanation":"वयं takes first person plural."
+      },
+      {
+         "id":"VERB-060",
+         "type":"find_error",
+         "question":"Which word is incorrect?",
+         "sentence":"भवन्तः देवं नमति।",
+         "options":[
+            "भवन्तः",
+            "देवम्",
+            "नमति",
+            "No mistake"
+         ],
+         "correct":2,
+         "explanation":"Plural subject requires नमन्ति."
+      },
+      {
+         "id":"VERB-061",
+         "type":"sentence_correction",
+         "question":"Choose the correct sentence.",
+         "sentence":"बालकौ धावन्ति।",
+         "options":[
+            "बालकौ धावतः।",
+            "बालकौ धावति।",
+            "बालकौ धावसि।",
+            "बालकौ धावामि।"
+         ],
+         "correct":0,
+         "explanation":"Dual subject requires धावतः."
+      },
+      {
+         "id":"VERB-062",
+         "type":"sentence_correction",
+         "question":"Choose the correct sentence.",
+         "sentence":"बालिके लिखन्ति।",
+         "options":[
+            "बालिके लिखतः।",
+            "बालिके लिखति।",
+            "बालिके लिखसि।",
+            "बालिके लिखामि।"
+         ],
+         "correct":0,
+         "explanation":"Dual subject requires लिखतः."
+      },
+      {
+         "id":"VERB-063",
+         "type":"find_error",
+         "question":"Which word is incorrect?",
+         "sentence":"अहं जलं पिबथ।",
+         "options":[
+            "अहम्",
+            "जलम्",
+            "पिबथ",
+            "No mistake"
+         ],
+         "correct":2,
+         "explanation":"First person singular requires पिबामि."
+      },
+      {
+         "id":"VERB-064",
+         "type":"sentence_correction",
+         "question":"Choose the correct sentence.",
+         "sentence":"त्वं वनं गच्छथ।",
+         "options":[
+            "त्वं वनं गच्छसि।",
+            "त्वं वनं गच्छामि।",
+            "त्वं वनं गच्छति।",
+            "त्वं वनं गच्छन्ति।"
+         ],
+         "correct":0,
+         "explanation":"त्वं takes second person singular."
+      },
+      {
+         "id":"VERB-065",
+         "type":"sentence_correction",
+         "question":"Choose the correct sentence.",
+         "sentence":"भवान् श्लोकं पठसि।",
+         "options":[
+            "भवान् श्लोकं पठति।",
+            "भवान् श्लोकं पठथ।",
+            "भवान् श्लोकं पठामि।",
+            "भवान् श्लोकं पठन्ति।"
+         ],
+         "correct":0,
+         "explanation":"भवान् uses third person singular."
+      },
+      {
+         "id":"VERB-066",
+         "type":"find_error",
+         "question":"Which word is incorrect?",
+         "sentence":"ते गच्छसि।",
+         "options":[
+            "ते",
+            "गच्छसि",
+            "No mistake"
+         ],
+         "correct":1,
+         "explanation":"ते requires गच्छन्ति."
+      },
+      {
+         "id":"VERB-067",
+         "type":"sentence_correction",
+         "question":"Choose the correct sentence.",
+         "sentence":"यूयं हससि।",
+         "options":[
+            "यूयं हसथ।",
+            "यूयं हसामि।",
+            "यूयं हसति।",
+            "यूयं हसन्ति।"
+         ],
+         "correct":0,
+         "explanation":"यूयं requires second person plural."
+      },
+      {
+         "id":"VERB-068",
+         "type":"sentence_correction",
+         "question":"Choose the correct sentence.",
+         "sentence":"आवाम् वदामः।",
+         "options":[
+            "आवाम् वदावः।",
+            "आवाम् वदामि।",
+            "आवाम् वदति।",
+            "आवाम् वदथ।"
+         ],
+         "correct":0,
+         "explanation":"First person dual takes वदावः."
+      },
+      {
+         "id":"VERB-069",
+         "type":"find_error",
+         "question":"Which word is incorrect?",
+         "sentence":"वयं लिखति।",
+         "options":[
+            "वयम्",
+            "लिखति",
+            "No mistake"
+         ],
+         "correct":1,
+         "explanation":"Plural first person requires लिखामः."
+      },
+      {
+         "id":"VERB-070",
+         "type":"sentence_correction",
+         "question":"Choose the correct sentence.",
+         "sentence":"बालकः धावन्ति।",
+         "options":[
+            "बालकः धावति।",
+            "बालकः धावतः।",
+            "बालकः धावामि।",
+            "बालकः धावथ।"
+         ],
+         "correct":0,
+         "explanation":"Singular subject requires धावति."
+      },
+      {
+         "id":"VERB-071",
+         "type":"multiple_correction",
+         "question":"Choose the completely corrected sentence.",
+         "sentence":"अहं विद्यालयं गच्छति च पठसि च।",
+         "options":[
+            "अहं विद्यालयं गच्छामि च पठामि च।",
+            "अहं विद्यालयं गच्छसि च पठसि च।",
+            "अहं विद्यालयं गच्छति च पठति च।",
+            "अहं विद्यालयं गच्छन्ति च पठन्ति च."
+         ],
+         "correct":0,
+         "explanation":"Both verbs must agree with अहम्."
+      },
+      {
+         "id":"VERB-072",
+         "type":"multiple_correction",
+         "question":"Choose the completely corrected sentence.",
+         "sentence":"ते क्रीडसि च हससि च।",
+         "options":[
+            "ते क्रीडन्ति च हसन्ति च।",
+            "ते क्रीडति च हसति च।",
+            "ते क्रीडामि च हसामि च।",
+            "ते क्रीडथ च हसथ च."
+         ],
+         "correct":0,
+         "explanation":"Both verbs agree with third person plural."
+      },
+      {
+         "id":"VERB-073",
+         "type":"multiple_correction",
+         "question":"Choose the completely corrected sentence.",
+         "sentence":"आवाम् गच्छामि च पिबामि च।",
+         "options":[
+            "आवाम् गच्छावः च पिबावः च।",
+            "आवाम् गच्छति च पिबति च।",
+            "आवाम् गच्छथ च पिबथ च.",
+            "आवाम् गच्छन्ति च पिबन्ति च."
+         ],
+         "correct":0,
+         "explanation":"Both verbs must be first person dual."
+      },
+      {
+         "id":"VERB-074",
+         "type":"find_error",
+         "question":"Which word is incorrect?",
+         "sentence":"भवन्तः श्लोकं पठति च गायन्ति च।",
+         "options":[
+            "भवन्तः",
+            "पठति",
+            "गायन्ति",
+            "No mistake"
+         ],
+         "correct":1,
+         "explanation":"Both verbs should be plural."
+      },
+      {
+         "id":"VERB-075",
+         "type":"sentence_correction",
+         "question":"Choose the correct sentence.",
+         "sentence":"बालिकाः लिखति।",
+         "options":[
+            "बालिकाः लिखन्ति।",
+            "बालिकाः लिखसि।",
+            "बालिकाः लिखामि।",
+            "बालिकाः लिखथ।"
+         ],
+         "correct":0,
+         "explanation":"Plural subject requires लिखन्ति."
+      },
+      {
+         "id":"VERB-076",
+         "type":"find_error",
+         "question":"Which word is incorrect?",
+         "sentence":"त्वं नमामि।",
+         "options":[
+            "त्वम्",
+            "नमामि",
+            "No mistake"
+         ],
+         "correct":1,
+         "explanation":"With त्वम् the verb should be नमसि."
+      },
+      {
+         "id":"VERB-077",
+         "type":"sentence_correction",
+         "question":"Choose the correct sentence.",
+         "sentence":"भवान् वदसि।",
+         "options":[
+            "भवान् वदति।",
+            "भवान् वदथ।",
+            "भवान् वदामि।",
+            "भवान् वदन्ति।"
+         ],
+         "correct":0,
+         "explanation":"भवान् behaves like third person singular."
+      },
+      {
+         "id":"VERB-078",
+         "type":"multiple_correction",
+         "question":"Choose the completely corrected sentence.",
+         "sentence":"यूयं हससि च गच्छसि च।",
+         "options":[
+            "यूयं हसथ च गच्छथ च।",
+            "यूयं हसन्ति च गच्छन्ति च।",
+            "यूयं हसामि च गच्छामि च।",
+            "यूयं हसति च गच्छति च."
+         ],
+         "correct":0,
+         "explanation":"Both verbs should be second person plural."
+      },
+      {
+         "id":"VERB-079",
+         "type":"sentence_correction",
+         "question":"Choose the correct sentence.",
+         "sentence":"बालके पठन्ति।",
+         "options":[
+            "बालके पठतः।",
+            "बालके पठति।",
+            "बालके पठामि।",
+            "बालके पठसि।"
+         ],
+         "correct":0,
+         "explanation":"Dual subject requires पठतः."
+      },
+      {
+         "id":"VERB-080",
+         "type":"multiple_correction",
+         "question":"Choose the completely corrected sentence.",
+         "sentence":"वयं पठति च लिखति च।",
+         "options":[
+            "वयं पठामः च लिखामः च।",
+            "वयं पठसि च लिखसि च।",
+            "वयं पठन्ति च लिखन्ति च।",
+            "वयं पठथ च लिखथ च."
+         ],
+         "correct":0,
+         "explanation":"Both verbs should agree with first person plural."
+      }
+   ]
+}
