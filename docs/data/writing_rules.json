@@ -72,7 +72,7 @@
          "question":"Which spelling correctly shows परसवर्ण?",
          "options":[
             "सन्गच्छति",
-            "संगच्छति",
+            "सङ्गच्छति",
             "सनगच्छति",
             "संगचछति"
          ],
@@ -225,7 +225,7 @@
       {
          "id":"WRITE-018",
          "type":"rule-analysis",
-         "question":"Which rule explains the change from <strong>संकर</strong> to <strong>शङ्कर</strong>?",
+         "question":"Which rule explains the change from <strong>शंकर</strong> to <strong>शङ्कर</strong>?",
          "options":[
             "परसवर्ण",
             "णत्व",
@@ -264,11 +264,11 @@
       {
          "id":"WRITE-021",
          "type":"comparison",
-         "question":"Which pair of words demonstrates the same writing rule?",
+         "question":"Which pair(s) of words demonstrates the same writing rule?",
          "options":[
             "रामेण, नृपेण",
             "रामेण, सञ्जय",
-            "सञ्जय, शङ्कर",
+            "संजय, शङ्कर",
             "रामं नमति, रामेण"
          ],
          "correct":0,
