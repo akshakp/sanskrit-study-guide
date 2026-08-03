@@ -183,3 +183,13 @@ When using verbs of motion (e.g., **गम्, रु, चर्**), the **desti
 !!! example "Giving Verbs — द्वितीया + चतुर्थी"
     - नृपः ब्राह्मणेभ्यः धनं यच्छति
     - श्रीकृष्णः ब्राह्मणाय दक्षिणां यच्छति
+
+### अस् तथा भू अकर्मक धात्वोः (अस् & भू verbs)
+
+The roots **अस्** (e.g., **अस्ति, सन्ति**) and **भू** (e.g., **भवति, भवन्ति**) are **intransitive verbs (अकर्मक धातु)**.
+
+When these verbs are used, **the person experiencing the state does NOT take the accusative case (द्वितीया विभक्ति)**. Instead, **the genitive case (षष्ठी विभक्ति)** is used.
+
+!!! example "Motion Verbs — द्वितीया"
+    - सत्सङ्गदीक्षायाः पाठेन **छात्राणाम्** अतीव आनन्दः भवति। (NOT छात्रान्)
+    - ईश्वरस्य पूजया कथया च **भक्तानां** सुखं भवति।(NOT भक्तान्)
