@@ -1,423 +1,423 @@
 {
    "title":"Advance Questions",
    "questions":[
-{
-"id":"MIX3-001",
-"type":"multiple_correction",
-"question":"Choose the completely correct sentence.",
-"sentence":"श्वेतः कपोतः वृक्षं वसति।",
-"options":[
-"श्वेतः कपोतः वृक्षे वसति।",
-"श्वेतम् कपोतः वृक्षे वसति।",
-"श्वेतः कपोतः वृक्षं वसन्ति।",
-"श्वेता कपोतः वृक्षे वसति।"
-],
-"correct":0,
-"concepts":[
-"विशेषण Agreement",
-"सप्तमी विभक्ति",
-"Verb Agreement"
-],
-"explanation":"वस् takes सप्तमी for location, the adjective agrees with कपोतः, and the verb agrees with the singular subject."
-},
-{
-"id":"MIX3-002",
-"type":"multiple_correction",
-"question":"Choose the completely correct sentence.",
-"sentence":"भक्ताः मन्दिरे गच्छन्ति।",
-"options":[
-"भक्ताः मन्दिरं गच्छन्ति।",
-"भक्ताः मन्दिरे गच्छन्ति।",
-"भक्ताः मन्दिरे गच्छति।",
-"भक्ताः मन्दिराय गच्छन्ति।"
-],
-"correct":0,
-"concepts":[
-"गत्यर्थक धातु",
-"द्वितीया विभक्ति",
-"Verb Agreement"
-],
-"explanation":"With गम् (गच्छति), the destination takes द्वितीया विभक्ति."
-},
-{
-"id":"MIX3-003",
-"type":"multiple_correction",
-"question":"Choose the completely correct sentence.",
-"sentence":"सेवकः ब्राह्मणं प्रसादः यच्छति।",
-"options":[
-"सेवकः ब्राह्मणेभ्यः प्रसादं यच्छति।",
-"सेवकः ब्राह्मणं प्रसादः यच्छति।",
-"सेवकः ब्राह्मणेन प्रसादं यच्छति।",
-"सेवकः ब्राह्मणस्य प्रसादं यच्छति।"
-],
-"correct":0,
-"concepts":[
-"द्विकर्मक धातु",
-"द्वितीया",
-"चतुर्थी"
-],
-"explanation":"यच्छति requires the thing given in द्वितीया and the recipient in चतुर्थी."
-},
-{
-"id":"MIX3-004",
-"type":"error_count",
-"question":"How many grammar mistakes are in this sentence?",
-"sentence":"श्वेता पुष्पम् पतन्ति।",
-"options":[
-"1",
-"2",
-"3",
-"4"
-],
-"correct":1,
-"concepts":[
-"विशेषण",
-"Verb Agreement"
-],
-"explanation":"Two mistakes: श्वेतम् and पतति."
-},
-{
-"id":"MIX3-005",
-"type":"multiple_correction",
-"question":"Choose the completely correct sentence.",
-"sentence":"सत्सङ्गदीक्षायाः पाठेन छात्रान् आनन्दः भवति।",
-"options":[
-"सत्सङ्गदीक्षायाः पाठेन छात्राणाम् आनन्दः भवति।",
-"सत्सङ्गदीक्षायाः पाठेन छात्रान् आनन्दः भवति।",
-"सत्सङ्गदीक्षायाः पाठेन छात्रेभ्यः आनन्दः भवति।",
-"सत्सङ्गदीक्षायाः पाठेन छात्रैः आनन्दः भवति।"
-],
-"correct":0,
-"concepts":[
-"भू",
-"षष्ठी",
-"अकर्मक"
-],
-"explanation":"With भवति, the experiencer takes षष्ठी विभक्ति."
-},
-  {
-    "id":"MIX3-006",
-    "type":"multiple_correction",
-    "question":"Choose the completely correct sentence.",
-    "sentence":"हरितः पर्णानि वृक्षं पतति।",
-    "options":[
-      "हरितानि पर्णानि वृक्षात् पतन्ति।",
-      "हरितानि पर्णानि वृक्षे पतन्ति।",
-      "हरितः पर्णानि वृक्षात् पतन्ति।",
-      "हरितानि पर्णानि वृक्षात् पतति।"
-    ],
-    "correct":0,
-    "concepts":[
-      "विशेषण Agreement",
-      "पञ्चमी विभक्ति",
-      "Verb Agreement"
-    ],
-    "explanation":"पर्णानि is neuter plural, so the adjective is हरितानि and the verb is पतन्ति. Since the leaves fall from the tree, the source is expressed by पञ्चमी (वृक्षात्)."
-  },
-  {
-    "id":"MIX3-007",
-    "type":"multiple_correction",
-    "question":"Choose the completely correct sentence.",
-    "sentence":"किङ्करः ईशम् प्रातःकाले नमन्ति।",
-    "options":[
-      "किङ्करः प्रातःकाले ईशाय नमति।",
-      "किङ्करः प्रातःकाले ईशम् नमति।",
-      "किङ्करः प्रातःकाले ईशेन नमति।",
-      "किङ्करः प्रातःकाले ईशस्य नमति।"
-    ],
-    "correct":0,
-    "concepts":[
-      "चतुर्थी",
-      "Verb Agreement",
-      "अव्यय"
-    ],
-    "explanation":"नम् takes चतुर्थी (ईशाय), the singular subject requires नमति, and प्रातःकाले is correctly used as an indeclinable time expression."
-  },
-  {
-    "id":"MIX3-008",
-    "type":"error_count",
-    "question":"How many grammar mistakes are in this sentence?",
-    "sentence":"श्वेता माला देवम् यच्छति।",
-    "options":[
-      "1",
-      "2",
-      "3",
-      "4"
-    ],
-    "correct":0,
-    "concepts":[
-      "द्विकर्मक धातु",
-      "चतुर्थी"
-    ],
-    "explanation":"Only one mistake. यच्छति requires the recipient in चतुर्थी, so देवम् should be देवाय."
-  },
-  {
-    "id":"MIX3-009",
-    "type":"multiple_correction",
-    "question":"Choose the completely correct sentence.",
-    "sentence":"बालिका नीलः लेखन्या पुस्तकम् लिखति।",
-    "options":[
-      "बालिका नीलया लेखन्या पुस्तकम् लिखति।",
-      "बालिका नीलः लेखन्या पुस्तकम् लिखति।",
-      "बालिका नीलम् लेखन्या पुस्तकम् लिखति।",
-      "बालिका नीलाय लेखन्या पुस्तकम् लिखति।"
-    ],
-    "correct":0,
-    "concepts":[
-      "विशेषण Agreement",
-      "करण विभक्ति"
-    ],
-    "explanation":"The adjective describes लेखन्या, so it must also be feminine instrumental singular: नीलया."
-  },
-  {
-    "id":"MIX3-010",
-    "type":"multiple_correction",
-    "question":"Choose the completely correct sentence.",
-    "sentence":"छात्राः नूतनः ग्रन्थम् विद्यालये पठति।",
-    "options":[
-      "छात्राः नूतनम् ग्रन्थम् विद्यालये पठन्ति।",
-      "छात्राः नूतनः ग्रन्थम् विद्यालये पठति।",
-      "छात्राः नूतनम् ग्रन्थे विद्यालयं पठन्ति।",
-      "छात्रः नूतनम् ग्रन्थम् विद्यालये पठन्ति।"
-    ],
-    "correct":0,
-    "concepts":[
-      "विशेषण Agreement",
-      "Verb Agreement",
-      "सप्तमी विभक्ति"
-    ],
-    "explanation":"The adjective must agree with ग्रन्थम् (neuter singular), the plural subject requires पठन्ति, and विद्यालये correctly expresses location."
-  },
-  {
-"id":"MIX3-011",
-"type":"multiple_correction",
-"question":"Choose the completely correct sentence.",
-"sentence":"छात्राः नूतनः ग्रन्थम् पठति।",
-"options":[
-"छात्राः नूतनम् ग्रन्थम् पठन्ति।",
-"छात्राः नूतनः ग्रन्थम् पठन्ति।",
-"छात्राः नूतनम् ग्रन्थम् पठति।",
-"छात्रः नूतनम् ग्रन्थम् पठन्ति।"
-],
-"correct":0,
-"concepts":[
-"Verb Agreement",
-"Adjective Agreement"
-],
-"explanation":"नूतनम् agrees with ग्रन्थम् and पठन्ति agrees with छात्राः."
-},
-{
-"id":"MIX3-012",
-"type":"multiple_correction",
-"question":"Choose the completely correct sentence.",
-"sentence":"सेवकः ब्राह्मणं प्रसादः यच्छति।",
-"options":[
-"सेवकः ब्राह्मणाय प्रसादं यच्छति।",
-"सेवकः ब्राह्मणं प्रसादः यच्छति।",
-"सेवकः ब्राह्मणेन प्रसादं यच्छति।",
-"सेवकः ब्राह्मणस्य प्रसादं यच्छति।"
-],
-"correct":0,
-"concepts":[
-"द्विकर्मक",
-"द्वितीया",
-"चतुर्थी"
-],
-"explanation":"यच्छति requires the thing given in द्वितीया and the recipient in चतुर्थी."
-},
-{
-"id":"MIX3-013",
-"type":"error_count",
-"question":"How many grammar mistakes are in this sentence?",
-"sentence":"श्वेता पुष्पम् पतन्ति।",
-"options":[
-"1",
-"2",
-"3",
-"4"
-],
-"correct":1,
-"concepts":[
-"Verb Agreement",
-"Adjective Agreement"
-],
-"explanation":"Two mistakes: श्वेतम् and पतति."
-},
-{
-"id":"MIX3-014",
-"type":"multiple_correction",
-"question":"Choose the completely correct sentence.",
-"sentence":"रामं आनन्दः भवति।",
-"options":[
-"रामस्य आनन्दः भवति।",
-"रामं आनन्दः भवति।",
-"रामाय आनन्दः भवति।",
-"रामे आनन्दः भवति।"
-],
-"correct":0,
-"concepts":[
-"भवति Rule",
-"षष्ठी"
-],
-"explanation":"With भवति expressing an experience or feeling, the experiencer takes षष्ठी विभक्ति."
-},
-{
-"id":"MIX3-015",
-"type":"multiple_correction",
-"question":"Choose the completely correct sentence.",
-"sentence":"बालकः पुस्तकम् पठन्ति च लिखन्ति च।",
-"options":[
-"बालकः पुस्तकम् पठति च लिखति च।",
-"बालकः पुस्तकम् पठन्ति च लिखन्ति च।",
-"बालकः पुस्तकम् पठसि च लिखसि च।",
-"बालकः पुस्तकम् पठामि च लिखामि च।"
-],
-"correct":0,
-"concepts":[
-"Multiple Verbs",
-"Verb Agreement"
-],
-"explanation":"When two verbs share the same subject, both verbs must agree with that subject."
-},
-{
-"id":"MIX3-016",
-"type":"identify_rule",
-"question":"Which grammar rule is violated?",
-"sentence":"भक्ताः मन्दिरे गच्छन्ति।",
-"options":[
-"गत्यर्थक धातु",
-"Verb Agreement",
-"विशेषण Agreement",
-"णत्व Rule"
-],
-"correct":0,
-"explanation":"With a गत्यर्थक धातु like गच्छति, the destination should be in द्वितीया विभक्ति (मन्दिरम्), not सप्तमी."
-},
-{
-"id":"MIX3-017",
-"type":"identify_rule",
-"question":"Which grammar rule is violated?",
-"sentence":"सेवकः ब्राह्मणं प्रसादं यच्छति।",
-"options":[
-"द्विकर्मक धातु",
-"Verb Agreement",
-"Word Order",
-"विशेषण Agreement"
-],
-"correct":0,
-"explanation":"यच्छति is a द्विकर्मक verb. The recipient must be in चतुर्थी विभक्ति."
-},
-{
-"id":"MIX3-018",
-"type":"identify_rule",
-"question":"Which grammar rule is violated?",
-"sentence":"हरितः पुष्पम् अस्ति।",
-"options":[
-"विशेषण Agreement",
-"Verb Agreement",
-"गत्यर्थक धातु",
-"परसवर्ण"
-],
-"correct":0,
-"explanation":"The adjective must agree with the neuter noun: हरितम् पुष्पम्."
-},
-{
-"id":"MIX3-019",
-"type":"identify_rule",
-"question":"Which grammar rule is violated?",
-"sentence":"छात्राः पुस्तकम् पठति।",
-"options":[
-"Verb Agreement",
-"णत्व",
-"Word Order",
-"चतुर्थी"
-],
-"correct":0,
-"explanation":"The plural subject requires the plural verb: पठन्ति."
-},
-{
-"id":"MIX3-020",
-"type":"identify_rule",
-"question":"Which grammar rule is violated?",
-"sentence":"रामं आनन्दः भवति।",
-"options":[
-"भवति Rule",
-"Verb Agreement",
-"विशेषण Agreement",
-"परसवर्ण"
-],
-"correct":0,
-"explanation":"With भवति expressing an experience, the experiencer takes षष्ठी विभक्ति."
-},
-{
-"id":"MIX3-021",
-"type":"identify_rule",
-"question":"Which grammar rule is violated?",
-"sentence":"रामेन",
-"options":[
-"णत्व Rule",
-"परसवर्ण",
-"Sandhi 1-3",
-"No rule is violated"
-],
-"correct":3,
-"explanation":"रामेन correctly becomes रामेण according to the णत्व rule. Therefore no rule is violated in the written form रामेण; the form रामेन itself illustrates the pre-rule stage in the handbook."
-},
-{
-"id":"MIX3-022",
-"type":"identify_rule",
-"question":"Which grammar rule applies?",
-"sentence":"रामम् नमामि",
-"options":[
-"म् → अनुस्वार",
-"परसवर्ण",
-"णत्व",
-"Word Order"
-],
-"correct":0,
-"explanation":"म् changes to अनुस्वार before a consonant: रामं नमामि."
-},
-{
-"id":"MIX3-023",
-"type":"identify_rule",
-"question":"Which grammar rule applies?",
-"sentence":"शंकर",
-"options":[
-"परसवर्ण",
-"णत्व",
-"Verb Agreement",
-"विशेषण Agreement"
-],
-"correct":0,
-"explanation":"The anusvāra changes to the nasal of the कु group: शङ्कर."
-},
-{
-"id":"MIX3-024",
-"type":"identify_rule",
-"question":"Which grammar rule is demonstrated?",
-"sentence":"रामः सूर्यं नमति। / सूर्यं रामः नमति।",
-"options":[
-"Word Order",
-"गत्यर्थक धातु",
-"द्विकर्मक",
-"णत्व"
-],
-"correct":0,
-"explanation":"Word order can change without changing the meaning."
-},
-{
-"id":"MIX3-025",
-"type":"identify_rule",
-"question":"Which grammar rule is violated?",
-"sentence":"किङ्करः ईशम् नमति।",
-"options":[
-"चतुर्थी with नम्",
-"Verb Agreement",
-"Word Order",
-"विशेषण Agreement"
-],
-"correct":0,
-"explanation":"The verb नम् takes the object in चतुर्थी विभक्ति: ईशाय."
-}
-]
+      {
+         "id":"MIX3-001",
+         "type":"multiple_correction",
+         "question":"Choose the completely correct sentence.",
+         "sentence":"श्वेतः कपोतः वृक्षं वसति।",
+         "options":[
+            "श्वेतः कपोतः वृक्षे वसति।",
+            "श्वेतम् कपोतः वृक्षे वसति।",
+            "श्वेतः कपोतः वृक्षं वसन्ति।",
+            "श्वेता कपोतः वृक्षे वसति।"
+         ],
+         "correct":0,
+         "concepts":[
+            "विशेषण Agreement",
+            "सप्तमी विभक्ति",
+            "Verb Agreement"
+         ],
+         "explanation":"वस् takes सप्तमी for location, the adjective agrees with कपोतः, and the verb agrees with the singular subject."
+      },
+      {
+         "id":"MIX3-002",
+         "type":"multiple_correction",
+         "question":"Choose the completely correct sentence.",
+         "sentence":"भक्ताः मन्दिरे गच्छन्ति।",
+         "options":[
+            "भक्ताः मन्दिरं गच्छन्ति।",
+            "भक्ताः मन्दिरे गच्छन्ति।",
+            "भक्ताः मन्दिरे गच्छति।",
+            "भक्ताः मन्दिराय गच्छन्ति।"
+         ],
+         "correct":0,
+         "concepts":[
+            "गत्यर्थक धातु",
+            "द्वितीया विभक्ति",
+            "Verb Agreement"
+         ],
+         "explanation":"With गम् (गच्छति), the destination takes द्वितीया विभक्ति."
+      },
+      {
+         "id":"MIX3-003",
+         "type":"multiple_correction",
+         "question":"Choose the completely correct sentence.",
+         "sentence":"सेवकः ब्राह्मणं प्रसादः यच्छति।",
+         "options":[
+            "सेवकः ब्राह्मणेभ्यः प्रसादं यच्छति।",
+            "सेवकः ब्राह्मणं प्रसादः यच्छति।",
+            "सेवकः ब्राह्मणेन प्रसादं यच्छति।",
+            "सेवकः ब्राह्मणस्य प्रसादं यच्छति।"
+         ],
+         "correct":0,
+         "concepts":[
+            "द्विकर्मक धातु",
+            "द्वितीया",
+            "चतुर्थी"
+         ],
+         "explanation":"यच्छति requires the thing given in द्वितीया and the recipient in चतुर्थी."
+      },
+      {
+         "id":"MIX3-004",
+         "type":"error_count",
+         "question":"How many grammar mistakes are in this sentence?",
+         "sentence":"श्वेता पुष्पम् पतन्ति।",
+         "options":[
+            "1",
+            "2",
+            "3",
+            "4"
+         ],
+         "correct":1,
+         "concepts":[
+            "विशेषण",
+            "Verb Agreement"
+         ],
+         "explanation":"Two mistakes: श्वेतम् and पतति."
+      },
+      {
+         "id":"MIX3-005",
+         "type":"multiple_correction",
+         "question":"Choose the completely correct sentence.",
+         "sentence":"सत्सङ्गदीक्षायाः पाठेन छात्रान् आनन्दः भवति।",
+         "options":[
+            "सत्सङ्गदीक्षायाः पाठेन छात्राणाम् आनन्दः भवति।",
+            "सत्सङ्गदीक्षायाः पाठेन छात्रान् आनन्दः भवति।",
+            "सत्सङ्गदीक्षायाः पाठेन छात्रेभ्यः आनन्दः भवति।",
+            "सत्सङ्गदीक्षायाः पाठेन छात्रैः आनन्दः भवति।"
+         ],
+         "correct":0,
+         "concepts":[
+            "भू",
+            "षष्ठी",
+            "अकर्मक"
+         ],
+         "explanation":"With भवति, the experiencer takes षष्ठी विभक्ति."
+      },
+      {
+         "id":"MIX3-006",
+         "type":"multiple_correction",
+         "question":"Choose the completely correct sentence.",
+         "sentence":"हरितः पर्णानि वृक्षं पतति।",
+         "options":[
+            "हरितानि पर्णानि वृक्षात् पतन्ति।",
+            "हरितानि पर्णानि वृक्षे पतन्ति।",
+            "हरितः पर्णानि वृक्षात् पतन्ति।",
+            "हरितानि पर्णानि वृक्षात् पतति।"
+         ],
+         "correct":0,
+         "concepts":[
+            "विशेषण Agreement",
+            "पञ्चमी विभक्ति",
+            "Verb Agreement"
+         ],
+         "explanation":"पर्णानि is neuter plural, so the adjective is हरितानि and the verb is पतन्ति. Since the leaves fall from the tree, the source is expressed by पञ्चमी (वृक्षात्)."
+      },
+      {
+         "id":"MIX3-007",
+         "type":"multiple_correction",
+         "question":"Choose the completely correct sentence.",
+         "sentence":"छात्राः नूतनः ग्रन्थम् प्रातःकाले पठति।",
+         "options":[
+            "छात्राः नूतनम् ग्रन्थम् प्रातःकाले पठन्ति.",
+            "छात्राः नूतनः ग्रन्थम् प्रातःकाले पठन्ति.",
+            "छात्राः नूतनम् ग्रन्थम् प्रातःकाले पठति.",
+            "छात्रः नूतनम् ग्रन्थम् प्रातःकाले पठन्ति."
+         ],
+         "correct":0,
+         "concepts":[
+            "Verb Agreement",
+            "विशेषण Agreement",
+            "अव्यय"
+         ],
+         "explanation":"नूतनम् agrees with the neuter noun ग्रन्थम्. The plural subject छात्राः requires the plural verb पठन्ति. प्रातःकाले is correctly used as an avyaya (time expression)."
+      },
+      {
+         "id":"MIX3-008",
+         "type":"error_count",
+         "question":"How many grammar mistakes are in this sentence?",
+         "sentence":"श्वेता माला देवम् यच्छति।",
+         "options":[
+            "1",
+            "2",
+            "3",
+            "4"
+         ],
+         "correct":0,
+         "concepts":[
+            "द्विकर्मक धातु",
+            "चतुर्थी"
+         ],
+         "explanation":"Only one mistake. यच्छति requires the recipient in चतुर्थी, so देवम् should be देवाय."
+      },
+      {
+         "id":"MIX3-009",
+         "type":"multiple_correction",
+         "question":"Choose the completely correct sentence.",
+         "sentence":"बालिका नीलः लेखन्या पुस्तकम् लिखति।",
+         "options":[
+            "बालिका नीलया लेखन्या पुस्तकम् लिखति।",
+            "बालिका नीलः लेखन्या पुस्तकम् लिखति।",
+            "बालिका नीलम् लेखन्या पुस्तकम् लिखति।",
+            "बालिका नीलाय लेखन्या पुस्तकम् लिखति।"
+         ],
+         "correct":0,
+         "concepts":[
+            "विशेषण Agreement",
+            "करण विभक्ति"
+         ],
+         "explanation":"The adjective describes लेखन्या, so it must also be feminine instrumental singular: नीलया."
+      },
+      {
+         "id":"MIX3-010",
+         "type":"multiple_correction",
+         "question":"Choose the completely correct sentence.",
+         "sentence":"छात्राः नूतनः ग्रन्थम् विद्यालये पठति।",
+         "options":[
+            "छात्राः नूतनम् ग्रन्थम् विद्यालये पठन्ति।",
+            "छात्राः नूतनः ग्रन्थम् विद्यालये पठति।",
+            "छात्राः नूतनम् ग्रन्थे विद्यालयं पठन्ति।",
+            "छात्रः नूतनम् ग्रन्थम् विद्यालये पठन्ति।"
+         ],
+         "correct":0,
+         "concepts":[
+            "विशेषण Agreement",
+            "Verb Agreement",
+            "सप्तमी विभक्ति"
+         ],
+         "explanation":"The adjective must agree with ग्रन्थम् (neuter singular), the plural subject requires पठन्ति, and विद्यालये correctly expresses location."
+      },
+      {
+         "id":"MIX3-011",
+         "type":"multiple_correction",
+         "question":"Choose the completely correct sentence.",
+         "sentence":"छात्राः नूतनः ग्रन्थम् पठति।",
+         "options":[
+            "छात्राः नूतनम् ग्रन्थम् पठन्ति।",
+            "छात्राः नूतनः ग्रन्थम् पठन्ति।",
+            "छात्राः नूतनम् ग्रन्थम् पठति।",
+            "छात्रः नूतनम् ग्रन्थम् पठन्ति।"
+         ],
+         "correct":0,
+         "concepts":[
+            "Verb Agreement",
+            "Adjective Agreement"
+         ],
+         "explanation":"नूतनम् agrees with ग्रन्थम् and पठन्ति agrees with छात्राः."
+      },
+      {
+         "id":"MIX3-012",
+         "type":"multiple_correction",
+         "question":"Choose the completely correct sentence.",
+         "sentence":"सेवकः ब्राह्मणं प्रसादः यच्छति।",
+         "options":[
+            "सेवकः ब्राह्मणाय प्रसादं यच्छति।",
+            "सेवकः ब्राह्मणं प्रसादः यच्छति।",
+            "सेवकः ब्राह्मणेन प्रसादं यच्छति।",
+            "सेवकः ब्राह्मणस्य प्रसादं यच्छति।"
+         ],
+         "correct":0,
+         "concepts":[
+            "द्विकर्मक",
+            "द्वितीया",
+            "चतुर्थी"
+         ],
+         "explanation":"यच्छति requires the thing given in द्वितीया and the recipient in चतुर्थी."
+      },
+      {
+         "id":"MIX3-013",
+         "type":"error_count",
+         "question":"How many grammar mistakes are in this sentence?",
+         "sentence":"श्वेता पुष्पम् पतन्ति।",
+         "options":[
+            "1",
+            "2",
+            "3",
+            "4"
+         ],
+         "correct":1,
+         "concepts":[
+            "Verb Agreement",
+            "Adjective Agreement"
+         ],
+         "explanation":"Two mistakes: श्वेतम् and पतति."
+      },
+      {
+         "id":"MIX3-014",
+         "type":"multiple_correction",
+         "question":"Choose the completely correct sentence.",
+         "sentence":"रामं आनन्दः भवति।",
+         "options":[
+            "रामस्य आनन्दः भवति।",
+            "रामं आनन्दः भवति।",
+            "रामाय आनन्दः भवति।",
+            "रामे आनन्दः भवति।"
+         ],
+         "correct":0,
+         "concepts":[
+            "भवति Rule",
+            "षष्ठी"
+         ],
+         "explanation":"With भवति expressing an experience or feeling, the experiencer takes षष्ठी विभक्ति."
+      },
+      {
+         "id":"MIX3-015",
+         "type":"multiple_correction",
+         "question":"Choose the completely correct sentence.",
+         "sentence":"बालकः पुस्तकम् पठन्ति च लिखन्ति च।",
+         "options":[
+            "बालकः पुस्तकम् पठति च लिखति च।",
+            "बालकः पुस्तकम् पठन्ति च लिखन्ति च।",
+            "बालकः पुस्तकम् पठसि च लिखसि च।",
+            "बालकः पुस्तकम् पठामि च लिखामि च।"
+         ],
+         "correct":0,
+         "concepts":[
+            "Multiple Verbs",
+            "Verb Agreement"
+         ],
+         "explanation":"When two verbs share the same subject, both verbs must agree with that subject."
+      },
+      {
+         "id":"MIX3-016",
+         "type":"identify_rule",
+         "question":"Which grammar rule is violated?",
+         "sentence":"भक्ताः मन्दिरे गच्छन्ति।",
+         "options":[
+            "गत्यर्थक धातु",
+            "Verb Agreement",
+            "विशेषण Agreement",
+            "णत्व Rule"
+         ],
+         "correct":0,
+         "explanation":"With a गत्यर्थक धातु like गच्छति, the destination should be in द्वितीया विभक्ति (मन्दिरम्), not सप्तमी."
+      },
+      {
+         "id":"MIX3-017",
+         "type":"identify_rule",
+         "question":"Which grammar rule is violated?",
+         "sentence":"सेवकः ब्राह्मणं प्रसादं यच्छति।",
+         "options":[
+            "द्विकर्मक धातु",
+            "Verb Agreement",
+            "Word Order",
+            "विशेषण Agreement"
+         ],
+         "correct":0,
+         "explanation":"यच्छति is a द्विकर्मक verb. The recipient must be in चतुर्थी विभक्ति."
+      },
+      {
+         "id":"MIX3-018",
+         "type":"identify_rule",
+         "question":"Which grammar rule is violated?",
+         "sentence":"हरितः पुष्पम् अस्ति।",
+         "options":[
+            "विशेषण Agreement",
+            "Verb Agreement",
+            "गत्यर्थक धातु",
+            "परसवर्ण"
+         ],
+         "correct":0,
+         "explanation":"The adjective must agree with the neuter noun: हरितम् पुष्पम्."
+      },
+      {
+         "id":"MIX3-019",
+         "type":"identify_rule",
+         "question":"Which grammar rule is violated?",
+         "sentence":"छात्राः पुस्तकम् पठति।",
+         "options":[
+            "Verb Agreement",
+            "णत्व",
+            "Word Order",
+            "चतुर्थी"
+         ],
+         "correct":0,
+         "explanation":"The plural subject requires the plural verb: पठन्ति."
+      },
+      {
+         "id":"MIX3-020",
+         "type":"identify_rule",
+         "question":"Which grammar rule is violated?",
+         "sentence":"रामं आनन्दः भवति।",
+         "options":[
+            "भवति Rule",
+            "Verb Agreement",
+            "विशेषण Agreement",
+            "परसवर्ण"
+         ],
+         "correct":0,
+         "explanation":"With भवति expressing an experience, the experiencer takes षष्ठी विभक्ति."
+      },
+      {
+         "id":"MIX3-021",
+         "type":"identify_rule",
+         "question":"Which grammar rule is violated?",
+         "sentence":"रामेन",
+         "options":[
+            "णत्व Rule",
+            "परसवर्ण",
+            "Sandhi 1-3",
+            "No rule is violated"
+         ],
+         "correct":3,
+         "explanation":"रामेन correctly becomes रामेण according to the णत्व rule. Therefore no rule is violated in the written form रामेण; the form रामेन itself illustrates the pre-rule stage in the handbook."
+      },
+      {
+         "id":"MIX3-022",
+         "type":"identify_rule",
+         "question":"Which grammar rule applies?",
+         "sentence":"रामम् नमामि",
+         "options":[
+            "म् → अनुस्वार",
+            "परसवर्ण",
+            "णत्व",
+            "Word Order"
+         ],
+         "correct":0,
+         "explanation":"म् changes to अनुस्वार before a consonant: रामं नमामि."
+      },
+      {
+         "id":"MIX3-023",
+         "type":"identify_rule",
+         "question":"Which grammar rule applies?",
+         "sentence":"शंकर",
+         "options":[
+            "परसवर्ण",
+            "णत्व",
+            "Verb Agreement",
+            "विशेषण Agreement"
+         ],
+         "correct":0,
+         "explanation":"The anusvāra changes to the nasal of the कु group: शङ्कर."
+      },
+      {
+         "id":"MIX3-024",
+         "type":"identify_rule",
+         "question":"Which grammar rule is demonstrated?",
+         "sentence":"रामः सूर्यं नमति। / सूर्यं रामः नमति।",
+         "options":[
+            "Word Order",
+            "गत्यर्थक धातु",
+            "द्विकर्मक",
+            "णत्व"
+         ],
+         "correct":0,
+         "explanation":"Word order can change without changing the meaning."
+      },
+      {
+         "id":"MIX3-025",
+         "type":"identify_rule",
+         "question":"Which grammar rule is violated?",
+         "sentence":"किङ्करः ईशम् नमति।",
+         "options":[
+            "चतुर्थी with नम्",
+            "Verb Agreement",
+            "Word Order",
+            "विशेषण Agreement"
+         ],
+         "correct":0,
+         "explanation":"The verb नम् takes the object in चतुर्थी विभक्ति: ईशाय."
+      }
+   ]
 }

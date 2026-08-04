@@ -2,21 +2,23 @@
 
 <div class="grid cards" markdown>
 
--   🔤 **Alphabets**
+- 📖 **Foundations**
 
     ---
 
-    Master Sanskrit vowels (स्वर), consonants (व्यञ्जन), and pronunciation.
+    Learn the Sanskrit alphabet, pronunciation, sentence basics, and core concepts.
 
-    [:octicons-arrow-right-24: Start Learning](alphabets.md)
+    [:octicons-arrow-right-24: Explore Foundations](sanskrit-foundations.md)
 
--   📖 **Grammar Fundamentals**
+
+- 🧠 **Quiz**
 
     ---
 
-    Understand the five parts of a sentence, gender (लिङ्ग), number (वचन), person (पुरुष), and core pronouns.
+    Master Sanskrit through interactive quizzes on vocabulary, grammar, verbs, adjectives, vibhaktis, writing rules, and mixed challenges.
 
-    [:octicons-arrow-right-24: Explore Grammar](grammar-fundamentals.md)
+    [:octicons-arrow-right-24: Start Quiz](quiz.md)
+
 
 -   🔢 **Nouns & Cases**
 
@@ -33,6 +35,14 @@
     Conjugate verbs in present tense, understand verb classes (धातुगण), and master special verb usage rules.
 
     [:octicons-arrow-right-24: Conjugate Verbs](verbs.md)
+
+-   📝 **Adjectives**
+
+    ---
+
+    Learn how adjectives (विशेषण) describe nouns and agree with them in gender (लिङ्ग), number (वचन), and case (विभक्ति).
+
+    [:octicons-arrow-right-24: Explore Adjectives](adjective.md)
 
 -   📝 **Rules of writing**
 
@@ -54,16 +64,8 @@
 
     ---
 
-    Essential words organized by category with a **live search filter** — search in Sanskrit, English, or Gujarati, and filter by gender.
+    Essential words and common verb roots organized by category with a **live search filter** — search in Sanskrit, English, or Gujarati, and filter by gender.
 
     [:octicons-arrow-right-24: Build Vocabulary](vocabulary.md)
-
--   🌿 **Verb Roots (धातु)**
-
-    ---
-
-    Reference tables for common verb roots with their guna changes and present tense forms.
-
-    [:octicons-arrow-right-24: View Roots](dhatu.md)
 
 </div>

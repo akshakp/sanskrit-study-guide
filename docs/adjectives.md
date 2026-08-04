@@ -4,11 +4,6 @@
 
 A **विशेषण (Adjective)** is a word that **describes or qualifies a noun (विशेष्य)**.
 
-It helps us:
-- Distinguish one person or object from a group.
-- Give a special identity.
-- Describe a quality or characteristic.
-
 !!! note "विशेष्य and विशेषण"
     - The **person or object being described** is called **विशेष्य** such as **कपोतः**, **विद्यार्थी**.
     - The **word describing its quality** is called **विशेषण** such as **श्वेतः**, **मेधावी**.
