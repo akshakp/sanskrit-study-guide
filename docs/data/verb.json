@@ -1069,285 +1069,284 @@
          "explanation":"Both verbs should agree with first person plural."
       },
       {
-    "id":"VERB-081",
-    "type":"multiple_correction",
-    "question":"Choose the completely corrected sentence.",
-    "sentence":"विद्यार्थीन् उत्साहः अस्ति।",
-    "options":[
-      "विद्यार्थिनां उत्साहः अस्ति।",
-      "विद्यार्थीन् उत्साहः अस्ति।",
-      "विद्यार्थिभ्यः उत्साहः अस्ति।",
-      "विद्यार्थिषु उत्साहः अस्ति।"
-    ],
-    "correct":0,
-    "explanation":"With अस्ति, the experiencer takes षष्ठी विभक्ति."
-  },
-  {
-    "id":"VERB-082",
-    "type":"multiple_correction",
-    "question":"Choose the completely corrected sentence.",
-    "sentence":"भक्तान् आनन्दः भवति।",
-    "options":[
-      "भक्तान् आनन्दः भवति।",
-      "भक्तानां आनन्दः भवति।",
-      "भक्तेभ्यः आनन्दः भवति।",
-      "भक्तेषु आनन्दः भवति।"
-    ],
-    "correct":1,
-    "explanation":"भू is अकर्मक; use षष्ठी."
-  },
-  {
-    "id":"VERB-083",
-    "type":"multiple_correction",
-    "question":"Choose the completely corrected sentence.",
-    "sentence":"रामं चिन्ता अस्ति।",
-    "options":[
-      "रामे चिन्ता अस्ति।",
-      "रामस्य चिन्ता अस्ति।",
-      "रामाय चिन्ता अस्ति।",
-      "रामम् चिन्ता अस्ति।"
-    ],
-    "correct":1,
-    "explanation":"रामस्य is the correct षष्ठी form."
-  },
-  {
-    "id":"VERB-084",
-    "type":"multiple_correction",
-    "question":"Choose the completely corrected sentence.",
-    "sentence":"सीतां दुःखं भवति।",
-    "options":[
-      "सीतायै दुःखं भवति।",
-      "सीतया दुःखं भवति।",
-      "सीतायाः दुःखं भवति।",
-      "सीताम् दुःखं भवति।"
-    ],
-    "correct":2,
-    "explanation":"The experiencer takes षष्ठी."
-  },
-  {
-    "id":"VERB-085",
-    "type":"multiple_correction",
-    "question":"Choose the completely corrected sentence.",
-    "sentence":"बालकान् भयम् अस्ति।",
-    "options":[
-      "बालकेभ्यः भयम् अस्ति।",
-      "बालकानां भयम् अस्ति।",
-      "बालकेषु भयम् अस्ति।",
-      "बालकान् भयम् अस्ति।"
-    ],
-    "correct":1,
-    "explanation":"Use षष्ठी with अस्ति."
-  },
-  {
-  "id":"VERB-086",
-  "type":"multiple_correction",
-  "question":"Choose the completely corrected sentence.",
-  "sentence":"किङ्करं सन्तोषः भवति।",
-  "options":[
-    "किङ्कराय सन्तोषः भवति।",
-    "किङ्करे सन्तोषः भवति।",
-    "किङ्करस्य सन्तोषः भवति।",
-    "किङ्करम् सन्तोषः भवति।"
-  ],
-  "correct":2,
-  "explanation":"With भवति, the experiencer takes षष्ठी विभक्ति."
-},
-  {
-    "id":"VERB-087",
-    "type":"multiple_correction",
-    "question":"Choose the completely corrected sentence.",
-    "sentence":"जनान् सुखं भवति।",
-    "options":[
-      "जनानां सुखं भवति।",
-      "जनेभ्यः सुखं भवति।",
-      "जनेषु सुखं भवति।",
-      "जनान् सुखं भवति।"
-    ],
-    "correct":0,
-    "explanation":"Experiencer takes षष्ठी."
-  },
-  {
-  "id":"VERB-088",
-  "type":"multiple_correction",
-  "question":"Choose the completely corrected sentence.",
-  "sentence":"छात्रं गौरवं अस्ति।",
-  "options":[
-    "छात्रस्य गौरवं अस्ति।",
-    "छात्राय गौरवं अस्ति।",
-    "छात्रे गौरवं अस्ति।",
-    "छात्रम् गौरवं अस्ति।"
-  ],
-  "correct":0,
-  "explanation":"Use षष्ठी with अस्ति."
-},
-  {
-    "id":"VERB-089",
-    "type":"multiple_correction",
-    "question":"Choose the completely corrected sentence.",
-    "sentence":"बालिकां उत्साहः भवति।",
-    "options":[
-      "बालिकायाः उत्साहः भवति।",
-      "बालिकायै उत्साहः भवति।",
-      "बालिकया उत्साहः भवति।",
-      "बालिकाम् उत्साहः भवति।"
-    ],
-    "correct":0,
-    "explanation":"Use षष्ठी with भवति."
-  },
-  {
-    "id":"VERB-090",
-    "type":"multiple_correction",
-    "question":"Choose the completely corrected sentence.",
-    "sentence":"मित्रं शोकः अस्ति।",
-    "options":[
-      "मित्रस्य शोकः अस्ति।",
-      "मित्राय शोकः अस्ति।",
-      "मित्रे शोकः अस्ति।",
-      "मित्रम् शोकः अस्ति।"
-    ],
-    "correct":0,
-    "explanation":"Use षष्ठी with अस्ति."
-  },
-  {
-    "id":"VERB-091",
-    "type":"multiple_correction",
-    "question":"Choose the completely corrected sentence.",
-    "sentence":"छात्रं गर्वः भवति।",
-    "options":[
-      "छात्रे गर्वः भवति।",
-      "छात्रस्य गर्वः भवति।",
-      "छात्राय गर्वः भवति।",
-      "छात्रम् गर्वः भवति।"
-    ],
-    "correct":1,
-    "explanation":"भवति requires षष्ठी."
-  },
-  {
-    "id":"VERB-092",
-    "type":"multiple_correction",
-    "question":"Choose the completely corrected sentence.",
-    "sentence":"नृपं क्रोधः अस्ति।",
-    "options":[
-      "नृपे क्रोधः अस्ति।",
-      "नृपस्य क्रोधः अस्ति।",
-      "नृपाय क्रोधः अस्ति।",
-      "नृपम् क्रोधः अस्ति।"
-    ],
-    "correct":1,
-    "explanation":"Use षष्ठी with अस्ति."
-  },
-  {
-    "id":"VERB-093",
-    "type":"multiple_correction",
-    "question":"Choose the completely corrected sentence.",
-    "sentence":"भक्तं श्रद्धा भवति।",
-    "options":[
-      "भक्तस्य श्रद्धा भवति।",
-      "भक्ताय श्रद्धा भवति।",
-      "भक्तेन श्रद्धा भवति।",
-      "भक्तम् श्रद्धा भवति।"
-    ],
-    "correct":0,
-    "explanation":"Experiencer takes षष्ठी."
-  },
-  {
-    "id":"VERB-094",
-    "type":"multiple_correction",
-    "question":"Choose the completely corrected sentence.",
-    "sentence":"देवं प्रसन्नता अस्ति।",
-    "options":[
-      "देवस्य प्रसन्नता अस्ति।",
-      "देवाय प्रसन्नता अस्ति।",
-      "देवे प्रसन्नता अस्ति।",
-      "देवम् प्रसन्नता अस्ति।"
-    ],
-    "correct":0,
-    "explanation":"Use षष्ठी with अस्ति."
-  },
-  {
-    "id":"VERB-095",
-    "type":"multiple_correction",
-    "question":"Choose the completely corrected sentence.",
-    "sentence":"शिष्यं शङ्का भवति।",
-    "options":[
-      "शिष्यस्य शङ्का भवति।",
-      "शिष्याय शङ्का भवति।",
-      "शिष्ये शङ्का भवति।",
-      "शिष्यम् शङ्का भवति।"
-    ],
-    "correct":0,
-    "explanation":"Use षष्ठी."
-  },
-  {
-  "id":"VERB-096",
-  "type":"multiple_correction",
-  "question":"Choose the completely corrected sentence.",
-  "sentence":"मालां चिन्ता अस्ति।",
-  "options":[
-    "मालायै चिन्ता अस्ति।",
-    "मालया चिन्ता अस्ति।",
-    "मालायाः चिन्ता अस्ति।",
-    "मालाम् चिन्ता अस्ति।"
-  ],
-  "correct":2,
-  "explanation":"use षष्ठी with अस्ति."
-},
-  {
-  "id":"VERB-097",
-  "type":"multiple_correction",
-  "question":"Choose the completely corrected sentence.",
-  "sentence":"फलं हर्षः भवति।",
-  "options":[
-    "फले हर्षः भवति।",
-    "फलाय हर्षः भवति।",
-    "फलस्य हर्षः भवति।",
-    "फलम् हर्षः भवति।"
-  ],
-  "correct":2,
-  "explanation":"use षष्ठी with भवति."
-},
-  {
-    "id":"VERB-098",
-    "type":"multiple_correction",
-    "question":"Choose the completely corrected sentence.",
-    "sentence":"कुमारं भयम् अस्ति।",
-    "options":[
-      "कुमारे भयम् अस्ति।",
-      "कुमारस्य भयम् अस्ति।",
-      "कुमाराय भयम् अस्ति।",
-      "कुमारम् भयम् अस्ति।"
-    ],
-    "correct":1,
-    "explanation":"Use षष्ठी."
-  },
-  {
-    "id":"VERB-099",
-    "type":"multiple_correction",
-    "question":"Choose the completely corrected sentence.",
-    "sentence":"अध्यापकं दुःखं भवति।",
-    "options":[
-      "अध्यापकस्य दुःखं भवति।",
-      "अध्यापकाय दुःखं भवति।",
-      "अध्यापके दुःखं भवति।",
-      "अध्यापकम् दुःखं भवति।"
-    ],
-    "correct":0,
-    "explanation":"Use षष्ठी with भवति."
-  },
-  {
-    "id":"VERB-100",
-    "type":"multiple_correction",
-    "question":"Choose the completely corrected sentence.",
-    "sentence":"कृषकं क्लेशः अस्ति।",
-    "options":[
-      "कृषकाय क्लेशः अस्ति।",
-      "कृषके क्लेशः अस्ति।",
-      "कृषकस्य क्लेशः अस्ति।",
-      "कृषकम् क्लेशः अस्ति।"
-    ],
-    "correct":2,
-    "explanation":"With अस्ति, the experiencer is expressed in षष्ठी विभक्ति."
-  }
-
+         "id":"VERB-081",
+         "type":"multiple_correction",
+         "question":"Choose the completely corrected sentence.",
+         "sentence":"विद्यार्थीन् उत्साहः अस्ति।",
+         "options":[
+            "विद्यार्थिनां उत्साहः अस्ति।",
+            "विद्यार्थीन् उत्साहः अस्ति।",
+            "विद्यार्थिभ्यः उत्साहः अस्ति।",
+            "विद्यार्थिषु उत्साहः अस्ति।"
+         ],
+         "correct":0,
+         "explanation":"With अस्ति, the experiencer takes षष्ठी विभक्ति."
+      },
+      {
+         "id":"VERB-082",
+         "type":"multiple_correction",
+         "question":"Choose the completely corrected sentence.",
+         "sentence":"भक्तान् आनन्दः भवति।",
+         "options":[
+            "भक्तान् आनन्दः भवति।",
+            "भक्तानां आनन्दः भवति।",
+            "भक्तेभ्यः आनन्दः भवति।",
+            "भक्तेषु आनन्दः भवति।"
+         ],
+         "correct":1,
+         "explanation":"भू is अकर्मक; use षष्ठी."
+      },
+      {
+         "id":"VERB-083",
+         "type":"multiple_correction",
+         "question":"Choose the completely corrected sentence.",
+         "sentence":"रामं चिन्ता अस्ति।",
+         "options":[
+            "रामे चिन्ता अस्ति।",
+            "रामस्य चिन्ता अस्ति।",
+            "रामाय चिन्ता अस्ति।",
+            "रामम् चिन्ता अस्ति।"
+         ],
+         "correct":1,
+         "explanation":"रामस्य is the correct षष्ठी form."
+      },
+      {
+         "id":"VERB-084",
+         "type":"multiple_correction",
+         "question":"Choose the completely corrected sentence.",
+         "sentence":"सीतां दुःखं भवति।",
+         "options":[
+            "सीतायै दुःखं भवति।",
+            "सीतया दुःखं भवति।",
+            "सीतायाः दुःखं भवति।",
+            "सीताम् दुःखं भवति।"
+         ],
+         "correct":2,
+         "explanation":"The experiencer takes षष्ठी."
+      },
+      {
+         "id":"VERB-085",
+         "type":"multiple_correction",
+         "question":"Choose the completely corrected sentence.",
+         "sentence":"बालकान् भयम् अस्ति।",
+         "options":[
+            "बालकेभ्यः भयम् अस्ति।",
+            "बालकानां भयम् अस्ति।",
+            "बालकेषु भयम् अस्ति।",
+            "बालकान् भयम् अस्ति।"
+         ],
+         "correct":1,
+         "explanation":"Use षष्ठी with अस्ति."
+      },
+      {
+         "id":"VERB-086",
+         "type":"multiple_correction",
+         "question":"Choose the completely corrected sentence.",
+         "sentence":"किङ्करं सन्तोषः भवति।",
+         "options":[
+            "किङ्कराय सन्तोषः भवति।",
+            "किङ्करे सन्तोषः भवति।",
+            "किङ्करस्य सन्तोषः भवति।",
+            "किङ्करम् सन्तोषः भवति।"
+         ],
+         "correct":2,
+         "explanation":"With भवति, the experiencer takes षष्ठी विभक्ति."
+      },
+      {
+         "id":"VERB-087",
+         "type":"multiple_correction",
+         "question":"Choose the completely corrected sentence.",
+         "sentence":"जनान् सुखं भवति।",
+         "options":[
+            "जनानां सुखं भवति।",
+            "जनेभ्यः सुखं भवति।",
+            "जनेषु सुखं भवति।",
+            "जनान् सुखं भवति।"
+         ],
+         "correct":0,
+         "explanation":"Experiencer takes षष्ठी."
+      },
+      {
+         "id":"VERB-088",
+         "type":"multiple_correction",
+         "question":"Choose the completely corrected sentence.",
+         "sentence":"छात्रं गौरवं अस्ति।",
+         "options":[
+            "छात्रस्य गौरवं अस्ति।",
+            "छात्राय गौरवं अस्ति।",
+            "छात्रे गौरवं अस्ति।",
+            "छात्रम् गौरवं अस्ति।"
+         ],
+         "correct":0,
+         "explanation":"Use षष्ठी with अस्ति."
+      },
+      {
+         "id":"VERB-089",
+         "type":"multiple_correction",
+         "question":"Choose the completely corrected sentence.",
+         "sentence":"बालिकां उत्साहः भवति।",
+         "options":[
+            "बालिकायाः उत्साहः भवति।",
+            "बालिकायै उत्साहः भवति।",
+            "बालिकया उत्साहः भवति।",
+            "बालिकाम् उत्साहः भवति।"
+         ],
+         "correct":0,
+         "explanation":"Use षष्ठी with भवति."
+      },
+      {
+         "id":"VERB-090",
+         "type":"multiple_correction",
+         "question":"Choose the completely corrected sentence.",
+         "sentence":"मित्रं शोकः अस्ति।",
+         "options":[
+            "मित्रस्य शोकः अस्ति।",
+            "मित्राय शोकः अस्ति।",
+            "मित्रे शोकः अस्ति।",
+            "मित्रम् शोकः अस्ति।"
+         ],
+         "correct":0,
+         "explanation":"Use षष्ठी with अस्ति."
+      },
+      {
+         "id":"VERB-091",
+         "type":"multiple_correction",
+         "question":"Choose the completely corrected sentence.",
+         "sentence":"छात्रं गर्वः भवति।",
+         "options":[
+            "छात्रे गर्वः भवति।",
+            "छात्रस्य गर्वः भवति।",
+            "छात्राय गर्वः भवति।",
+            "छात्रम् गर्वः भवति।"
+         ],
+         "correct":1,
+         "explanation":"भवति requires षष्ठी."
+      },
+      {
+         "id":"VERB-092",
+         "type":"multiple_correction",
+         "question":"Choose the completely corrected sentence.",
+         "sentence":"नृपं क्रोधः अस्ति।",
+         "options":[
+            "नृपे क्रोधः अस्ति।",
+            "नृपस्य क्रोधः अस्ति।",
+            "नृपाय क्रोधः अस्ति।",
+            "नृपम् क्रोधः अस्ति।"
+         ],
+         "correct":1,
+         "explanation":"Use षष्ठी with अस्ति."
+      },
+      {
+         "id":"VERB-093",
+         "type":"multiple_correction",
+         "question":"Choose the completely corrected sentence.",
+         "sentence":"भक्तं श्रद्धा भवति।",
+         "options":[
+            "भक्तस्य श्रद्धा भवति।",
+            "भक्ताय श्रद्धा भवति।",
+            "भक्तेन श्रद्धा भवति।",
+            "भक्तम् श्रद्धा भवति।"
+         ],
+         "correct":0,
+         "explanation":"Experiencer takes षष्ठी."
+      },
+      {
+         "id":"VERB-094",
+         "type":"multiple_correction",
+         "question":"Choose the completely corrected sentence.",
+         "sentence":"देवं प्रसन्नता अस्ति।",
+         "options":[
+            "देवस्य प्रसन्नता अस्ति।",
+            "देवाय प्रसन्नता अस्ति।",
+            "देवे प्रसन्नता अस्ति।",
+            "देवम् प्रसन्नता अस्ति।"
+         ],
+         "correct":0,
+         "explanation":"Use षष्ठी with अस्ति."
+      },
+      {
+         "id":"VERB-095",
+         "type":"multiple_correction",
+         "question":"Choose the completely corrected sentence.",
+         "sentence":"शिष्यं शङ्का भवति।",
+         "options":[
+            "शिष्यस्य शङ्का भवति।",
+            "शिष्याय शङ्का भवति।",
+            "शिष्ये शङ्का भवति।",
+            "शिष्यम् शङ्का भवति।"
+         ],
+         "correct":0,
+         "explanation":"Use षष्ठी."
+      },
+      {
+         "id":"VERB-096",
+         "type":"multiple_correction",
+         "question":"Choose the completely corrected sentence.",
+         "sentence":"मालां चिन्ता अस्ति।",
+         "options":[
+            "मालायै चिन्ता अस्ति।",
+            "मालया चिन्ता अस्ति।",
+            "मालायाः चिन्ता अस्ति।",
+            "मालाम् चिन्ता अस्ति।"
+         ],
+         "correct":2,
+         "explanation":"use षष्ठी with अस्ति."
+      },
+      {
+         "id":"VERB-097",
+         "type":"multiple_correction",
+         "question":"Choose the completely corrected sentence.",
+         "sentence":"फलं हर्षः भवति।",
+         "options":[
+            "फले हर्षः भवति।",
+            "फलाय हर्षः भवति।",
+            "फलस्य हर्षः भवति।",
+            "फलम् हर्षः भवति।"
+         ],
+         "correct":2,
+         "explanation":"use षष्ठी with भवति."
+      },
+      {
+         "id":"VERB-098",
+         "type":"multiple_correction",
+         "question":"Choose the completely corrected sentence.",
+         "sentence":"कुमारं भयम् अस्ति।",
+         "options":[
+            "कुमारे भयम् अस्ति।",
+            "कुमारस्य भयम् अस्ति।",
+            "कुमाराय भयम् अस्ति।",
+            "कुमारम् भयम् अस्ति।"
+         ],
+         "correct":1,
+         "explanation":"Use षष्ठी."
+      },
+      {
+         "id":"VERB-099",
+         "type":"multiple_correction",
+         "question":"Choose the completely corrected sentence.",
+         "sentence":"अध्यापकं दुःखं भवति।",
+         "options":[
+            "अध्यापकस्य दुःखं भवति।",
+            "अध्यापकाय दुःखं भवति।",
+            "अध्यापके दुःखं भवति।",
+            "अध्यापकम् दुःखं भवति।"
+         ],
+         "correct":0,
+         "explanation":"Use षष्ठी with भवति."
+      },
+      {
+         "id":"VERB-100",
+         "type":"multiple_correction",
+         "question":"Choose the completely corrected sentence.",
+         "sentence":"कृषकं क्लेशः अस्ति।",
+         "options":[
+            "कृषकाय क्लेशः अस्ति।",
+            "कृषके क्लेशः अस्ति।",
+            "कृषकस्य क्लेशः अस्ति।",
+            "कृषकम् क्लेशः अस्ति।"
+         ],
+         "correct":2,
+         "explanation":"With अस्ति, the experiencer is expressed in षष्ठी विभक्ति."
+      }
    ]
 }

@@ -1,0 +1,705 @@
+{
+   "title":"क्रियापदम् — Verb Analysis (Part 1)",
+   "questions":[
+      {
+         "id":"ADJ-001",
+         "type":"fill_blank",
+         "question":"Choose the correct adjective.",
+         "sentence":"_____ बालकः विद्यालयं गच्छति।",
+         "options":[
+            "सुन्दरः",
+            "सुन्दरा",
+            "सुन्दरम्",
+            "सुन्दराः"
+         ],
+         "correct":0,
+         "explanation":"बालकः is masculine singular nominative."
+      },
+      {
+         "id":"ADJ-002",
+         "type":"fill_blank",
+         "question":"Choose the correct adjective.",
+         "sentence":"रामः _____ फलम् खादति।",
+         "options":[
+            "मधुरः",
+            "मधुरा",
+            "मधुरम्",
+            "मधुराणि"
+         ],
+         "correct":2,
+         "explanation":"फलम् is neuter singular."
+      },
+      {
+         "id":"ADJ-003",
+         "type":"fill_blank",
+         "question":"Choose the correct adjective.",
+         "sentence":"_____ माला सुन्दरा अस्ति।",
+         "options":[
+            "श्वेतः",
+            "श्वेता",
+            "श्वेतम्",
+            "श्वेताः"
+         ],
+         "correct":1,
+         "explanation":"माला is feminine singular."
+      },
+      {
+         "id":"ADJ-004",
+         "type":"fill_blank",
+         "question":"Choose the correct adjective.",
+         "sentence":"उद्याने _____ वृक्षाः सन्ति।",
+         "options":[
+            "उच्चः",
+            "उच्चाः",
+            "उच्चम्",
+            "उच्चा"
+         ],
+         "correct":1,
+         "explanation":"वृक्षाः is masculine plural."
+      },
+      {
+         "id":"ADJ-005",
+         "type":"fill_blank",
+         "question":"Choose the correct adjective.",
+         "sentence":"वयं _____ पुस्तके पठावः।",
+         "options":[
+            "नवः",
+            "नवे",
+            "नवम्",
+            "नव्यौ"
+         ],
+         "correct":1,
+         "explanation":"पुस्तके is neuter dual locative."
+      },
+      {
+         "id":"ADJ-006",
+         "type":"fill_blank",
+         "question":"Choose the correct adjective.",
+         "sentence":"_____ बालिके गीतं गायतः।",
+         "options":[
+            "चपले",
+            "चपला",
+            "चपलौ",
+            "चपलम्"
+         ],
+         "correct":0,
+         "explanation":"बालिके is feminine dual."
+      },
+      {
+         "id":"ADJ-007",
+         "type":"fill_blank",
+         "question":"Choose the correct adjective.",
+         "sentence":"देवः _____ वचनानि वदति।",
+         "options":[
+            "मधुरः",
+            "मधुरे",
+            "मधुराणि",
+            "मधुरम्"
+         ],
+         "correct":2,
+         "explanation":"वचनानि is neuter plural."
+      },
+      {
+         "id":"ADJ-008",
+         "type":"fill_blank",
+         "question":"Choose the correct adjective.",
+         "sentence":"_____ छात्राय पुस्तकं ददामि।",
+         "options":[
+            "कुशलाय",
+            "कुशलः",
+            "कुशलम्",
+            "कुशले"
+         ],
+         "correct":0,
+         "explanation":"छात्राय is masculine dative singular."
+      },
+      {
+         "id":"ADJ-009",
+         "type":"fill_blank",
+         "question":"Choose the correct adjective.",
+         "sentence":"अहं _____ मालया पूजां करोमि।",
+         "options":[
+            "श्वेतया",
+            "श्वेता",
+            "श्वेतायाः",
+            "श्वेताम्"
+         ],
+         "correct":0,
+         "explanation":"मालया is feminine instrumental singular."
+      },
+      {
+         "id":"ADJ-010",
+         "type":"fill_blank",
+         "question":"Choose the correct adjective.",
+         "sentence":"_____ फले मधुरे स्तः।",
+         "options":[
+            "पीते",
+            "पीतः",
+            "पीतौ",
+            "पीतम्"
+         ],
+         "correct":0,
+         "explanation":"फले is neuter dual."
+      },
+      {
+         "id":"ADJ-011",
+         "type":"fill_blank",
+         "question":"Choose the correct adjective.",
+         "sentence":"बालकः _____ अश्वेन गच्छति।",
+         "options":[
+            "श्वेतेन",
+            "श्वेतः",
+            "श्वेतम्",
+            "श्वेताय"
+         ],
+         "correct":0,
+         "explanation":"अश्वेन is masculine instrumental singular."
+      },
+      {
+         "id":"ADJ-012",
+         "type":"fill_blank",
+         "question":"Choose the correct adjective.",
+         "sentence":"_____ बालिकाभ्यः पुष्पाणि ददाति।",
+         "options":[
+            "प्रियाभ्यः",
+            "प्रियाः",
+            "प्रिये",
+            "प्रियाम्"
+         ],
+         "correct":0,
+         "explanation":"बालिकाभ्यः is feminine dative/ablative plural."
+      },
+      {
+         "id":"ADJ-013",
+         "type":"fill_blank",
+         "question":"Choose the correct adjective.",
+         "sentence":"_____ वनानि सुन्दराणि सन्ति।",
+         "options":[
+            "हरितानि",
+            "हरिताः",
+            "हरितम्",
+            "हरिता"
+         ],
+         "correct":0,
+         "explanation":"वनानि is neuter plural."
+      },
+      {
+         "id":"ADJ-014",
+         "type":"fill_blank",
+         "question":"Choose the correct adjective.",
+         "sentence":"अहं _____ छात्रस्य मित्रम् अस्मि।",
+         "options":[
+            "कुशलस्य",
+            "कुशलः",
+            "कुशलम्",
+            "कुशलेन"
+         ],
+         "correct":0,
+         "explanation":"छात्रस्य is masculine genitive singular."
+      },
+      {
+         "id":"ADJ-015",
+         "type":"fill_blank",
+         "question":"Choose the correct adjective.",
+         "sentence":"_____ नद्यां नौका अस्ति।",
+         "options":[
+            "गम्भीरायाम्",
+            "गम्भीरः",
+            "गम्भीरम्",
+            "गम्भीराय"
+         ],
+         "correct":0,
+         "explanation":"नद्याम् is feminine locative singular."
+      },
+      {
+         "id":"ADJ-016",
+         "type":"fill_blank",
+         "question":"Choose the correct adjective.",
+         "sentence":"_____ देवौ मन्दिरं गच्छतः।",
+         "options":[
+            "शूरौ",
+            "शूरः",
+            "शूरे",
+            "शूरम्"
+         ],
+         "correct":0,
+         "explanation":"देवौ is masculine dual."
+      },
+      {
+         "id":"ADJ-017",
+         "type":"fill_blank",
+         "question":"Choose the correct adjective.",
+         "sentence":"बालिका _____ पुष्पेण पूजां करोति।",
+         "options":[
+            "सुगन्धिना",
+            "सुगन्धेन",
+            "सुगन्ध्या",
+            "सुगन्धम्"
+         ],
+         "correct":1,
+         "explanation":"पुष्पेण is neuter instrumental singular."
+      },
+      {
+         "id":"ADJ-018",
+         "type":"fill_blank",
+         "question":"Choose the correct adjective.",
+         "sentence":"_____ किङ्कराः कार्यं कुर्वन्ति।",
+         "options":[
+            "उत्सुकाः",
+            "उत्सुकः",
+            "उत्सुकम्",
+            "उत्सुका"
+         ],
+         "correct":0,
+         "explanation":"किङ्कराः is masculine plural."
+      },
+      {
+         "id":"ADJ-019",
+         "type":"fill_blank",
+         "question":"Choose the correct adjective.",
+         "sentence":"_____ लेखन्या लिखामि।",
+         "options":[
+            "नीलया",
+            "नीलेन",
+            "नीलायाः",
+            "नीला"
+         ],
+         "correct":0,
+         "explanation":"लेखन्या is feminine instrumental singular."
+      },
+      {
+         "id":"ADJ-020",
+         "type":"fill_blank",
+         "question":"Choose the correct adjective.",
+         "sentence":"_____ बालकेभ्यः गुरुः कथां कथयति।",
+         "options":[
+            "लघुभ्यः",
+            "लघवः",
+            "लघु",
+            "लघुना"
+         ],
+         "correct":0,
+         "explanation":"बालकेभ्यः is masculine dative/ablative plural."
+      },
+      {
+         "id":"ADJ-031",
+         "type":"multiple_correction",
+         "question":"Choose the completely correct sentence.",
+         "sentence":"सुन्दरम् बालकः विद्यालयं गच्छति।",
+         "options":[
+            "सुन्दरः बालकः विद्यालयं गच्छति।",
+            "सुन्दरा बालकः विद्यालयं गच्छति।",
+            "सुन्दरम् बालकः विद्यालयं गच्छति।",
+            "सुन्दरौ बालकः विद्यालयं गच्छति।"
+         ],
+         "correct":0,
+         "explanation":"The adjective must agree with बालकः (masculine singular nominative)."
+      },
+      {
+         "id":"ADJ-032",
+         "type":"multiple_correction",
+         "question":"Choose the completely correct sentence.",
+         "sentence":"श्वेतः माला अस्ति।",
+         "options":[
+            "श्वेता माला अस्ति।",
+            "श्वेतम् माला अस्ति।",
+            "श्वेतः माला अस्ति।",
+            "श्वेते माला अस्ति।"
+         ],
+         "correct":0,
+         "explanation":"माला is feminine singular."
+      },
+      {
+         "id":"ADJ-033",
+         "type":"multiple_correction",
+         "question":"Choose the completely correct sentence.",
+         "sentence":"मधुरः फलम् अस्ति।",
+         "options":[
+            "मधुरम् फलम् अस्ति।",
+            "मधुरः फलम् अस्ति।",
+            "मधुरा फलम् अस्ति।",
+            "मधुरे फलम् अस्ति।"
+         ],
+         "correct":0,
+         "explanation":"फलम् is neuter singular."
+      },
+      {
+         "id":"ADJ-034",
+         "type":"multiple_correction",
+         "question":"Choose the completely correct sentence.",
+         "sentence":"हरितः वनानि सुन्दराणि सन्ति।",
+         "options":[
+            "हरितानि वनानि सुन्दराणि सन्ति।",
+            "हरितः वनानि सुन्दराणि सन्ति।",
+            "हरिते वनानि सुन्दराणि सन्ति।",
+            "हरिता वनानि सुन्दराणि सन्ति।"
+         ],
+         "correct":0,
+         "explanation":"हरितानि must agree with वनानि."
+      },
+      {
+         "id":"ADJ-035",
+         "type":"multiple_correction",
+         "question":"Choose the completely correct sentence.",
+         "sentence":"शूरः देवौ आगच्छतः।",
+         "options":[
+            "शूरौ देवौ आगच्छतः।",
+            "शूरः देवौ आगच्छतः।",
+            "शूरे देवौ आगच्छतः।",
+            "शूरम् देवौ आगच्छतः।"
+         ],
+         "correct":0,
+         "explanation":"देवौ is masculine dual."
+      },
+      {
+         "id":"ADJ-036",
+         "type":"multiple_correction",
+         "question":"Choose the completely correct sentence.",
+         "sentence":"प्रियः बालिकाभ्यः पुस्तकानि ददाति।",
+         "options":[
+            "प्रियाभ्यः बालिकाभ्यः पुस्तकानि ददाति।",
+            "प्रिये बालिकाभ्यः पुस्तकानि ददाति।",
+            "प्रियाः बालिकाभ्यः पुस्तकानि ददाति।",
+            "प्रियया बालिकाभ्यः पुस्तकानि ददाति।"
+         ],
+         "correct":0,
+         "explanation":"The adjective agrees with बालिकाभ्यः (feminine dative/ablative plural)."
+      },
+      {
+         "id":"ADJ-037",
+         "type":"multiple_correction",
+         "question":"Choose the completely correct sentence.",
+         "sentence":"बालकः श्वेतया अश्वेन गच्छति।",
+         "options":[
+            "बालकः श्वेतेन अश्वेन गच्छति।",
+            "बालकः श्वेतया अश्वेन गच्छति।",
+            "बालकः श्वेतम् अश्वेन गच्छति।",
+            "बालकः श्वेताय अश्वेन गच्छति।"
+         ],
+         "correct":0,
+         "explanation":"श्वेतेन agrees with अश्वेन."
+      },
+      {
+         "id":"ADJ-038",
+         "type":"multiple_correction",
+         "question":"Choose the completely correct sentence.",
+         "sentence":"बालिका नीलेन लेखन्या लिखति।",
+         "options":[
+            "बालिका नीलया लेखन्या लिखति।",
+            "बालिका नीलेन लेखन्या लिखति।",
+            "बालिका नीलाम् लेखन्या लिखति।",
+            "बालिका नीलायाः लेखन्या लिखति।"
+         ],
+         "correct":0,
+         "explanation":"लेखन्या is feminine instrumental singular."
+      },
+      {
+         "id":"ADJ-039",
+         "type":"multiple_correction",
+         "question":"Choose the completely correct sentence.",
+         "sentence":"पीतः फले स्वादूनि स्तः।",
+         "options":[
+            "पीते फले स्वादूनि स्तः।",
+            "पीतः फले स्वादूनि स्तः।",
+            "पीतम् फले स्वादूनि स्तः।",
+            "पीतौ फले स्वादूनि स्तः।"
+         ],
+         "correct":0,
+         "explanation":"फले is neuter dual locative."
+      },
+      {
+         "id":"ADJ-040",
+         "type":"multiple_correction",
+         "question":"Choose the completely correct sentence.",
+         "sentence":"सुन्दरः पुस्तके पठामः।",
+         "options":[
+            "सुन्दरे पुस्तके पठामः।",
+            "सुन्दरः पुस्तके पठामः।",
+            "सुन्दरम् पुस्तके पठामः।",
+            "सुन्दरौ पुस्तके पठामः।"
+         ],
+         "correct":0,
+         "explanation":"The adjective agrees with पुस्तके."
+      },
+      {
+         "id":"ADJ-041",
+         "type":"multiple_correction",
+         "question":"Choose the completely correct sentence.",
+         "sentence":"नीलः मेघाय वर्षति।",
+         "options":[
+            "नीलाय मेघाय वर्षति।",
+            "नीलः मेघाय वर्षति।",
+            "नीले मेघाय वर्षति।",
+            "नीलम् मेघाय वर्षति।"
+         ],
+         "correct":0,
+         "explanation":"मेघाय is masculine dative singular."
+      },
+      {
+         "id":"ADJ-042",
+         "type":"multiple_correction",
+         "question":"Choose the completely correct sentence.",
+         "sentence":"हरितम् पर्णानि पतन्ति।",
+         "options":[
+            "हरितानि पर्णानि पतन्ति।",
+            "हरितम् पर्णानि पतन्ति।",
+            "हरिताः पर्णानि पतन्ति।",
+            "हरिता पर्णानि पतन्ति।"
+         ],
+         "correct":0,
+         "explanation":"पर्णानि is neuter plural."
+      },
+      {
+         "id":"ADJ-043",
+         "type":"multiple_correction",
+         "question":"Choose the completely correct sentence.",
+         "sentence":"लघुः छात्रस्य पुस्तकम् अस्ति।",
+         "options":[
+            "लघोः छात्रस्य पुस्तकम् अस्ति।",
+            "लघोः छात्रस्य पुस्तकम् अस्ति।",
+            "लघो छात्रस्य पुस्तकम् अस्ति।",
+            "लघोम् छात्रस्य पुस्तकम् अस्ति।"
+         ],
+         "correct":0,
+         "explanation":"The adjective agrees with छात्रस्य (genitive singular)."
+      },
+      {
+         "id":"ADJ-044",
+         "type":"multiple_correction",
+         "question":"Choose the completely correct sentence.",
+         "sentence":"गम्भीरः नद्याम् नौका अस्ति।",
+         "options":[
+            "गम्भीरायाम् नद्याम् नौका अस्ति।",
+            "गम्भीरः नद्याम् नौका अस्ति।",
+            "गम्भीरे नद्याम् नौका अस्ति।",
+            "गम्भीराम् नद्याम् नौका अस्ति।"
+         ],
+         "correct":0,
+         "explanation":"नद्याम् is feminine locative singular."
+      },
+      {
+         "id":"ADJ-045",
+         "type":"multiple_correction",
+         "question":"Choose the completely correct sentence.",
+         "sentence":"उच्चाः वृक्षे पक्षिणः वसन्ति।",
+         "options":[
+            "उच्चे वृक्षे पक्षिणः वसन्ति।",
+            "उच्चाः वृक्षे पक्षिणः वसन्ति।",
+            "उच्चम् वृक्षे पक्षिणः वसन्ति।",
+            "उच्चस्य वृक्षे पक्षिणः वसन्ति।"
+         ],
+         "correct":0,
+         "explanation":"The adjective describes वृक्षे (locative singular), not पक्षिणः."
+      },
+      {
+         "id":"ADJ-046",
+         "type":"multiple_correction",
+         "question":"Choose the completely correct sentence.",
+         "sentence":"मधुरः वचनानि श्रुणुमः।",
+         "options":[
+            "मधुराणि वचनानि श्रुणुमः।",
+            "मधुरः वचनानि श्रुणुमः।",
+            "मधुरे वचनानि श्रुणुमः।",
+            "मधुरम् वचनानि श्रुणुमः।"
+         ],
+         "correct":0,
+         "explanation":"वचनानि is neuter plural."
+      },
+      {
+         "id":"ADJ-047",
+         "type":"multiple_correction",
+         "question":"Choose the completely correct sentence.",
+         "sentence":"रामः श्वेतम् अश्वम् पश्यति।",
+         "options":[
+            "रामः श्वेतम् अश्वम् पश्यति।",
+            "रामः श्वेतः अश्वम् पश्यति।",
+            "रामः श्वेता अश्वम् पश्यति।",
+            "रामः श्वेते अश्वम् पश्यति।"
+         ],
+         "correct":0,
+         "explanation":"Both adjective and noun are masculine accusative singular."
+      },
+      {
+         "id":"ADJ-048",
+         "type":"multiple_correction",
+         "question":"Choose the completely correct sentence.",
+         "sentence":"बालिका नीलानि पुष्पाणि चिनोति।",
+         "options":[
+            "बालिका नीलानि पुष्पाणि चिनोति।",
+            "बालिका नीलाः पुष्पाणि चिनोति।",
+            "बालिका नीलम् पुष्पाणि चिनोति।",
+            "बालिका नीलः पुष्पाणि चिनोति।"
+         ],
+         "correct":0,
+         "explanation":"पुष्पाणि is neuter plural."
+      },
+      {
+         "id":"ADJ-049",
+         "type":"multiple_correction",
+         "question":"Choose the completely correct sentence.",
+         "sentence":"कृष्णः गावः चरन्ति।",
+         "options":[
+            "कृष्णाः गावः चरन्ति।",
+            "कृष्णः गावः चरन्ति।",
+            "कृष्णम् गावः चरन्ति।",
+            "कृष्णे गावः चरन्ति।"
+         ],
+         "correct":0,
+         "explanation":"गावः is feminine plural."
+      },
+      {
+         "id":"ADJ-050",
+         "type":"multiple_correction",
+         "question":"Choose the completely correct sentence.",
+         "sentence":"उज्ज्वलः दीपानि ज्वलन्ति।",
+         "options":[
+            "उज्ज्वलानि दीपानि ज्वलन्ति।",
+            "उज्ज्वलः दीपानि ज्वलन्ति।",
+            "उज्ज्वले दीपानि ज्वलन्ति।",
+            "उज्ज्वलम् दीपानि ज्वलन्ति।"
+         ],
+         "correct":0,
+         "explanation":"दीपानि is neuter plural."
+      },
+      {
+         "id":"ADJ-051",
+         "type":"multiple_correction",
+         "question":"Choose the completely correct sentence.",
+         "sentence":"प्रिये मित्रे आगच्छतः.",
+         "options":[
+            "प्रिये मित्रे आगच्छतः.",
+            "प्रियौ मित्रे आगच्छतः.",
+            "प्रियः मित्रे आगच्छतः.",
+            "प्रियम् मित्रे आगच्छतः."
+         ],
+         "correct":0,
+         "explanation":"मित्रे is neuter dual."
+      },
+      {
+         "id":"ADJ-052",
+         "type":"multiple_correction",
+         "question":"Choose the completely correct sentence.",
+         "sentence":"लघूनि फलानि पतन्ति.",
+         "options":[
+            "लघूनि फलानि पतन्ति.",
+            "लघवः फलानि पतन्ति.",
+            "लघु फलानि पतन्ति.",
+            "लघू फलानि पतन्ति."
+         ],
+         "correct":0,
+         "explanation":"फलानि is neuter plural."
+      },
+      {
+         "id":"ADJ-053",
+         "type":"multiple_correction",
+         "question":"Choose the completely correct sentence.",
+         "sentence":"पीतया मालया पूजां करोमि.",
+         "options":[
+            "पीतया मालया पूजां करोमि.",
+            "पीतेन मालया पूजां करोमि.",
+            "पीतायाः मालया पूजां करोमि.",
+            "पीतम् मालया पूजां करोमि."
+         ],
+         "correct":0,
+         "explanation":"Both adjective and noun are feminine instrumental singular."
+      },
+      {
+         "id":"ADJ-054",
+         "type":"multiple_correction",
+         "question":"Choose the completely correct sentence.",
+         "sentence":"शूरेभ्यः सैनिकेभ्यः धन्यवादः.",
+         "options":[
+            "शूरेभ्यः सैनिकेभ्यः धन्यवादः.",
+            "शूराः सैनिकेभ्यः धन्यवादः.",
+            "शूरैः सैनिकेभ्यः धन्यवादः.",
+            "शूरस्य सैनिकेभ्यः धन्यवादः."
+         ],
+         "correct":0,
+         "explanation":"Both adjective and noun are masculine dative/ablative plural."
+      },
+      {
+         "id":"ADJ-055",
+         "type":"multiple_correction",
+         "question":"Choose the completely correct sentence.",
+         "sentence":"सुन्दरस्य देवस्य मन्दिरम् अस्ति.",
+         "options":[
+            "सुन्दरस्य देवस्य मन्दिरम् अस्ति.",
+            "सुन्दरः देवस्य मन्दिरम् अस्ति.",
+            "सुन्दरम् देवस्य मन्दिरम् अस्ति.",
+            "सुन्दरे देवस्य मन्दिरम् अस्ति."
+         ],
+         "correct":0,
+         "explanation":"The adjective agrees with देवस्य."
+      },
+      {
+         "id":"ADJ-056",
+         "type":"multiple_correction",
+         "question":"Choose the completely correct sentence.",
+         "sentence":"हरितेषु वनेषु मृगाः वसन्ति.",
+         "options":[
+            "हरितेषु वनेषु मृगाः वसन्ति.",
+            "हरितानि वनेषु मृगाः वसन्ति.",
+            "हरितः वनेषु मृगाः वसन्ति.",
+            "हरिते वनेषु मृगाः वसन्ति."
+         ],
+         "correct":0,
+         "explanation":"The adjective agrees with वनेषु."
+      },
+      {
+         "id":"ADJ-057",
+         "type":"multiple_correction",
+         "question":"Choose the completely correct sentence.",
+         "sentence":"मधुराणां फलानां रसः स्वादुः अस्ति.",
+         "options":[
+            "मधुराणां फलानां रसः स्वादुः अस्ति.",
+            "मधुरस्य फलानां रसः स्वादुः अस्ति.",
+            "मधुरे फलानां रसः स्वादुः अस्ति.",
+            "मधुरम् फलानां रसः स्वादुः अस्ति."
+         ],
+         "correct":0,
+         "explanation":"The adjective agrees with फलानाम्."
+      },
+      {
+         "id":"ADJ-058",
+         "type":"multiple_correction",
+         "question":"Choose the completely correct sentence.",
+         "sentence":"उच्चेषु पर्वतेषु हिमः अस्ति.",
+         "options":[
+            "उच्चेषु पर्वतेषु हिमः अस्ति.",
+            "उच्चे पर्वतेषु हिमः अस्ति.",
+            "उच्चानि पर्वतेषु हिमः अस्ति.",
+            "उच्चः पर्वतेषु हिमः अस्ति."
+         ],
+         "correct":0,
+         "explanation":"The adjective agrees with पर्वतेषु."
+      },
+      {
+         "id":"ADJ-059",
+         "type":"multiple_correction",
+         "question":"Choose the completely correct sentence.",
+         "sentence":"पवित्रे मन्दिरे भक्ताः प्रार्थनां कुर्वन्ति.",
+         "options":[
+            "पवित्रे मन्दिरे भक्ताः प्रार्थनां कुर्वन्ति.",
+            "पवित्रः मन्दिरे भक्ताः प्रार्थनां कुर्वन्ति.",
+            "पवित्रम् मन्दिरे भक्ताः प्रार्थनां कुर्वन्ति.",
+            "पवित्रेभ्यः मन्दिरे भक्ताः प्रार्थनां कुर्वन्ति."
+         ],
+         "correct":0,
+         "explanation":"The adjective agrees with मन्दिरे."
+      },
+      {
+         "id":"ADJ-060",
+         "type":"multiple_correction",
+         "question":"Choose the completely correct sentence.",
+         "sentence":"बुद्धिमन्तः छात्राः सदैव पठन्ति.",
+         "options":[
+            "बुद्धिमन्तः छात्राः सदैव पठन्ति.",
+            "बुद्धिमान् छात्राः सदैव पठन्ति.",
+            "बुद्धिमत् छात्राः सदैव पठन्ति.",
+            "बुद्धिमता छात्राः सदैव पठन्ति."
+         ],
+         "correct":0,
+         "explanation":"The adjective agrees with masculine nominative plural."
+      }
+   ]
+}

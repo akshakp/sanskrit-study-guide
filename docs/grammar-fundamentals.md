@@ -8,10 +8,15 @@ A Sanskrit sentence is built from meaningful word types. The two most essential 
 |----------|---------|----------|---------|
 | **[संज्ञा / नाम](nouns.md)** | Noun | Names a person, place, thing, or idea | रामः, पुस्तकम् |
 | **[क्रियापदम्](verbs.md)** | Verb | Shows action, occurrence, or state | पठति, गच्छति |
-| **विशेषणम्** | Adjective | Describes a noun | सुन्दरः, स्वस्थः |
+| **[विशेषणम्](adjectives.md)** | Adjective | Describes a noun | सुन्दरः, स्वस्थः |
 | **सर्वनाम** | Pronoun | Stands in place of noun | सः, सा, तत् |
-| **[अव्ययम्](vocabulary.md#adverbs-particles)** | Indeclinable | Does not change due to लिङ्ग, वचन or विभक्ति | अत्र, तत्र, च, न, अन्यत्र |
+| **[अव्ययम्](vocabulary.md#adverbs-particles)** | Indeclinable | Adds meaning to a word or sentence without changing its form | अत्र, तत्र, च, न, अन्यत्र |
 
+!!! tip "Every Sanskrit word is either विकारी (Variable) or अविकारी (Invariable)"
+
+    - **अव्ययम्** is the **only अविकारी (Invariable)** part of speech. Its form never changes.
+    - **Everything else** (**संज्ञा / नाम, सर्वनाम, विशेषणम्, and क्रियापदम्**) is **विकारी (Variable)**, meaning its form changes according to gender, number, case, person, tense, etc.
+    
 ---
 
 ## Gender (लिङ्ग)
