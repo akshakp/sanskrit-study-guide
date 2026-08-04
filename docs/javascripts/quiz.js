@@ -6,7 +6,7 @@
   "use strict";
 
   const QUIZ_CONFIG = {
-    totalQuestions: 20,
+    totalQuestions: 25,
 
     sources: [
       {
@@ -28,7 +28,16 @@
         key: "avyay",
         label: "अव्यय",
         url: "../data/avyay.json"
-      }
+      },
+      {
+        key: "adjective",
+        label: "विशेषणम्",
+        url: "../data/adjective.json"
+      },
+      {"key":"mixed",
+        "label":"संयुक्त ",
+        "url":"../data/mixed.json"
+        }
     ]
   };
 
@@ -176,11 +185,12 @@
     /*
      * Round-robin allocation keeps the source counts equal.
      *
-     * With 4 sources and 20 questions:
+     * With 5 sources and 25 questions:
      * 5 Vibhakti
      * 5 Verbs
      * 5 Writing
      * 5 Avyaya
+     * 5 Adjective
      *
      * If one source has fewer questions, its unused allocation
      * is automatically distributed among the other sources.

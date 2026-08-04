@@ -626,19 +626,6 @@
          "explanation":"Dual subject must take a dual verb."
       },
       {
-         "id":"VERB-049",
-         "type":"transformation",
-         "question":"<strong>गुरुः शिष्याय पुस्तकं ददाति।</strong><br><br>Select the correct sentence meaning <strong>'The teachers give a book to the student.'</strong>",
-         "options":[
-            "गुरवः शिष्याय पुस्तकं ददति।",
-            "गुरवः शिष्याय पुस्तकं ददन्ति।",
-            "गुरुः शिष्याय पुस्तकं ददन्ति।",
-            "गुरवः शिष्याय पुस्तकं ददाति।"
-         ],
-         "correct":1,
-         "explanation":"Plural subject requires plural verb."
-      },
-      {
          "id":"VERB-050",
          "type":"multi-step",
          "question":"<strong>रामः मित्रं पश्यति।</strong><br><br>Which sentence correctly changes the meaning to <strong>'Rama and Krishna see their friend.'</strong>",
