@@ -71,6 +71,7 @@
 | वीणा | Veena (instrument) | વીણા | F | — |
 | कर्पूरम् | Camphor | કપૂર | N | — |
 | तूलम् | Cotton | રૂ / કપાસ | N | — |
+|पादुका |Sandal, footwear | પાદુકા, ચંપલ, પગરખાં | F | - |
 
 ---
 
