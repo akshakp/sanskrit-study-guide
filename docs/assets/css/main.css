@@ -1756,3 +1756,415 @@ body:has(.topic-card-page) .md-typeset .topic-card-page {
     justify-content: center;
   }
 }
+
+/* =============================================================
+   PHASE 3C: Vocabulary page (reference/vocabulary) — scoped
+   via :has(#vocabSearch). The dhatu page shares .vocab-search-box
+   and this script but NOT these scoped page-level rules.
+   ============================================================= */
+
+/* Search-first layout: wider, centered, no sidebars (front matter
+   hides navigation + toc on this page only). Desktop exclusive of
+   Material's fixed inner margin; mobile restores side margins. */
+.md-container .md-main .md-content:has(#vocabSearch) {
+  max-width: 64rem;
+  margin-inline: auto;
+}
+
+.md-container .md-main .md-content:has(#vocabSearch) .md-content__inner {
+  margin-inline: auto;
+}
+
+.md-main__inner:has(#vocabSearch) {
+  margin-top: 0.4rem;
+}
+
+/* Accessible label helper (vocab page only) */
+.md-content:has(#vocabSearch) .visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+/* ── Search card ───────────────────────────── */
+.md-content:has(#vocabSearch) .vocab-search-box {
+  background: var(--md-default-bg-color);
+  border: 1px solid var(--md-default-fg-color--lightest);
+  border-radius: 14px;
+  padding: 1rem 1.1rem 1.05rem;
+  margin: 1rem 0 1.4rem;
+  box-shadow: 0 1px 3px rgba(36, 48, 65, 0.05);
+}
+
+[data-md-color-scheme="slate"] .md-content:has(#vocabSearch) .vocab-search-box {
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+}
+
+.md-content:has(#vocabSearch) #vocabSearch {
+  height: 52px;
+  font-size: 1.05rem;
+  border: 1.5px solid var(--md-default-fg-color--lightest);
+  border-radius: 10px;
+  padding-right: 46px;
+}
+
+/* native WebKit clear button would duplicate ours */
+.md-content:has(#vocabSearch) #vocabSearch::-webkit-search-cancel-button {
+  -webkit-appearance: none;
+  appearance: none;
+}
+
+.vocab-search-input-wrap .vocab-clear-search {
+  position: absolute;
+  right: 9px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 34px;
+  height: 34px;
+  border: 1px solid var(--md-default-fg-color--lightest);
+  border-radius: 50%;
+  background: var(--md-default-bg-color);
+  color: var(--md-default-fg-color--light);
+  font-size: 1.05rem;
+  line-height: 1;
+  cursor: pointer;
+}
+
+.vocab-search-input-wrap .vocab-clear-search:hover {
+  color: var(--md-default-fg-color);
+  border-color: var(--md-default-fg-color--light);
+}
+
+.vocab-clear-search:focus-visible {
+  outline: 2px solid var(--md-accent-fg-color);
+  outline-offset: 2px;
+}
+
+/* ── Filter groups: Language / Gender ──────── */
+.vocab-filter-groups {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem 1.6rem;
+  margin-top: 0.85rem;
+}
+
+.vocab-filter-group {
+  min-width: 0;
+}
+
+.vocab-filter-caption {
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: var(--md-default-fg-color--light);
+  margin: 0 0 0.35rem;
+}
+
+.md-content:has(#vocabSearch) .vocab-filter-btn {
+  padding: 0.5em 0.95em;
+  border: 1.5px solid var(--md-default-fg-color--lightest);
+  border-radius: 999px;
+  background: var(--md-default-bg-color);
+  color: var(--md-default-fg-color);
+  font-size: 0.88rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: border-color 0.15s ease, background 0.15s ease;
+}
+
+.md-content:has(#vocabSearch) .vocab-filter-btn:hover {
+  border-color: var(--md-accent-fg-color);
+  color: var(--md-default-fg-color);
+}
+
+.md-content:has(#vocabSearch) .vocab-filter-btn.active {
+  background: var(--md-accent-fg-color);
+  border-color: var(--md-accent-fg-color);
+  color: #243041;
+  font-weight: 600;
+}
+
+.md-content:has(#vocabSearch) .vocab-filter-btn:focus-visible {
+  outline: 2px solid var(--md-accent-fg-color);
+  outline-offset: 2px;
+}
+
+.vocab-clear-filters {
+  background: none;
+  border: none;
+  color: var(--md-default-fg-color--light);
+  text-decoration: underline;
+  text-underline-offset: 2px;
+  font-size: 0.85rem;
+  cursor: pointer;
+  padding: 0.5em 0.4em;
+  font-family: inherit;
+}
+
+.vocab-clear-filters:hover {
+  color: var(--md-default-fg-color);
+}
+
+.vocab-clear-filters:focus-visible {
+  outline: 2px solid var(--md-accent-fg-color);
+  outline-offset: 2px;
+}
+
+/* ── Result count + empty state ────────────── */
+.md-content:has(#vocabSearch) .vocab-result-count {
+  margin-top: 0.75rem;
+  font-size: 0.88rem;
+}
+
+.vocab-empty-state {
+  margin-top: 0.75rem;
+  padding: 0.9rem 1rem;
+  border: 1.5px dashed var(--md-default-fg-color--lightest);
+  border-radius: 10px;
+  color: var(--md-default-fg-color--light);
+  font-size: 0.9rem;
+  text-align: center;
+}
+
+/* State classes (set by vocab-search.js) */
+.vocab-cards[hidden],
+.vocab-empty-state[hidden] {
+  display: none !important;
+}
+
+table.vocab-group-hidden {
+  display: none !important;
+}
+
+/* ── Desktop table presentation ────────────── */
+.vocab-table-wrap {
+  border: 1px solid var(--md-default-fg-color--lightest);
+  border-radius: 12px;
+  box-shadow: 0 1px 3px rgba(36, 48, 65, 0.05);
+  overflow: hidden;
+  margin-bottom: 1.4rem;
+}
+
+[data-md-color-scheme="slate"] .vocab-table-wrap {
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+}
+
+.md-content:has(#vocabSearch) table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.92rem;
+  margin: 0;
+}
+
+/* Root cause of the “table only fills ~60% of its wrap” issue: Material
+   sets `.md-typeset table:not([class]) { display: inline-block; overflow: auto }`
+   on bare tables. width:100% then sizes the OUTER inline-block box while the
+   inner anonymous table shrink-fits its content, leaving dead space on the
+   right. Restore real table semantics on the vocabulary page only — the
+   .vocab-table-wrap supplies the border/shadow and clipping is not needed
+   since columns wrap instead of scroll. */
+.md-content:has(#vocabSearch) .vocab-table-wrap table {
+  display: table;
+  overflow: visible;
+}
+
+/* Keep Gender visually narrow: cells hold single tokens (M/F/N, M/F). */
+.md-content:has(#vocabSearch) td.vocab-cell-gender,
+.md-content:has(#vocabSearch) th.vocab-cell-gender {
+  white-space: nowrap;
+}
+
+/* Column hints per real header semantics (roles are tagged per table by
+   vocab-search.js from each table's own header labels, so tables with
+   different schemas get only the hints their columns actually have). */
+.md-content:has(#vocabSearch) td.vocab-cell-meaning,
+.md-content:has(#vocabSearch) td.vocab-cell-female {
+  min-width: 9rem;
+}
+
+.md-content:has(#vocabSearch) td.vocab-cell-gujarati,
+.md-content:has(#vocabSearch) td.vocab-cell-synonyms {
+  min-width: 12rem;
+}
+
+.md-content:has(#vocabSearch) thead th {
+  background: var(--md-hero-surface);
+  border-bottom: 2px solid var(--md-default-fg-color--lightest);
+  padding: 0.55em 0.8em;
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: var(--md-default-fg-color);
+  text-align: left;
+}
+
+.md-content:has(#vocabSearch) tbody td {
+  padding: 0.55em 0.8em;
+  border-bottom: 1px solid var(--md-default-fg-color--lightest);
+  vertical-align: top;
+  color: var(--md-default-fg-color);
+}
+
+.md-content:has(#vocabSearch) tbody tr:last-child td {
+  border-bottom: none;
+}
+
+.md-content:has(#vocabSearch) tbody tr:nth-child(2n) {
+  background: var(--md-hover-surface);
+}
+
+.md-content:has(#vocabSearch) tbody tr:hover {
+  background: var(--md-accent-fg-color--transparent);
+}
+
+/* Structure-aware language styling: vocab-search.js tags each body cell
+   from the real header labels (vocab-cell-<role>), never column numbers. */
+.md-content:has(#vocabSearch) td.vocab-cell-primary {
+  font-family: 'Noto Sans Devanagari', sans-serif;
+  font-size: 1.02rem;
+  font-weight: 500;
+}
+
+.md-content:has(#vocabSearch) td.vocab-cell-female {
+  font-family: 'Noto Sans Devanagari', sans-serif;
+  font-size: 1rem;
+}
+
+.md-content:has(#vocabSearch) td.vocab-cell-gujarati {
+  font-size: 1rem;
+  font-family: 'Noto Sans Gujarati', 'Noto Sans Devanagari', sans-serif;
+}
+
+.md-content:has(#vocabSearch) td.vocab-cell-gender {
+  text-align: center;
+  font-weight: 600;
+  color: var(--md-default-fg-color--light);
+  letter-spacing: 0.04em;
+}
+
+/* ── Mobile: cards replace tables (same row data) ── */
+.vocab-cards {
+  display: none;
+}
+
+@media (max-width: 760px) {
+  .md-content:has(#vocabSearch) .vocab-table-wrap {
+    display: none;
+  }
+
+  .md-content:has(#vocabSearch) .vocab-cards {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 0.65rem;
+    margin-bottom: 1.4rem;
+  }
+
+  /* consistent 16-20px page gutter, mirroring the quiz page fix */
+  .md-container .md-main .md-content:has(#vocabSearch) .md-content__inner {
+    margin-inline: 0.8rem;
+  }
+
+  .md-content:has(#vocabSearch) .vocab-search-box {
+    padding: 0.85rem 0.9rem 0.9rem;
+  }
+
+  .md-content:has(#vocabSearch) #vocabSearch {
+    height: 48px;
+    font-size: 1rem;
+  }
+
+  .vocab-filter-groups {
+    flex-direction: column;
+    gap: 0.7rem;
+  }
+
+  .md-content:has(#vocabSearch) .vocab-filter-btn {
+    min-height: 42px;
+    padding: 0.45em 1em;
+    font-size: 0.95rem;
+  }
+}
+
+/* Cards visible on mobile only (markup built by vocab-search.js) */
+@media (max-width: 760px) {
+  .vocab-card {
+    background: var(--md-default-bg-color);
+    border: 1px solid var(--md-default-fg-color--lightest);
+    border-radius: 12px;
+    padding: 0.75rem 0.85rem 0.8rem;
+    font-family: 'Noto Sans Devanagari', sans-serif;
+  }
+
+  .vocab-card-term {
+    margin: 0 0 0.5rem;
+    font-size: 1.18rem;
+    font-weight: 600;
+    color: var(--md-default-fg-color);
+    display: flex;
+    align-items: baseline;
+  }
+
+  .vocab-card-fem {
+    margin-left: 0.5rem;
+    padding-left: 0.55rem;
+    border-left: 1px solid var(--md-default-fg-color--lightest);
+    font-size: 1.05rem;
+    font-weight: 400;
+    color: var(--md-default-fg-color--light);
+  }
+
+  .vocab-card-fields {
+    margin: 0;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 0.3rem;
+  }
+
+  .vocab-card-field {
+    display: flex;
+    gap: 0.55rem;
+    align-items: baseline;
+  }
+
+  .vocab-card-field dt {
+    flex-shrink: 0;
+    width: 5.6rem;
+    font-family: 'Inter', sans-serif;
+    font-size: 0.72rem;
+    font-weight: 600;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    color: var(--md-default-fg-color--light);
+  }
+
+  .vocab-card-field dd {
+    margin: 0;
+    font-size: 0.98rem;
+    color: var(--md-default-fg-color);
+    word-break: break-word;
+  }
+
+  .vocab-card-guj {
+    font-family: 'Noto Sans Gujarati', 'Noto Sans Devanagari', sans-serif;
+  }
+
+  .vocab-card-gender {
+    font-weight: 600;
+    letter-spacing: 0.05em;
+    color: var(--md-default-fg-color--light);
+  }
+}
+
+@media print {
+  .vocab-cards {
+    display: none !important;
+  }
+}

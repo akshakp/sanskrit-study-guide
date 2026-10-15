@@ -1,20 +1,48 @@
+---
+hide:
+  - navigation
+  - toc
+---
+
 # Vocabulary (शब्दसंग्रहः)
 
-<div class="vocab-search-box">
-  <div class="vocab-search-input-wrap">
-    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
-    <input type="text" id="vocabSearch" placeholder="Search Sanskrit, English, or Gujarati... (e.g. 'book', 'પુસ્તક', or 'पुस्तक')">
-  </div>
+<div class="vocab-search-box" id="vocab-search-box">
+
+<label class="visually-hidden" for="vocabSearch">Search vocabulary in Sanskrit, English, or Gujarati</label>
+
+<div class="vocab-search-input-wrap">
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
+  <input type="search" id="vocabSearch" name="vocabulary-search" autocomplete="off"
+         aria-label="Search vocabulary in Sanskrit, English, or Gujarati"
+         placeholder="Search Sanskrit, English, or Gujarati... (e.g. 'book', 'પુસ્તક', or 'पुस्तक')">
+  <button type="button" class="vocab-clear-search" id="vocabClearSearch" aria-label="Clear search" hidden>×</button>
+</div>
+
+<div class="vocab-filter-groups">
+
+<div class="vocab-filter-group" role="radiogroup" aria-label="Search language">
+  <p class="vocab-filter-caption" id="vocab-filter-language-label">Language</p>
   <div class="vocab-filters">
-    <button class="vocab-filter-btn active" data-filter="all">All</button>
-    <button class="vocab-filter-btn" data-filter="sans">Sanskrit</button>
-    <button class="vocab-filter-btn" data-filter="eng">English</button>
-    <button class="vocab-filter-btn" data-filter="guj">Gujarati</button>
-    <button class="vocab-filter-btn" data-filter="masc">Masculine</button>
-    <button class="vocab-filter-btn" data-filter="fem">Feminine</button>
-    <button class="vocab-filter-btn" data-filter="neut">Neuter</button>
+    <button type="button" class="vocab-filter-btn active" data-filter="all" role="radio" aria-checked="true">All</button>
+    <button type="button" class="vocab-filter-btn" data-filter="sans" role="radio" aria-checked="false">Sanskrit</button>
+    <button type="button" class="vocab-filter-btn" data-filter="eng" role="radio" aria-checked="false">English</button>
+    <button type="button" class="vocab-filter-btn" data-filter="guj" role="radio" aria-checked="false">Gujarati</button>
+    <button type="button" class="vocab-clear-filters" id="vocabClearFilters" aria-label="Clear language and gender filters" hidden>Clear filters</button>
   </div>
-  <div class="vocab-result-count" id="vocabResultCount">Loading...</div>
+</div>
+
+<div class="vocab-filter-group" role="radiogroup" aria-label="Filter by gender">
+  <p class="vocab-filter-caption">Gender</p>
+  <div class="vocab-filters">
+    <button type="button" class="vocab-filter-btn" data-filter="masc" role="radio" aria-checked="false">Masculine</button>
+    <button type="button" class="vocab-filter-btn" data-filter="fem" role="radio" aria-checked="false">Feminine</button>
+    <button type="button" class="vocab-filter-btn" data-filter="neut" role="radio" aria-checked="false">Neuter</button>
+  </div>
+</div>
+
+</div>
+
+<div class="vocab-result-count" id="vocabResultCount" aria-live="polite">Loading...</div>
 </div>
 
 ---
@@ -123,7 +151,7 @@
 | अधिकारी | अधिकारिणी | Officer | અધિકારી | — |
 | प्राध्यापकः | प्राध्यापिका | Professor | પ્રોફેસર | — |
 | अधिवक्ता | अधिवक्त्री | Advocate / Lawyer | વકીલ | — |
-| आचार्यः | आचार्या | Teacher (esp. preceptor/guru) | શિક્ષક | अध्यापकः / अध्यापिका (instructor), उपाध्यायः (M, general teacher), शिक्षिका (F, generic "female teacher") |
+| आचार्यः | आचार्या | Teacher (esp. preceptor/guru) | શિક્ષક | अध्यापकः / अध्यापिका (instructor) |
 | आपणिकः | आपणिका | Merchant / Trader | વેપારી | — |
 | व्याख्याता | व्याख्यात्री | Commentator | ટીકાકાર | — |
 | अभिनेता | अभिनेत्री | Actor | અભિનેતા | — |
