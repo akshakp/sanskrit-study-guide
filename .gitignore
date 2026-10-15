@@ -22,3 +22,7 @@ desktop.ini
 # folders to ignore
 syllabus/
 reports/
+
+# MkDocs build output / local validation venv
+site/
+.venv/

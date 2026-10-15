@@ -12,31 +12,31 @@
       {
         key: "vibhakti",
         label: "विभक्ति",
-        url: "../data/vibhakti.json"
+        url: "data/vibhakti.json"
       },
       {
         key: "verb",
         label: "क्रियापदम्",
-        url: "../data/verb.json"
+        url: "data/verb.json"
       },
       {
         key: "writing",
         label: "लेखननियमाः",
-        url: "../data/writing_rules.json"
+        url: "data/writing_rules.json"
       },
       {
         key: "avyay",
         label: "अव्यय",
-        url: "../data/avyay.json"
+        url: "data/avyay.json"
       },
       {
         key: "adjective",
         label: "विशेषणम्",
-        url: "../data/adjective.json"
+        url: "data/adjective.json"
       },
       {"key":"mixed",
         "label":"संयुक्त ",
-        "url":"../data/mixed.json"
+        "url":"data/mixed.json"
         }
     ]
   };

@@ -56,7 +56,7 @@ A Sanskrit sentence is built from meaningful word types. The two most essential 
 | **[क्रियापदम्](verbs.md)** | Verb | Shows action, occurrence, or state | पठति, गच्छति |
 | **[विशेषणम्](adjectives.md)** | Adjective | Describes a noun | सुन्दरः, स्वस्थः |
 | **सर्वनाम** | Pronoun | Stands in place of noun | सः, सा, तत् |
-| **[अव्ययम्](vocabulary.md#adverbs-particles)** | Indeclinable | Adds meaning to a word or sentence without changing its form | अत्र, तत्र, च, न, अन्यत्र |
+| **[अव्ययम्](../reference/vocabulary.md#adverbs-particles)** | Indeclinable | Adds meaning to a word or sentence without changing its form | अत्र, तत्र, च, न, अन्यत्र |
 
 !!! tip "Every Sanskrit word is either विकारी (Variable) or अविकारी (Invariable)"
 

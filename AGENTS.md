@@ -23,7 +23,7 @@ These restrictions apply to all agents, subagents, skills, MCP tools, and delega
 ### Important distinction: source versus output
 
 - `docs/**/*.md`: existing **study-guide output**. Read it to understand layout, conventions, and what needs maintenance, but **do not use it as the sole authority to introduce, validate, or correct Sanskrit content**.
-- `README.md`, `TROUBLESHOOTING.md`, `mkdocs.yml`, `.github/`, `docs/stylesheets/`, `docs/javascripts/`: **engineering context**, not Sanskrit syllabus evidence.
+- `README.md`, `TROUBLESHOOTING.md`, `mkdocs.yml`, `.github/`, `docs/assets/`: **engineering context**, not Sanskrit syllabus evidence.
 - User-provided text in the current task can be used as task input, but do not treat a paraphrase of a grammar rule as verified syllabus evidence unless it appears in the approved source.
 
 **Allowed Sanskrit content source = approved local syllabus file(s) only.** If the user asks for a Sanskrit answer, rule, vocabulary word, declension, conjugation, translation, example, quiz answer, or explanation, confirm it is supported by those files before producing or editing it.
@@ -69,7 +69,7 @@ You may maintain the site's **code and presentation**, using the local repositor
 - Organize existing material into user-requested headings or sections, preserving every entry and its meaning.
 - Add an empty template or UI component when requested, but do not populate it with invented Sanskrit learning material.
 
-This is a Markdown-based MkDocs website deployed to GitHub Pages. The repository currently documents `mkdocs.yml`, `docs/`, `docs/stylesheets/main.css`, `docs/javascripts/vocab-search.js`, and `.github/workflows/deploy.yml`. Inspect actual local files before assuming any additional file exists.
+This is a Markdown-based MkDocs website deployed to GitHub Pages. The repository currently documents `mkdocs.yml`, `docs/`, `docs/assets/css/main.css`, `docs/assets/js/vocab-search.js`, and `.github/workflows/deploy.yml`. Inspect actual local files before assuming any additional file exists.
 
 A request to “improve,” “rewrite,” “complete,” or “fix” content is **not authorization** to supplement missing Sanskrit information from model knowledge. Ask for the approved source if needed.
 
