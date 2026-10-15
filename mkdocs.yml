@@ -8,24 +8,24 @@ site_author: Sanskrit Learner
 
 theme:
   name: material
+  custom_dir: docs/overrides
   palette:
     - scheme: default
-      primary: deep purple
+      primary: blue grey
       accent: amber
       toggle:
         icon: material/brightness-7
         name: Switch to dark mode
     - scheme: slate
-      primary: deep purple
+      primary: blue grey
       accent: amber
       toggle:
         icon: material/brightness-4
         name: Switch to light mode
   features:
-    # - navigation.sections
-    # - navigation.expand
+    - navigation.tabs
+    - navigation.tabs.sticky
     - navigation.top
-    - toc.integrate
     - search.suggest
     - search.highlight
     - search.share
@@ -48,10 +48,8 @@ nav:
     - Visarga Sandhi: topics/visarg-sandhi.md
     - Krudanta & Taddhita: topics/krudant-tadvid.md
     - Conversation: topics/conversation.md
-  - Reference:
-    - Vocabulary: reference/vocabulary.md
-  - Practice:
-    - Practice Quiz: practice/quiz.md
+  - Vocabulary: reference/vocabulary.md
+  - Practice Quiz: practice/quiz.md
 
 plugins:
   - search:
@@ -69,6 +67,7 @@ plugins:
 extra_javascript:
   - assets/js/vocab-search.js
   - assets/js/quiz.js
+  - assets/js/nouns-explorer.js
 
 extra_css:
   - assets/css/main.css

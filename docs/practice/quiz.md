@@ -1,27 +1,62 @@
-# संस्कृतम् — Mixed Practice Quiz
+---
+hide:
+  - toc
+---
 
-Each attempt contains **25 new questions**, selected equally from the four question banks. Questions and answer choices are reshuffled whenever you start a new quiz.
+# Practice Quiz
 
-<div class="quiz-score-bar">
-  <span id="quiz-score">Score: 0 / 0 answered (0%)</span>
-  <button class="quiz-reset-btn" id="quiz-new-btn">
-  ↻ Start New Quiz
-</button>
+<section class="quiz-setup" id="quiz-setup" markdown>
+
+### Quiz setup
+
+<div class="quiz-setup__controls">
+
+<div class="quiz-setup__field">
+
+<label for="quiz-category">Category (विषयः)</label>
+
+<select id="quiz-category">
+</select>
+
 </div>
 
-<div
-  id="quiz-container"
-  data-total-questions="25"
-  data-quiz-sources='[
-    {"key":"vibhakti","label":"विभक्ति","url":"data/vibhakti.json"},
-    {"key":"verb","label":"क्रियापदम्","url":"data/verb.json"},
-    {"key":"writing","label":"लेखननियमाः","url":"data/writing_rules.json"},
-    {"key":"avyay","label":"अव्यय","url":"data/avyay.json"},
-    {"key":"adjective","label":"विशेषणम्","url":"data/adjective.json"},
-    {"key":"mixed","label":"संयुक्त ","url":"data/mixed.json"}
-  ]'
->
-  <p>Loading quiz...</p>
+<div class="quiz-setup__field">
+
+<label for="quiz-count">Number of questions</label>
+
+<select id="quiz-count">
+  <option value="5">5 questions</option>
+  <option value="10" selected="selected">10 questions</option>
+  <option value="25">25 questions</option>
+</select>
+
+<div class="quiz-count-btns" role="radiogroup" aria-label="Number of questions">
+
+<button type="button" class="quiz-count-btn" data-value="5" role="radio" aria-checked="false">5</button>
+<button type="button" class="quiz-count-btn" data-value="10" role="radio" aria-checked="true">10</button>
+<button type="button" class="quiz-count-btn" data-value="25" role="radio" aria-checked="false">25</button>
+
 </div>
 
-<script src="../assets/js/quiz.js"></script>
+</div>
+
+</div>
+
+<button type="button" class="quiz-start-btn" id="quiz-start"><span aria-hidden="true">▶</span> Start Quiz</button>
+
+<p class="quiz-setup-note" id="quiz-setup-note">Loading question banks…</p>
+
+</section>
+
+<div class="quiz-score-bar quiz-score-bar--hidden" id="quiz-score-bar" hidden>
+  <div class="quiz-score-bar__top">
+    <span id="quiz-progress-text">Question 0 of 0</span>
+    <span id="quiz-counts">✓ 0 correct · ✗ 0 incorrect</span>
+  </div>
+  <div class="quiz-progress-track" role="progressbar" aria-label="Quiz progress"
+       aria-valuemin="0" aria-valuemax="100" aria-valuenow="0" id="quiz-progress-track">
+    <div class="quiz-progress-fill" id="quiz-progress-fill"></div>
+  </div>
+</div>
+
+<div id="quiz-container"><p class="quiz-loading">Choose a category and press Start Quiz.</p></div>

@@ -1,71 +1,81 @@
-# 🙏 Sanskrit Study Guide
+# Study Topics
+
+<div class="topic-card-page" markdown>
 
 <div class="grid cards" markdown>
 
-- 📖 **Foundations**
+- :material-book-open-page-variant:{ .middle } **Sanskrit Foundations**
 
-    ---
+    The alphabet, pronunciation, sentence basics, and core concepts.
 
-    Learn the Sanskrit alphabet, pronunciation, sentence basics, and core concepts.
+    [Explore →](topics/sanskrit-foundations.md)
 
-    [:octicons-arrow-right-24: Explore Foundations](topics/sanskrit-foundations.md)
+- :material-alpha-a:{ .middle } **Alphabets**
 
+    Vowels (स्वर), consonants (व्यञ्जन), and pronunciation places.
 
-- 🧠 **Quiz**
+    [Explore →](topics/alphabets.md)
 
-    ---
+- :material-table-edit:{ .middle } **Nouns & Cases**
 
-    Master Sanskrit through interactive quizzes on vocabulary, grammar, verbs, adjectives, vibhaktis, writing rules, and mixed challenges.
+    The 8 cases (विभक्ति), masculine `-a` declension, and the णत्व rule.
 
-    [:octicons-arrow-right-24: Start Quiz](practice/quiz.md)
+    [Study →](topics/nouns.md)
 
+- :material-run:{ .middle } **Verbs**
 
--   🔢 **Nouns & Cases**
+    Present tense conjugation and verb classes (धातुगण).
 
-    ---
+    [Study →](topics/verbs.md)
 
-    Learn the 8 cases (विभक्ति) with the full declension table for masculine -a nouns, plus the णत्व rule.
+- :material-chart-tree:{ .middle } **Verb Roots**
 
-    [:octicons-arrow-right-24: Study Cases](topics/nouns.md)
+    भ्वादिगण roots with गुण, उपधा, and संधि changes.
 
--   🏃 **Verbs**
+    [Study →](topics/dhatu.md)
 
-    ---
+- :material-format-color-text:{ .middle } **Adjectives**
 
-    Conjugate verbs in present tense, understand verb classes (धातुगण), and master special verb usage rules.
+    Adjective (विशेषण) agreement in लिङ्ग, वचन, and विभक्ति.
 
-    [:octicons-arrow-right-24: Conjugate Verbs](topics/verbs.md)
+    [Study →](topics/adjectives.md)
 
--   📝 **Adjectives**
+- :material-pencil-outline:{ .middle } **Writing Rules**
 
-    ---
+    Sandhi rules (संधि नियम), punctuation, and sentence structure.
 
-    Learn how adjectives (विशेषण) describe nouns and agree with them in gender (लिङ्ग), number (वचन), and case (विभक्ति).
+    [Study →](topics/writing-rules.md)
 
-    [:octicons-arrow-right-24: Explore Adjectives](topics/adjectives.md)
+- :material-swap-horizontal:{ .middle } **Visarga Sandhi**
 
--   📝 **Rules of writing**
+    Decision strategy, the summary table, and exceptions.
 
-    ---
+    [Study →](topics/visarg-sandhi.md)
 
-    Sanskrit orthography — sandhi rules (संधि नियम), punctuation, and proper sentence structure.
+- :material-layers-plus:{ .middle } **Krudanta & Taddhita**
 
-    [:octicons-arrow-right-24: Learn Rules](topics/writing-rules.md)
+    Core कृदन्त rules and तद्धित formation patterns.
 
--   💬 **Conversation**
+    [Study →](topics/krudant-tadvid.md)
 
-    ---
+- :material-comment-text-multiple:{ .middle } **Conversation**
 
-    Practical Sanskrit dialogues — introductions, questions, locations, and daily expressions.
+    Practical dialogues — introductions, questions, and daily expressions.
 
-    [:octicons-arrow-right-24: Start Speaking](topics/conversation.md)
+    [Start →](topics/conversation.md)
 
--   📚 **Vocabulary**
+- :material-bookshelf:{ .middle } **Vocabulary**
 
-    ---
+    Essential words and verb roots with live search in Sanskrit, English, or Gujarati.
 
-    Essential words and common verb roots organized by category with a **live search filter** — search in Sanskrit, English, or Gujarati, and filter by gender.
+    [Browse →](reference/vocabulary.md)
 
-    [:octicons-arrow-right-24: Build Vocabulary](reference/vocabulary.md)
+- :material-clipboard-text:{ .middle } **Practice Quiz**
+
+    Mixed practice drawn from all seven question banks.
+
+    [Start →](practice/quiz.md)
+
+</div>
 
 </div>

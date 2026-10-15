@@ -6,15 +6,55 @@
 /* ── 1. FONT IMPORTS ───────────────────────────────────────── */
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Devanagari:wght@400;500;600;700&family=Noto+Sans+Gujarati:wght@400;500;600;700&family=Inter:wght@400;500;600;700&display=swap');
 
-/* ── 2. SANSKRIT / GUJARATI FONT ASSIGNMENTS ─────────────── */
-.md-typeset :is([lang="sa"], [lang="gu"], [lang="hi"]),
-.md-typeset td:first-child,
-.md-typeset th:first-child {
-  font-family: 'Noto Sans Devanagari', 'Sanskrit 2003', 'Mangal', serif;
+/* ── 2. NEUTRAL SCHEME TOKENS (light + dark) ─────────────── */
+/* Warm off-white page, white cards, charcoal text, muted amber accent. */
+[data-md-color-scheme="default"] {
+  --md-default-bg-color: #FAF9F6;
+  --md-default-fg-color: #243041;
+  --md-default-fg-color--light: #596273;
+  --md-default-fg-color--lighter: #848B96;
+  --md-default-fg-color--lightest: #E5E2DC;
+  --md-primary-fg-color: #F3F0E9;
+  --md-primary-bg-color: #243041;
+  --md-accent-fg-color: #B66A32;
+  --md-accent-fg-color--transparent: rgba(182, 106, 50, 0.12);
+  --md-typeset-a-color: #A05A2B;
+  --md-hover-surface: #F5F1EB;
+  --md-hero-surface: #E9EDF2;
+  --md-footer-bg-color: #F3F0E9;
+  --md-footer-fg-color: #596273;
 }
 
-.md-typeset td:nth-child(3),
-.md-typeset th:nth-child(3) {
+[data-md-color-scheme="slate"] {
+  --md-default-bg-color: #1C1B18;
+  --md-default-fg-color: #E6E3DB;
+  --md-default-fg-color--light: #C7C3B8;
+  --md-default-fg-color--lighter: #9A958A;
+  --md-default-fg-color--lightest: #3A372E;
+  --md-primary-fg-color: #23211D;
+  --md-primary-bg-color: #E6E3DB;
+  --md-accent-fg-color: #D9A158;
+  --md-accent-fg-color--transparent: rgba(217, 161, 88, 0.14);
+  --md-typeset-a-color: #D9A158;
+  --md-hover-surface: #2A2823;
+  --md-hero-surface: #26292E;
+  --md-footer-bg-color: #23211D;
+  --md-footer-fg-color: #C7C3B8;
+}
+
+/* ── 3. SANSKRIT / GUJARATI FONTS (script-aware, not column-based) ──
+   Latin renders with Inter; Devanagari and Gujarati glyphs fall back
+   per codepoint to Noto fonts, so any table column or block renders
+   correctly regardless of its position. */
+.md-typeset {
+  font-family: 'Inter', 'Noto Sans Devanagari', 'Noto Sans Gujarati', sans-serif;
+}
+
+.md-typeset :is([lang="sa"], [lang="hi"]) {
+  font-family: 'Noto Sans Devanagari', 'Sanskrit 2003', 'Mangal', 'Noto Sans Gujarati', serif;
+}
+
+.md-typeset [lang="gu"] {
   font-family: 'Noto Sans Gujarati', 'Shruti', sans-serif;
 }
 
@@ -29,6 +69,7 @@
 a:hover .octicons-arrow-right-24,
 .md-typeset a:hover .octicons-arrow-right-24 {
   transform: translateX(3px);
+  color: var(--md-accent-fg-color);
 }
 
 /* ── 4. TWEMOJI / EMOJI IN CARDS ─────────────────────────── */
@@ -80,7 +121,7 @@ a:hover .octicons-arrow-right-24,
   line-height: 1.65;
 }
 
-/* ---- TABLES: compact but readable ---- */
+/* ---- TABLES: comfortable padding, subtle separators ---- */
 .md-typeset .md-typeset__table {
   display: block;
   overflow-x: auto;
@@ -88,15 +129,15 @@ a:hover .octicons-arrow-right-24,
 }
 
 .md-typeset table {
-  font-size: 0.88rem;
+  font-size: 0.9rem;
   margin: 0.75rem 0 1.25rem;
   width: 100%;
 }
 
 .md-typeset table th,
 .md-typeset table td {
-  padding: 0.45rem 0.6rem;
-  line-height: 1.4;
+  padding: 0.55rem 0.7rem;
+  line-height: 1.65;
 }
 
 .md-typeset table th {
@@ -104,11 +145,17 @@ a:hover .octicons-arrow-right-24,
   font-weight: 600;
   background: var(--md-default-fg-color--lightest);
   white-space: nowrap;
+  border-bottom: 1px solid var(--md-default-fg-color--light);
 }
 
 .md-typeset table td {
-  font-size: 0.88rem;
+  font-size: 0.9rem;
   word-break: break-word;
+  border-bottom: 1px solid var(--md-default-fg-color--lightest);
+}
+
+.md-typeset table tbody tr:last-child td {
+  border-bottom: none;
 }
 
 /* zebra striping for readability */
@@ -116,7 +163,13 @@ a:hover .octicons-arrow-right-24,
   background: var(--md-default-bg-color);
 }
 .md-typeset table tbody tr:nth-child(even) {
-  background: var(--md-code-bg-color);
+  background: rgba(119, 104, 76, 0.04);
+}
+[data-md-color-scheme="slate"] .md-typeset table tbody tr:nth-child(even) {
+  background: rgba(230, 227, 219, 0.03);
+}
+.md-typeset table tbody tr:hover {
+  background: var(--md-hover-surface);
 }
 
 /* ---- Admonitions ---- */
@@ -124,10 +177,96 @@ a:hover .octicons-arrow-right-24,
   font-size: 0.9rem;
 }
 
-/* ---- Left sidebar: compact (DESKTOP ONLY) ---- */
-@media screen and (min-width: 769px) {
-  .md-sidebar {
-    width: 14rem;
+/* ---- LEFT SIDEBAR: hidden on wide screens (top tabs take over) ----
+   Official Material pattern for tab-first navigation. The nav drawer
+   (hamburger) is untouched on tablet and mobile widths. */
+@media screen and (min-width: 76.1875em) {
+  .md-sidebar--primary {
+    display: none;
+  }
+}
+
+/* Top tabs: restrained neutral bar, amber active underline */
+.md-header {
+  box-shadow: none;
+  border-bottom: 1px solid var(--md-default-fg-color--lightest);
+}
+
+.md-header__title,
+.md-tabs__link {
+  font-weight: 600;
+}
+
+/* ── 5. TOP NAVIGATION (tabs) ────────────────
+   With navigation.tabs.sticky, Material renders `.md-tabs` inside the
+   header. The main.html override places it INSIDE `.md-header__inner`,
+   producing a single compact row on desktop:
+   [Logo + title] [Home] [Study Topics] [Vocabulary] [Practice Quiz] [Search] [Toggle]
+   Below 76.1875em (1220px) the tabs hide and the drawer menu takes over. */
+.md-tabs--in-header {
+  display: none;
+}
+
+@media screen and (min-width: 76.1875em) {
+  .md-tabs--in-header {
+    display: flex;
+    flex: 1 1 auto;
+    align-items: center;
+    min-width: 0;
+    margin: 0 0.6rem;
+    overflow: visible;
+    background: none;
+  }
+
+  /* Title no longer claims all leftover space: nav links sit after it,
+     search and palette stay at the far right. */
+  .md-header__title {
+    flex-grow: 0;
+  }
+
+  .md-tabs--in-header .md-grid {
+    max-width: 100%;
+    width: 100%;
+  }
+
+  .md-tabs--in-header .md-tabs__item {
+    display: flex;
+    align-items: center;
+    height: 2.4rem;
+  }
+
+  .md-tabs--in-header .md-tabs__link {
+    position: relative;
+    margin-top: 0;
+    color: var(--md-primary-bg-color);
+    opacity: 0.72;
+  }
+
+  .md-tabs--in-header .md-tabs__link:hover,
+  .md-tabs--in-header .md-tabs__link--active {
+    opacity: 1;
+    color: var(--md-primary-bg-color);
+  }
+
+  /* Subtle active-link indicator */
+  .md-tabs--in-header .md-tabs__link--active::after {
+    content: "";
+    position: absolute;
+    left: 0.4rem;
+    right: 0.4rem;
+    bottom: 0.05rem;
+    height: 2px;
+    border-radius: 1px;
+    background: var(--md-accent-fg-color);
+  }
+
+  /* One header row instead of two: correct sticky offsets */
+  .md-header--lifted ~ .md-container .md-sidebar {
+    top: 2.4rem;
+  }
+
+  .md-header--lifted ~ .md-container .md-typeset :target {
+    --md-scroll-margin: 3rem;
   }
 }
 
@@ -192,8 +331,8 @@ a:hover .octicons-arrow-right-24,
 
 #vocabSearch:focus,
 #dhatuSearch:focus {
-  border-color: var(--md-primary-fg-color);
-  box-shadow: 0 0 0 3px var(--md-primary-fg-color--transparent);
+  border-color: var(--md-accent-fg-color);
+  box-shadow: 0 0 0 3px var(--md-accent-fg-color--transparent);
 }
 
 #vocabSearch::placeholder,
@@ -223,20 +362,391 @@ a:hover .octicons-arrow-right-24,
 }
 
 .vocab-filter-btn:hover {
-  border-color: var(--md-default-fg-color--light);
-  color: var(--md-default-fg-color);
+  border-color: var(--md-accent-fg-color);
+  color: var(--md-accent-fg-color);
 }
 
 .vocab-filter-btn.active {
-  background: var(--md-primary-fg-color);
-  color: var(--md-primary-bg-color);
-  border-color: var(--md-primary-fg-color);
+  background: var(--md-default-fg-color);
+  color: var(--md-default-bg-color);
+  border-color: var(--md-default-fg-color);
 }
 
 .vocab-result-count {
   font-size: 0.9rem;
   color: var(--md-default-fg-color--light);
   margin-top: 10px;
+  font-weight: 500;
+}
+
+/* ============================================
+   VIBHAKTI TABLE EXPLORER (Nouns & Cases page)
+   Two dependent selectors (Ending → Gender) + complete table.
+   Scoped to .decl-* classes only: no effect on other pages.
+   ============================================ */
+
+/* The approved markdown tables live in the "Full Tables" tab (Material
+   content tabs); no page-level hiding is needed anymore. */
+
+.decl-explorer {
+  background: var(--md-hover-surface);
+  border: 1px solid var(--md-default-fg-color--lightest);
+  border-radius: 12px;
+  padding: 1rem 1.1rem 1.2rem;
+  margin: 1rem 0 1.5rem;
+  box-shadow: 0 1px 3px rgba(36, 48, 65, 0.05);
+}
+
+[data-md-color-scheme="slate"] .decl-explorer {
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+}
+
+.decl-explorer__title {
+  font-size: 0.8rem;
+  color: var(--md-default-fg-color--light);
+  margin-bottom: 0.75rem;
+}
+
+.decl-selects {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0.75rem;
+  max-width: 42rem;
+}
+
+.decl-control label {
+  display: block;
+  font-size: 0.78rem;
+  font-weight: 600;
+  color: var(--md-default-fg-color--light);
+  margin-bottom: 0.3rem;
+}
+
+.decl-control label [lang] {
+  font-family: inherit;
+}
+
+.decl-select {
+  width: 100%;
+  height: 42px;
+  padding: 0 0.7rem;
+  font-size: 0.95rem;
+  border: 1.5px solid var(--md-default-fg-color--lightest);
+  border-radius: 8px;
+  background: var(--md-default-bg-color);
+  color: var(--md-default-fg-color);
+  font-family: inherit;
+  cursor: pointer;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.decl-select:focus-visible,
+.decl-select:focus {
+  border-color: var(--md-accent-fg-color);
+  box-shadow: 0 0 0 3px var(--md-accent-fg-color--transparent);
+  outline: none;
+}
+
+.decl-hero {
+  margin: 1rem 0 0.9rem;
+  padding: 1.3rem 1rem 1.15rem;
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.6), 0 1px 2px rgba(36, 48, 65, 0.04);
+  background: var(--md-hero-surface);
+  border: 1px solid var(--md-default-fg-color--lightest);
+  border-radius: 10px;
+  text-align: center;
+}
+
+.decl-hero__noun {
+  font-family: 'Noto Sans Devanagari', 'Inter', serif;
+  font-size: clamp(2rem, 5.5vw, 2.2rem); /* 32px mobile → 44px desktop (Material root is 125%) */
+  font-weight: 600;
+  line-height: 1.25;
+  color: var(--md-default-fg-color);
+}
+
+.decl-hero__sub {
+  margin-top: 0.35rem;
+  font-family: 'Noto Sans Devanagari', 'Inter', serif;
+  font-size: 0.95rem;
+  color: var(--md-default-fg-color--light);
+  white-space: nowrap;
+}
+
+.decl-table-cap {
+  margin: 1rem 0 0.45rem;
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--md-default-fg-color);
+}
+
+.decl-table-cap .decl-table-cap__label {
+  font-family: 'Noto Sans Devanagari', 'Inter', serif;
+}
+
+.decl-table-cap .decl-table-cap__note {
+  font-weight: 400;
+  font-size: 0.78rem;
+  color: var(--md-default-fg-color--light);
+  font-family: 'Noto Sans Devanagari', 'Inter', serif;
+}
+
+.decl-scroll {
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  border: 1px solid var(--md-default-fg-color--lightest);
+  border-radius: 10px;
+  background: #FFFFFF;
+  box-shadow: 0 1px 2px rgba(36, 48, 65, 0.05);
+}
+
+table.decl-table {
+  border-collapse: collapse;
+  width: 100%;
+  margin: 0;
+}
+
+table.decl-table th {
+  background: var(--md-hero-surface);
+  font-weight: 600;
+  font-size: 0.85rem;
+  color: var(--md-default-fg-color);
+  text-align: left;
+  padding: 0.6rem 0.85rem;
+  border-bottom: 2px solid var(--md-default-fg-color--light);
+  white-space: nowrap;
+  font-family: 'Noto Sans Devanagari', 'Inter', serif;
+}
+
+table.decl-table td {
+  padding: 0.6rem 0.85rem;
+  border-bottom: 1px solid var(--md-default-fg-color--lightest);
+  vertical-align: top;
+  line-height: 1.6;
+  transition: background 0.15s ease;
+}
+
+table.decl-table tbody tr:nth-child(even) td {
+  background: var(--md-hover-surface);
+}
+
+table.decl-table tbody tr:hover td {
+  background: var(--md-accent-fg-color--transparent);
+}
+
+table.decl-table tbody tr:last-child td {
+  border-bottom: none;
+}
+
+[data-md-color-scheme="slate"] .decl-scroll {
+  background: #23211D;
+}
+
+table.decl-table td.decl-cell-case {
+  white-space: nowrap;
+  min-width: 8rem;
+  font-family: 'Noto Sans Devanagari', 'Inter', serif;
+}
+
+table.decl-table .decl-case-name {
+  font-weight: 600;
+  color: var(--md-default-fg-color);
+  font-size: 0.95rem;
+}
+
+table.decl-table .decl-case-question {
+  display: block;
+  font-weight: 400;
+  font-size: 0.74rem;
+  color: var(--md-default-fg-color--light);
+}
+
+table.decl-table td.decl-cell-form {
+  font-family: 'Noto Sans Devanagari', 'Inter', serif;
+  font-size: 1.1rem;
+  white-space: nowrap;
+  color: var(--md-default-fg-color);
+}
+
+table.decl-table td.decl-cell-missing {
+  color: var(--md-default-fg-color--light);
+}
+
+.decl-cell-missing-text {
+  color: var(--md-default-fg-color--light);
+}
+
+/* ── Mobile case cards (≤640px) — replaces the scrolling table ──
+   Built by the same render pass from the same verified data as the
+   desktop table, so the two presentations cannot diverge. */
+.decl-cards {
+  display: none;
+}
+
+.decl-card {
+  background: #FFFFFF;
+  border: 1px solid var(--md-default-fg-color--lightest);
+  border-radius: 10px;
+  padding: 0.7rem 0.9rem 0.8rem;
+  margin: 0 0 0.6rem;
+  box-shadow: 0 1px 2px rgba(36, 48, 65, 0.05);
+}
+
+[data-md-color-scheme="slate"] .decl-card {
+  background: #23211D;
+}
+
+.decl-card__head {
+  font-family: 'Noto Sans Devanagari', 'Inter', serif;
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--md-accent-fg-color);
+  padding-bottom: 0.4rem;
+  border-bottom: 1px solid var(--md-default-fg-color--lightest);
+  margin-bottom: 0.5rem;
+}
+
+.decl-card__row {
+  display: flex;
+  align-items: baseline;
+  gap: 0.6rem;
+  padding: 0.28rem 0;
+  min-height: 2.4rem;
+}
+
+.decl-card__label {
+  flex: 0 0 6.5rem;
+  font-family: 'Noto Sans Devanagari', 'Inter', serif;
+  font-size: 0.78rem;
+  color: var(--md-default-fg-color--light);
+}
+
+.decl-card__value {
+  font-family: 'Noto Sans Devanagari', 'Inter', serif;
+  font-size: 1.15rem;
+  font-weight: 500;
+  color: var(--md-default-fg-color);
+  overflow-wrap: break-word;
+}
+
+/* ── णत्व नियम indicator (desktop cells + mobile cards) ── */
+.decl-natva {
+  display: inline-flex;
+  align-items: center;
+  margin: 0 0 0 0.55rem;
+  padding: 0.05rem 0.45rem;
+  border: 1px solid var(--md-accent-fg-color);
+  border-radius: 999px;
+  background: var(--md-accent-fg-color--transparent);
+  color: var(--md-accent-fg-color);
+  font-family: 'Noto Sans Devanagari', 'Inter', serif;
+  font-size: 0.62rem;
+  font-weight: 600;
+  line-height: 1.5;
+  cursor: pointer;
+  vertical-align: middle;
+  transition: background 0.15s ease;
+}
+
+.decl-natva:hover {
+  background: var(--md-accent-fg-color--transparent);
+  box-shadow: 0 0 0 2px var(--md-accent-fg-color--transparent);
+}
+
+.decl-natva:focus-visible {
+  outline: 2px solid var(--md-accent-fg-color);
+  outline-offset: 2px;
+}
+
+.decl-natva[lang] {
+  border-bottom: none;
+}
+
+/* ── Back button in the Rules tab ── */
+.decl-back-btn {
+  display: inline-flex;
+  align-items: center;
+  margin: 0 0 1rem;
+  padding: 0.35rem 0.85rem;
+  border: 1.5px solid var(--md-default-fg-color--lightest);
+  border-radius: 999px;
+  background: var(--md-default-bg-color);
+  color: var(--md-default-fg-color);
+  font-family: inherit;
+  font-size: 0.8rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: border-color 0.15s ease, box-shadow 0.15s ease;
+}
+
+.decl-back-btn:hover {
+  border-color: var(--md-accent-fg-color);
+  box-shadow: 0 0 0 3px var(--md-accent-fg-color--transparent);
+}
+
+.decl-back-btn:focus-visible {
+  outline: 2px solid var(--md-accent-fg-color);
+  outline-offset: 2px;
+}
+
+.decl-loading,
+.decl-error {
+  padding: 0.8rem 1rem;
+  border: 1px solid var(--md-default-fg-color--lightest);
+  border-radius: 8px;
+  background: var(--md-default-bg-color);
+  color: var(--md-default-fg-color--light);
+  font-size: 0.9rem;
+}
+
+.decl-error__detail {
+  margin: 0.4rem 0 0;
+  font-size: 0.78rem;
+}
+
+/* Mobile / narrow: stacked selectors, centered hero, case cards
+   replace the table entirely (no horizontal scrolling). */
+@media screen and (max-width: 640px) {
+  .decl-scroll {
+    display: none;
+  }
+
+  .decl-cards {
+    display: block;
+  }
+
+  .decl-card:last-child {
+    margin-bottom: 0;
+  }
+
+  .decl-selects {
+    grid-template-columns: 1fr;
+    gap: 0.6rem;
+    max-width: none;
+  }
+
+  .decl-explorer {
+    padding: 0.85rem 0.9rem 1rem;
+  }
+
+  .decl-hero {
+    padding: 1.1rem 0.9rem 1rem;
+  }
+
+  .decl-hero__sub {
+    white-space: normal;
+  }
+}
+
+/* ── Table readability on this page only ──
+   Scoped via :has(.decl-explorer): no effect on other pages.
+   Case-name column never wraps; header row stays above forms. */
+body:has(.decl-explorer) .md-typeset table th {
+  vertical-align: bottom;
+}
+
+body:has(.decl-explorer) .md-typeset table td:first-child {
+  white-space: nowrap;
   font-weight: 500;
 }
 
@@ -293,15 +803,148 @@ a:hover .octicons-arrow-right-24,
   }
 }
 
-/* ── ADDITIONAL UTILITIES ─────────────────────────────────── */
+/* ============================================
+   HOMEPAGE TOPIC CARDS
+   Compact white cards, warm border, responsive grid:
+   4 columns on wide desktop, 3 on medium, 2 on tablet,
+   1 on mobile (CSS Grid auto-fill). Entire card clickable.
+   ============================================ */
+
+.md-typeset .topic-card-page .grid.cards > ul {
+  grid-template-columns: repeat(auto-fill, minmax(15rem, 1fr));
+}
+
+.md-typeset .topic-card-page .grid.cards > ul > li {
+  position: relative;
+  background: #FFFFFF;
+  border: 1px solid var(--md-default-fg-color--lightest);
+  border-radius: 10px;
+  padding: 0.7rem 0.85rem;
+  transition: border-color 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+[data-md-color-scheme="slate"] .md-typeset .topic-card-page .grid.cards > ul > li {
+  background: #23211D;
+}
+
+.md-typeset .topic-card-page .grid.cards > ul > li:hover {
+  border-color: var(--md-accent-fg-color);
+  box-shadow: 0 2px 10px rgba(36, 48, 65, 0.08);
+  transform: translateY(-1px);
+}
+
+[data-md-color-scheme="slate"] .md-typeset .topic-card-page .grid.cards > ul > li:hover {
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.4);
+}
+
+/* Make the whole card an accessible link: stretch the single link
+   over the card surface. The link itself remains keyboard-focusable. */
+.md-typeset .topic-card-page .grid.cards > ul > li > p > a::after {
+  content: "";
+  position: absolute;
+  inset: -0.4rem -0.85rem -0.5rem;
+  z-index: 1;
+}
+
+.md-typeset .topic-card-page .grid.cards > ul > li a {
+  color: var(--md-accent-fg-color);
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.md-typeset .topic-card-page .grid.cards > ul > li a:hover {
+  color: var(--md-accent-fg-color);
+}
+
+.md-typeset .topic-card-page .grid.cards > ul > li .md-ellipsis,
+.md-typeset .topic-card-page .grid.cards > ul > li strong {
+  font-weight: 600;
+  color: var(--md-default-fg-color);
+}
+
+.md-typeset .topic-card-page .grid.cards > ul > li {
+  font-size: 0.8rem;
+  line-height: 1.5;
+  color: var(--md-default-fg-color--light);
+}
+
+/* Hide the big divider line between card title and description */
+.md-typeset .topic-card-page .grid.cards > ul > li hr {
+  display: none;
+}
+
+/* Slightly smaller card icons for a compact look */
+.md-typeset .topic-card-page .grid.cards > ul > li .twemoji,
+.md-typeset .topic-card-page .grid.cards > ul > li .twemoji svg {
+  width: 1.05em;
+  height: 1.05em;
+}
+
+/* ── Homepage: wider content, no reserved TOC column ──
+   Reading pages keep the default comfortable width and the
+   right-hand TOC; :has() scope means old browsers simply
+   fall back to the standard layout. */
+@media screen and (min-width: 76.1875em) {
+  body:has(.topic-card-page) .md-main__inner {
+    max-width: 88rem;
+  }
+
+  body:has(.topic-card-page) .md-sidebar--secondary {
+    display: none;
+  }
+}
+
+@media screen and (min-width: 61.25em) and (max-width: 76.1875em) {
+  body:has(.topic-card-page) .md-sidebar--secondary {
+    display: none;
+  }
+}
+
+/* ── Homepage-only compact spacing ──────────
+   Scoped to pages containing .topic-card-page, so study and
+   reference pages keep Material's default spacing, permalinks,
+   and content padding. */
+
+/* Remove the dead space pushed onto the first heading */
+body:has(.topic-card-page) .md-main__inner {
+  margin-top: 0;
+}
+
+body:has(.topic-card-page) .md-content__inner {
+  padding-top: 1.5rem; /* 24px breathing room under the header */
+}
+
+body:has(.topic-card-page) .md-content__inner::before {
+  display: none;
+}
+
+body:has(.topic-card-page) .md-typeset h1 {
+  margin: 0 0 1rem;
+}
+
+/* No heading permalink on the homepage (kept everywhere else) */
+body:has(.topic-card-page) .md-typeset h1 .headerlink {
+  display: none;
+}
+
+/* Grid starts right below the heading */
+body:has(.topic-card-page) .md-typeset .grid {
+  margin: 0.5rem 0 0;
+  grid-gap: 0.75rem; /* 12px gaps between card rows and columns */
+}
+
+body:has(.topic-card-page) .md-typeset .topic-card-page {
+  margin-top: 0;
+}
+
 
 ::selection {
-  background: rgba(124, 77, 255, 0.25);
+  background: rgba(182, 106, 50, 0.16);
   color: inherit;
 }
 
 :focus-visible {
-  outline: 2px solid var(--md-primary-fg-color);
+  outline: 2px solid var(--md-accent-fg-color);
   outline-offset: 2px;
   border-radius: 2px;
 }
@@ -335,30 +978,272 @@ a:hover .octicons-arrow-right-24,
 
 /* .md-typeset details > div {
     font-size: 1rem;
-} */
-
-/* Quiz Styling */
-
-/* ============================================
-   Interactive Quiz Styles
+} */\n\n/* ============================================
+   QUIZ STYLING — Phase 3B redesign
+   Setup → one-question-at-a-time → results → review/retry.
+   Scoped to .quiz-* classes only.
    ============================================ */
 
-.quiz-section {
-  margin: 2rem 0;
+/* ── Setup area ────────────────────────────── */
+.quiz-setup {
+  background: var(--md-hover-surface);
+  border: 1px solid var(--md-default-fg-color--lightest);
+  border-radius: 12px;
+  padding: 1rem 1.1rem 1.1rem;
+  margin: 1.25rem 0 1.5rem;
+  box-shadow: 0 1px 3px rgba(36, 48, 65, 0.05);
+}
+
+[data-md-color-scheme="slate"] .quiz-setup {
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+}
+
+.quiz-setup h3 {
+  margin: 0 0 0.75rem;
+  font-size: 1rem;
+  color: var(--md-default-fg-color);
+}
+
+.quiz-setup__controls {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0.75rem;
+  max-width: 42rem;
+}
+
+.quiz-setup__field label {
+  display: block;
+  font-size: 0.78rem;
+  font-weight: 600;
+  color: var(--md-default-fg-color--light);
+  margin-bottom: 0.3rem;
+}
+
+.quiz-setup select {
+  width: 100%;
+  height: 42px;
+  padding: 0 0.7rem;
+  font-size: 0.95rem;
+  border: 1.5px solid var(--md-default-fg-color--lightest);
+  border-radius: 8px;
+  background: var(--md-default-bg-color);
+  color: var(--md-default-fg-color);
+  font-family: inherit;
+  cursor: pointer;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.quiz-setup select:focus-visible,
+.quiz-setup select:focus {
+  border-color: var(--md-accent-fg-color);
+  box-shadow: 0 0 0 3px var(--md-accent-fg-color--transparent);
+  outline: none;
+}
+
+.quiz-start-btn {
+  margin-top: 0.85rem;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.55rem 1.4rem;
+  border: none;
+  border-radius: 999px;
+  background: var(--md-default-fg-color);
+  color: var(--md-default-bg-color);
+  font-family: inherit;
+  font-size: 0.95rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.15s ease, box-shadow 0.15s ease;
+}
+
+.quiz-start-btn:hover {
+  background: var(--md-accent-fg-color);
+  color: #FFFFFF;
+  box-shadow: 0 2px 6px var(--md-accent-fg-color--transparent);
+}
+
+.quiz-start-btn:focus-visible {
+  outline: 2px solid var(--md-accent-fg-color);
+  outline-offset: 2px;
+}
+
+.quiz-setup-note {
+  margin: 0.6rem 0 0;
+  font-size: 0.8rem;
+  color: var(--md-default-fg-color--light);
+}
+
+/* Helper note: long line for wide screens, short dynamic line for mobile. */
+.quiz-note-short {
+  display: none;
+}
+
+/* Compact 5/10/25 buttons (mobile alternative to the count dropdown).
+   The select stays in the DOM hidden and synchronized — same values,
+   same change events, engine untouched apart from the listener. */
+.quiz-count-btns {
+  display: none;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 0.4rem;
+  margin-top: 0.45rem;
+}
+
+.quiz-count-btn {
+  min-height: 44px;
+  border: 1.5px solid var(--md-default-fg-color--lightest);
+  border-radius: 8px;
+  background: var(--md-default-bg-color);
+  color: var(--md-default-fg-color);
+  font-family: inherit;
+  font-size: 0.85rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: border-color 0.15s ease, background 0.15s ease;
+}
+
+.quiz-count-btn:hover {
+  border-color: var(--md-default-fg-color--light);
+}
+
+.quiz-count-btn.is-selected {
+  background: var(--md-accent-fg-color);
+  border-color: var(--md-accent-fg-color);
+  color: #243041;
+}
+
+.quiz-count-btn:focus-visible {
+  outline: 2px solid var(--md-accent-fg-color);
+  outline-offset: 2px;
+}
+
+/* ── Score / progress bar ──────────────────── */
+.quiz-score-bar {
+  position: sticky;
+  top: 96px;
+  z-index: 10;
+  background: var(--md-default-bg-color);
+  border: 1px solid var(--md-default-fg-color--lightest);
+  border-radius: 10px;
+  padding: 0.6rem 0.9rem;
+  margin-bottom: 1.25rem;
+  box-shadow: 0 2px 6px rgba(36, 48, 65, 0.08);
+}
+
+[data-md-color-scheme="slate"] .quiz-score-bar {
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.4);
+}
+
+.quiz-score-bar--hidden,
+.quiz-score-bar[hidden] {
+  display: none !important;
+}
+
+.quiz-score-bar__top {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.4rem 1rem;
+  font-size: 0.85rem;
+  color: var(--md-default-fg-color);
+  margin-bottom: 0.45rem;
+}
+
+#quiz-counts {
+  color: var(--md-default-fg-color--light);
+  font-weight: 500;
+}
+
+.quiz-progress-track {
+  height: 6px;
+  background: var(--md-default-fg-color--lightest);
+  border-radius: 999px;
+  overflow: hidden;
+}
+
+.quiz-progress-fill {
+  height: 100%;
+  width: 0%;
+  background: var(--md-accent-fg-color);
+  border-radius: 999px;
+  transition: width 0.25s ease;
+}
+
+/* ── Question card ─────────────────────────── */
+/* Practice Quiz: focused layout — center content at a comfortable width.
+   The right TOC is already page-hidden via front matter; this keeps the
+   reading column compact and centered without touching other pages.
+   Specificity breaks the tie with Material's `.md-sidebar--primary:not([hidden])
+   ~ .md-content > .md-content__inner { margin-left: 1.2rem }`; our stylesheet
+   loads after the theme's, so equal specificity resolves in our favor. */
+.md-container .md-main .md-content:has(.quiz-setup) {
+  max-width: 56rem;
+  margin-inline: auto;
+}
+
+.md-container .md-main .md-content:has(.quiz-setup) .md-content__inner {
+  margin-inline: auto;
 }
 
 .quiz-question {
   background: var(--md-default-bg-color);
   border: 1px solid var(--md-default-fg-color--lightest);
   border-radius: 12px;
-  padding: 1.25rem;
+  padding: 1rem 1.15rem 1.15rem;
   margin: 1rem 0;
-  box-shadow: 0 1px 3px rgba(0,0,0,0.06);
+  box-shadow: 0 1px 3px rgba(36, 48, 65, 0.06);
   transition: box-shadow 0.2s ease;
 }
 
-.quiz-question:hover {
-  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+[data-md-color-scheme="slate"] .quiz-question {
+  background: #23211D;
+}
+
+.quiz-question-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  margin-bottom: 0.6rem;
+  align-items: center;
+}
+
+.quiz-run-label {
+  padding: 0.15rem 0.65rem;
+  border-radius: 999px;
+  background: var(--md-default-fg-color);
+  color: var(--md-default-bg-color);
+  font-size: 0.72rem;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.quiz-source-chip {
+  padding: 0.2rem 0.7rem;
+  border: 1px solid var(--md-default-fg-color--lightest);
+  border-radius: 999px;
+  background: var(--md-hover-surface);
+  color: var(--md-default-fg-color);
+  font-family: 'Noto Sans Devanagari', 'Inter', serif;
+  font-size: 0.8rem;
+  font-weight: 500;
+  white-space: nowrap;
+}
+
+.quiz-question-text {
+  font-size: 1.05rem;
+  font-weight: 500;
+  display: flex;
+  align-items: flex-start;
+  gap: 0.75rem;
+  line-height: 1.55;
+  margin-bottom: 0.75rem;
+  color: var(--md-default-fg-color);
+}
+
+.quiz-question-text .deva {
+  font-family: 'Noto Sans Devanagari', serif;
+  font-size: 1.15em;
 }
 
 .quiz-question-number {
@@ -367,27 +1252,24 @@ a:hover .octicons-arrow-right-24,
   justify-content: center;
   width: 32px;
   height: 32px;
-  background: var(--md-primary-fg-color);
-  color: var(--md-primary-bg-color);
+  background: var(--md-hero-surface);
+  color: var(--md-default-fg-color);
+  border: 1px solid var(--md-accent-fg-color);
   border-radius: 50%;
   font-weight: 700;
   font-size: 0.9rem;
-  margin-right: 0.75rem;
   flex-shrink: 0;
 }
 
-.quiz-question-text {
-  font-size: 1.05rem;
-  font-weight: 500;
-  margin-bottom: 0.75rem;
-  display: flex;
-  align-items: flex-start;
-  line-height: 1.5;
-}
-
-.quiz-question-text .deva {
+.quiz-sentence {
+  margin: 0.75rem 0;
+  padding: 0.65rem 0.9rem;
+  border-left: 3px solid var(--md-accent-fg-color);
+  border-radius: 0 6px 6px 0;
+  background: var(--md-hover-surface);
   font-family: 'Noto Sans Devanagari', serif;
-  font-size: 1.15em;
+  font-size: 1.12rem;
+  line-height: 1.6;
 }
 
 .quiz-hint {
@@ -397,6 +1279,7 @@ a:hover .octicons-arrow-right-24,
   font-style: italic;
 }
 
+/* ── Options ───────────────────────────────── */
 .quiz-options {
   display: flex;
   flex-direction: column;
@@ -407,18 +1290,33 @@ a:hover .octicons-arrow-right-24,
   display: flex;
   align-items: center;
   gap: 0.75rem;
-  padding: 0.75rem 1rem;
-  border: 2px solid var(--md-default-fg-color--lightest);
+  width: 100%;
+  padding: 0.7rem 1rem;
+  border: 1.5px solid var(--md-default-fg-color--lightest);
   border-radius: 10px;
   cursor: pointer;
-  transition: all 0.2s ease;
+  transition: border-color 0.15s ease, background 0.15s ease, box-shadow 0.15s ease;
   background: var(--md-default-bg-color);
-  font-size: 0.95rem;
+  color: var(--md-default-fg-color);
+  font-size: 0.98rem;
+  font-family: inherit;
+  text-align: left;
 }
 
-.quiz-option:hover {
-  border-color: var(--md-primary-fg-color);
-  background: var(--md-primary-fg-color--transparent, rgba(124,77,255,0.05));
+.quiz-option .opt-text {
+  font-family: 'Noto Sans Devanagari', serif;
+  font-size: 1.08em;
+  flex: 1;
+}
+
+.quiz-option:hover:not(:disabled) {
+  border-color: var(--md-accent-fg-color);
+}
+
+.quiz-option.selected {
+  border-color: var(--md-accent-fg-color);
+  background: var(--md-accent-fg-color--transparent);
+  box-shadow: 0 0 0 2px var(--md-accent-fg-color--transparent);
 }
 
 .quiz-option .opt-label {
@@ -427,390 +1325,434 @@ a:hover .octicons-arrow-right-24,
   justify-content: center;
   width: 28px;
   height: 28px;
-  border: 2px solid var(--md-default-fg-color--lightest);
+  border: 1.5px solid var(--md-default-fg-color--lightest);
   border-radius: 50%;
   font-size: 0.8rem;
   font-weight: 600;
   color: var(--md-default-fg-color--light);
   flex-shrink: 0;
-  transition: all 0.2s ease;
+  transition: all 0.15s ease;
 }
 
-.quiz-option:hover .opt-label {
-  border-color: var(--md-primary-fg-color);
-  color: var(--md-primary-fg-color);
+.quiz-option.selected .opt-label {
+  border-color: var(--md-accent-fg-color);
+  color: var(--md-accent-fg-color);
 }
 
-.quiz-option .opt-text {
-  font-family: 'Noto Sans Devanagari', serif;
-  font-size: 1.1em;
+.quiz-option .opt-tag {
+  font-size: 0.78rem;
+  font-weight: 700;
+  white-space: nowrap;
+  padding: 0.1rem 0.5rem;
+  border-radius: 999px;
 }
 
-/* Selected states */
+.quiz-option:focus-visible {
+  outline: 2px solid var(--md-accent-fg-color);
+  outline-offset: 2px;
+}
+
+.quiz-option:disabled {
+  cursor: default;
+}
+
+/* Selected states: color plus symbols/tags/text, never color alone */
 .quiz-option.correct {
-  border-color: #4caf50;
-  background: rgba(76, 175, 80, 0.08);
+  border-color: #2E7D32;
+  background: rgba(46, 125, 50, 0.07);
 }
 
-.quiz-option.correct .opt-label {
-  background: #4caf50;
-  border-color: #4caf50;
-  color: #fff;
+.quiz-option.correct .opt-tag {
+  background: #2E7D32;
+  color: #FFFFFF;
 }
 
 .quiz-option.wrong {
-  border-color: #f44336;
-  background: rgba(244, 67, 54, 0.06);
+  border-color: #C62828;
+  background: rgba(198, 40, 40, 0.05);
 }
 
-.quiz-option.wrong .opt-label {
-  background: #f44336;
-  border-color: #f44336;
-  color: #fff;
+.quiz-option.wrong .opt-tag {
+  background: #C62828;
+  color: #FFFFFF;
 }
 
-/* Feedback */
+[data-md-color-scheme="slate"] .quiz-option.correct .opt-tag,
+[data-md-color-scheme="slate"] .quiz-option.wrong .opt-tag {
+  color: #FFFFFF;
+}
+
+/* ── Feedback + explanation ────────────────── */
 .quiz-feedback {
-  margin-top: 0.75rem;
-  padding: 0.6rem 1rem;
+  display: none;
+  margin-top: 0.8rem;
+  padding: 0.6rem 0.9rem;
   border-radius: 8px;
   font-weight: 600;
-  font-size: 0.9rem;
-  display: none;
+  font-size: 0.92rem;
 }
 
 .quiz-feedback.correct {
   display: block;
-  background: rgba(76, 175, 80, 0.12);
-  color: #2e7d32;
+  background: rgba(46, 125, 50, 0.1);
+  color: #2E7D32;
 }
 
 .quiz-feedback.wrong {
   display: block;
-  background: rgba(244, 67, 54, 0.1);
-  color: #c62828;
+  background: rgba(198, 40, 40, 0.09);
+  color: #C62828;
 }
 
-/* Explanation */
 .quiz-explanation {
-  display: none;
-  margin-top: 0.75rem;
-  padding: 0.75rem 1rem;
-  background: var(--md-code-bg-color);
+  margin-top: 0.7rem;
+  padding: 0.7rem 0.9rem;
+  background: var(--md-hover-surface);
   border-radius: 8px;
-  border-left: 3px solid var(--md-primary-fg-color);
+  border-left: 3px solid var(--md-default-fg-color--light);
   font-size: 0.9rem;
   line-height: 1.6;
+  color: var(--md-default-fg-color);
 }
 
-.quiz-explanation strong {
-  color: var(--md-primary-fg-color);
-}
-
-/* Score bar */
-.quiz-score-bar {
-  position: sticky;
-  top: 64px;
-  z-index: 10;
-  background: var(--md-default-bg-color);
-  border: 1px solid var(--md-default-fg-color--lightest);
-  border-radius: 10px;
-  padding: 0.75rem 1.25rem;
-  margin-bottom: 1.5rem;
+/* ── Controls ──────────────────────────────── */
+.quiz-controls {
+  margin-top: 0.9rem;
   display: flex;
-  align-items: center;
-  justify-content: space-between;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+  justify-content: flex-end;
 }
 
-.quiz-score-bar #quiz-score {
+.quiz-submit-btn,
+.quiz-next-btn {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.5rem 1.2rem;
+  border-radius: 999px;
+  font-family: inherit;
+  font-size: 0.9rem;
   font-weight: 600;
-  font-size: 1rem;
-  color: var(--md-primary-fg-color);
-}
-
-.quiz-reset-btn {
-  padding: 0.4rem 1rem;
-  border: 1px solid var(--md-primary-fg-color);
-  border-radius: 20px;
-  background: transparent;
-  color: var(--md-primary-fg-color);
-  font-size: 0.85rem;
-  font-weight: 500;
   cursor: pointer;
-  transition: all 0.2s ease;
+  transition: background 0.15s ease, box-shadow 0.15s ease;
 }
 
-.quiz-reset-btn:hover {
-  background: var(--md-primary-fg-color);
-  color: var(--md-primary-bg-color);
+.quiz-submit-btn {
+  /* Enabled: filled muted-amber primary action with charcoal ink; readable
+     in both color schemes. */
+  border: 1.5px solid var(--md-accent-fg-color);
+  background: var(--md-accent-fg-color);
+  color: #243041;
 }
 
-/* Section header */
-.quiz-section-header {
-  display: flex;
-  align-items: center;
-  gap: 0.75rem;
-  margin: 2.5rem 0 1rem;
-  padding-bottom: 0.5rem;
-  border-bottom: 2px solid var(--md-primary-fg-color--light, #b388ff);
+.quiz-submit-btn:hover:not(:disabled) {
+  filter: brightness(0.97);
+  box-shadow: 0 2px 6px rgba(190, 144, 63, 0.3);
 }
 
-.quiz-section-header h2 {
-  margin: 0 !important;
-  border: none !important;
-  padding: 0 !important;
+.quiz-submit-btn:disabled {
+  background: var(--md-default-fg-color--lightest);
+  border-color: var(--md-default-fg-color--lightest);
+  color: var(--md-default-fg-color--light);
+  opacity: 1;
+  cursor: not-allowed;
+}
+
+.quiz-submit-btn:focus-visible,
+.quiz-next-btn:focus-visible {
+  outline: 2px solid var(--md-accent-fg-color);
+  outline-offset: 2px;
+}
+
+.quiz-next-btn {
+  border: none;
+  background: var(--md-default-fg-color);
+  color: var(--md-default-bg-color);
+}
+
+.quiz-next-btn:hover {
+  background: var(--md-accent-fg-color);
+  color: #FFFFFF;
+}
+
+/* ── Results ───────────────────────────────── */
+.quiz-summary {
+  background: var(--md-default-bg-color);
+  border: 2px solid var(--md-default-fg-color--lightest);
+  border-radius: 12px;
+  padding: 1.4rem 1.5rem;
+  margin-top: 2rem;
+  text-align: center;
+  box-shadow: 0 1px 3px rgba(36, 48, 65, 0.06);
+  animation: fadeInUp 0.4s ease;
+}
+
+[data-md-color-scheme="slate"] .quiz-summary {
+  background: #23211D;
+}
+
+.quiz-summary h3 {
+  margin: 0 0 0.75rem;
+  color: var(--md-default-fg-color);
   font-size: 1.3rem;
 }
 
-/* Animations */
+.quiz-result-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 0.6rem;
+  max-width: 34rem;
+  margin: 0 auto 0.8rem;
+}
+
+.quiz-result-cell {
+  background: var(--md-hover-surface);
+  border: 1px solid var(--md-default-fg-color--lightest);
+  border-radius: 10px;
+  padding: 0.6rem 0.5rem;
+}
+
+.quiz-result-label {
+  display: block;
+  font-size: 0.72rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: var(--md-default-fg-color--light);
+}
+
+.quiz-result-value {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--md-default-fg-color);
+}
+
+.quiz-result-category {
+  max-width: 22rem;
+  margin: 0.2rem auto 0;
+  font-size: 0.85rem;
+  color: var(--md-default-fg-color);
+}
+
+.quiz-result-category .quiz-result-value {
+  font-size: 0.95rem;
+  font-weight: 600;
+  font-family: 'Noto Sans Devanagari', 'Inter', serif;
+}
+
+.quiz-perfect-note {
+  color: var(--md-default-fg-color--light);
+  font-size: 0.9rem;
+}
+
 @keyframes fadeInUp {
   from { opacity: 0; transform: translateY(8px); }
   to { opacity: 1; transform: translateY(0); }
 }
 
-/* Responsive */
-@media (max-width: 600px) {
-  .quiz-question {
-    padding: 1rem;
-  }
-  .quiz-question-text {
-    font-size: 0.95rem;
-  }
-  .quiz-option {
-    padding: 0.6rem 0.75rem;
-    font-size: 0.9rem;
-  }
-  .quiz-score-bar {
-    top: 56px;
-    padding: 0.6rem 1rem;
-  }
+.quiz-actions {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.5rem;
+  margin-top: 1rem;
 }
 
-/* Blank underline in questions */
+.quiz-action-btn {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.5rem 1.2rem;
+  border-radius: 999px;
+  border: 1.5px solid var(--md-default-fg-color--lightest);
+  background: var(--md-default-bg-color);
+  color: var(--md-default-fg-color);
+  font-family: inherit;
+  font-size: 0.88rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: border-color 0.15s ease, box-shadow 0.15s ease, background 0.15s ease;
+}
+
+.quiz-action-btn:hover {
+  border-color: var(--md-accent-fg-color);
+  box-shadow: 0 0 0 3px var(--md-accent-fg-color--transparent);
+}
+
+.quiz-action-btn:focus-visible {
+  outline: 2px solid var(--md-accent-fg-color);
+  outline-offset: 2px;
+}
+
+/* ── Review ────────────────────────────────── */
+.quiz-review-heading {
+  font-size: 1.05rem;
+  margin: 1.5rem 0 0.2rem;
+  color: var(--md-default-fg-color);
+}
+
+.quiz-review-item {
+  animation: none;
+}
+
+.quiz-review-options {
+  margin-top: 0.5rem;
+}
+
+.quiz-review-answer {
+  width: auto;
+}
+
+.quiz-review-answer.correct {
+  border-width: 1.5px;
+}
+
+/* ── Blank underline in questions ──────────── */
 .quiz-blank {
   display: inline-block;
   min-width: 80px;
   border-bottom: 2px dashed var(--md-default-fg-color--light);
   text-align: center;
   margin: 0 0.25rem;
-  color: var(--md-primary-fg-color);
+  color: var(--md-accent-fg-color);
   font-weight: 600;
 }
 
-/* ── Quiz Progress Header ────────────────── */
-.quiz-progress {
-  background: var(--md-primary-fg-color--transparent, rgba(124,77,255,0.08));
-  border-left: 4px solid var(--md-primary-fg-color);
-  padding: 0.75rem 1rem;
-  margin-bottom: 1.5rem;
-  border-radius: 0 8px 8px 0;
-  font-size: 0.95rem;
-  color: var(--md-default-fg-color);
-}
-
-/* ── Quiz Summary (end of test) ────────────── */
-.quiz-summary {
-  background: var(--md-default-bg-color);
-  border: 2px solid var(--md-primary-fg-color);
-  border-radius: 12px;
-  padding: 1.5rem;
-  margin-top: 2rem;
-  text-align: center;
-  animation: fadeInUp 0.4s ease;
-}
-
-.quiz-summary h3 {
-  margin: 0 0 0.5rem;
-  color: var(--md-primary-fg-color);
-  font-size: 1.3rem;
-}
-
-.quiz-summary p {
-  margin: 0 0 1rem;
-  font-size: 1rem;
-}
-
-/* ── Quiz Error State ──────────────────────── */
-.quiz-error {
-  background: rgba(244, 67, 54, 0.08);
-  border: 1px solid #f44336;
-  border-radius: 10px;
-  padding: 1rem;
-  color: #c62828;
-}
-
-.quiz-error code {
-  background: rgba(0,0,0,0.05);
-  padding: 0.1rem 0.3rem;
-  border-radius: 4px;
-}
-
-/* ============================================================
-   Dynamic mixed-quiz enhancements
-   ============================================================ */
-
+/* ── Loading / error ───────────────────────── */
 .quiz-loading {
   padding: 1rem 1.2rem;
   border: 1px solid var(--md-default-fg-color--lightest);
   border-radius: 10px;
-  background: var(--md-code-bg-color);
+  background: var(--md-hover-surface);
   color: var(--md-default-fg-color--light);
   text-align: center;
 }
 
-.quiz-progress > div:first-child {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  gap: 0.6rem;
+.quiz-error {
+  background: rgba(198, 40, 40, 0.08);
+  border: 1px solid #C62828;
+  border-radius: 10px;
+  padding: 1rem;
+  color: #C62828;
 }
 
-.quiz-run-label,
-.quiz-source-chip,
-.quiz-source-label,
-.quiz-type-label {
-  display: inline-flex;
-  align-items: center;
-  border-radius: 999px;
-  white-space: nowrap;
+[data-md-color-scheme="slate"] .quiz-error {
+  background: rgba(198, 40, 40, 0.12);
 }
 
-.quiz-run-label {
-  padding: 0.1rem 0.5rem;
-  background: var(--md-primary-fg-color);
-  color: var(--md-primary-bg-color);
-  font-size: 0.75rem;
-  font-weight: 600;
-}
-
-.quiz-progress-detail {
-  margin-top: 0.25rem;
-  color: var(--md-default-fg-color--light);
-  font-size: 0.87rem;
-}
-
-.quiz-source-summary {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.4rem;
-  margin-top: 0.65rem;
-}
-
-.quiz-source-chip {
-  padding: 0.18rem 0.55rem;
-  border: 1px solid var(--md-default-fg-color--lightest);
-  background: var(--md-default-bg-color);
-  font-family: 'Noto Sans Devanagari', Inter, sans-serif;
+.quiz-error__detail {
+  margin: 0.4rem 0 0;
   font-size: 0.78rem;
-  font-weight: 500;
 }
 
-.quiz-question-meta {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.4rem;
-  margin-bottom: 0.65rem;
-}
-
-.quiz-source-label,
-.quiz-type-label {
-  padding: 0.14rem 0.5rem;
-  font-size: 0.72rem;
-  line-height: 1.3;
-}
-
-.quiz-source-label {
-  background: var(--md-primary-fg-color--transparent, rgba(124, 77, 255, 0.09));
-  color: var(--md-primary-fg-color);
-  font-family: 'Noto Sans Devanagari', Inter, sans-serif;
-  font-weight: 600;
-}
-
-.quiz-type-label {
-  border: 1px solid var(--md-default-fg-color--lightest);
-  color: var(--md-default-fg-color--light);
-  text-transform: capitalize;
-}
-
-.quiz-question-content {
-  min-width: 0;
-  flex: 1;
-}
-
-.quiz-sentence {
-  margin: 0.75rem 0;
-  padding: 0.65rem 0.85rem;
-  border-left: 3px solid var(--md-primary-fg-color);
-  border-radius: 0 6px 6px 0;
-  background: var(--md-code-bg-color);
-  font-family: 'Noto Sans Devanagari', serif;
-  font-size: 1.08rem;
-}
-
-/* quiz-option is now a real button for keyboard and accessibility support */
-button.quiz-option {
-  width: 100%;
-  color: var(--md-default-fg-color);
-  font-family: inherit;
-  text-align: left;
-}
-
-button.quiz-option:focus-visible {
-  outline: 3px solid var(--md-primary-fg-color--transparent, rgba(124, 77, 255, 0.25));
-  outline-offset: 2px;
-}
-
-button.quiz-option:disabled {
-  cursor: default;
-}
-
-.quiz-option.muted {
-  opacity: 0.58;
-}
-
-.quiz-warning {
-  margin-top: 0.75rem;
-  padding: 0.55rem 0.7rem;
-  border: 1px solid #ed9b2d;
-  border-radius: 7px;
-  background: rgba(237, 155, 45, 0.08);
-  font-size: 0.82rem;
-}
-
-.quiz-warning summary {
-  cursor: pointer;
-  font-weight: 600;
-}
-
-.quiz-warning ul {
-  margin: 0.5rem 0 0 1rem;
-}
-
-.quiz-reset-btn:disabled {
-  opacity: 0.5;
-  cursor: wait;
-}
-
-@media (max-width: 600px) {
-  .quiz-score-bar {
-    gap: 0.75rem;
+/* ── Responsive ────────────────────────────── */
+@media (max-width: 700px) {
+  /* Root-cause fix: the desktop centering rule (margin-inline: auto) outranks
+   Material's responsive `.md-content__inner { margin: 0 .8rem 1.2rem }`, which
+   previously removed the horizontal padding on mobile and left the H1 flush
+   against the viewport edge. Restore Material-equivalent side margins here —
+   desktop keeps margin-inline: auto. */
+  .md-container .md-main .md-content:has(.quiz-setup) .md-content__inner {
+    margin-inline: 0.8rem;
+    padding-top: 0.2rem;
   }
 
-  .quiz-score-bar #quiz-score {
-    font-size: 0.88rem;
+  .md-content:has(.quiz-setup) .md-content__inner > h1 {
+    font-size: 1.4rem;
+    margin-top: 0.35rem;
+    margin-bottom: 0.5em;
   }
 
-  .quiz-reset-btn {
-    padding: 0.38rem 0.7rem;
-    font-size: 0.78rem;
+  /* Material gives .md-main__inner margin-top: 1.5rem (30px) — pin the quiz
+     page to the ~20-24px target between global header and page title. */
+  .md-main__inner:has(.quiz-setup) {
+    margin-top: 0.2rem;
   }
 
-  .quiz-source-summary {
-    gap: 0.3rem;
+  .quiz-setup {
+    padding: 0.85rem 0.9rem 0.9rem;
+    margin: 0.85rem 0 0.9rem;
   }
 
+  .quiz-setup h3 {
+    font-size: 0.92rem;
+    margin: 0 0 0.55rem;
+  }
+
+  .quiz-setup__controls {
+    grid-template-columns: 1fr;
+    max-width: none;
+    gap: 0.6rem;
+  }
+
+  .quiz-setup select {
+    height: 46px;
+    font-size: 1rem;
+  }
+
+  .quiz-note-long {
+    display: none;
+  }
+
+  /* Long retry labels ("Retry — missed …") wrap instead of forcing overflow. */
   .quiz-source-chip {
-    font-size: 0.71rem;
+    white-space: normal;
+  }
+
+  .quiz-note-short {
+    display: inline;
+  }
+
+  /* Mobile count buttons replace the dropdown; select stays hidden but synced. */
+  .quiz-count-btns {
+    display: grid;
+  }
+
+  #quiz-count {
+    display: none;
+  }
+
+  /* Full-width primary action, directly under the controls. */
+  .quiz-start-btn {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    min-height: 46px;
+    margin-top: 0.7rem;
+    padding: 0.6rem 1rem;
+  }
+
+  .quiz-setup-note {
+    margin-top: 0.45rem;
+    line-height: 1.4;
+  }
+
+  .quiz-score-bar {
+    top: 3.4rem;
+    padding: 0.5rem 0.8rem;
+  }
+
+  .quiz-question {
+    padding: 0.9rem 0.95rem 1rem;
+  }
+
+  .quiz-question-text {
+    font-size: 0.98rem;
+  }
+
+  .quiz-option {
+    padding: 0.6rem 0.8rem;
+    font-size: 0.94rem;
+    min-height: 2.7rem;
+  }
+
+  .quiz-result-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .quiz-actions {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .quiz-action-btn {
+    justify-content: center;
   }
 }

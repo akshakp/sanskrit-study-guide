@@ -73,6 +73,9 @@ This is a Markdown-based MkDocs website deployed to GitHub Pages. The repository
 
 A request to “improve,” “rewrite,” “complete,” or “fix” content is **not authorization** to supplement missing Sanskrit information from model knowledge. Ask for the approved source if needed.
 
+### Legacy redirect pages: removed — do not recreate
+The Phase 0 redirect-only Markdown stubs at the old page locations (for example `docs/verbs.md`, `docs/nouns.md`, `docs/quiz.md`, `docs/vocabulary.md`) have been **intentionally removed** by owner decision. Canonical pages live under `docs/topics/`, `docs/reference/`, and `docs/practice/`. Do not create or recreate redirect-only Markdown files, HTML stubs, or any replacement pages for the retired URLs. No redirect plugin is installed; do not add one without explicit approval.
+
 ## 5. Work procedure for every task
 
 1. Read this `AGENTS.md` at the start of the task.
