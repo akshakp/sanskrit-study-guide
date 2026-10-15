@@ -26,19 +26,19 @@
          ],
          "correct":1,
          "explanation":"हसति (laughs) does not require an object, so it is अकर्मक."
-      },
+      },      
       {
-         "id":"VERB-003",
-         "type":"verb-classification",
-         "question":"<strong>गुरुः शिष्याय पुस्तकं ददाति।</strong><br><br>The verb <strong>ददाति</strong> is:",
-         "options":[
-            "सकर्मक",
-            "अकर्मक",
-            "द्विकर्मक",
-            "Cannot determine"
-         ],
-         "correct":2,
-         "explanation":"ददाति involves two grammatical objects in the course framework (the thing given and the recipient), so it is classified as द्विकर्मक."
+      "id": "VERB-003",
+      "type": "verb-classification",
+      "question": "<strong>वरुणः वसन्तं धर्मं वदति।</strong><br><br>The verb <strong>वदति</strong> in this sentence is:",
+      "options": [
+         "सकर्मक",
+         "अकर्मक",
+         "द्विकर्मक",
+         "Cannot determine"
+      ],
+      "correct": 2,
+      "explanation": "According to AARSH Book-01, वरुणः वसन्तं धर्मं वदति is an example of द्विकर्मक क्रियापद. The verb वदति involves two कर्म: वसन्तं (गौण कर्म) and धर्मं (मुख्य कर्म). Both are in द्वितीया विभक्ति."
       },
       {
          "id":"VERB-004",

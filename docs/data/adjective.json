@@ -56,20 +56,20 @@
          ],
          "correct":1,
          "explanation":"वृक्षाः is masculine plural."
-      },
+      },      
       {
-         "id":"ADJ-005",
-         "type":"fill_blank",
-         "question":"Choose the correct adjective.",
-         "sentence":"वयं _____ पुस्तके पठावः।",
-         "options":[
-            "नवः",
-            "नवे",
-            "नवम्",
-            "नव्यौ"
-         ],
-         "correct":1,
-         "explanation":"पुस्तके is neuter dual locative."
+      "id": "ADJ-005",
+      "type": "fill_blank",
+      "question": "Choose the correct adjective.",
+      "sentence": "वयं _____ पुस्तके पठामः।",
+      "options": [
+         "नवः",
+         "नवे",
+         "नवम्",
+         "नव्यौ"
+      ],
+      "correct": 1,
+      "explanation": "पुस्तके is नपुंसकलिङ्ग, द्वितीया विभक्ति, द्विवचन. The adjective must agree in gender, case, and number, so नवे is correct. वयं requires the plural verb पठामः."
       },
       {
          "id":"ADJ-006",

@@ -61,10 +61,6 @@ There are **1943 roots** grouped into **10 gaṇas**.
 | **सकर्मक** (Transitive)      | 1       | कर्ता + कर्म + क्रियापद        | रामः फलम् खादति, व्यासः वेदान् पठति |
 | **द्विकर्मक** (Ditransitive) | 2       | कर्ता + कर्म + कर्म + क्रियापद | सः गुरुम् प्रश्नं पृच्छति           |
 
-!!! note for "द्विकर्मक क्रियापद" 
-    - **What?** = मुख्य कर्म (main object) → **द्वितीया** 
-    - **Whom?** = गौण कर्म (secondary object) → **चतुर्थी**
-
 ---
 
 ## Present Tense Parasmaipada Suffixes

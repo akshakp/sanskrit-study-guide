@@ -18,3 +18,7 @@ desktop.ini
 
 # Logs
 *.log
+
+# folders to ignore
+syllabus/
+reports/
