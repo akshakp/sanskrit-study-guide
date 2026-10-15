@@ -1,0 +1,61 @@
+{#-
+  Navigation dropdown override (based on Material 9.7.7 partials/tabs-item.html).
+  Change vs. upstream: a top-level nav SECTION no longer renders as a plain
+  link to its first child; it renders as a click-to-open dropdown listing all
+  child pages. Keyboard + Escape + outside-click close the menu via
+  docs/assets/js/nav-site.js. Used only for the in-header tabs
+  (see docs/overrides/main.html); the mobile drawer keeps Material's native
+  collapsible section group.
+
+  NOTE: mirrors installed Material 9.7.7. Review when upgrading
+  mkdocs-material.
+-#}
+{% macro render_content(nav_item, ref) %}
+  {% set ref = ref or nav_item %}
+  {% if nav_item == ref or "navigation.indexes" in features %}
+    {% if nav_item.is_index and nav_item.meta.icon %}
+      {% include ".icons/" ~ nav_item.meta.icon ~ ".svg" %}
+    {% endif %}
+  {% endif %}
+  {{ ref.title }}
+{% endmacro %}
+{% macro render(nav_item, ref) %}
+  {% set ref = ref or nav_item %}
+  {% set class = "md-tabs__item" %}
+  {% if ref.active %}
+    {% set class = class ~ " md-tabs__item--active" %}
+  {% endif %}
+  {% if nav_item.children %}
+    {% set first = nav_item.children | first %}
+    {% if first.children %}
+      {{ render(first, ref) }}
+    {% else %}
+      <li class="{{ class }} md-tabs__item--menu">
+        <div class="md-tabs__dd {% if ref.active %}is-open-active{% endif %}" data-menu-root>
+          <button type="button" class="md-tabs__link md-tabs__menu-trigger" data-menu-trigger
+                  aria-haspopup="true" aria-expanded="false" aria-controls="study-topics-menu">
+            {{ render_content(nav_item, ref) }}
+            <svg class="md-tabs__menu-chevron" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg>
+          </button>
+          <div class="md-tabs__menu" id="study-topics-menu" data-menu-panel hidden>
+            <ul class="md-tabs__menu-list" role="list">
+              {% for child in nav_item.children %}
+                <li class="md-tabs__menu-item{% if child.active %} md-tabs__menu-item--active{% endif %}">
+                  <a href="{{ child.url | url }}" class="md-tabs__menu-link" role="menuitem" {% if child.active %}aria-current="page"{% endif %}>
+                    {{ child.title }}
+                  </a>
+                </li>
+              {% endfor %}
+            </ul>
+          </div>
+        </div>
+      </li>
+    {% endif %}
+  {% else %}
+    <li class="{{ class }}">
+      <a href="{{ nav_item.url | url }}" class="md-tabs__link">
+        {{ render_content(nav_item) }}
+      </a>
+    </li>
+  {% endif %}
+{% endmacro %}

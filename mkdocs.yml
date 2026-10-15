@@ -68,6 +68,7 @@ extra_javascript:
   - assets/js/vocab-search.js
   - assets/js/quiz.js
   - assets/js/nouns-explorer.js
+  - assets/js/nav-site.js
 
 extra_css:
   - assets/css/main.css

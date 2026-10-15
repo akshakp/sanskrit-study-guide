@@ -2168,3 +2168,281 @@ table.vocab-group-hidden {
     display: none !important;
   }
 }
+
+/* =============================================================
+   PHASE 3D-1: Verbs (topics/verbs) + Verb Roots (topics/dhatu)
+   Horizontal section tabs (Material tabbed) like Nouns & Cases.
+   Scope: dhatu via #dhatuSearch (shared search script), verbs via
+   the stable H1 slug h1#verbs. Navigation/toc hidden in front
+   matter on both pages; global top navigation is preserved.
+   ============================================================= */
+
+/* Search-first layout family: wider centered content, no sidebars
+   (mirrors the approved vocabulary page). */
+.md-container .md-main .md-content:has(#dhatuSearch),
+.md-container .md-main .md-content:has(h1#verbs) {
+  max-width: 64rem;
+  margin-inline: auto;
+}
+
+.md-container .md-main .md-content:has(#dhatuSearch) .md-content__inner,
+.md-container .md-main .md-content:has(h1#verbs) .md-content__inner {
+  margin-inline: auto;
+}
+
+.md-main__inner:has(#dhatuSearch),
+.md-main__inner:has(h1#verbs) {
+  margin-top: 0.4rem;
+}
+
+/* Verbs + dhatu pages: tables arrive inside Material's
+   .md-typeset__table wrapper (inline-block, -0.8rem overhang that spills
+   past the viewport when the md-grid has no side gutter, e.g. 768/1024
+   windows where our content fills the grid). Contain to the content
+   width on all desktop sizes. */
+.md-content:has(h1#verbs) .md-typeset__scrollwrap,
+.md-content:has(#dhatuSearch) .md-typeset__scrollwrap {
+  margin-inline: 0;
+}
+
+.md-content:has(h1#verbs) .md-typeset__table,
+.md-content:has(#dhatuSearch) .md-typeset__table {
+  display: block;
+  padding: 0;
+  margin-bottom: 1.4rem;
+}
+
+/* Full-width compact tables: identical presentation family on both
+   pages (Material's inline-block "word-style" table quirk is undone
+   exactly like the vocabulary page fix). */
+.md-content:has(#dhatuSearch) .vocab-table-wrap table,
+.md-content:has(h1#verbs) .md-typeset__table table {
+  display: table;
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.92rem;
+  margin: 0;
+}
+
+.md-content:has(#dhatuSearch) thead th,
+.md-content:has(h1#verbs) thead th {
+  background: var(--md-hero-surface);
+  border-bottom: 2px solid var(--md-default-fg-color--lightest);
+  padding: 0.55em 0.8em;
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: var(--md-default-fg-color);
+  text-align: left;
+}
+
+.md-content:has(#dhatuSearch) tbody td,
+.md-content:has(h1#verbs) tbody td {
+  padding: 0.55em 0.8em;
+  border-bottom: 1px solid var(--md-default-fg-color--lightest);
+  vertical-align: top;
+  color: var(--md-default-fg-color);
+}
+
+.md-content:has(#dhatuSearch) tbody tr:last-child td,
+.md-content:has(h1#verbs) tbody tr:last-child td {
+  border-bottom: none;
+}
+
+.md-content:has(#dhatuSearch) tbody tr:nth-child(2n),
+.md-content:has(h1#verbs) tbody tr:nth-child(2n) {
+  background: var(--md-hover-surface);
+}
+
+.md-content:has(#dhatuSearch) tbody tr:hover,
+.md-content:has(h1#verbs) tbody tr:hover {
+  background: var(--md-accent-fg-color--transparent);
+}
+
+/* Mobile: dhatu cards replace its tables, exactly like the vocabulary
+   page (same underlying rows; builder in vocab-search.js). */
+@media (max-width: 760px) {
+  .md-content:has(#dhatuSearch) .vocab-table-wrap {
+    display: none;
+  }
+
+  .md-content:has(#dhatuSearch) .vocab-cards {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 0.65rem;
+    margin-bottom: 1.4rem;
+  }
+
+  .md-container .md-main .md-content:has(#dhatuSearch) .md-content__inner,
+  .md-container .md-main .md-content:has(h1#verbs) .md-content__inner {
+    margin-inline: 0.8rem;
+  }
+}
+
+/* =============================================================
+   NAVIGATION: Study Topics header dropdown (desktop)
+   Markup: docs/overrides/partials/tabs-item.html
+   Script: docs/assets/js/nav-site.js (click/Escape/outside-click)
+   The mobile drawer keeps Material's native collapsible section.
+   ============================================================= */
+
+/* Layering fix: Material makes .md-tabs__list an overflow:auto label
+   scroller with `contain: content` (layout+paint). BOTH clip the
+   absolutely-positioned dropdown panel to the header row — with paint
+   containment the menu body never paints above page content even after
+   overflow:visible (hit-testing lands on the page underneath). The
+   in-header tabs render only at widths where the few top-level labels
+   fit, so dropping the containment/scroll containment there loses
+   nothing. */
+.md-tabs--in-header .md-tabs__list {
+  overflow: visible;
+  contain: none;
+}
+
+.md-tabs__item--menu {
+  padding: 0;
+}
+
+.md-tabs__dd {
+  position: relative;
+}
+
+.md-tabs__menu-trigger {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.25rem;
+  padding: 0.5rem 0.4rem;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.md-tabs__menu-chevron {
+  transition: transform 160ms ease;
+  opacity: 0.75;
+}
+
+.md-tabs__dd--open .md-tabs__menu-chevron {
+  transform: rotate(180deg);
+}
+
+.md-tabs__menu {
+  position: absolute;
+  top: calc(100% - 0.2rem);
+  left: -0.5rem;
+  z-index: 30;
+  min-width: 17rem;
+  max-width: 26rem;
+  background: var(--md-default-bg-color);
+  border: 1px solid var(--md-default-fg-color--lightest);
+  border-radius: 12px;
+  box-shadow: 0 8px 24px rgba(36, 48, 65, 0.14);
+  padding: 0.35rem;
+}
+
+[data-md-color-scheme="slate"] .md-tabs__menu {
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
+}
+
+@media (min-width: 640px) {
+  .md-tabs__menu-list {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0.05rem;
+  }
+}
+
+.md-tabs__menu-link {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.6rem 0.75rem;
+  min-height: 40px;
+  border-radius: 8px;
+  font-size: 0.9rem;
+  color: var(--md-default-fg-color);
+  text-decoration: none;
+  border-left: 2px solid transparent;
+}
+
+.md-tabs__menu-link:hover,
+.md-tabs__menu-link:focus-visible {
+  background: var(--md-accent-fg-color--transparent);
+  color: var(--md-default-fg-color);
+  outline: none;
+}
+
+.md-tabs__menu-item--active > .md-tabs__menu-link {
+  border-left-color: var(--md-accent-fg-color);
+  font-weight: 600;
+}
+
+/* =============================================================
+   VERBS PAGE: neutral admonition restyle (Basic Type/ admonitions
+   were inheriting Material's violet-blue defaults). Scoped to the
+   verbs page only; content untouched.
+   ============================================================= */
+
+.md-content:has(h1#verbs) .admonition {
+  background: var(--md-default-bg-color);
+  border: 1px solid var(--md-default-fg-color--lightest);
+  border-left: 3px solid var(--md-accent-fg-color);
+  border-radius: 10px;
+  box-shadow: 0 1px 3px rgba(36, 48, 65, 0.06);
+  font-size: 0.95rem;
+}
+
+[data-md-color-scheme="slate"] .md-content:has(h1#verbs) .admonition {
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+}
+
+.md-content:has(h1#verbs) .admonition-title {
+  background: transparent;
+  color: var(--md-default-fg-color);
+  font-weight: 600;
+}
+
+.md-content:has(h1#verbs) .admonition-title::before {
+  background-color: var(--md-accent-fg-color);
+}
+
+/* =============================================================
+   DHATU PAGE: mobile-card density + alignment polish (mobile only;
+   the approved vocabulary card presentation is untouched).
+   ============================================================= */
+
+@media (max-width: 760px) {
+  .md-content:has(#dhatuSearch) .vocab-cards {
+    gap: 0.55rem;
+    margin-bottom: 1.1rem;
+  }
+
+  .md-content:has(#dhatuSearch) .vocab-card {
+    padding: 0.6rem 0.75rem 0.65rem;
+  }
+
+  .md-content:has(#dhatuSearch) .vocab-card-term {
+    margin: 0 0 0.35rem;
+    font-size: 1.12rem;
+    line-height: 1.3;
+  }
+
+  /* Label column follows the content (long dhatu header labels wrap
+     naturally instead of forcing a fixed 5.6rem column). */
+  .md-content:has(#dhatuSearch) .vocab-card-field {
+    column-gap: 0.45rem;
+  }
+
+  .md-content:has(#dhatuSearch) .vocab-card-field dt {
+    width: auto;
+    max-width: 7rem;
+    font-size: 0.68rem;
+    line-height: 1.35;
+  }
+
+  .md-content:has(#dhatuSearch) .vocab-card-field dd {
+    font-size: 0.94rem;
+    line-height: 1.45;
+  }
+}

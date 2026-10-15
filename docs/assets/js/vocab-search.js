@@ -21,8 +21,9 @@ document.addEventListener('DOMContentLoaded', function() {
   var currentFilter = 'all';
   var emptyState = null;
 
-  // ─── Vocabulary-page only: mobile cards + clear controls ────
-  // The dhatu page shares this script with dhatuSearch and must not change.
+  // ─── Mobile cards + card/table wrapping ────────────────────
+  // Both pages share the card builder: each row's cells are re-rendered as
+  // one mobile card from the SAME table row (no duplicated data source).
 
   // Maps a table-header label to a display role for the card fields.
   function fieldRole(label) {
@@ -42,7 +43,6 @@ document.addEventListener('DOMContentLoaded', function() {
   }
 
   function buildVocabCards() {
-    if (!isVocabPage) return;
     for (var t = 0; t < tables.length; t++) {
       var table = tables[t];
       // Structure-aware column typing: read the real header labels, tag each
@@ -87,14 +87,16 @@ document.addEventListener('DOMContentLoaded', function() {
         card.dataset.targetsRow = String(r);
         card.style.display = '';
 
-        // Primary Devanagari term(s): the first column (Sanskrit or the male
-        // profession form); second column joins it when labeled Female.
+        // Primary Devanagari term: always the first column (Sanskrit,
+        // male profession form, or dhātu). The second column joins the term
+        // only when labeled Female (vocabulary profession tables).
         var term = document.createElement('h4');
         term.className = 'vocab-card-term';
         var main = document.createElement('span');
         main.textContent = cells[0].textContent.trim();
         term.appendChild(main);
-        if (cells.length > 1 && fieldRole(labels[1]) === 'female') {
+        var femJoin = cells.length > 1 && fieldRole(labels[1]) === 'female';
+        if (femJoin) {
           var fem = document.createElement('span');
           fem.className = 'vocab-card-fem';
           fem.textContent = cells[1].textContent.trim();
@@ -105,8 +107,8 @@ document.addEventListener('DOMContentLoaded', function() {
         var fields = document.createElement('dl');
         fields.className = 'vocab-card-fields';
         for (var c = 0; c < cells.length; c++) {
+          if (c === 0 || (c === 1 && femJoin)) continue;
           var role = fieldRole(labels[c] || '');
-          if (role === 'primary' || role === 'female') continue;
           var value = cells[c].textContent.trim();
           if (role === 'synonyms' && isPlaceholder(value)) continue;
 
@@ -135,13 +137,14 @@ document.addEventListener('DOMContentLoaded', function() {
   }
 
   function setGroupHidden(table, hidden) {
-    // Vocabulary page only: hide the whole empty group (table + cards).
+    // Vocabulary page: hide the whole empty group (table + cards).
     // The dhatu page keeps its existing behavior (heading hides, table stays).
-    if (!isVocabPage) { return; }
-    if (hidden) {
-      table.classList.add('vocab-group-hidden');
-    } else {
-      table.classList.remove('vocab-group-hidden');
+    if (isVocabPage) {
+      if (hidden) {
+        table.classList.add('vocab-group-hidden');
+      } else {
+        table.classList.remove('vocab-group-hidden');
+      }
     }
     var cards = table.parentElement && table.parentElement.classList.contains('vocab-table-wrap')
       ? table.parentElement.nextElementSibling
