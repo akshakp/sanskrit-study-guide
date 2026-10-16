@@ -27,3 +27,4 @@ reports/
 # MkDocs build output / local validation venv
 site/
 .venv/
+.baseline/

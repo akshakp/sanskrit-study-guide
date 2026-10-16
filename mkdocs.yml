@@ -3,8 +3,8 @@
 # STEP 2: Make sure your repo is named exactly: sanskrit-study-guide
 # ============================================
 site_name: Sanskrit Study Guide
-site_url: https://yourusername.github.io/sanskrit-study-guide
-site_author: Sanskrit Learner
+site_url: https://akshakp.github.io/sanskrit-study-guide
+site_author: Ronak Patel
 
 theme:
   name: material
