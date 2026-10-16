@@ -3,29 +3,29 @@
 # STEP 2: Make sure your repo is named exactly: sanskrit-study-guide
 # ============================================
 site_name: Sanskrit Study Guide
-site_url: https://yourusername.github.io/sanskrit-study-guide
-site_author: Sanskrit Learner
+site_url: https://akshakp.github.io/sanskrit-study-guide
+site_author: Ronak Patel
 
 theme:
   name: material
+  custom_dir: docs/overrides
   palette:
     - scheme: default
-      primary: deep purple
+      primary: blue grey
       accent: amber
       toggle:
         icon: material/brightness-7
         name: Switch to dark mode
     - scheme: slate
-      primary: deep purple
+      primary: blue grey
       accent: amber
       toggle:
         icon: material/brightness-4
         name: Switch to light mode
   features:
-    # - navigation.sections
-    # - navigation.expand
+    - navigation.tabs
+    - navigation.tabs.sticky
     - navigation.top
-    - toc.integrate
     - search.suggest
     - search.highlight
     - search.share
@@ -37,18 +37,18 @@ theme:
 # Explicit navigation order for left sidebar
 nav:
   - Home: index.md
-  - Foundations: sanskrit-foundations.md
-  - Grammar:
-    - Nouns & Cases (संज्ञा): nouns.md
-    - Verbs(क्रियापद): verbs.md
-    - Adjective (विशेषण): adjectives.md
-    - कृदन्त & तद्धित: krudant-tadvid.md
-  - Writing Rules: writing-rules.md
-  - Conversation (संभाषण): conversation.md
-  - Vocabulary: 
-    - Words: vocabulary.md
-    - Verb Roots (धातु): dhatu.md
-  - Practice Quiz: quiz.md
+  - Study Topics:
+    - Language Essentials: topics/language-essentials.md
+    - Nouns & Cases: topics/nouns.md
+    - Verbs: topics/verbs.md
+    - Verb Roots: topics/dhatu.md
+    - Adjectives: topics/adjectives.md
+    - Writing Rules: topics/writing-rules.md
+    - Visarga Sandhi: topics/visarg-sandhi.md
+    - Krudanta & Taddhita: topics/krudant-tadvid.md
+  - Vocabulary: reference/vocabulary.md
+  - Conversation: topics/conversation.md
+  - Practice Quiz: practice/quiz.md
 
 plugins:
   - search:
@@ -64,11 +64,15 @@ plugins:
       minify_html: true
 
 extra_javascript:
-  - javascripts/vocab-search.js
-  - javascripts/quiz.js
+  - assets/js/vocab-search.js
+  - assets/js/quiz.js
+  - assets/js/nouns-explorer.js
+  - assets/js/nav-site.js
+  - assets/js/conversation-tabs.js
+  - assets/js/formation-labels.js
 
 extra_css:
-  - stylesheets/main.css
+  - assets/css/main.css
 
 extra:
   social:

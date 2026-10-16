@@ -6,6 +6,8 @@ document.addEventListener('DOMContentLoaded', function() {
   var searchInput = document.getElementById('vocabSearch') || document.getElementById('dhatuSearch');
   if (!searchInput) return;
 
+  var isVocabPage = searchInput.id === 'vocabSearch';
+
   var filterBtns = document.querySelectorAll('.vocab-filter-btn');
   var resultCount = document.getElementById('vocabResultCount') || document.getElementById('dhatuResultCount');
 
@@ -17,6 +19,194 @@ document.addEventListener('DOMContentLoaded', function() {
   var tables = contentArea.querySelectorAll('table');
 
   var currentFilter = 'all';
+  var emptyState = null;
+
+  // ─── Mobile cards + card/table wrapping ────────────────────
+  // Both pages share the card builder: each row's cells are re-rendered as
+  // one mobile card from the SAME table row (no duplicated data source).
+
+  // Maps a table-header label to a display role for the card fields.
+  function fieldRole(label) {
+    var l = (label || '').trim();
+    var ll = l.toLowerCase();
+    if (ll.indexOf('sanskrit') !== -1 || ll === 'male') return 'primary';
+    if (ll === 'female') return 'female';
+    if (ll.indexOf('gujarati') !== -1) return 'gujarati';
+    if (ll.indexOf('gender') !== -1) return 'gender';
+    if (ll.indexOf('synonym') !== -1) return 'synonyms';
+    return 'meaning'; // Meaning / English / any remaining text column
+  }
+
+  function isPlaceholder(text) {
+    var t = text.trim();
+    return t === '\u2014' || t === '-' || t === '\u2013' || t === '';
+  }
+
+  function buildVocabCards() {
+    for (var t = 0; t < tables.length; t++) {
+      var table = tables[t];
+      // Structure-aware column typing: read the real header labels, tag each
+      // body cell with its role, then style via classes (no fragile column
+      // index assumptions for language styling).
+      var ths = table.querySelectorAll('thead th');
+      var labels = [];
+      for (var th = 0; th < ths.length; th++) {
+        labels.push(ths[th].textContent.trim());
+      }
+      if (!labels.length) continue; // no real header — no cards
+
+      var rows = table.querySelectorAll('tbody tr');
+      for (var r = 0; r < rows.length; r++) {
+        var prow = rows[r];
+        var pcells = prow.querySelectorAll('td');
+        for (var pc = 0; pc < pcells.length; pc++) {
+          var prole = fieldRole(labels[pc] || '');
+          pcells[pc].classList.add('vocab-cell-' + prole);
+        }
+      }
+
+      // Card-style wrapper for the desktop table + the row-mirroring mobile
+      // cards — both presentations come from the same table rows.
+      var wrap = document.createElement('div');
+      wrap.className = 'vocab-table-wrap';
+      table.parentNode.insertBefore(wrap, table);
+      wrap.appendChild(table);
+
+      var cardsWrap = document.createElement('div');
+      cardsWrap.className = 'vocab-cards';
+      cardsWrap.setAttribute('lang', 'sa');
+
+      for (var rr = 0; rr < rows.length; rr++) {
+        var row = rows[rr];
+        var cells = row.querySelectorAll('td');
+        if (cells.length < 2) continue;
+
+        var card = document.createElement('article');
+        card.className = 'vocab-card';
+        // Identity of the card's mirror row must be THIS loop's row index.
+        // (Pre-4C-2 bug: used the stale leftover `r` from the role-tagging
+        // loop above, so every card of a table carried the same target and
+        // per-row card filtering collapsed to one unnamed card per table.)
+        card.dataset.targetsTable = String(t);
+        card.dataset.targetsRow = String(rr);
+        card.style.display = '';
+
+        // Primary Devanagari term: always the first column (Sanskrit,
+        // male profession form, or dhātu). The second column joins the term
+        // only when labeled Female (vocabulary profession tables).
+        // Card title is a styled non-heading (P3-02): an element at h4 made
+        // the heading outline jump H2→H4 on Vocabulary and Verb Roots.
+        // All sizing lives on the .vocab-card-term class, so visuals keep.
+        var term = document.createElement('p');
+        term.className = 'vocab-card-term';
+        var main = document.createElement('span');
+        main.textContent = cells[0].textContent.trim();
+        term.appendChild(main);
+        var femJoin = cells.length > 1 && fieldRole(labels[1]) === 'female';
+        if (femJoin) {
+          var fem = document.createElement('span');
+          fem.className = 'vocab-card-fem';
+          fem.textContent = cells[1].textContent.trim();
+          term.appendChild(fem);
+        }
+        card.appendChild(term);
+
+        var fields = document.createElement('dl');
+        fields.className = 'vocab-card-fields';
+        for (var c = 0; c < cells.length; c++) {
+          if (c === 0 || (c === 1 && femJoin)) continue;
+          var role = fieldRole(labels[c] || '');
+          var value = cells[c].textContent.trim();
+          if (role === 'synonyms' && isPlaceholder(value)) continue;
+
+          var item = document.createElement('div');
+          item.className = 'vocab-card-field';
+          var dt = document.createElement('dt');
+          dt.textContent = labels[c] || '';
+          var dd = document.createElement('dd');
+          dd.textContent = value;
+          if (role === 'gujarati') { item.setAttribute('lang', 'gu'); dd.className = 'vocab-card-guj'; }
+          if (role === 'gender') dd.className = 'vocab-card-gender';
+          item.appendChild(dt);
+          item.appendChild(dd);
+          fields.appendChild(item);
+        }
+        card.appendChild(fields);
+        cardsWrap.appendChild(card);
+      }
+
+      table.parentNode.parentNode.insertBefore(cardsWrap, table.parentNode.nextSibling);
+    }
+  }
+
+  function cardLookup(t, r) {
+    return document.querySelector('.vocab-card[data-targets-table="' + t + '"][data-targets-row="' + r + '"]');
+  }
+
+  function setGroupHidden(table, hidden) {
+    // Vocabulary page: hide the whole empty group (table + cards).
+    // The dhatu page keeps its existing behavior (heading hides, table stays).
+    if (isVocabPage) {
+      if (hidden) {
+        table.classList.add('vocab-group-hidden');
+      } else {
+        table.classList.remove('vocab-group-hidden');
+      }
+    }
+    var cards = table.parentElement && table.parentElement.classList.contains('vocab-table-wrap')
+      ? table.parentElement.nextElementSibling
+      : table.nextElementSibling;
+    if (cards && cards.classList.contains('vocab-cards')) {
+      cards.hidden = hidden;
+    }
+  }
+
+  function ensureEmptyState() {
+    if (!isVocabPage || emptyState) { return; }
+    emptyState = document.createElement('div');
+    emptyState.className = 'vocab-empty-state';
+    emptyState.hidden = true;
+    emptyState.setAttribute('role', 'status');
+    emptyState.textContent = 'No vocabulary matches your search or filters. Try different spellings — Devanagari or Latin forms both work.';
+    searchInput.parentNode.parentNode.appendChild(emptyState);
+  }
+
+  function wireClearControls() {
+    if (!isVocabPage) return;
+    var clearSearch = document.getElementById('vocabClearSearch');
+    var clearFilters = document.getElementById('vocabClearFilters');
+
+    function reflectClearSearch() {
+      if (clearSearch) { clearSearch.hidden = searchInput.value.length === 0; }
+    }
+    if (clearSearch) {
+      clearSearch.addEventListener('click', function() {
+        searchInput.value = '';
+        reflectClearSearch();
+        doSearch();
+        searchInput.focus();
+      });
+    }
+    searchInput.addEventListener('input', reflectClearSearch);
+
+    function reflectClearFilters() {
+      if (clearFilters) { clearFilters.hidden = currentFilter === 'all'; }
+    }
+    if (clearFilters) {
+      clearFilters.addEventListener('click', function() {
+        var allBtn = document.querySelector('.vocab-filter-btn[data-filter="all"]');
+        if (allBtn) { allBtn.click(); } else {
+          currentFilter = 'all'; reflectClearFilters(); doSearch();
+        }
+        reflectClearFilters();
+      });
+    }
+    // expose reflect hooks for the filter wiring below
+    wireClearControls._search = reflectClearSearch;
+    wireClearControls._filters = reflectClearFilters;
+    reflectClearSearch();
+    reflectClearFilters();
+  }
 
   // ── Transliteration helpers ───────────────────────────────
 
@@ -260,6 +450,10 @@ document.addEventListener('DOMContentLoaded', function() {
         } else {
           row.style.display = 'none';
         }
+        // The vocabulary mobile card mirrors this exact row (1:1) — same data,
+        // same visibility; no separate filtering pass, no duplicated results.
+        var card = cardLookup(t, r);
+        if (card) { card.style.display = visible ? '' : 'none'; }
       }
 
       totalVisible += sectionVisible;
@@ -268,6 +462,13 @@ document.addEventListener('DOMContentLoaded', function() {
       if (heading) {
         heading.style.display = sectionVisible > 0 ? '' : 'none';
       }
+      // Hide the whole group (table + cards) when nothing matches — do this via
+      // a class so the desktop-table / mobile-cards decision stays in CSS.
+      setGroupHidden(table, sectionVisible === 0);
+    }
+
+    if (isVocabPage && emptyState) {
+      emptyState.hidden = !(totalVisible === 0 && (query || currentFilter !== 'all'));
     }
 
     if (resultCount) {
@@ -290,13 +491,19 @@ document.addEventListener('DOMContentLoaded', function() {
       btn.addEventListener('click', function() {
         for (var i = 0; i < filterBtns.length; i++) {
           filterBtns[i].classList.remove('active');
+          if (isVocabPage) { filterBtns[i].setAttribute('aria-checked', 'false'); }
         }
         btn.classList.add('active');
+        if (isVocabPage) { btn.setAttribute('aria-checked', 'true'); }
         currentFilter = btn.dataset.filter;
+        if (wireClearControls._filters) { wireClearControls._filters(); }
         doSearch();
       });
     })(filterBtns[b]);
   }
 
+  buildVocabCards();
+  ensureEmptyState();
+  wireClearControls();
   doSearch();
 });

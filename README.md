@@ -32,8 +32,8 @@ The **Vocabulary** page has a built-in live filter:
 | ---------------------------------- | ------------------------------------ |
 | `mkdocs.yml`                       | Website theme & settings (UI config) |
 | `docs/`                            | All your **content** lives here      |
-| `docs/javascripts/vocab-search.js` | Vocabulary filter logic              |
-| `docs/stylesheets/main.css`        | UI styling                           |
+| `docs/assets/js/vocab-search.js`   | Vocabulary filter logic              |
+| `docs/assets/css/main.css`         | UI styling                           |
 | `.github/workflows/deploy.yml`     | Auto-publish to GitHub Pages         |
 
 ## 🚀 How to Publish Your Website (Step by Step)
