@@ -2472,8 +2472,174 @@ table.vocab-group-hidden {
   }
 }
 
-/* कृदन्त Formation Reference: one continuous table matching the neutral
-   reference-table family, with restrained amber category dividers. */
+/* =============================================================
+   CONVERSATION PAGE (phase 3D-3, mobile): the four one-row-per-prompt
+   reference tables become compact labeled record cards. Labels come from
+   the table's own header semantics (td[data-label]) — one dataset only,
+   no second mobile copy of the content. Desktop keeps the full tables.
+   ============================================================= */
+
+/* Desktop/tablet: the native section selector is a mobile-only control. */
+@media screen and (min-width: 768px) {
+  .md-content:has(#pageTabbedStudy) .conv-section-select {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  /* Tab strip: on the Conversation page the strip is replaced entirely
+     below 768px by the native section selector (conversation-tabs.js);
+     hide strip AND Material's prev/next arrows, not just restyle. */
+  .md-content:has(#pageTabbedStudy) .tabbed-set:has(.conv-ref) .tabbed-labels,
+  .md-content:has(#pageTabbedStudy) .tabbed-set:has(.conv-ref) .tabbed-controls,
+  .md-content:has(#pageTabbedStudy) .tabbed-set:has(.conv-ref) .tabbed-control {
+    display: none;
+  }
+
+  /* Native section selector: same control language as the page filter
+     selects (decl-select): full width, warm-neutral fill, thin border,
+     muted amber focus. 42px height = comfortable touch target. */
+  .md-content:has(#pageTabbedStudy) .conv-section-select {
+    position: relative;
+    margin: 0 0 0.9rem;
+    z-index: 3;
+  }
+
+  .md-content:has(#pageTabbedStudy) .conv-select-caption {
+    display: block;
+    font-size: 0.78rem;
+    font-weight: 600;
+    color: var(--md-default-fg-color--light);
+    margin-bottom: 0.3rem;
+  }
+
+  .md-content:has(#pageTabbedStudy) .conv-select {
+    display: block;
+    box-sizing: border-box;
+    width: 100%;
+    height: 42px;
+    padding: 0 0.7rem;
+    font-size: 0.95rem;
+    font-family: inherit;
+    color: var(--md-default-fg-color);
+    background: var(--md-default-bg-color);
+    border: 1.5px solid var(--md-default-fg-color--lightest);
+    border-radius: 8px;
+    cursor: pointer;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+    appearance: none;
+    -webkit-appearance: none;
+    /* Custom chevron so the control matches the approved set, and no
+       native arrow art overlaps long section names. */
+    background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='14' height='14' viewBox='0 0 24 24' fill='none' stroke='%23596273' stroke-width='2.2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='m6 9 6 6 6-6'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 0.7rem center;
+    padding-right: 2rem;
+  }
+
+  .md-content:has(#pageTabbedStudy) .conv-select:focus-visible,
+  .md-content:has(#pageTabbedStudy) .conv-select:focus {
+    border-color: var(--md-accent-fg-color);
+    box-shadow: 0 0 0 3px var(--md-accent-fg-color--transparent);
+    outline: none;
+  }
+
+  .md-content:has(#pageTabbedStudy) .tabbed-set .tabbed-labels {
+    max-width: 100%;
+    scrollbar-width: thin;
+    -webkit-overflow-scrolling: touch;
+    scroll-snap-type: x proximity;
+  }
+
+  .md-content:has(#pageTabbedStudy) .tabbed-set .tabbed-labels > label {
+    scroll-snap-align: start;
+  }
+
+  .md-content:has(#pageTabbedStudy) .conv-ref table {
+    display: block;
+    margin: 0;
+  }
+
+  .md-content:has(#pageTabbedStudy) .conv-ref thead {
+    display: none;
+  }
+
+  .md-content:has(#pageTabbedStudy) .conv-ref tbody {
+    display: block;
+  }
+
+  /* One card per original row: the English prompt is the title, each
+     applicable Sanskrit variant sits beneath it with its gender label. */
+  .md-content:has(#pageTabbedStudy) .conv-ref tbody tr {
+    display: block;
+    box-sizing: border-box;
+    border: 1px solid var(--md-default-fg-color--lightest);
+    border-left: 3px solid var(--md-accent-fg-color);
+    border-radius: 0.18rem;
+    background: var(--md-default-bg-color);
+    padding: 0.45rem 0.65rem 0.5rem;
+    margin-bottom: 0.6rem;
+    break-inside: avoid;
+  }
+
+  .md-content:has(#pageTabbedStudy) .conv-ref tbody tr:last-child {
+    margin-bottom: 0;
+  }
+
+  .md-content:has(#pageTabbedStudy) .conv-ref tbody td {
+    display: block;
+    padding: 0.2rem 0;
+    border: 0;
+    background: none;
+    font-size: 0.95rem;
+    line-height: 1.55;
+    color: var(--md-default-fg-color);
+    overflow-wrap: normal;
+    word-break: normal;
+  }
+
+  /* English prompt = card title, no repeated label. */
+  .md-content:has(#pageTabbedStudy) .conv-ref tbody td.conv-prompt {
+    font-weight: 650;
+    font-size: 0.98rem;
+    padding: 0 0 0.25rem;
+  }
+
+  /* Labeled Sanskrit/romanized variants (Male/Female/Neuter etc.). */
+  .md-content:has(#pageTabbedStudy) .conv-ref tbody td[data-label] {
+    padding-left: 0;
+  }
+
+  .md-content:has(#pageTabbedStudy) .conv-ref tbody td[data-label]::before {
+    display: block;
+    content: attr(data-label);
+    color: var(--md-default-fg-color--light);
+    font-size: 0.64rem;
+    font-weight: 650;
+    letter-spacing: 0.05em;
+    line-height: 1.3;
+    text-transform: uppercase;
+    margin-bottom: 0.05rem;
+  }
+
+  /* Devanagari variants read prominently; no per-character breaking. */
+  .md-content:has(#pageTabbedStudy) .conv-ref tbody td.conv-dev {
+    font-size: 1.02rem;
+    line-height: 1.6;
+  }
+
+  /* Location tab: transliteration reads as a quiet echo under Sanskrit. */
+  .md-content:has(#pageTabbedStudy) .conv-loc tbody td[data-label="Transliteration"] {
+    color: var(--md-default-fg-color--light);
+    font-size: 0.88rem;
+  }
+
+  /* Source-dash cells (no Neuter form exists): omit entirely instead of
+     printing a large blank Neuter row. No data is invented or lost. */
+  .md-content:has(#pageTabbedStudy) .conv-ref tbody td.is-dash {
+    display: none;
+  }
+}
 .md-content:has(#pageTabbedStudy) .formation-table-wrap {
   width: 100%;
   margin: 0.75rem 0 1.25rem;
@@ -2785,13 +2951,29 @@ table.vocab-group-hidden {
   transform: rotate(180deg);
 }
 
+/* Positioning: the panel is position:absolute, so it anchors to the
+   nearest POSITIONED ancestor. Neither the <li> nor this wrapper is
+   positioned by default, which made the panel drift to the header's left
+   edge (its far-off sticky <header> ancestor). Making the wrapper
+   relative re-anchors the panel beneath the Study Topics trigger at
+   every desktop width — no viewport-specific offsets. */
+.md-tabs--in-header .md-tabs__dd {
+  position: relative;
+}
+
 .md-tabs__menu {
   position: absolute;
   top: calc(100% - 0.2rem);
   left: -0.5rem;
   z-index: 30;
-  min-width: 17rem;
-  max-width: 26rem;
+  /* Content-driven width: the grid's two columns collapse onto the
+     widest link label instead of reserving a fixed oversized box. */
+  width: max-content;
+  min-width: 15rem;
+  max-width: min(22rem, 80vw);
+  /* Material shrinks .md-tabs__list to ~10px for the tab bar; the menu
+     must read like normal navigation labels (header links are 0.7rem). */
+  font-size: 0.75rem;
   background: var(--md-default-bg-color);
   border: 1px solid var(--md-default-fg-color--lightest);
   border-radius: 12px;
@@ -2806,7 +2988,7 @@ table.vocab-group-hidden {
 @media (min-width: 640px) {
   .md-tabs__menu-list {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: minmax(max-content, 1fr) minmax(max-content, 1fr);
     gap: 0.05rem;
   }
 }
@@ -2815,13 +2997,14 @@ table.vocab-group-hidden {
   display: flex;
   align-items: center;
   gap: 0.5rem;
-  padding: 0.6rem 0.75rem;
-  min-height: 40px;
+  padding: 0.5rem 0.75rem;
+  min-height: 36px;
   border-radius: 8px;
-  font-size: 0.9rem;
+  font-size: 1em; /* inherit the menu's label size, not Material's scaled list */
   color: var(--md-default-fg-color);
   text-decoration: none;
   border-left: 2px solid transparent;
+  white-space: nowrap;
 }
 
 .md-tabs__menu-link:hover,
