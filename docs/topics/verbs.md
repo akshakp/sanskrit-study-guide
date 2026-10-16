@@ -184,6 +184,6 @@ A verb describes an **action**, an **occurrence**, or a **state of being**.
 
     When these verbs are used, **the person experiencing the state does NOT take the accusative case (द्वितीया विभक्ति)**. Instead, **the genitive case (षष्ठी विभक्ति)** is used.
 
-    !!! example "Motion Verbs — द्वितीया"
+    !!! example "अस् / भू — षष्ठी विभक्ति"
         - सत्सङ्गदीक्षायाः पाठेन **छात्राणाम्** अतीव आनन्दः भवति। (NOT छात्रान्)
         - ईश्वरस्य पूजया कथया च **भक्तानां** सुखं भवति।(NOT भक्तान्)

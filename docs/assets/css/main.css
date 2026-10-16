@@ -2180,18 +2180,21 @@ table.vocab-group-hidden {
 /* Search-first layout family: wider centered content, no sidebars
    (mirrors the approved vocabulary page). */
 .md-container .md-main .md-content:has(#dhatuSearch),
-.md-container .md-main .md-content:has(h1#verbs) {
+.md-container .md-main .md-content:has(h1#verbs),
+.md-container .md-main .md-content:has(#pageTabbedStudy) {
   max-width: 64rem;
   margin-inline: auto;
 }
 
 .md-container .md-main .md-content:has(#dhatuSearch) .md-content__inner,
-.md-container .md-main .md-content:has(h1#verbs) .md-content__inner {
+.md-container .md-main .md-content:has(h1#verbs) .md-content__inner,
+.md-container .md-main .md-content:has(#pageTabbedStudy) .md-content__inner {
   margin-inline: auto;
 }
 
 .md-main__inner:has(#dhatuSearch),
-.md-main__inner:has(h1#verbs) {
+.md-main__inner:has(h1#verbs),
+.md-main__inner:has(#pageTabbedStudy) {
   margin-top: 0.4rem;
 }
 
@@ -2201,8 +2204,465 @@ table.vocab-group-hidden {
    windows where our content fills the grid). Contain to the content
    width on all desktop sizes. */
 .md-content:has(h1#verbs) .md-typeset__scrollwrap,
-.md-content:has(#dhatuSearch) .md-typeset__scrollwrap {
+.md-content:has(#dhatuSearch) .md-typeset__scrollwrap,
+.md-content:has(#pageTabbedStudy) .md-typeset__scrollwrap {
   margin-inline: 0;
+}
+
+/* Phase 3D-2 tabbed pages (language-essentials, adjectives, writing-rules,
+   visarg-sandhi, krudant-tadvid): same full-width, contained reference-table
+   presentation as the verbs family on desktop. Below 760px Material's own
+   .md-typeset__scrollwrap keeps the table inside the page (table-level
+   horizontal scrolling, no page overflow), so the rules stay desktop-only. */
+@media screen and (min-width: 760px) {
+  .md-content:has(#pageTabbedStudy) .md-typeset__table {
+    display: block;
+    padding: 0;
+    margin-bottom: 1.4rem;
+  }
+
+  .md-content:has(#pageTabbedStudy) .md-typeset__table table {
+    display: table;
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.92rem;
+    margin: 0;
+  }
+
+  .md-content:has(#pageTabbedStudy) thead th {
+    background: var(--md-hero-surface);
+    border-bottom: 2px solid var(--md-default-fg-color--lightest);
+    padding: 0.55em 0.8em;
+    font-size: 0.72rem;
+    font-weight: 600;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    color: var(--md-default-fg-color);
+    text-align: left;
+  }
+
+  .md-content:has(#pageTabbedStudy) tbody td {
+    padding: 0.55em 0.8em;
+    border-bottom: 1px solid var(--md-default-fg-color--lightest);
+    vertical-align: top;
+    color: var(--md-default-fg-color);
+  }
+
+  .md-content:has(#pageTabbedStudy) tbody tr:last-child td {
+    border-bottom: none;
+  }
+
+  .md-content:has(#pageTabbedStudy) tbody tr:nth-child(2n) {
+    background: var(--md-hover-surface);
+  }
+
+  .md-content:has(#pageTabbedStudy) tbody tr:hover {
+    background: var(--md-accent-fg-color--transparent);
+  }
+}
+
+/* कृदन्त tab Examples table: Material's bare-table shrink-to-fit
+   (.md-typeset table:not([class]) → inline-block/auto width) leaves this
+   small two-column table hugging the left with dead space on the right,
+   especially on mobile. Scope a stable wrapper class so only this table
+   fills its container at balanced 40/60 columns, with compact rows. */
+.md-content:has(#pageTabbedStudy) .krudant-examples .md-typeset__table {
+  display: block;
+  width: 100%;
+  padding: 0; /* Material's default 0 .8rem is the leftover right gap */
+  margin-bottom: 1.2rem;
+}
+
+.md-content:has(#pageTabbedStudy) .krudant-examples .md-typeset__scrollwrap {
+  margin: 0 0 1.2rem;
+}
+
+.md-content:has(#pageTabbedStudy) .krudant-examples table {
+  display: table;
+  width: 100%;
+  table-layout: fixed;
+  border-collapse: collapse;
+  font-size: 0.92rem;
+  margin: 0;
+}
+
+.md-content:has(#pageTabbedStudy) .krudant-examples thead th,
+.md-content:has(#pageTabbedStudy) .krudant-examples tbody td {
+  width: auto;
+}
+
+.md-content:has(#pageTabbedStudy) .krudant-examples thead th:nth-child(1),
+.md-content:has(#pageTabbedStudy) .krudant-examples tbody td:nth-child(1) {
+  width: 40%;
+}
+
+.md-content:has(#pageTabbedStudy) .krudant-examples thead th:nth-child(2),
+.md-content:has(#pageTabbedStudy) .krudant-examples tbody td:nth-child(2) {
+  width: 60%;
+}
+
+.md-content:has(#pageTabbedStudy) .krudant-examples thead th {
+  padding: 0.4em 0.7em;
+}
+
+.md-content:has(#pageTabbedStudy) .krudant-examples tbody td {
+  padding: 0.3em 0.7em;
+  line-height: 1.5;
+  white-space: nowrap;
+  word-break: normal;
+  overflow-wrap: normal;
+}
+
+/* तद्धित tables on the tabbed page: Material's bare-table shrink-to-fit
+   + .md-typeset__table padding leaves both of these tables over-compressed
+   on mobile. Scoped via stable wrapper classes so only these two tables
+   are affected; desktop keeps the four/three-column presentation. */
+.md-content:has(#pageTabbedStudy) .taddhit-formation .md-typeset__table,
+.md-content:has(#pageTabbedStudy) .taddhit-examples .md-typeset__table {
+  display: block;
+  width: 100%;
+  padding: 0;
+  margin-bottom: 1.2rem;
+}
+
+.md-content:has(#pageTabbedStudy) .taddhit-formation .md-typeset__scrollwrap,
+.md-content:has(#pageTabbedStudy) .taddhit-examples .md-typeset__scrollwrap {
+  margin: 0 0 1.2rem;
+}
+
+.md-content:has(#pageTabbedStudy) .taddhit-formation table,
+.md-content:has(#pageTabbedStudy) .taddhit-examples table {
+  display: table;
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.92rem;
+  margin: 0;
+}
+
+.md-content:has(#pageTabbedStudy) .taddhit-formation thead th,
+.md-content:has(#pageTabbedStudy) .taddhit-examples thead th {
+  background: var(--md-hero-surface);
+  border-bottom: 2px solid var(--md-default-fg-color--lightest);
+  padding: 0.45em 0.7em;
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: var(--md-default-fg-color);
+  text-align: left;
+}
+
+.md-content:has(#pageTabbedStudy) .taddhit-formation tbody td,
+.md-content:has(#pageTabbedStudy) .taddhit-examples tbody td {
+  padding: 0.3em 0.7em;
+  border-bottom: 1px solid var(--md-default-fg-color--lightest);
+  vertical-align: top;
+  color: var(--md-default-fg-color);
+  word-break: normal;
+  overflow-wrap: normal;
+}
+
+.md-content:has(#pageTabbedStudy) .taddhit-formation tbody tr:last-child td,
+.md-content:has(#pageTabbedStudy) .taddhit-examples tbody tr:last-child td {
+  border-bottom: none;
+}
+
+.md-content:has(#pageTabbedStudy) .taddhit-formation tbody tr:nth-child(2n),
+.md-content:has(#pageTabbedStudy) .taddhit-examples tbody tr:nth-child(2n) {
+  background: var(--md-hover-surface);
+}
+
+/* तद्धित Examples: full width, balanced 30/30/40 columns, unbroken Sanskrit. */
+.md-content:has(#pageTabbedStudy) .taddhit-examples table {
+  table-layout: fixed;
+}
+
+.md-content:has(#pageTabbedStudy) .taddhit-examples thead th:nth-child(1),
+.md-content:has(#pageTabbedStudy) .taddhit-examples tbody td:nth-child(1) {
+  width: 30%;
+}
+
+.md-content:has(#pageTabbedStudy) .taddhit-examples thead th:nth-child(2),
+.md-content:has(#pageTabbedStudy) .taddhit-examples tbody td:nth-child(2) {
+  width: 30%;
+}
+
+.md-content:has(#pageTabbedStudy) .taddhit-examples thead th:nth-child(3),
+.md-content:has(#pageTabbedStudy) .taddhit-examples tbody td:nth-child(3) {
+  width: 40%;
+}
+
+.md-content:has(#pageTabbedStudy) .taddhit-examples tbody td:nth-child(1),
+.md-content:has(#pageTabbedStudy) .taddhit-examples tbody td:nth-child(2) {
+  white-space: nowrap;
+}
+
+@media screen and (max-width: 760px) {
+  .md-content:has(#pageTabbedStudy) .taddhit-examples tbody td {
+    font-size: 0.98rem;
+    padding: 0.28rem 0.55rem;
+    line-height: 1.5;
+  }
+
+  .md-content:has(#pageTabbedStudy) .taddhit-examples thead th {
+    padding: 0.4rem 0.55rem;
+  }
+
+  /* प्रत्यय Formation/Result/Declension table: compact labeled record
+     blocks instead of four squeezed columns. Labels come from the table's
+     own header semantics — the two data rows remain the only source. */
+  .md-content:has(#pageTabbedStudy) .taddhit-formation table {
+    display: block;
+  }
+
+  .md-content:has(#pageTabbedStudy) .taddhit-formation thead {
+    display: none;
+  }
+
+  .md-content:has(#pageTabbedStudy) .taddhit-formation tbody {
+    display: block;
+  }
+
+  .md-content:has(#pageTabbedStudy) .taddhit-formation tbody tr {
+    display: block;
+    box-sizing: border-box;
+    border: 1px solid var(--md-default-fg-color--lightest);
+    border-left: 3px solid var(--md-accent-fg-color);
+    border-radius: 0.18rem;
+    background: var(--md-default-bg-color);
+    padding: 0.3rem 0.6rem;
+    margin-bottom: 0.65rem;
+  }
+
+  .md-content:has(#pageTabbedStudy) .taddhit-formation tbody tr:last-child {
+    margin-bottom: 0;
+  }
+
+  .md-content:has(#pageTabbedStudy) .taddhit-formation tbody td {
+    box-sizing: border-box;
+    display: flex;
+    align-items: baseline;
+    gap: 0.45rem;
+    min-width: 0;
+    padding: 0.22rem 0;
+    border: 0;
+    background: none;
+    font-size: 0.95rem;
+    line-height: 1.55;
+    white-space: normal;
+  }
+
+  .md-content:has(#pageTabbedStudy) .taddhit-formation tbody td + td {
+    box-shadow: inset 0 1px 0 var(--md-default-fg-color--lightest);
+  }
+
+  .md-content:has(#pageTabbedStudy) .taddhit-formation tbody td::before {
+    flex: none;
+    content: attr(data-label);
+    color: var(--md-default-fg-color--light);
+    font-size: 0.66rem;
+    font-weight: 650;
+    letter-spacing: 0.04em;
+    line-height: 1.3;
+    text-transform: uppercase;
+  }
+
+  .md-content:has(#pageTabbedStudy) .taddhit-formation tbody td:first-child {
+    font-weight: 650;
+  }
+}
+
+/* कृदन्त Formation Reference: one continuous table matching the neutral
+   reference-table family, with restrained amber category dividers. */
+.md-content:has(#pageTabbedStudy) .formation-table-wrap {
+  width: 100%;
+  margin: 0.75rem 0 1.25rem;
+  overflow: hidden;
+  border-radius: 0.18rem;
+  background: var(--md-default-bg-color);
+  box-shadow: var(--md-shadow-z1);
+}
+
+[data-md-color-scheme="slate"] .md-content:has(#pageTabbedStudy) .formation-table-wrap {
+  box-shadow: var(--md-shadow-z2);
+}
+
+.md-content:has(#pageTabbedStudy) table.formation-reference-table {
+  display: table;
+  width: 100%;
+  border-collapse: collapse;
+  table-layout: fixed;
+  font-size: 0.92rem;
+  margin: 0;
+}
+
+.md-content:has(#pageTabbedStudy) table.formation-reference-table thead th,
+.md-content:has(#pageTabbedStudy) table.formation-reference-table tbody tr:not(.formation-category) td {
+  width: 25%;
+}
+
+.md-content:has(#pageTabbedStudy) table.formation-reference-table .formation-category th {
+  width: 100%;
+  background: var(--md-hover-surface);
+  border-bottom: 1px solid var(--md-default-fg-color--lightest);
+  border-left: 3px solid var(--md-accent-fg-color);
+  color: var(--md-default-fg-color);
+  font-size: 0.82rem;
+  font-weight: 650;
+  letter-spacing: 0.01em;
+  padding: 0.55em 0.8em;
+  text-align: left;
+  text-transform: none;
+}
+
+.md-content:has(#pageTabbedStudy) .formation-pair-label {
+  display: none;
+}
+
+.md-content:has(#pageTabbedStudy) .formation-reference-table td:last-child,
+.md-content:has(#pageTabbedStudy) .formation-reference-table th:last-child {
+  border-right: 0;
+}
+
+@media screen and (max-width: 760px) {
+  .md-content:has(#pageTabbedStudy) .formation-table-wrap {
+    overflow: visible;
+  }
+
+  .md-content:has(#pageTabbedStudy) table.formation-reference-table {
+    display: block;
+    table-layout: auto;
+  }
+
+  /* Show ONE two-column header (धातु | कृदन्त) instead of repeating
+     labels inside every data row. The second pair's header cells are
+     redundant in this layout and are hidden. */
+  .md-content:has(#pageTabbedStudy) table.formation-reference-table thead {
+    border-bottom: 2px solid var(--md-default-fg-color--lightest);
+  }
+
+  /* thead is the grid container; its inner <tr> would otherwise become
+     the single grid item (landing in track 1 and squashing both ths to
+     half the table width). display:contents promotes the th cells to
+     grid items so header columns match the data-column geometry. */
+  .md-content:has(#pageTabbedStudy) table.formation-reference-table thead tr {
+    display: contents;
+  }
+
+  .md-content:has(#pageTabbedStudy) table.formation-reference-table thead th:nth-child(1) {
+    grid-column: 1;
+  }
+
+  .md-content:has(#pageTabbedStudy) table.formation-reference-table thead th:nth-child(2) {
+    grid-column: 2;
+  }
+
+  .md-content:has(#pageTabbedStudy) table.formation-reference-table thead th {
+    box-sizing: border-box;
+    width: auto;
+    background: var(--md-hover-surface);
+    padding: 0.4rem 0.55rem;
+    font-size: 0.72rem;
+    font-weight: 650;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    color: var(--md-default-fg-color);
+    text-align: left;
+  }
+
+  .md-content:has(#pageTabbedStudy) table.formation-reference-table thead th:nth-child(3),
+  .md-content:has(#pageTabbedStudy) table.formation-reference-table thead th:nth-child(4) {
+    display: none;
+  }
+
+  .md-content:has(#pageTabbedStudy) table.formation-reference-table thead th:nth-child(2) {
+    border-left: 1px solid var(--md-default-fg-color--lighter);
+  }
+
+  .md-content:has(#pageTabbedStudy) table.formation-reference-table tbody {
+    display: block;
+  }
+
+  .md-content:has(#pageTabbedStudy) table.formation-reference-table tbody tr:not(.formation-category),
+  .md-content:has(#pageTabbedStudy) table.formation-reference-table thead {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(min-content, 1fr));
+    grid-auto-rows: minmax(0, auto);
+    border-bottom: 1px solid var(--md-default-fg-color--lightest);
+  }
+
+  /* Each pair becomes one compact two-column row: धातु | कृदन्त.
+     A row holds up to two such pairs (grid row 1 and grid row 2).
+     Sanskrit terms are single short words: render them unbroken and
+     never fall back to per-character breaking. */
+  .md-content:has(#pageTabbedStudy) table.formation-reference-table tbody tr:not(.formation-category) td {
+    box-sizing: border-box;
+    width: auto; /* undo the desktop 25% so grid cells fill their track */
+    display: flex;
+    flex-direction: row;
+    align-items: baseline;
+    gap: 0.4rem;
+    min-width: 0;
+    padding: 0.28rem 0.55rem;
+    border: 0;
+    font-size: 0.98rem;
+    line-height: 1.55;
+    white-space: nowrap;
+    word-break: normal;
+    overflow-wrap: normal;
+  }
+
+  /* Sensible fallback for an unusually long entry (none in the current
+     syllabus data): the minmax(min-content, 1fr) tracks widen to fit an
+     unbroken word instead of splitting it — words are never broken. */
+
+  .md-content:has(#pageTabbedStudy) table.formation-reference-table tr:not(.formation-category) td:nth-child(1) {
+    grid-column: 1;
+    grid-row: 1;
+  }
+
+  .md-content:has(#pageTabbedStudy) table.formation-reference-table tr:not(.formation-category) td:nth-child(2) {
+    grid-column: 2;
+    grid-row: 1;
+    border-left: 1px solid var(--md-default-fg-color--lighter);
+  }
+
+  .md-content:has(#pageTabbedStudy) table.formation-reference-table tr:not(.formation-category) td:nth-child(3) {
+    grid-column: 1;
+    grid-row: 2;
+    padding-top: 0.15rem;
+  }
+
+  .md-content:has(#pageTabbedStudy) table.formation-reference-table tr:not(.formation-category) td:nth-child(4) {
+    grid-column: 2;
+    grid-row: 2;
+    padding-top: 0.15rem;
+    padding-bottom: 0.5rem;
+    border-left: 1px solid var(--md-default-fg-color--lighter);
+  }
+
+  /* Second pair of the row: separated by a hairline above for clean
+     two-pair rhythm without extra vertical bulk. */
+  .md-content:has(#pageTabbedStudy) table.formation-reference-table tr:not(.formation-category) td:nth-child(3),
+  .md-content:has(#pageTabbedStudy) table.formation-reference-table tr:not(.formation-category) td:nth-child(4) {
+    box-shadow: inset 0 1px 0 var(--md-default-fg-color--lightest);
+  }
+
+  /* Field labels are not repeated inside data rows; the single
+     two-column header identifies the columns instead. */
+  .md-content:has(#pageTabbedStudy) table.formation-reference-table .formation-pair-label {
+    display: none;
+  }
+
+  .md-content:has(#pageTabbedStudy) table.formation-reference-table .formation-category {
+    display: block;
+  }
+
+  .md-content:has(#pageTabbedStudy) table.formation-reference-table .formation-category th {
+    box-sizing: border-box;
+    display: block;
+    width: 100%;
+  }
 }
 
 .md-content:has(h1#verbs) .md-typeset__table,
@@ -2275,7 +2735,8 @@ table.vocab-group-hidden {
   }
 
   .md-container .md-main .md-content:has(#dhatuSearch) .md-content__inner,
-  .md-container .md-main .md-content:has(h1#verbs) .md-content__inner {
+  .md-container .md-main .md-content:has(h1#verbs) .md-content__inner,
+  .md-container .md-main .md-content:has(#pageTabbedStudy) .md-content__inner {
     margin-inline: 0.8rem;
   }
 }
@@ -2300,19 +2761,16 @@ table.vocab-group-hidden {
   contain: none;
 }
 
-.md-tabs__item--menu {
-  padding: 0;
-}
-
-.md-tabs__dd {
-  position: relative;
-}
-
+/* Spacing system: every top-level item — including Study Topics — gets its
+   horizontal spacing from the SHARED .md-tabs__item padding Material applies
+   to all siblings. Previously the menu item zeroed that padding while its
+   trigger added its own, so the ink gaps around Study Topics were 28–44px
+   while other pairs measured 18–24px. */
 .md-tabs__menu-trigger {
   display: inline-flex;
   align-items: center;
   gap: 0.25rem;
-  padding: 0.5rem 0.4rem;
+  padding: 0.5rem 0;
   background: none;
   border: none;
   cursor: pointer;

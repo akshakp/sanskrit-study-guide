@@ -59,7 +59,17 @@ For each **substantive Sanskrit content change**, maintain a clear mapping to th
 
 If two approved sources conflict, report both and ask which governs. Do not silently choose one.
 
-## 4. Tasks that are allowed without syllabus content changes
+## 4. User-reviewed study-guide content
+
+The owner identifies these repository pages as the current user-reviewed educational-content baseline:
+
+- `docs/reference/vocabulary.md`
+- `docs/topics/verbs.md`
+- `docs/topics/krudant-tadvid.md`
+
+Preserve the owner's manually corrected Sanskrit, Gujarati, English, examples, and tables exactly during future UI or content work. Do not restore older content from Git history or earlier copies. Keep educational-content changes separate from UI changes where practical, and preserve existing search, filters, tabs, links, responsive tables, and required JavaScript hooks when editing content. AARSH Book 1 remains authoritative for independent grammatical verification; report suspected discrepancies with source locations and ask for guidance instead of silently correcting them. User-reviewed page content is the preservation baseline, not independent authority for validating new Sanskrit material.
+
+## 5. Tasks that are allowed without syllabus content changes
 
 You may maintain the site's **code and presentation**, using the local repository:
 
@@ -76,7 +86,7 @@ A request to “improve,” “rewrite,” “complete,” or “fix” content 
 ### Legacy redirect pages: removed — do not recreate
 The Phase 0 redirect-only Markdown stubs at the old page locations (for example `docs/verbs.md`, `docs/nouns.md`, `docs/quiz.md`, `docs/vocabulary.md`) have been **intentionally removed** by owner decision. Canonical pages live under `docs/topics/`, `docs/reference/`, and `docs/practice/`. Do not create or recreate redirect-only Markdown files, HTML stubs, or any replacement pages for the retired URLs. No redirect plugin is installed; do not add one without explicit approval.
 
-## 5. Work procedure for every task
+## 6. Work procedure for every task
 
 1. Read this `AGENTS.md` at the start of the task.
 2. Check the working directory and `git status`; preserve all existing changes.
@@ -89,7 +99,7 @@ The Phase 0 redirect-only Markdown stubs at the old page locations (for example 
 9. For UI work, test locally if a working preview tool is available. For content work, inspect Markdown tables, Devanagari rendering, links, and navigation.
 10. Report what changed, actual tests performed, and source references for any Sanskrit changes. State any gaps clearly.
 
-## 6. Version control and publishing safety
+## 7. Version control and publishing safety
 
 - Work locally only unless the owner explicitly approves a remote action.
 - Do not commit, push, merge, open a pull request, or deploy to GitHub Pages without authorization.
@@ -98,7 +108,7 @@ The Phase 0 redirect-only Markdown stubs at the old page locations (for example 
 - Do not change existing published URLs, navigation slugs, or educational content while making an unrelated code fix.
 - Never overwrite or delete the source material folder.
 
-## 7. Communication and final report
+## 8. Communication and final report
 
 Write clearly for a learner and repository maintainer. Be brief but precise.
 
@@ -112,7 +122,7 @@ For completed work, report:
 
 If asked a question that cannot be answered using approved local syllabus material, do not guess: explain what is missing and request the relevant file.
 
-## 8. Highest-priority reminder
+## 9. Highest-priority reminder
 
 **Syllabus fidelity > completeness, general Sanskrit knowledge, confident explanations, or convenience.**
 

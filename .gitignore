@@ -22,6 +22,7 @@ desktop.ini
 # folders to ignore
 syllabus/
 reports/
+.pageserve-*/
 
 # MkDocs build output / local validation venv
 site/

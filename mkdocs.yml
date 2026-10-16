@@ -38,8 +38,7 @@ theme:
 nav:
   - Home: index.md
   - Study Topics:
-    - Alphabets: topics/alphabets.md
-    - Sanskrit Foundations: topics/sanskrit-foundations.md
+    - Language Essentials: topics/language-essentials.md
     - Nouns & Cases: topics/nouns.md
     - Verbs: topics/verbs.md
     - Verb Roots: topics/dhatu.md
@@ -47,8 +46,8 @@ nav:
     - Writing Rules: topics/writing-rules.md
     - Visarga Sandhi: topics/visarg-sandhi.md
     - Krudanta & Taddhita: topics/krudant-tadvid.md
-    - Conversation: topics/conversation.md
   - Vocabulary: reference/vocabulary.md
+  - Conversation: topics/conversation.md
   - Practice Quiz: practice/quiz.md
 
 plugins:

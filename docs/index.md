@@ -4,17 +4,11 @@
 
 <div class="grid cards" markdown>
 
-- :material-book-open-page-variant:{ .middle } **Sanskrit Foundations**
+- :material-book-open-page-variant:{ .middle } **Language Essentials**
 
     The alphabet, pronunciation, sentence basics, and core concepts.
 
-    [Explore →](topics/sanskrit-foundations.md)
-
-- :material-alpha-a:{ .middle } **Alphabets**
-
-    Vowels (स्वर), consonants (व्यञ्जन), and pronunciation places.
-
-    [Explore →](topics/alphabets.md)
+    [Explore →](topics/language-essentials.md)
 
 - :material-table-edit:{ .middle } **Nouns & Cases**
 

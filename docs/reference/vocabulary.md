@@ -387,6 +387,42 @@ hide:
 | उपरि उपरि | Directly above | બરાબર ઉપર | — |
 | अधि अधि | Directly below | બરાબર નીચે | — |
 | उभयतः | On both sides | બંને બાજુ | — |
+| अकस्मात् | Suddenly | અચાનક | — |
+| अन्यच्च | And also | અને પણ | — |
+| अन्यथा | Otherwise | બીજી રીતે, નહિતર | — |
+| अपरद्युः | On the next day | બીજે દિવસે | — |
+| अपरं च | And furthermore | અને બીજું | — |
+| असकृत् | Repeatedly | કેટલીય વાર | — |
+| इतः | From here | અહીંથી | — |
+| इव | Like; as in a simile | ની જેમ (ઉપમા) | — |
+| ईषत् | A little | થોડું | — |
+| उच्चैः | High; aloud | ઊંચેથી | — |
+| ऊर्ध्वम् | Above; afterwards | ઉપર, પછી | — |
+| एवम् | Thus; in this way | આ રીતે | — |
+| किञ्च | And moreover | અને વળી, બીજું | — |
+| किमर्थम् | Why; for what purpose | શા માટે? | — |
+| कुतः | From where | ક્યાંથી? | — |
+| क्व | Where | ક્યાં | — |
+| जातु | At any time | ક્યારેય | — |
+| ततः | After that; from there | ત્યાર પછી, ત્યાંથી | — |
+| तदानीम् | At that time | ત્યારે | — |
+| तर्हि | Then; in that case | ત્યારે, તો | — |
+| तावत् | Until then; that much | ત્યાં સુધી | — |
+| दिवा | By day | દિવસે | — |
+| नक्तम् | At night | રાત્રે | — |
+| नाम | Namely; that is | એટલે, અર્થાત્ | — |
+| नीचैः | Below | નીચે | — |
+| नूनम् | Certainly | અવશ્ય | — |
+| पूर्वम् | Before | પહેલાં | — |
+| प्रातः | In the morning | સવારે | — |
+| मिथः | Mutually | પરસ્પર | — |
+| यतः | Because; from where | કારણ કે, જ્યાંથી | — |
+| यदि | If | જો | — |
+| यावत् | Until; as long as | જ્યાં સુધી | — |
+| वरम् | Rather; preferable | સારું | — |
+| वृथा | In vain | વ્યર્થ, નકામું | — |
+| सद्यः | Immediately | તરત | — |
+| सायम् | In the evening | સાંજે | — |
 
 ---
 
