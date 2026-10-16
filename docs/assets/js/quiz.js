@@ -603,7 +603,10 @@
   async function initializeQuiz() {
     quizContainer = document.getElementById("quiz-container");
     if (!quizContainer) {
-      console.error("Quiz container was not found.");
+      // quiz.js ships on every page; on pages without the quiz component
+      // this is the normal case, not an error — exit quietly (P3 console
+      // guard). Genuine failures on the Practice Quiz page itself are still
+      // surfaced below via showErrorState/console.error.
       return;
     }
     quizContainer.innerHTML = '<p class="quiz-loading">Loading question banks…</p>';

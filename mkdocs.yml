@@ -69,6 +69,7 @@ extra_javascript:
   - assets/js/nouns-explorer.js
   - assets/js/nav-site.js
   - assets/js/conversation-tabs.js
+  - assets/js/formation-labels.js
 
 extra_css:
   - assets/css/main.css

@@ -83,14 +83,21 @@ document.addEventListener('DOMContentLoaded', function() {
 
         var card = document.createElement('article');
         card.className = 'vocab-card';
+        // Identity of the card's mirror row must be THIS loop's row index.
+        // (Pre-4C-2 bug: used the stale leftover `r` from the role-tagging
+        // loop above, so every card of a table carried the same target and
+        // per-row card filtering collapsed to one unnamed card per table.)
         card.dataset.targetsTable = String(t);
-        card.dataset.targetsRow = String(r);
+        card.dataset.targetsRow = String(rr);
         card.style.display = '';
 
         // Primary Devanagari term: always the first column (Sanskrit,
         // male profession form, or dhātu). The second column joins the term
         // only when labeled Female (vocabulary profession tables).
-        var term = document.createElement('h4');
+        // Card title is a styled non-heading (P3-02): an element at h4 made
+        // the heading outline jump H2→H4 on Vocabulary and Verb Roots.
+        // All sizing lives on the .vocab-card-term class, so visuals keep.
+        var term = document.createElement('p');
         term.className = 'vocab-card-term';
         var main = document.createElement('span');
         main.textContent = cells[0].textContent.trim();

@@ -7,6 +7,7 @@ hide:
 # Verb Roots (धातु)
 
 <div class="vocab-search-box">
+  <label class="visually-hidden" for="dhatuSearch">Search verb roots in Sanskrit, English, or Gujarati</label>
   <div class="vocab-search-input-wrap">
     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
     <input type="text" id="dhatuSearch" placeholder="Search dhātu, meaning, or form... (e.g. 'go', 'જવું', 'गम्')">

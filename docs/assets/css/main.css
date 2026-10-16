@@ -1757,6 +1757,30 @@ body:has(.topic-card-page) .md-typeset .topic-card-page {
   }
 }
 
+/* P3-05 touch targets (identified by audit): Material's tab-strip scroll
+   arrows are an 18×18px button nested in a pointer-events:none wrapper, so
+   the button alone is the entire hit target. Grow it to a 24×24px target
+   while keeping the arrow glyph at its themed .9rem size — no visual or
+   layout change. The wrapper stays pointer-events:none. */
+.md-typeset .tabbed-button {
+  width: 1.2rem;
+  height: 1.2rem;
+  margin-top: 0;
+}
+
+.md-typeset .tabbed-button:after {
+  width: .9rem;
+  height: .9rem;
+  margin: auto;
+}
+
+/* Home topic-card action links read as card controls, not inline prose:
+   give their hit area a comfortable vertical reach without any visible
+   layout change (transparent padding on an inline link). */
+body:has(.topic-card-page) .md-typeset .grid.cards a {
+  padding: 0.15rem 0;
+}
+
 /* =============================================================
    PHASE 3C: Vocabulary page (reference/vocabulary) — scoped
    via :has(#vocabSearch). The dhatu page shares .vocab-search-box
@@ -1779,8 +1803,9 @@ body:has(.topic-card-page) .md-typeset .topic-card-page {
   margin-top: 0.4rem;
 }
 
-/* Accessible label helper (vocab page only) */
-.md-content:has(#vocabSearch) .visually-hidden {
+/* Accessible label helper (search-first pages with .visually-hidden labels) */
+.md-content:has(#vocabSearch) .visually-hidden,
+.md-content:has(#dhatuSearch) .visually-hidden {
   position: absolute;
   width: 1px;
   height: 1px;
@@ -2198,14 +2223,17 @@ table.vocab-group-hidden {
   margin-top: 0.4rem;
 }
 
-/* Verbs + dhatu pages: tables arrive inside Material's
+/* Verbs + dhatu + vocabulary pages: tables arrive inside Material's
    .md-typeset__table wrapper (inline-block, -0.8rem overhang that spills
    past the viewport when the md-grid has no side gutter, e.g. 768/1024
    windows where our content fills the grid). Contain to the content
-   width on all desktop sizes. */
+   width on all desktop sizes. The vocabulary page shares the same
+   search-first layout family (max-width content, no side gutters in the
+   768–1220px range), so its scrollwrap must be contained the same way. */
 .md-content:has(h1#verbs) .md-typeset__scrollwrap,
 .md-content:has(#dhatuSearch) .md-typeset__scrollwrap,
-.md-content:has(#pageTabbedStudy) .md-typeset__scrollwrap {
+.md-content:has(#pageTabbedStudy) .md-typeset__scrollwrap,
+.md-content:has(#vocabSearch) .md-typeset__scrollwrap {
   margin-inline: 0;
 }
 
