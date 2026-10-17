@@ -130,6 +130,71 @@
       ],
       "correct": 0,
       "explanation": "Both सः and एषः are pronouns."
+    },
+    {
+      "id": "PRON-011",
+      "type": "comparison",
+      "question": "Which pair correctly matches the masculine and feminine singular forms of “this”?",
+      "options": [
+        "सः — सा",
+        "एषः — एषा",
+        "तत् — एतत्",
+        "कः — सा"
+      ],
+      "correct": 1,
+      "explanation": "The lesson pairs एषः (masculine) with एषा (feminine) for “this”."
+    },
+    {
+      "id": "PRON-012",
+      "type": "comparison",
+      "question": "Which pair correctly matches the masculine and neuter singular forms of “that”?",
+      "options": [
+        "सः — तत्",
+        "एषः — एतत्",
+        "सा — तत्",
+        "एषः — तत्"
+      ],
+      "correct": 0,
+      "explanation": "सः and तत् are masculine and neuter forms of “that”."
+    },
+    {
+      "id": "PRON-013",
+      "type": "classification",
+      "question": "Which group contains only singular forms meaning “this”?",
+      "options": [
+        "एषः, एषा, एतत्",
+        "सः, सा, तत्",
+        "सः, एषा, तत्",
+        "एषः, सा, एतत्"
+      ],
+      "correct": 0,
+      "explanation": "एषः, एषा, एतत् correspond to “this” for three genders."
+    },
+    {
+      "id": "PRON-014",
+      "type": "classification",
+      "question": "Which group contains only singular forms meaning “that”?",
+      "options": [
+        "एषः, एषा, एतत्",
+        "सः, सा, तत्",
+        "सः, एषा, तत्",
+        "एषः, सा, एतत्"
+      ],
+      "correct": 1,
+      "explanation": "सः, सा, तत् correspond to “that” for three genders."
+    },
+    {
+      "id": "PRON-015",
+      "type": "comparison",
+      "question": "Which pair shows the feminine singular forms of “this” and “that,” respectively?",
+      "options": [
+        "एषा — सा",
+        "सा — एषा",
+        "एषः — सः",
+        "एतत् — तत्"
+      ],
+      "correct": 0,
+      "explanation": "एषा means “this” feminine singular; सा means “that” feminine singular."
     }
   ]
 }

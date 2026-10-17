@@ -1334,6 +1334,136 @@
          ],
          "correct":2,
          "explanation":"With अस्ति, the experiencer is expressed in षष्ठी विभक्ति."
-      }
+      },
+      {
+      "id": "VERB-101",
+      "type": "root",
+      "question": "Which धातु corresponds to the verb अटति?",
+      "options": [
+        "अट्",
+        "अव्",
+        "अर्च्",
+        "अर्ज्"
+      ],
+      "correct": 0,
+      "explanation": "The root table pairs अट् with अटति."
+    },
+    {
+      "id": "VERB-102",
+      "type": "root",
+      "question": "Which verb form is listed for जप्?",
+      "options": [
+        "जपति",
+        "जायति",
+        "ज्वलति",
+        "जिघ्रति"
+      ],
+      "correct": 0,
+      "explanation": "The root table pairs जप् with जपति."
+    },
+    {
+      "id": "VERB-103",
+      "type": "root",
+      "question": "Which धातु corresponds to त्यजति?",
+      "options": [
+        "तप्",
+        "त्यज्",
+        "दह्",
+        "तॄ"
+      ],
+      "correct": 1,
+      "explanation": "The reference pairs त्यज् with त्यजति."
+    },
+    {
+      "id": "VERB-104",
+      "type": "root",
+      "question": "Which verb form is listed for चूष्?",
+      "options": [
+        "चूषति",
+        "चोशति",
+        "चिन्तयति",
+        "चलति"
+      ],
+      "correct": 0,
+      "explanation": "The reference pairs चूष् with चूषति."
+    },
+    {
+      "id": "VERB-105",
+      "type": "root",
+      "question": "Which धातु corresponds to व्रजति?",
+      "options": [
+        "वद्",
+        "वम्",
+        "वस्",
+        "व्रज्"
+      ],
+      "correct": 3,
+      "explanation": "The reference pairs व्रज् with व्रजति."
+    },
+    {
+      "id": "VERB-106",
+      "type": "root",
+      "question": "Which verb form is listed for क्रीड्?",
+      "options": [
+        "क्रीडति",
+        "क्रोशति",
+        "कृषति",
+        "कूजति"
+      ],
+      "correct": 0,
+      "explanation": "The reference pairs क्रीड् with क्रीडति."
+    },
+    {
+      "id": "VERB-107",
+      "type": "meaning",
+      "question": "Which धातु is listed with the meaning “to dwell”?",
+      "options": [
+        "वद्",
+        "वस्",
+        "वम्",
+        "व्रज्"
+      ],
+      "correct": 1,
+      "explanation": "The Book 1 study reference glosses वस् as to dwell."
+    },
+    {
+      "id": "VERB-108",
+      "type": "root",
+      "question": "Which verb form is listed for अव्?",
+      "options": [
+        "अटति",
+        "अवति",
+        "अर्चति",
+        "अर्जति"
+      ],
+      "correct": 1,
+      "explanation": "The reference pairs अव् with अवति."
+    },
+    {
+      "id": "VERB-109",
+      "type": "root",
+      "question": "Which धातु corresponds to जीवति?",
+      "options": [
+        "जप्",
+        "जम्",
+        "जीव्",
+        "जि"
+      ],
+      "correct": 2,
+      "explanation": "The reference pairs जीव् with जीवति."
+    },
+    {
+      "id": "VERB-110",
+      "type": "meaning",
+      "question": "Which धातु is listed with the meaning “to abandon”?",
+      "options": [
+        "त्यज्",
+        "तप्",
+        "चर्",
+        "नम्"
+      ],
+      "correct": 0,
+      "explanation": "The reference glosses त्यज् as to abandon."
+    }
    ]
 }

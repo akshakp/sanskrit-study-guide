@@ -66,7 +66,7 @@
 
 - :material-clipboard-text:{ .middle } **Practice Quiz**
 
-    Mixed practice drawn from all seven question banks.
+    Practice questions across Sanskrit grammar, word formation, Sandhi, and more.
 
     [Start →](practice/quiz.md)
 
