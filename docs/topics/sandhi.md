@@ -4,9 +4,11 @@ hide:
   - toc
 ---
 
-# Visarga Sandhi (विसर्गसन्धिः)
+# Sandhi (सन्धिः)
 
 <div id="pageTabbedStudy" hidden></div>
+
+## Visarga Sandhi (विसर्गसन्धिः)
 
 Visarga Sandhi occurs when **विसर्गः ( ः )** comes next to a vowel or consonant and changes according to the surrounding sounds.
 

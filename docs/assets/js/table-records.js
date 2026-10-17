@@ -35,7 +35,7 @@
       '#examples'
     ],
     'topics/writing-rules/': ['#when-a-word-ends-in', '#sandhi-1-3-rule'],
-    'topics/visarg-sandhi/': ['#master-summary-table']
+    'topics/sandhi/': ['#master-summary-table']
   };
 
   function pathKey() {

@@ -40,11 +40,11 @@
 
     [Study →](topics/writing-rules.md)
 
-- :material-swap-horizontal:{ .middle } **Visarga Sandhi**
+- :material-swap-horizontal:{ .middle } **Sandhi**
 
-    Decision strategy, the summary table, and exceptions.
+    Visarga Sandhi — decision strategy, the summary table, and exceptions.
 
-    [Study →](topics/visarg-sandhi.md)
+    [Study →](topics/sandhi.md)
 
 - :material-layers-plus:{ .middle } **Krudanta & Taddhita**
 
