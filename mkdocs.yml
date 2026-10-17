@@ -68,7 +68,8 @@ extra_javascript:
   - assets/js/quiz.js
   - assets/js/nouns-explorer.js
   - assets/js/nav-site.js
-  - assets/js/conversation-tabs.js
+  - assets/js/section-tabs.js
+  - assets/js/table-records.js
   - assets/js/formation-labels.js
 
 extra_css:
