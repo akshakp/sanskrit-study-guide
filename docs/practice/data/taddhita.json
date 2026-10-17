@@ -1,0 +1,135 @@
+{
+  "title": "तद्धित — Practice",
+  "questions": [
+    {
+      "id": "TADD-001",
+      "type": "concept",
+      "question": "A तद्धित word is formed by adding a तद्धित-प्रत्यय to which base?",
+      "options": [
+        "धातु",
+        "शब्द",
+        "विभक्ति",
+        "लकार"
+      ],
+      "correct": 1,
+      "explanation": "The lesson defines तद्धित as शब्द + तद्धित-प्रत्यय."
+    },
+    {
+      "id": "TADD-002",
+      "type": "recognition",
+      "question": "Which ता-ending formation is listed for मानव?",
+      "options": [
+        "मानवत्वम्",
+        "मानवता",
+        "मानवानि",
+        "मानवनम्"
+      ],
+      "correct": 1,
+      "explanation": "The teaching example is मानव + ता → मानवता."
+    },
+    {
+      "id": "TADD-003",
+      "type": "recognition",
+      "question": "Which त्व-ending formation is listed for अमर?",
+      "options": [
+        "अमरता",
+        "अमरत्वम्",
+        "अमरणम्",
+        "अमरस्य"
+      ],
+      "correct": 1,
+      "explanation": "The example is अमर + त्वम् → अमरत्वम्."
+    },
+    {
+      "id": "TADD-004",
+      "type": "concept",
+      "question": "The ता-ending तद्धित forms decline like which model?",
+      "options": [
+        "वनम्",
+        "माला",
+        "देव",
+        "हरि"
+      ],
+      "correct": 1,
+      "explanation": "ता forms follow माला (आकारान्त स्त्रीलिङ्ग)."
+    },
+    {
+      "id": "TADD-005",
+      "type": "concept",
+      "question": "The त्वम्-ending तद्धित forms decline like which model?",
+      "options": [
+        "माला",
+        "हरि",
+        "वनम्",
+        "देव"
+      ],
+      "correct": 2,
+      "explanation": "त्वम् forms follow वनम् (अकारान्त नपुंसकलिङ्ग)."
+    },
+    {
+      "id": "TADD-006",
+      "type": "recognition",
+      "question": "Which ता-ending word is listed for कठिन?",
+      "options": [
+        "कठिनत्वम्",
+        "कठिनता",
+        "कठिननम्",
+        "कठिनेन"
+      ],
+      "correct": 1,
+      "explanation": "The listed pair is कठिनता / कठिनत्वम्."
+    },
+    {
+      "id": "TADD-007",
+      "type": "recognition",
+      "question": "Which त्वम्-ending word is listed for नम्र?",
+      "options": [
+        "नम्रता",
+        "नम्रस्य",
+        "नम्रत्वम्",
+        "नम्रणम्"
+      ],
+      "correct": 2,
+      "explanation": "The listed pair is नम्रता / नम्रत्वम्."
+    },
+    {
+      "id": "TADD-008",
+      "type": "recognition",
+      "question": "Which ता-ending word is listed for पवित्र?",
+      "options": [
+        "पवित्रता",
+        "पवित्रत्वम्",
+        "पवित्रणम्",
+        "पवित्रम्"
+      ],
+      "correct": 0,
+      "explanation": "The listed pair is पवित्रता / पवित्रत्वम्."
+    },
+    {
+      "id": "TADD-009",
+      "type": "recognition",
+      "question": "Which त्वम्-ending word is listed for मधुर?",
+      "options": [
+        "मधुरता",
+        "मधुरत्वम्",
+        "मधुरणम्",
+        "मधुरस्य"
+      ],
+      "correct": 1,
+      "explanation": "The listed pair is मधुरता / मधुरत्वम्."
+    },
+    {
+      "id": "TADD-010",
+      "type": "concept",
+      "question": "What does the textbook caution about using ता and त्व for one तद्धित formation?",
+      "options": [
+        "Always add both together",
+        "Use neither प्रत्यय",
+        "Use only one of the two प्रत्यय",
+        "Change both प्रत्यय into अन"
+      ],
+      "correct": 2,
+      "explanation": "The lesson instructs using ता OR त्व rather than both in one formation."
+    }
+  ]
+}

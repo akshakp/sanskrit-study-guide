@@ -1,0 +1,200 @@
+{
+  "title": "सन्धिः — Practice",
+  "questions": [
+    {
+      "id": "SANDHI-001",
+      "type": "sandhi",
+      "question": "दासः + अस्मि — choose the correct sandhi form.",
+      "options": [
+        "दासोऽस्मि",
+        "दासःस्मि",
+        "दासरस्मि",
+        "दासेस्मि"
+      ],
+      "correct": 0,
+      "explanation": "अः before अ becomes ओऽ."
+    },
+    {
+      "id": "SANDHI-002",
+      "type": "sandhi",
+      "question": "देवः + जयति — choose the correct sandhi form.",
+      "options": [
+        "देवःजयति",
+        "देवो जयति",
+        "देवर् जयति",
+        "देवा जयति"
+      ],
+      "correct": 1,
+      "explanation": "अः before a घोष consonant becomes ओ."
+    },
+    {
+      "id": "SANDHI-003",
+      "type": "sandhi",
+      "question": "सन्तोषः + एव — choose the correct sandhi form.",
+      "options": [
+        "सन्तोषोऽएव",
+        "सन्तोषर् एव",
+        "सन्तोष एव",
+        "सन्तोषः एव"
+      ],
+      "correct": 2,
+      "explanation": "अः before a vowel other than अ loses the visarga."
+    },
+    {
+      "id": "SANDHI-004",
+      "type": "sandhi",
+      "question": "भक्ताः + आगच्छन्ति — choose the correct form.",
+      "options": [
+        "भक्तोऽगच्छन्ति",
+        "भक्तारागच्छन्ति",
+        "भक्ताःआगच्छन्ति",
+        "भक्ता आगच्छन्ति"
+      ],
+      "correct": 3,
+      "explanation": "आः before a vowel loses the visarga."
+    },
+    {
+      "id": "SANDHI-005",
+      "type": "sandhi",
+      "question": "मेघाः + वर्षन्ति — choose the correct form.",
+      "options": [
+        "मेघा वर्षन्ति",
+        "मेघो वर्षन्ति",
+        "मेघर् वर्षन्ति",
+        "मेघाश्वर्षन्ति"
+      ],
+      "correct": 0,
+      "explanation": "आः before a घोष consonant loses the visarga."
+    },
+    {
+      "id": "SANDHI-006",
+      "type": "sandhi",
+      "question": "मुनिः + भजते — choose the correct form.",
+      "options": [
+        "मुनिभजते",
+        "मुनो भजते",
+        "मुनिर्भजते",
+        "मुनी भजते"
+      ],
+      "correct": 2,
+      "explanation": "After इ, visarga becomes र् before a घोष consonant."
+    },
+    {
+      "id": "SANDHI-007",
+      "type": "sandhi",
+      "question": "ऋषेः + अगस्त्यस्य — choose the correct form.",
+      "options": [
+        "ऋषेरगस्त्यस्य",
+        "ऋषोऽगस्त्यस्य",
+        "ऋषे अगस्त्यस्य",
+        "ऋषेश्छविः"
+      ],
+      "correct": 0,
+      "explanation": "After a vowel other than अ/आ, visarga before a vowel becomes र्."
+    },
+    {
+      "id": "SANDHI-008",
+      "type": "sandhi",
+      "question": "हरिः + रक्षति — choose the correct sandhi result.",
+      "options": [
+        "हरिर्रक्षति",
+        "हरी रक्षति",
+        "हरो रक्षति",
+        "हरिःरक्षति"
+      ],
+      "correct": 1,
+      "explanation": "Before र्, the inserted र् disappears and the preceding vowel lengthens."
+    },
+    {
+      "id": "SANDHI-009",
+      "type": "sandhi",
+      "question": "सः + अहम् — choose the correct form.",
+      "options": [
+        "साहम्",
+        "सः अहम्",
+        "सोऽहम्",
+        "सरहम्"
+      ],
+      "correct": 2,
+      "explanation": "The special सः rule before अ gives ओऽ."
+    },
+    {
+      "id": "SANDHI-010",
+      "type": "sandhi",
+      "question": "एषः + आचार्यः — choose the correct form.",
+      "options": [
+        "एषोऽाचार्यः",
+        "एषराचार्यः",
+        "एष आचार्यः",
+        "एषःआचार्यः"
+      ],
+      "correct": 2,
+      "explanation": "The special एषः rule before a sound other than अ drops the visarga."
+    },
+    {
+      "id": "SANDHI-011",
+      "type": "sandhi",
+      "question": "भोः + अर्जुन! — choose the correct form.",
+      "options": [
+        "भोर्जुन!",
+        "भो अर्जुन!",
+        "भोऽर्जुन!",
+        "भोषर्जुन!"
+      ],
+      "correct": 1,
+      "explanation": "भोः before a vowel loses the visarga."
+    },
+    {
+      "id": "SANDHI-012",
+      "type": "sandhi",
+      "question": "भोः + कृष्ण! — choose the correct form.",
+      "options": [
+        "भो कृष्ण!",
+        "भोर् कृष्ण!",
+        "भोऽकृष्ण!",
+        "भोः कृष्ण!"
+      ],
+      "correct": 3,
+      "explanation": "भोः before an अघोष consonant retains the visarga."
+    },
+    {
+      "id": "SANDHI-013",
+      "type": "sandhi",
+      "question": "पुनः + अपि — choose the correct form.",
+      "options": [
+        "पुनोऽपि",
+        "पुनरपि",
+        "पुनापि",
+        "पुनश्चापि"
+      ],
+      "correct": 1,
+      "explanation": "र्-स्थानिक विसर्ग restores र् before a vowel."
+    },
+    {
+      "id": "SANDHI-014",
+      "type": "sandhi",
+      "question": "रवेः + छविः — choose the correct form.",
+      "options": [
+        "रवेछविः",
+        "रवेःछविः",
+        "रवेश्छविः",
+        "रवेष्छविः"
+      ],
+      "correct": 2,
+      "explanation": "Visarga before छ् becomes श्."
+    },
+    {
+      "id": "SANDHI-015",
+      "type": "sandhi",
+      "question": "गङ्गायाः + तीरे — choose the correct form.",
+      "options": [
+        "गङ्गायास्तीरे",
+        "गङ्गायार्तीरे",
+        "गङ्गायो तीरे",
+        "गङ्गायाश्तीरे"
+      ],
+      "correct": 0,
+      "explanation": "Visarga before त् becomes स्."
+    }
+  ]
+}

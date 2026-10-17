@@ -1,0 +1,200 @@
+{
+  "title": "कृदन्त — Practice",
+  "questions": [
+    {
+      "id": "KRUD-001",
+      "type": "recognition",
+      "question": "Which कृदन्त is formed from हस्?",
+      "options": [
+        "हसनम्",
+        "नमनम्",
+        "पठनम्",
+        "गमनम्"
+      ],
+      "correct": 0,
+      "explanation": "The Book 1 formation table pairs हस् with हसनम्."
+    },
+    {
+      "id": "KRUD-002",
+      "type": "recognition",
+      "question": "Which धातु produces पठनम्?",
+      "options": [
+        "पत्",
+        "पठ्",
+        "पा",
+        "पुष्"
+      ],
+      "correct": 1,
+      "explanation": "The table pairs पठ् with पठनम्."
+    },
+    {
+      "id": "KRUD-003",
+      "type": "recognition",
+      "question": "Which कृदन्त is formed from स्मृ?",
+      "options": [
+        "स्मरणम्",
+        "सरणम्",
+        "स्वरणम्",
+        "दर्शनम्"
+      ],
+      "correct": 0,
+      "explanation": "स्मृ + the taught formation produces स्मरणम्."
+    },
+    {
+      "id": "KRUD-004",
+      "type": "recognition",
+      "question": "Which कृदन्त is formed from दृश्?",
+      "options": [
+        "दशनम्",
+        "दर्शनम्",
+        "ध्यानम्",
+        "दानम्"
+      ],
+      "correct": 1,
+      "explanation": "दृश् corresponds to दर्शनम्."
+    },
+    {
+      "id": "KRUD-005",
+      "type": "recognition",
+      "question": "Which कृदन्त is formed from गै?",
+      "options": [
+        "गमनम्",
+        "गानम्",
+        "गर्जनम्",
+        "ग्लानम्"
+      ],
+      "correct": 1,
+      "explanation": "The vowel-ending धातु गै produces गानम्."
+    },
+    {
+      "id": "KRUD-006",
+      "type": "recognition",
+      "question": "Which कृदन्त is formed from दा?",
+      "options": [
+        "दानम्",
+        "दहनम्",
+        "दशनम्",
+        "दर्शनम्"
+      ],
+      "correct": 0,
+      "explanation": "दा corresponds to दानम्."
+    },
+    {
+      "id": "KRUD-007",
+      "type": "recognition",
+      "question": "Which कृदन्त is formed from कृ?",
+      "options": [
+        "क्रन्दनम्",
+        "चरणम्",
+        "करणम्",
+        "कर्षणम्"
+      ],
+      "correct": 2,
+      "explanation": "कृ corresponds to करणम्."
+    },
+    {
+      "id": "KRUD-008",
+      "type": "recognition",
+      "question": "Which कृदन्त is formed from गम्?",
+      "options": [
+        "गानम्",
+        "गमनम्",
+        "गर्जनम्",
+        "ग्लानम्"
+      ],
+      "correct": 1,
+      "explanation": "गम् corresponds to गमनम्."
+    },
+    {
+      "id": "KRUD-009",
+      "type": "recognition",
+      "question": "Which कृदन्त is formed from बुध्?",
+      "options": [
+        "बोधनम्",
+        "बोधनः",
+        "भवनम्",
+        "भूषणम्"
+      ],
+      "correct": 0,
+      "explanation": "बुध् corresponds to बोधनम्."
+    },
+    {
+      "id": "KRUD-010",
+      "type": "recognition",
+      "question": "Which कृदन्त is formed from रक्ष्?",
+      "options": [
+        "रक्षणम्",
+        "रोहणम्",
+        "रटनम्",
+        "रक्षकम्"
+      ],
+      "correct": 0,
+      "explanation": "The listed कृदन्त of रक्ष् is रक्षणम्."
+    },
+    {
+      "id": "KRUD-011",
+      "type": "concept",
+      "question": "According to the कृदन्त lesson, the taught भाववाचक nouns decline like which model?",
+      "options": [
+        "माला",
+        "देव",
+        "वनम्",
+        "हरि"
+      ],
+      "correct": 2,
+      "explanation": "The taught कृदन्त words are neuter and decline like वनम्."
+    },
+    {
+      "id": "KRUD-012",
+      "type": "concept",
+      "question": "Which grammatical gender is assigned to these taught अन-ending कृदन्त nouns?",
+      "options": [
+        "पुल्लिङ्ग",
+        "स्त्रीलिङ्ग",
+        "नपुंसकलिङ्ग",
+        "All three"
+      ],
+      "correct": 2,
+      "explanation": "The lesson identifies these भाववाचक nouns as नपुंसकलिङ्ग."
+    },
+    {
+      "id": "KRUD-013",
+      "type": "recognition",
+      "question": "Complete the transformation: अहम् ईशं स्मरामि। → अहम् ईशस्य _____ करोमि।",
+      "options": [
+        "स्मरणं",
+        "स्मरणेन",
+        "स्मरणाय",
+        "स्मरणात्"
+      ],
+      "correct": 0,
+      "explanation": "The lesson provides अहम् ईशस्य स्मरणं करोमि।"
+    },
+    {
+      "id": "KRUD-014",
+      "type": "concept",
+      "question": "In अहम् ईशस्य स्मरणं करोमि।, which case is ईशस्य?",
+      "options": [
+        "द्वितीया",
+        "षष्ठी",
+        "तृतीया",
+        "सप्तमी"
+      ],
+      "correct": 1,
+      "explanation": "The lesson contrasts ईशं (द्वितीया) and ईशस्य (षष्ठी)."
+    },
+    {
+      "id": "KRUD-015",
+      "type": "recognition",
+      "question": "Which is the taught कृदन्त expression corresponding to सिंहः गर्जति।?",
+      "options": [
+        "सिंहः गमनं करोति।",
+        "सिंहः गर्जनं करोति।",
+        "सिंहः गानं करोति।",
+        "सिंहः करणं करोति।"
+      ],
+      "correct": 1,
+      "explanation": "The lesson gives सिंहः गर्जनं करोति। as its paired expression."
+    }
+  ]
+}

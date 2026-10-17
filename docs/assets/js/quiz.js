@@ -19,6 +19,9 @@
       { key: "avyay", label: "अव्यय", url: "../data/avyay.json" },
       { key: "adjective", label: "विशेषणम्", url: "../data/adjective.json" },
       { key: "pronoun", label: "सर्वनाम", url: "../data/pronoun.json" },
+      { key: "sandhi", label: "Sandhi", url: "../data/sandhi.json" },
+      { key: "krudanta", label: "कृदन्त", url: "../data/krudanta.json" },
+      { key: "taddhita", label: "तद्धित", url: "../data/taddhita.json" },
       { key: "mixed", label: "संयुक्त", url: "../data/mixed.json" }
     ],
     categoryKey: "mixed-practice",
