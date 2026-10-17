@@ -2292,7 +2292,7 @@ table.vocab-group-hidden {
 }
 
 /* Phase 3D-2 tabbed pages (language-essentials, adjectives, writing-rules,
-   visarg-sandhi, krudant-tadvid): same full-width, contained reference-table
+   sandhi, krudant-tadvid): same full-width, contained reference-table
    presentation as the verbs family on desktop. Below 760px Material's own
    .md-typeset__scrollwrap keeps the table inside the page (table-level
    horizontal scrolling, no page overflow), so the rules stay desktop-only. */

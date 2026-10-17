@@ -76,4 +76,4 @@ reference from this lesson.
 
     The complete Visarga Sandhi reference — the quick decision strategy,
     the full rules table (Rules 1.1–8), exceptions, and worked examples —
-    lives on the dedicated [Visarga Sandhi](visarg-sandhi.md) page.
+    lives on the dedicated [Visarga Sandhi](sandhi.md) page.
