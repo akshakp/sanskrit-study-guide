@@ -260,6 +260,60 @@ a:hover .octicons-arrow-right-24,
     background: var(--md-accent-fg-color);
   }
 
+  /* ── Header search (open state): compact floating panel ──────
+     Material 9.7.7 expands the header search as an IN-FLOW float
+     (.md-search__inner 11.7rem → 23.4rem at 60–76.23em, → 34.4rem at
+     ≥76.25em). In stock Material the tabs live in a separate row, so the
+     expansion merely shrinks the title; this override places the tabs in
+     the same flex row, so the expansion squeezed the tab bar below its
+     content width and painted the wide form over the last nav labels.
+     Two-part fix, theme-supported structure only:
+       1. Pin the .md-search container to its closed slot (11.7rem ×
+          2.4rem) whenever the search is open, so the header flex row
+          keeps IDENTICAL geometry open or closed — zero reflow, nothing
+          shifts.
+       2. Take the expanded .md-search__inner out of the flow and anchor
+          it to the slot's right edge as a compact 384px panel (spec:
+          ~320–400px desktop search). It extends left across the search
+          trigger zone and stops well short of the navigation: at every
+          desktop width its left edge clears the Practice Quiz item by
+          ~250px (measured), so all five top-level items remain visible.
+       3. Also cancel Material's built-in [data-md-toggle=search]:checked
+          .md-header__option { max-width: 0 } collapse — with the search
+          slot pinned, that collapse would free 2.4–2.6rem of flex space
+          and stretch the tab bar, shifting the labels.
+     The dark page backdrop, Escape dismissal and outside-click label
+     are all stock Material behavior and remain active. The palette
+     toggle keeps its slot (nothing moves) but sits beneath the panel
+     while search is open, as in Material's own open-search state. */
+  [data-md-toggle=search]:checked ~ .md-header .md-search {
+    width: 11.7rem;
+    height: 2.4rem;
+    /* Pin as an unflexible flex item: a bare width is not enough — the open
+       panel takes the inner out of the flow and the row's flex negotiation
+       reclaims ~3.1rem from this slot (measured), sliding the palette toggle
+       right. An explicit non-grow, non-shrink basis keeps the slot exactly
+       11.7rem so NOTHING in the header row moves while search is open. */
+    flex: 0 0 11.7rem;
+  }
+
+  [data-md-toggle=search]:checked ~ .md-header .md-search__inner {
+    position: absolute;
+    top: 0.2rem;
+    right: 0;
+    width: 384px; /* compact desktop panel; rem-independent so the slot (11.7rem) and the panel widths stay inside the spec band at every root-font-size scale */
+  }
+
+  [data-md-toggle=search]:checked ~ .md-header .md-search__scrollwrap {
+    width: 384px;
+  }
+
+  /* Keep the palette slot occupied while search is open (see above). */
+  [data-md-toggle=search]:checked ~ .md-header .md-header__option {
+    max-width: none;
+    opacity: 1;
+  }
+
   /* One header row instead of two: correct sticky offsets */
   .md-header--lifted ~ .md-container .md-sidebar {
     top: 2.4rem;
@@ -2507,33 +2561,42 @@ table.vocab-group-hidden {
    no second mobile copy of the content. Desktop keeps the full tables.
    ============================================================= */
 
+/* =============================================================
+   MOBILE SECTION SELECTOR (shared, all tabbed study pages):
+   generalized from the approved Conversation implementation. One-row-per-
+   content patterns like the Conversation reference tables keep their own
+   page styling (.conv-ref); the SELECTOR itself is page-agnostic: labels
+   come from the rendered tab labels (section-tabs.js) — one dataset only.
+   Desktop keeps the full horizontal tab strip.
+   ============================================================= */
+
 /* Desktop/tablet: the native section selector is a mobile-only control. */
 @media screen and (min-width: 768px) {
-  .md-content:has(#pageTabbedStudy) .conv-section-select {
-    display: none;
+  .md-content:has(.tabbed-set) .tab-select-wrap {
+    display: none !important;
   }
 }
 
 @media screen and (max-width: 767px) {
-  /* Tab strip: on the Conversation page the strip is replaced entirely
-     below 768px by the native section selector (conversation-tabs.js);
-     hide strip AND Material's prev/next arrows, not just restyle. */
-  .md-content:has(#pageTabbedStudy) .tabbed-set:has(.conv-ref) .tabbed-labels,
-  .md-content:has(#pageTabbedStudy) .tabbed-set:has(.conv-ref) .tabbed-controls,
-  .md-content:has(#pageTabbedStudy) .tabbed-set:has(.conv-ref) .tabbed-control {
+  /* Tab strip: below 768px the strip is replaced entirely by the native
+     section selector; hide strip AND Material's prev/next arrows, not
+     just restyle. No nested tab groups exist on these pages. */
+  .md-content:has(.tabbed-set) .tabbed-set .tabbed-labels,
+  .md-content:has(.tabbed-set) .tabbed-set .tabbed-controls,
+  .md-content:has(.tabbed-set) .tabbed-set .tabbed-control {
     display: none;
   }
 
   /* Native section selector: same control language as the page filter
      selects (decl-select): full width, warm-neutral fill, thin border,
      muted amber focus. 42px height = comfortable touch target. */
-  .md-content:has(#pageTabbedStudy) .conv-section-select {
+  .md-content:has(.tabbed-set) .tab-select-wrap {
     position: relative;
     margin: 0 0 0.9rem;
     z-index: 3;
   }
 
-  .md-content:has(#pageTabbedStudy) .conv-select-caption {
+  .md-content:has(.tabbed-set) .tab-select-caption {
     display: block;
     font-size: 0.78rem;
     font-weight: 600;
@@ -2541,7 +2604,7 @@ table.vocab-group-hidden {
     margin-bottom: 0.3rem;
   }
 
-  .md-content:has(#pageTabbedStudy) .conv-select {
+  .md-content:has(.tabbed-set) .tab-select {
     display: block;
     box-sizing: border-box;
     width: 100%;
@@ -2565,8 +2628,8 @@ table.vocab-group-hidden {
     padding-right: 2rem;
   }
 
-  .md-content:has(#pageTabbedStudy) .conv-select:focus-visible,
-  .md-content:has(#pageTabbedStudy) .conv-select:focus {
+  .md-content:has(.tabbed-set) .tab-select:focus-visible,
+  .md-content:has(.tabbed-set) .tab-select:focus {
     border-color: var(--md-accent-fg-color);
     box-shadow: 0 0 0 3px var(--md-accent-fg-color--transparent);
     outline: none;
@@ -3113,5 +3176,155 @@ table.vocab-group-hidden {
   .md-content:has(#dhatuSearch) .vocab-card-field dd {
     font-size: 0.94rem;
     line-height: 1.45;
+  }
+}
+
+/* =============================================================
+   MOBILE REFERENCE RECORDS (table-records.js, opt-in tables only):
+   marked reference tables render as compact labeled-record cards below
+   768px. Labels are generated from the table's own headers; values are
+   cloned node-by-node from the authoritative table, so there is exactly
+   one educational dataset and the desktop tables stay pixel-identical.
+   ============================================================= */
+
+/* Desktop/tablet: records never render; the source table is untouched. */
+@media screen and (min-width: 768px) {
+  .md-content .md-records {
+    display: none !important;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  /* The original scrollwrap yields its mobile slot to the record cards. */
+  .md-content .md-typeset__scrollwrap.md-record-source {
+    display: none;
+  }
+
+  .md-content .md-records {
+    margin: 0.35rem 0 1.1rem;
+  }
+
+  .md-content .md-record {
+    display: block;
+    box-sizing: border-box;
+    border: 1px solid var(--md-default-fg-color--lightest);
+    border-left: 3px solid var(--md-accent-fg-color);
+    border-radius: 0.18rem;
+    background: var(--md-default-bg-color);
+    padding: 0.5rem 0.7rem 0.55rem;
+    margin-bottom: 0.55rem;
+    break-inside: avoid;
+  }
+
+  .md-content .md-record:last-child {
+    margin-bottom: 0;
+  }
+
+  /* Primary term/reference anchor. */
+  .md-content .md-record-head {
+    display: block;
+    font-size: 1.05rem;
+    font-weight: 650;
+    line-height: 1.45;
+    color: var(--md-default-fg-color);
+    margin: 0 0 0.3rem;
+  }
+
+  .md-content .md-record-head a,
+  .md-content .md-record-head a strong {
+    color: var(--md-typeset-a-color);
+  }
+
+  .md-content .md-record-field {
+    margin: 0.22rem 0 0.22rem;
+    font-size: 0.82rem;
+    line-height: 1.55;
+    color: var(--md-default-fg-color);
+    overflow-wrap: normal;
+  }
+
+  /* Field label: derived from the table header, small and muted. */
+  .md-content .md-record-field::before {
+    display: block;
+    content: attr(data-label);
+    color: var(--md-default-fg-color--light);
+    font-size: 0.66rem;
+    font-weight: 650;
+    letter-spacing: 0.04em;
+    line-height: 1.3;
+    text-transform: uppercase;
+    margin-bottom: 0.1rem;
+  }
+
+  .md-content .md-record-field[data-label=""]::before {
+    display: none;
+  }
+
+  .md-content .md-record-field del {
+    color: var(--md-default-fg-color--light);
+  }
+
+  /* ── Two-column label/value grid (opt-in pages only) ──
+   Applied via .md-record-grid-page, set by table-records.js when the page's
+   config opts into the approved pattern. Structure: full-width card heading,
+   thin neutral divider, then a single grid for every field — left column
+   labels (~90–110px, adjusted for viewport), right column values with
+   minmax(0,1fr) so words wrap naturally and Devanagari/Gujarati never
+   break character-by-character. */
+  .md-content.md-record-grid-page .md-record-head {
+    border-bottom: 1px solid var(--md-default-fg-color--lightest);
+    padding-bottom: 0.3rem;
+    margin-bottom: 0.35rem;
+  }
+
+  .md-content.md-record-grid-page .md-record-grid {
+    display: grid;
+    grid-template-columns: clamp(88px, 27vw, 108px) minmax(0, 1fr);
+    column-gap: 0.55rem;
+    align-items: start;
+  }
+
+  .md-content.md-record-grid-page .md-record-label {
+    display: block;
+    font-size: 0.68rem;
+    font-weight: 650;
+    letter-spacing: 0.04em;
+    line-height: 1.35;
+    text-transform: uppercase;
+    color: var(--md-default-fg-color--light);
+    padding-top: 0.28em;
+  }
+
+  .md-content.md-record-grid-page .md-record-value {
+    display: block;
+    margin: 0.14rem 0;
+    font-size: 0.84rem;
+    line-height: 1.55;
+    color: var(--md-default-fg-color);
+    overflow-wrap: normal;
+    min-width: 0;
+    text-align: left;
+  }
+
+  .md-content.md-record-grid-page .md-record-value a {
+    color: var(--md-typeset-a-color);
+  }
+
+  .md-content.md-record-grid-page .md-record-value del {
+    color: var(--md-default-fg-color--light);
+  }
+
+  /* Deliberate full-width stacked row for exceptionally long labels. */
+  .md-content.md-record-grid-page .md-record-label.md-record-widerow,
+  .md-content.md-record-grid-page .md-record-value.md-record-widerow {
+    grid-column: 1 / -1;
+  }
+
+  .md-content.md-record-grid-page .md-record-label.md-record-widerow {
+    padding-top: 0.2rem;
+  }
+
+  .md-content.md-record-grid-page .md-record-value.md-record-widerow {
+    margin-top: 0;
   }
 }
