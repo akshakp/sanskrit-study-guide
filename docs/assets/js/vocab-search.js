@@ -7,6 +7,7 @@ document.addEventListener('DOMContentLoaded', function() {
   if (!searchInput) return;
 
   var isVocabPage = searchInput.id === 'vocabSearch';
+  var isDhatuPage = searchInput.id === 'dhatuSearch';
 
   var filterBtns = document.querySelectorAll('.vocab-filter-btn');
   var resultCount = document.getElementById('vocabResultCount') || document.getElementById('dhatuResultCount');
@@ -17,6 +18,74 @@ document.addEventListener('DOMContentLoaded', function() {
     || document.querySelector('article')
     || document.body;
   var tables = contentArea.querySelectorAll('table');
+
+  // ── Dhatu page scoping ────────────────────────────────────
+  // The dhatu page has TWO searchable root tables (Parasmaipada and
+  // Atmanepada) plus Guna-change *reference* tables that must stay
+  // untouched by the search. Root tables are identified by their
+  // section heading (Parasmaipada / Atmanepada in the h2 text).
+  var rootTables = null; // null = not scoped (vocabulary page searches all)
+  var rootEmptyMessages = null; // dhatu: per-group empty-state elements (index-mirrored to rootTables)
+
+  function isRootTableHeading(text) {
+    var t = text || '';
+    return t.indexOf('\u092A\u0930\u0938\u094D\u092E\u0948\u092A\u0926\u0940') !== -1 || /* परस्मैपदी */
+           t.indexOf('\u0906\u0924\u094D\u092E\u0928\u0947\u092A\u0926\u0940') !== -1;    /* आत्मनेपदी */
+  }
+
+  function groupHeading(table) {
+    // Walk back from the table (or its wrap) to the section heading.
+    // Material wraps content tables as .md-typeset__scrollwrap >
+    // .md-typeset__table > table, so we climb wrapper layers until the
+    // heading appears as a previous sibling (h2 direct or nested),
+    // stopping at the content root to stay inside this group.
+    var el = table.closest && table.closest('.vocab-table-wrap');
+    el = el || table;
+    while (el) {
+      var sib = el.previousElementSibling;
+      while (sib) {
+        if (sib.tagName === 'H2') return sib;
+        if (sib.querySelector && sib.querySelector('h2')) return sib.querySelector('h2');
+        sib = sib.previousElementSibling;
+      }
+      el = el.parentElement;
+      if (el === contentArea || el === document.body || !el) return null;
+    }
+    return null;
+  }
+
+  function determineRootTables() {
+    if (!isDhatuPage) { rootTables = null; return; }
+    var found = [];
+    for (var i = 0; i < tables.length; i++) {
+      var h = groupHeading(tables[i]);
+      if (h && isRootTableHeading(h.textContent)) { found.push(tables[i]); }
+    }
+    // Fallback: if scoping failed to find both groups, search all tables
+    // (old behavior) so the search box never goes dead.
+    rootTables = found.length ? found : null;
+  }
+
+  function ensureRootGroupEmptyMessages() {
+    if (!isDhatuPage || !rootTables) return null;
+    var byTable = [];
+    for (var i = 0; i < rootTables.length; i++) {
+      var table = rootTables[i];
+      var div = document.createElement('div');
+      div.className = 'vocab-group-empty';
+      div.hidden = true;
+      div.setAttribute('role', 'status');
+      div.textContent = 'No matching roots in this group — results from the other group are unaffected.';
+      var wrap = (table.closest && table.closest('.vocab-table-wrap')) || table;
+      var after = wrap.nextElementSibling;
+      if (after && after.classList && after.classList.contains('vocab-cards')) {
+        after = after.nextElementSibling;
+      }
+      wrap.parentNode.insertBefore(div, after);
+      byTable.push(div);
+    }
+    return byTable;
+  }
 
   var currentFilter = 'all';
   var emptyState = null;
@@ -162,12 +231,14 @@ document.addEventListener('DOMContentLoaded', function() {
   }
 
   function ensureEmptyState() {
-    if (!isVocabPage || emptyState) { return; }
+    if ((!isVocabPage && !isDhatuPage) || emptyState) { return; }
     emptyState = document.createElement('div');
     emptyState.className = 'vocab-empty-state';
     emptyState.hidden = true;
     emptyState.setAttribute('role', 'status');
-    emptyState.textContent = 'No vocabulary matches your search or filters. Try different spellings — Devanagari or Latin forms both work.';
+    emptyState.textContent = isVocabPage
+      ? 'No vocabulary matches your search or filters. Try different spellings — Devanagari or Latin forms both work.'
+      : 'No roots match your search or filters in either group. Try different spellings — Devanagari, English, or Gujarati.';
     searchInput.parentNode.parentNode.appendChild(emptyState);
   }
 
@@ -389,9 +460,13 @@ document.addEventListener('DOMContentLoaded', function() {
     var query = normalize(searchInput.value);
     var totalVisible = 0;
     var totalRows = 0;
+    var sectionCounts = {}; // dhatu: visible rows per table index, for per-group empty states
 
     for (var t = 0; t < tables.length; t++) {
       var table = tables[t];
+      // Dhatu page: only the two root tables participate in the search;
+      // Guna-change reference tables keep all their rows untouched.
+      if (isDhatuPage && rootTables && rootTables.indexOf(table) === -1) { continue; }
       var rows = table.querySelectorAll('tbody tr');
       var sectionVisible = 0;
 
@@ -406,6 +481,10 @@ document.addEventListener('DOMContentLoaded', function() {
         var englishText = '';
         var gujaratiText = '';
         var allText = '';
+        // Dhatu page: mixed meaning cells like "To wander / ભટકવું" hold an
+        // English half too; capture only the Latin letters here so the
+        // English filter can work even when the cell also has Gujarati.
+        var latinHalfText = '';
         var gender = getGender(row);
 
         for (var c = 0; c < cells.length; c++) {
@@ -416,6 +495,7 @@ document.addEventListener('DOMContentLoaded', function() {
             sanskritText += ' ' + txt;
           } else if (hasGujarati(cells[c])) {
             gujaratiText += ' ' + txt;
+            if (isDhatuPage) { latinHalfText += ' ' + txt.replace(/[\u0A80-\u0AFF\u00B7\u200C]/g, ' '); }
           } else if (isEnglishCell(cells[c])) {
             englishText += ' ' + txt;
           } else {
@@ -438,6 +518,11 @@ document.addEventListener('DOMContentLoaded', function() {
             matchesFilter = normalize(sanskritText).indexOf(q) !== -1 || devanagariToLatin(sanskritText).indexOf(q) !== -1 || normalize(sanskritText).indexOf(latinToDevanagari(q)) !== -1;
           } else if (currentFilter === 'eng') {
             matchesFilter = normalize(englishText).indexOf(q) !== -1;
+            // Dhatu page: meaning cells mix English and Gujarati, so also
+            // match against the Latin half captured above.
+            if (!matchesFilter && isDhatuPage) {
+              matchesFilter = normalize(latinHalfText).indexOf(q) !== -1;
+            }
           } else if (currentFilter === 'guj') {
             matchesFilter = normalize(gujaratiText).indexOf(q) !== -1;
           }
@@ -465,9 +550,37 @@ document.addEventListener('DOMContentLoaded', function() {
       // Hide the whole group (table + cards) when nothing matches — do this via
       // a class so the desktop-table / mobile-cards decision stays in CSS.
       setGroupHidden(table, sectionVisible === 0);
+      sectionCounts[t] = sectionVisible;
     }
 
-    if (isVocabPage && emptyState) {
+    // Dhatu page: per-group inline empty state — shown for a group with no
+    // matches ONLY while the other group still has results; when nothing
+    // matches anywhere, the single overall empty-state message covers both.
+    if (isDhatuPage && rootTables && rootEmptyMessages) {
+      for (var g = 0; g < rootTables.length; g++) {
+        var gt = rootTables[g];
+        var gtIndex = -1;
+        for (var x = 0; x < tables.length; x++) {
+          if (tables[x] === gt) { gtIndex = x; break; }
+        }
+        var itsCount = gtIndex === -1 ? 0 : (sectionCounts[gtIndex] || 0);
+        var othersCount = 0;
+        for (var y = 0; y < rootTables.length; y++) {
+          if (rootTables[y] === gt) { continue; }
+          var yIndex = -1;
+          for (var z = 0; z < tables.length; z++) {
+            if (tables[z] === rootTables[y]) { yIndex = z; break; }
+          }
+          othersCount += (yIndex === -1 ? 0 : (sectionCounts[yIndex] || 0));
+        }
+        var msg = rootEmptyMessages[g];
+        if (msg) {
+          msg.hidden = !(itsCount === 0 && othersCount > 0 && (query || currentFilter !== 'all'));
+        }
+      }
+    }
+
+    if ((isVocabPage || isDhatuPage) && emptyState) {
       emptyState.hidden = !(totalVisible === 0 && (query || currentFilter !== 'all'));
     }
 
@@ -503,6 +616,8 @@ document.addEventListener('DOMContentLoaded', function() {
   }
 
   buildVocabCards();
+  determineRootTables();
+  rootEmptyMessages = ensureRootGroupEmptyMessages();
   ensureEmptyState();
   wireClearControls();
   doSearch();

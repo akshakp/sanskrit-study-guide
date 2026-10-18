@@ -1828,6 +1828,42 @@ body:has(.topic-card-page) .md-typeset .topic-card-page {
   margin: auto;
 }
 
+/* =============================================================
+   CONTENT-TAB TYPOGRAPHY (global, all pages using Material content
+   tabs): larger primary (≈17px/600) and nested (≈16px/600) tab labels.
+   The site root resolves 1rem ≈ 20px computed, so .85rem ≈ 17px and
+   .8rem ≈ 16px. Colors, the active underline, focus states, and the
+   em-scaled label padding stay Material-default. Ordinary body text,
+   buttons, and the site navigation are untouched.
+   ============================================================= */
+.md-typeset .tabbed-set > .tabbed-labels > label {
+  font-size: 0.85rem; /* ≈17px computed */
+  font-weight: 600;
+}
+
+.md-typeset .tabbed-set .tabbed-set > .tabbed-labels > label {
+  font-size: 0.8rem; /* ≈16px computed */
+  font-weight: 600;
+}
+
+/* =============================================================
+   SANDHI CLASSIFICATION LISTS — scoped to the Sandhi topic page via
+   :has(#pageSandhiTabs) (hidden marker div in sandhi.md). Lists at
+   body-text weight with compact spacing (Wrappers are md_in_html
+   div.sandhi-classify; the ** bold markers remain in the source).
+   ============================================================= */
+.md-content:has(#pageSandhiTabs) .sandhi-classify ul {
+  line-height: 1.55;
+}
+
+.md-content:has(#pageSandhiTabs) .sandhi-classify li {
+  margin: 0.15em 0;
+}
+
+.md-content:has(#pageSandhiTabs) .sandhi-classify strong {
+  font-weight: 400;
+}
+
 /* Home topic-card action links read as card controls, not inline prose:
    give their hit area a comfortable vertical reach without any visible
    layout change (transparent padding on an inline link). */
@@ -2015,6 +2051,21 @@ body:has(.topic-card-page) .md-typeset .grid.cards a {
 /* State classes (set by vocab-search.js) */
 .vocab-cards[hidden],
 .vocab-empty-state[hidden] {
+  display: none !important;
+}
+
+/* Per-group inline empty state (dhatu root tables): shown for one root
+   table with no matches while the other group still has results. */
+.vocab-group-empty {
+  margin: 0.5rem 0 0.25rem;
+  padding: 0.6rem 0.8rem;
+  border: 1.5px dashed var(--md-default-fg-color--lightest);
+  border-radius: 8px;
+  color: var(--md-default-fg-color--light);
+  font-size: 0.85rem;
+}
+
+.vocab-group-empty[hidden] {
   display: none !important;
 }
 
@@ -2633,6 +2684,17 @@ table.vocab-group-hidden {
     border-color: var(--md-accent-fg-color);
     box-shadow: 0 0 0 3px var(--md-accent-fg-color--transparent);
     outline: none;
+  }
+
+  /* Nested group selector (दीर्घसन्धिः/गुणसन्धिः etc.): same control
+     language, visually subordinate via a modest indent. Lives inside its
+     own tab block, so it only shows while the parent section is active. */
+  .md-content:has(.tabbed-set) .tab-select-wrap--nested {
+    padding-left: 0.65rem;
+  }
+
+  .md-content:has(.tabbed-set) .tab-select-wrap--nested .tab-select-caption {
+    font-size: 0.72rem;
   }
 
   .md-content:has(#pageTabbedStudy) .tabbed-set .tabbed-labels {

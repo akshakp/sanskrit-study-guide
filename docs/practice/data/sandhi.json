@@ -195,6 +195,396 @@
       ],
       "correct": 0,
       "explanation": "Visarga before त् becomes स्."
+    },
+    {
+      "id": "SANDHI-016",
+      "type": "dirgha",
+      "question": "वचन + अमृतम् — choose the correct दीर्घसन्धि form.",
+      "options": [
+        "वचनामृतम्",
+        "वचनेमृतम्",
+        "वचनोमृतम्",
+        "वचनअमृतम्"
+      ],
+      "correct": 0,
+      "explanation": "अ + अ becomes आ: वचन + अमृतम् → वचनामृतम्."
+    },
+    {
+      "id": "SANDHI-017",
+      "type": "dirgha",
+      "question": "देव + आलयः — choose the correct sandhi form.",
+      "options": [
+        "देवोलयः",
+        "देवालयः",
+        "देवेलयः",
+        "देवआलयः"
+      ],
+      "correct": 1,
+      "explanation": "अ + आ becomes आ: देव + आलयः → देवालयः."
+    },
+    {
+      "id": "SANDHI-018",
+      "type": "dirgha",
+      "question": "मुनि + इन्द्रः — choose the correct sandhi form.",
+      "options": [
+        "मुन्यिन्द्रः",
+        "मुनेन्द्रः",
+        "मुनीन्द्रः",
+        "मुनिन्द्रः"
+      ],
+      "correct": 2,
+      "explanation": "इ + इ becomes ई: मुनि + इन्द्रः → मुनीन्द्रः."
+    },
+    {
+      "id": "SANDHI-019",
+      "type": "dirgha",
+      "question": "गुरु + उत्साहः — choose the correct sandhi form.",
+      "options": [
+        "गुर्वुत्साहः",
+        "गुरोत्साहः",
+        "गुरुत्साहः",
+        "गुरूत्साहः"
+      ],
+      "correct": 3,
+      "explanation": "उ + उ becomes ऊ: गुरु + उत्साहः → गुरूत्साहः."
+    },
+    {
+      "id": "SANDHI-020",
+      "type": "dirgha",
+      "question": "पितृ + ऋणम् — choose the form given in the दीर्घसन्धि lesson.",
+      "options": [
+        "पितॄणम्",
+        "पितर्णम्",
+        "पित्रिणम्",
+        "पितृणम्"
+      ],
+      "correct": 0,
+      "explanation": "ऋ + ऋ becomes ॠ in the chapter’s example पितृ + ऋणम् → पितॄणम्."
+    },
+    {
+      "id": "SANDHI-021",
+      "type": "dirgha",
+      "question": "Which pair of adjoining vowels becomes **ई** in दीर्घसन्धिः?",
+      "options": [
+        "अ + इ",
+        "इ + ई",
+        "अ + ई",
+        "उ + इ"
+      ],
+      "correct": 1,
+      "explanation": "The इ / ई family combines into long ई in दीर्घसन्धिः. ()"
+    },
+    {
+      "id": "SANDHI-022",
+      "type": "dirgha",
+      "question": "Which pair of adjoining vowels becomes **ऊ** in दीर्घसन्धिः?",
+      "options": [
+        "अ + उ",
+        "इ + उ",
+        "उ + ऊ",
+        "अ + ऊ"
+      ],
+      "correct": 2,
+      "explanation": "The उ / ऊ family combines into long ऊ. ()"
+    },
+    {
+      "id": "SANDHI-023",
+      "type": "dirgha",
+      "question": "Which pair of adjoining vowels becomes **आ** in दीर्घसन्धिः?",
+      "options": [
+        "अ + ई",
+        "अ + उ",
+        "इ + इ",
+        "आ + अ"
+      ],
+      "correct": 3,
+      "explanation": "The अ / आ family combines into long आ. ()"
+    },
+    {
+      "id": "SANDHI-024",
+      "type": "dirgha",
+      "question": "Which pair of adjoining vowels becomes **ॠ** in दीर्घसन्धिः?",
+      "options": [
+        "ऋ + ऋ",
+        "अ + ऋ",
+        "अ + ॠ",
+        "इ + ऋ"
+      ],
+      "correct": 0,
+      "explanation": "The ऋ / ॠ family combines into long ॠ. ()"
+    },
+    {
+      "id": "SANDHI-025",
+      "type": "dirgha",
+      "question": "वचनामृतम् comes from which pair in Chapter 15?",
+      "options": [
+        "वचन + ऋतम्",
+        "वचन + अमृतम्",
+        "वचना + मृतम्",
+        "वचन + इमृतम्"
+      ],
+      "correct": 1,
+      "explanation": "The chapter combines वचन + अमृतम् using अ + अ → आ."
+    },
+    {
+      "id": "SANDHI-026",
+      "type": "dirgha",
+      "question": "मुनीन्द्रः comes from which pair in Chapter 15?",
+      "options": [
+        "मुनि + ईन्द्रः",
+        "मुन + इन्द्रः",
+        "मुनि + इन्द्रः",
+        "मुनी + न्द्रः"
+      ],
+      "correct": 2,
+      "explanation": "The chapter demonstrates मुनि + इन्द्रः → मुनीन्द्रः (इ + इ → ई)."
+    },
+    {
+      "id": "SANDHI-027",
+      "type": "dirgha",
+      "question": "Which transformation is an example of **दीर्घसन्धिः**?",
+      "options": [
+        "देव + ऋषिः → देवर्षिः",
+        "महा + ईशः → महेशः",
+        "भाग्य + उदयः → भाग्योदयः",
+        "देव + आलयः → देवालयः"
+      ],
+      "correct": 3,
+      "explanation": "देव + आलयः combines अ + आ into आ, demonstrating दीर्घसन्धिः; the other pairs illustrate गुणसन्धिः."
+    },
+    {
+      "id": "SANDHI-028",
+      "type": "dirgha",
+      "question": "In मुनि + इन्द्रः → मुनीन्द्रः, which long vowel appears at the junction?",
+      "options": [
+        "ई",
+        "ए",
+        "आ",
+        "ऊ"
+      ],
+      "correct": 0,
+      "explanation": "The adjoining इ + इ forms ई in मुनीन्द्रः."
+    },
+    {
+      "id": "SANDHI-029",
+      "type": "dirgha",
+      "question": "In गुरु + उत्साहः → गुरूत्साहः, which vowel change occurs?",
+      "options": [
+        "उ + उ → ओ",
+        "उ + उ → ऊ",
+        "उ + उ → आ",
+        "उ + उ → ए"
+      ],
+      "correct": 1,
+      "explanation": "Two उ vowels combine into long ऊ."
+    },
+    {
+      "id": "SANDHI-030",
+      "type": "dirgha",
+      "question": "Which statement best describes दीर्घसन्धिः as taught in Chapter 15?",
+      "options": [
+        "अ / आ combines with इ / ई to form ए.",
+        "अ / आ combines with उ / ऊ to form ओ.",
+        "Two vowels of the same family combine into the corresponding long vowel.",
+        "Visarga changes before certain consonants."
+      ],
+      "correct": 2,
+      "explanation": "दीर्घसन्धिः combines vowels of the same family into a long vowel; the other vowel-pair descriptions are गुणसन्धि rules."
+    },
+    {
+      "id": "SANDHI-031",
+      "type": "guna",
+      "question": "ईश्वर + इच्छा — choose the correct गुणसन्धि form.",
+      "options": [
+        "ईश्वरिच्छा",
+        "ईश्वरोच्छा",
+        "ईश्वराच्छा",
+        "ईश्वरेच्छा"
+      ],
+      "correct": 3,
+      "explanation": "अ + इ becomes ए: ईश्वर + इच्छा → ईश्वरेच्छा."
+    },
+    {
+      "id": "SANDHI-032",
+      "type": "guna",
+      "question": "महा + ईशः — choose the correct गुणसन्धि form.",
+      "options": [
+        "महेशः",
+        "महीशः",
+        "महाशः",
+        "महोशः"
+      ],
+      "correct": 0,
+      "explanation": "आ + ई becomes ए: महा + ईशः → महेशः."
+    },
+    {
+      "id": "SANDHI-033",
+      "type": "guna",
+      "question": "भाग्य + उदयः — choose the correct गुणसन्धि form.",
+      "options": [
+        "भाग्युदयः",
+        "भाग्योदयः",
+        "भाग्येदयः",
+        "भाग्यादयः"
+      ],
+      "correct": 1,
+      "explanation": "अ + उ becomes ओ: भाग्य + उदयः → भाग्योदयः."
+    },
+    {
+      "id": "SANDHI-034",
+      "type": "guna",
+      "question": "रेवा + ऊर्मिः — choose the correct गुणसन्धि form.",
+      "options": [
+        "रेवाऊर्मिः",
+        "रेवार्मिः",
+        "रेवोर्मिः",
+        "रेवेर्मिः"
+      ],
+      "correct": 2,
+      "explanation": "आ + ऊ becomes ओ: रेवा + ऊर्मिः → रेवोर्मिः."
+    },
+    {
+      "id": "SANDHI-035",
+      "type": "guna",
+      "question": "देव + ऋषिः — choose the correct गुणसन्धि form.",
+      "options": [
+        "देवृषिः",
+        "देवोर्षिः",
+        "देवेषिः",
+        "देवर्षिः"
+      ],
+      "correct": 3,
+      "explanation": "अ + ऋ becomes अर्: देव + ऋषिः → देवर्षिः."
+    },
+    {
+      "id": "SANDHI-036",
+      "type": "guna",
+      "question": "वर्षा + ऋतुः — choose the correct गुणसन्धि form.",
+      "options": [
+        "वर्षर्तुः",
+        "वर्षोतुः",
+        "वर्षेतुः",
+        "वर्षातुः"
+      ],
+      "correct": 0,
+      "explanation": "आ + ऋ becomes अर्: वर्षा + ऋतुः → वर्षर्तुः."
+    },
+    {
+      "id": "SANDHI-037",
+      "type": "guna",
+      "question": "In गुणसन्धिः, what does **अ / आ + इ / ई** become?",
+      "options": [
+        "आ",
+        "ए",
+        "ओ",
+        "अर्"
+      ],
+      "correct": 1,
+      "explanation": "अ / आ followed by इ / ई produces ए."
+    },
+    {
+      "id": "SANDHI-038",
+      "type": "guna",
+      "question": "In गुणसन्धिः, what does **अ / आ + उ / ऊ** become?",
+      "options": [
+        "ए",
+        "आ",
+        "ओ",
+        "अर्"
+      ],
+      "correct": 2,
+      "explanation": "अ / आ followed by उ / ऊ produces ओ."
+    },
+    {
+      "id": "SANDHI-039",
+      "type": "guna",
+      "question": "In गुणसन्धिः, what does **अ / आ + ऋ / ॠ** become?",
+      "options": [
+        "ए",
+        "ओ",
+        "आ",
+        "अर्"
+      ],
+      "correct": 3,
+      "explanation": "अ / आ followed by ऋ / ॠ produces अर्."
+    },
+    {
+      "id": "SANDHI-040",
+      "type": "guna",
+      "question": "In the गुणसन्धि rule table, what does **अ / आ + लृ** become?",
+      "options": [
+        "अल्",
+        "अर्",
+        "ओ",
+        "ए"
+      ],
+      "correct": 0,
+      "explanation": "The chapter names अल् as the गुण result for अ / आ + लृ."
+    },
+    {
+      "id": "SANDHI-041",
+      "type": "guna",
+      "question": "महेशः is formed from which pair in Chapter 15?",
+      "options": [
+        "महा + उशः",
+        "महा + ईशः",
+        "महा + अशः",
+        "महि + ईशः"
+      ],
+      "correct": 1,
+      "explanation": "महा + ईशः combines आ + ई into ए, forming महेशः."
+    },
+    {
+      "id": "SANDHI-042",
+      "type": "guna",
+      "question": "भाग्योदयः illustrates which vowel combination?",
+      "options": [
+        "अ + इ → ए",
+        "आ + उ → ओ",
+        "अ + उ → ओ",
+        "अ + ऋ → अर्"
+      ],
+      "correct": 2,
+      "explanation": "भाग्य ends in inherent अ and उदयः begins with उ: अ + उ → ओ."
+    },
+    {
+      "id": "SANDHI-043",
+      "type": "guna",
+      "question": "Which transformation illustrates **गुणसन्धिः**?",
+      "options": [
+        "वचन + अमृतम् → वचनामृतम्",
+        "मुनि + इन्द्रः → मुनीन्द्रः",
+        "गुरु + उत्साहः → गुरूत्साहः",
+        "देव + ऋषिः → देवर्षिः"
+      ],
+      "correct": 3,
+      "explanation": "देव + ऋषिः combines अ + ऋ into अर्, a गुणसन्धि rule; the other pairs show दीर्घसन्धिः."
+    },
+    {
+      "id": "SANDHI-044",
+      "type": "guna",
+      "question": "Which group lists the four गुण results named in Chapter 15?",
+      "options": [
+        "ए, ओ, अर्, अल्",
+        "आ, ई, ऊ, ॠ",
+        "ए, ऐ, ओ, औ",
+        "अ, इ, उ, ऋ"
+      ],
+      "correct": 0,
+      "explanation": "Chapter 15 identifies ए, ओ, अर् and अल् as the गुण results."
+    },
+    {
+      "id": "SANDHI-045",
+      "type": "guna",
+      "question": "Which sandhi is used in ईश्वर + इच्छा → ईश्वरेच्छा?",
+      "options": [
+        "दीर्घसन्धिः",
+        "गुणसन्धिः",
+        "विसर्गसन्धिः",
+        "व्यञ्जनसन्धिः"
+      ],
+      "correct": 1,
+      "explanation": "The अ + इ junction changes to ए, which the chapter teaches as गुणसन्धिः."
     }
   ]
 }
