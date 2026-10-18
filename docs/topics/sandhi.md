@@ -10,16 +10,6 @@ hide:
 
 सन्धि is the junction between two sounds or a sound change.
 
-Three types of Sandhi:
-
-<div class="sandhi-classify" markdown="1">
-
-- **स्वर-सन्धिः**
-- **व्यञ्जन-सन्धिः**
-- **विसर्ग-सन्धिः**
-
-</div>
-
 <div id="pageTabbedStudy" hidden></div>
 
 === "स्वर-सन्धिः"
@@ -80,27 +70,9 @@ Three types of Sandhi:
 
     Visarga Sandhi occurs when **विसर्गः ( ः )** comes next to a vowel or consonant and changes according to the surrounding sounds.
 
-    > **Important**
-    >
-    > - When an **अघोष consonant** follows the visarga, mainly look at the letter **after ः**.
-    > - In the other rules, you may need to check both the vowel **before ः** and the sound **after ः**.
+    === "Sandhi Rules"
 
-    === "Quick Reference"
-
-        ## Quick Decision Strategy
-
-        1. If an **अघोष consonant** follows → **Rule 1**
-        2. If the form is **अः** → **Rule 2**
-        3. If the form is **आः** → **Rule 3**
-        4. If a vowel other than **अ / आ** comes before ः → **Rule 4**
-        5. If the word is **सः / एषः** → **Rule 5**
-        6. If the word is **भोः** → **Rule 6**
-        7. If ः is at the **end of a sentence** → **Rule 7**
-        8. If ः is **र्-स्थानिक विसर्ग** → **Rule 8**
-
-    === "Master Summary"
-
-        ## Master Summary Table
+        ## Master Sandhi Rules Table
 
         | Rule | Before ः | After ः | Result | AARSH Example |
         |---|---|---|---|---|
