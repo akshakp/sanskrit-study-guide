@@ -56,12 +56,27 @@ plugins:
         - en
         - hi
       separator: '[\s\-,:!=\[\]()"/]+|\.(?!\d)|&[lg]t;|(?!\b)(?=[A-Z][a-z])'
+      # 'stemmer' is deliberately omitted from the search pipeline. Material's
+      # stemmer rewrites English words at index time (lotus->lotu,
+      # elephant->eleph, vocabulary->vocabulari), while query terms are matched
+      # unstemmed (lunr.js disables the query pipeline for the trailing-asterisk
+      # prefix clauses Material adds), so English words whose stem differs from
+      # their surface form could never be found in the global search. Literal
+      # index tokens keep surface words searchable; Devanagari and Gujarati
+      # terms already pass through unchanged.
       pipeline:
-        - stemmer
         - stopWordFilter
         - trimmer
   - minify:
       minify_html: true
+
+# Appends the Gujarati Unicode range to the Hindi lunr language pack's
+# word characters. Without this, the multi-language trimmer that the
+# search worker generates strips every Gujarati token out of the global
+# search index entirely (Gujarati is not one of the bundled lunr language
+# packs, so the generated word-character set only covers Devanagari).
+hooks:
+  - hooks/gujarati_search.py
 
 extra_javascript:
   - assets/js/vocab-search.js

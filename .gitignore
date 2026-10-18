@@ -28,3 +28,6 @@ reports/
 site/
 .venv/
 .baseline/
+.freebuff/
+__pycache__/
+*.pyc
