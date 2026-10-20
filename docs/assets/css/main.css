@@ -369,7 +369,9 @@ a:hover .octicons-arrow-right-24,
 }
 
 #vocabSearch,
-#dhatuSearch {
+#dhatuSearch,
+#krudantSearch,
+#taddhitSearch {
   width: 100%;
   height: 48px;
   padding: 0 16px 0 44px;
@@ -384,13 +386,17 @@ a:hover .octicons-arrow-right-24,
 }
 
 #vocabSearch:focus,
-#dhatuSearch:focus {
+#dhatuSearch:focus,
+#krudantSearch:focus,
+#taddhitSearch:focus {
   border-color: var(--md-accent-fg-color);
   box-shadow: 0 0 0 3px var(--md-accent-fg-color--transparent);
 }
 
 #vocabSearch::placeholder,
-#dhatuSearch::placeholder {
+#dhatuSearch::placeholder,
+#krudantSearch::placeholder,
+#taddhitSearch::placeholder {
   color: var(--md-default-fg-color--lighter);
 }
 
@@ -1908,7 +1914,9 @@ body:has(.topic-card-page) .md-typeset .grid.cards a {
 }
 
 /* ── Search card ───────────────────────────── */
-.md-content:has(#vocabSearch) .vocab-search-box {
+/* The Krudanta page reuses the same vocabulary search-box markup, so the
+   card styles below extend to it via the shared class. */
+.md-content:has(#vocabSearch, #krudantSearch) .vocab-search-box {
   background: var(--md-default-bg-color);
   border: 1px solid var(--md-default-fg-color--lightest);
   border-radius: 14px;
@@ -1917,11 +1925,13 @@ body:has(.topic-card-page) .md-typeset .grid.cards a {
   box-shadow: 0 1px 3px rgba(36, 48, 65, 0.05);
 }
 
-[data-md-color-scheme="slate"] .md-content:has(#vocabSearch) .vocab-search-box {
+[data-md-color-scheme="slate"] .md-content:has(#vocabSearch, #krudantSearch) .vocab-search-box {
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
 }
 
-.md-content:has(#vocabSearch) #vocabSearch {
+.md-content:has(#vocabSearch) #vocabSearch,
+.md-content:has(#krudantSearch) #krudantSearch,
+.md-content:has(#taddhitSearch) #taddhitSearch {
   height: 52px;
   font-size: 1.05rem;
   border: 1.5px solid var(--md-default-fg-color--lightest);
@@ -1930,7 +1940,9 @@ body:has(.topic-card-page) .md-typeset .grid.cards a {
 }
 
 /* native WebKit clear button would duplicate ours */
-.md-content:has(#vocabSearch) #vocabSearch::-webkit-search-cancel-button {
+.md-content:has(#vocabSearch) #vocabSearch::-webkit-search-cancel-button,
+.md-content:has(#krudantSearch) #krudantSearch::-webkit-search-cancel-button,
+.md-content:has(#taddhitSearch) #taddhitSearch::-webkit-search-cancel-button {
   -webkit-appearance: none;
   appearance: none;
 }
@@ -2033,7 +2045,7 @@ body:has(.topic-card-page) .md-typeset .grid.cards a {
 }
 
 /* ── Result count + empty state ────────────── */
-.md-content:has(#vocabSearch) .vocab-result-count {
+.md-content:has(#vocabSearch, #krudantSearch) .vocab-result-count {
   margin-top: 0.75rem;
   font-size: 0.88rem;
 }
@@ -2793,196 +2805,6 @@ table.vocab-group-hidden {
     display: none;
   }
 }
-.md-content:has(#pageTabbedStudy) .formation-table-wrap {
-  width: 100%;
-  margin: 0.75rem 0 1.25rem;
-  overflow: hidden;
-  border-radius: 0.18rem;
-  background: var(--md-default-bg-color);
-  box-shadow: var(--md-shadow-z1);
-}
-
-[data-md-color-scheme="slate"] .md-content:has(#pageTabbedStudy) .formation-table-wrap {
-  box-shadow: var(--md-shadow-z2);
-}
-
-.md-content:has(#pageTabbedStudy) table.formation-reference-table {
-  display: table;
-  width: 100%;
-  border-collapse: collapse;
-  table-layout: fixed;
-  font-size: 0.92rem;
-  margin: 0;
-}
-
-.md-content:has(#pageTabbedStudy) table.formation-reference-table thead th,
-.md-content:has(#pageTabbedStudy) table.formation-reference-table tbody tr:not(.formation-category) td {
-  width: 25%;
-}
-
-.md-content:has(#pageTabbedStudy) table.formation-reference-table .formation-category th {
-  width: 100%;
-  background: var(--md-hover-surface);
-  border-bottom: 1px solid var(--md-default-fg-color--lightest);
-  border-left: 3px solid var(--md-accent-fg-color);
-  color: var(--md-default-fg-color);
-  font-size: 0.82rem;
-  font-weight: 650;
-  letter-spacing: 0.01em;
-  padding: 0.55em 0.8em;
-  text-align: left;
-  text-transform: none;
-}
-
-.md-content:has(#pageTabbedStudy) .formation-pair-label {
-  display: none;
-}
-
-.md-content:has(#pageTabbedStudy) .formation-reference-table td:last-child,
-.md-content:has(#pageTabbedStudy) .formation-reference-table th:last-child {
-  border-right: 0;
-}
-
-@media screen and (max-width: 760px) {
-  .md-content:has(#pageTabbedStudy) .formation-table-wrap {
-    overflow: visible;
-  }
-
-  .md-content:has(#pageTabbedStudy) table.formation-reference-table {
-    display: block;
-    table-layout: auto;
-  }
-
-  /* Show ONE two-column header (धातु | कृदन्त) instead of repeating
-     labels inside every data row. The second pair's header cells are
-     redundant in this layout and are hidden. */
-  .md-content:has(#pageTabbedStudy) table.formation-reference-table thead {
-    border-bottom: 2px solid var(--md-default-fg-color--lightest);
-  }
-
-  /* thead is the grid container; its inner <tr> would otherwise become
-     the single grid item (landing in track 1 and squashing both ths to
-     half the table width). display:contents promotes the th cells to
-     grid items so header columns match the data-column geometry. */
-  .md-content:has(#pageTabbedStudy) table.formation-reference-table thead tr {
-    display: contents;
-  }
-
-  .md-content:has(#pageTabbedStudy) table.formation-reference-table thead th:nth-child(1) {
-    grid-column: 1;
-  }
-
-  .md-content:has(#pageTabbedStudy) table.formation-reference-table thead th:nth-child(2) {
-    grid-column: 2;
-  }
-
-  .md-content:has(#pageTabbedStudy) table.formation-reference-table thead th {
-    box-sizing: border-box;
-    width: auto;
-    background: var(--md-hover-surface);
-    padding: 0.4rem 0.55rem;
-    font-size: 0.72rem;
-    font-weight: 650;
-    letter-spacing: 0.05em;
-    text-transform: uppercase;
-    color: var(--md-default-fg-color);
-    text-align: left;
-  }
-
-  .md-content:has(#pageTabbedStudy) table.formation-reference-table thead th:nth-child(3),
-  .md-content:has(#pageTabbedStudy) table.formation-reference-table thead th:nth-child(4) {
-    display: none;
-  }
-
-  .md-content:has(#pageTabbedStudy) table.formation-reference-table thead th:nth-child(2) {
-    border-left: 1px solid var(--md-default-fg-color--lighter);
-  }
-
-  .md-content:has(#pageTabbedStudy) table.formation-reference-table tbody {
-    display: block;
-  }
-
-  .md-content:has(#pageTabbedStudy) table.formation-reference-table tbody tr:not(.formation-category),
-  .md-content:has(#pageTabbedStudy) table.formation-reference-table thead {
-    display: grid;
-    grid-template-columns: repeat(2, minmax(min-content, 1fr));
-    grid-auto-rows: minmax(0, auto);
-    border-bottom: 1px solid var(--md-default-fg-color--lightest);
-  }
-
-  /* Each pair becomes one compact two-column row: धातु | कृदन्त.
-     A row holds up to two such pairs (grid row 1 and grid row 2).
-     Sanskrit terms are single short words: render them unbroken and
-     never fall back to per-character breaking. */
-  .md-content:has(#pageTabbedStudy) table.formation-reference-table tbody tr:not(.formation-category) td {
-    box-sizing: border-box;
-    width: auto; /* undo the desktop 25% so grid cells fill their track */
-    display: flex;
-    flex-direction: row;
-    align-items: baseline;
-    gap: 0.4rem;
-    min-width: 0;
-    padding: 0.28rem 0.55rem;
-    border: 0;
-    font-size: 0.98rem;
-    line-height: 1.55;
-    white-space: nowrap;
-    word-break: normal;
-    overflow-wrap: normal;
-  }
-
-  /* Sensible fallback for an unusually long entry (none in the current
-     syllabus data): the minmax(min-content, 1fr) tracks widen to fit an
-     unbroken word instead of splitting it — words are never broken. */
-
-  .md-content:has(#pageTabbedStudy) table.formation-reference-table tr:not(.formation-category) td:nth-child(1) {
-    grid-column: 1;
-    grid-row: 1;
-  }
-
-  .md-content:has(#pageTabbedStudy) table.formation-reference-table tr:not(.formation-category) td:nth-child(2) {
-    grid-column: 2;
-    grid-row: 1;
-    border-left: 1px solid var(--md-default-fg-color--lighter);
-  }
-
-  .md-content:has(#pageTabbedStudy) table.formation-reference-table tr:not(.formation-category) td:nth-child(3) {
-    grid-column: 1;
-    grid-row: 2;
-    padding-top: 0.15rem;
-  }
-
-  .md-content:has(#pageTabbedStudy) table.formation-reference-table tr:not(.formation-category) td:nth-child(4) {
-    grid-column: 2;
-    grid-row: 2;
-    padding-top: 0.15rem;
-    padding-bottom: 0.5rem;
-    border-left: 1px solid var(--md-default-fg-color--lighter);
-  }
-
-  /* Second pair of the row: separated by a hairline above for clean
-     two-pair rhythm without extra vertical bulk. */
-  .md-content:has(#pageTabbedStudy) table.formation-reference-table tr:not(.formation-category) td:nth-child(3),
-  .md-content:has(#pageTabbedStudy) table.formation-reference-table tr:not(.formation-category) td:nth-child(4) {
-    box-shadow: inset 0 1px 0 var(--md-default-fg-color--lightest);
-  }
-
-  /* Field labels are not repeated inside data rows; the single
-     two-column header identifies the columns instead. */
-  .md-content:has(#pageTabbedStudy) table.formation-reference-table .formation-pair-label {
-    display: none;
-  }
-
-  .md-content:has(#pageTabbedStudy) table.formation-reference-table .formation-category {
-    display: block;
-  }
-
-  .md-content:has(#pageTabbedStudy) table.formation-reference-table .formation-category th {
-    box-sizing: border-box;
-    display: block;
-    width: 100%;
-  }
-}
 
 .md-content:has(h1#verbs) .md-typeset__table,
 .md-content:has(#dhatuSearch) .md-typeset__table {
@@ -3202,42 +3024,107 @@ table.vocab-group-hidden {
 }
 
 /* =============================================================
-   DHATU PAGE: mobile-card density + alignment polish (mobile only;
-   the approved vocabulary card presentation is untouched).
+   DHATU PAGE: compact mobile-card grid (mobile only; the approved
+   vocabulary card presentation is untouched). Layout: card heading on a
+   subtle divider, then one two-column grid for every field — fixed-width
+   labels, flexible minmax(0,1fr) values. display:contents promotes each
+   label/value pair to grid items so every column starts identically and
+   nothing needs its own nested whitespace. No heavy padding or shadows.
    ============================================================= */
 
 @media (max-width: 760px) {
   .md-content:has(#dhatuSearch) .vocab-cards {
-    gap: 0.55rem;
+    gap: 0.5rem;
     margin-bottom: 1.1rem;
   }
 
   .md-content:has(#dhatuSearch) .vocab-card {
-    padding: 0.6rem 0.75rem 0.65rem;
+    padding: 0.5rem 0.65rem 0.55rem;
   }
 
+  /* Prominent root + subtle divider: the only visual anchor per card. */
   .md-content:has(#dhatuSearch) .vocab-card-term {
-    margin: 0 0 0.35rem;
-    font-size: 1.12rem;
+    margin: 0 0 0.3rem;
+    padding-bottom: 0.3rem;
+    border-bottom: 1px solid var(--md-default-fg-color--lightest);
+    font-size: 1.1rem;
     line-height: 1.3;
   }
 
-  /* Label column follows the content (long dhatu header labels wrap
-     naturally instead of forcing a fixed 5.6rem column). */
+  /* Two-column grid: fixed label column, fluid value column. */
+  .md-content:has(#dhatuSearch) .vocab-card-fields {
+    display: grid;
+    grid-template-columns: clamp(96px, 27vw, 110px) minmax(0, 1fr);
+    column-gap: 0.55rem;
+    align-items: start;
+  }
+
   .md-content:has(#dhatuSearch) .vocab-card-field {
-    column-gap: 0.45rem;
+    display: contents; /* dt/dd fill the two grid columns above */
   }
 
   .md-content:has(#dhatuSearch) .vocab-card-field dt {
     width: auto;
-    max-width: 7rem;
-    font-size: 0.68rem;
-    line-height: 1.35;
+    max-width: none;
+    padding-top: 0.28em; /* optical line-up with the first value line */
+    font-size: 0.7rem;
+    line-height: 1.4;
   }
 
   .md-content:has(#dhatuSearch) .vocab-card-field dd {
+    margin: 0.16rem 0;
     font-size: 0.94rem;
     line-height: 1.45;
+    min-width: 0; /* long Devanagari/Gujarati words wrap, never overflow */
+    overflow-wrap: normal;
+    word-break: normal;
+  }
+}
+
+/* =============================================================
+   VERBS PAGE: conjugation value weight — one shared rule for the six
+   conjugation/प्रत्यय tables so परस्मैपदी and आत्मनेपदी values match on
+   desktop (आत्मनेपदी cells carry Markdown emphasis; this normalises its
+   presentation only — the markup and Sanskrit forms are untouched and
+   पुरुष first-column emphasis stays as authored).
+   ============================================================= */
+
+.md-content:has(h1#verbs) :is(#parasmaipadi-pratyayah, #conj-nam, #conj-as, #conj-kr, #atmanepadi-pratyayah, #conj-ram) ~ .md-typeset__scrollwrap table tbody td:not(:first-child) strong {
+  font-weight: 400;
+}
+
+/* =============================================================
+   DHATU PAGE: RULE APPLIED column links — visually identifiable as links
+   (accent color) but quiet: no heavy borders, small text, underline only
+   on hover/focus. Cells get vocab-cell-rule / dd links from vocab-search.js
+   based on the table's own RULE APPLIED header, not column position.
+   ============================================================= */
+
+.md-content:has(#dhatuSearch) td.vocab-cell-rule {
+  white-space: nowrap;
+}
+
+.md-content:has(#dhatuSearch) td.vocab-cell-rule a,
+.md-content:has(#dhatuSearch) .vocab-card-field-rule dd a {
+  font-size: 0.85rem;
+  color: var(--md-typeset-a-color);
+  text-decoration: none;
+}
+
+.md-content:has(#dhatuSearch) td.vocab-cell-rule a:hover,
+.md-content:has(#dhatuSearch) td.vocab-cell-rule a:focus-visible,
+.md-content:has(#dhatuSearch) .vocab-card-field-rule dd a:hover,
+.md-content:has(#dhatuSearch) .vocab-card-field-rule dd a:focus-visible {
+  text-decoration: underline;
+}
+
+/* Mobile card: keep the link a comfortable tap target (>24px tall) by
+   padding it and pulling the padding back off the text flow. */
+@media (max-width: 760px) {
+  .md-content:has(#dhatuSearch) .vocab-card-field-rule dd a {
+    display: inline-block;
+    padding: 0.3rem 0.55rem;
+    margin: -0.3rem -0.55rem;
   }
 }
 
@@ -3276,6 +3163,35 @@ table.vocab-group-hidden {
     padding: 0.5rem 0.7rem 0.55rem;
     margin-bottom: 0.55rem;
     break-inside: avoid;
+  }
+
+  /* Neutral variant, opt-in per heading via table-records.js (neutralCards):
+     the SAME record pattern — radius, padding, spacing, label typography —
+     with the amber left accent replaced by the row base border, so whole
+     rule-reference groups read as one family with no per-table styling. */
+  .md-content .md-records.md-records-neutral .md-record {
+    border-left: 1px solid var(--md-default-fg-color--lightest);
+  }
+
+  .md-content .md-records.md-records-neutral .md-record:last-child {
+    margin-bottom: 0;
+  }
+
+  /* Conjugation value consistency (opt-in via table-records.js plainValues,
+     Verbs page परस्मैपदी+आत्मनेपदी tables): card values render at regular
+     weight regardless of Markdown emphasis in the source cell; पुरुष card
+     headings keep their own 650 CSS weight. */
+  .md-content .md-records.md-records-plain-values .md-record-value strong {
+    font-weight: 400;
+  }
+
+  /* Verbs page Formation & Sandhi Rules cards opt into the shared label/value
+     grid (per-heading gridCards). This reuses the approved .md-record-grid
+     language below, scoped a touch larger so values read at normal body
+     size on this page. Labels stay small, muted, medium-weight. */
+  .md-content:has(h1#verbs) .md-record-grid-page .md-record-value {
+    font-size: 0.95rem;
+    margin: 0.1rem 0;
   }
 
   .md-content .md-record:last-child {
@@ -3388,5 +3304,89 @@ table.vocab-group-hidden {
 
   .md-content.md-record-grid-page .md-record-value.md-record-widerow {
     margin-top: 0;
+  }
+}
+
+/* =============================================================
+   KRUDANTA PAGE (topics/krudant-tadvid): Formation Reference
+   search + mobile cards. Reuses the vocabulary search-box and
+   card classes; krudant-search.js builds the cards from the same
+   Markdown-table rows (single data source). Below 760px the
+   tables are replaced by compact pair cards matching the Dhatu
+   page; above 760px the full-width #pageTabbedStudy table family
+   styles the six Markdown tables unchanged.
+   ============================================================= */
+
+/* md_in_html blank-line artifacts around the raw search box: height-0
+   paragraphs that still contribute vertical margins between the search
+   card and the first group (marked once by krudant-search.js — a paragraph
+   is marked only if it is truly textContent-empty, so nothing visible is
+   ever hidden). */
+.krudant-blank-p {
+  display: none;
+}
+
+@media (max-width: 760px) {
+  .md-content:has(#krudantSearch) .vocab-search-box {
+    padding: 0.85rem 0.9rem 0.9rem;
+  }
+
+  .md-content:has(#krudantSearch) #krudantSearch,
+  .md-content:has(#taddhitSearch) #taddhitSearch {
+    height: 48px;
+    font-size: 1rem;
+  }
+
+  .md-content:has(#krudantSearch) .vocab-table-wrap {
+    display: none;
+  }
+
+  .md-content:has(#krudantSearch) .vocab-cards {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 0.5rem;
+    margin-bottom: 1.1rem;
+  }
+
+  /* Dhatu-style compact pair card: prominent धातुः over a divider,
+     then a fixed label column and a fluid value column. */
+  .md-content:has(#krudantSearch) .vocab-card {
+    padding: 0.5rem 0.65rem 0.55rem;
+  }
+
+  .md-content:has(#krudantSearch) .vocab-card-term {
+    margin: 0 0 0.3rem;
+    padding-bottom: 0.3rem;
+    border-bottom: 1px solid var(--md-default-fg-color--lightest);
+    font-size: 1.05rem;
+    line-height: 1.3;
+  }
+
+  .md-content:has(#krudantSearch) .vocab-card-fields {
+    display: grid;
+    grid-template-columns: clamp(96px, 27vw, 110px) minmax(0, 1fr);
+    column-gap: 0.55rem;
+    align-items: start;
+  }
+
+  .md-content:has(#krudantSearch) .vocab-card-field {
+    display: contents; /* dt/dd fill the two grid columns above */
+  }
+
+  .md-content:has(#krudantSearch) .vocab-card-field dt {
+    width: auto;
+    max-width: none;
+    padding-top: 0.28em; /* optical line-up with the first value line */
+    font-size: 0.68rem;
+    line-height: 1.4;
+  }
+
+  .md-content:has(#krudantSearch) .vocab-card-field dd {
+    margin: 0.16rem 0;
+    font-size: 0.94rem;
+    line-height: 1.45;
+    min-width: 0; /* long Devanagari words wrap, never overflow */
+    overflow-wrap: normal;
+    word-break: normal;
   }
 }
