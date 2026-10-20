@@ -380,14 +380,29 @@ document.addEventListener('DOMContentLoaded', function() {
     return document.querySelector('.vocab-card[data-targets-table="' + t + '"][data-targets-row="' + r + '"]');
   }
 
-  function setGroupHidden(table, hidden) {
-    // Vocabulary page: hide the whole empty group (table + cards).
-    // The dhatu page keeps its existing behavior (heading hides, table stays).
+  function setGroupHidden(table, hidden, heading) {
+    // Vocabulary page: collapse the ENTIRE empty section so a search/filter
+    // shows only sections with matches, directly under the search panel:
+    // the section heading, the Material table block (scrollwrap containing
+    // the bordered table wrap AND the mobile cards) — no empty boxes, no
+    // gaps. The dhatu page keeps its existing behavior (per-group inline
+    // messages; cards hide; table shell stays).
     if (isVocabPage) {
-      if (hidden) {
-        table.classList.add('vocab-group-hidden');
-      } else {
-        table.classList.remove('vocab-group-hidden');
+      table.classList.toggle('vocab-group-hidden', hidden);
+      if (heading) { heading.style.display = hidden ? 'none' : ''; }
+      var scrollwrap = table.closest && table.closest('.md-typeset__scrollwrap');
+      var wrapEl = table.closest && table.closest('.vocab-table-wrap');
+      var target = scrollwrap || wrapEl;
+      if (target) { target.style.display = hidden ? 'none' : ''; }
+      // Also hide any prose between the section heading and the table block
+      // (e.g. the indeclinables note): the section must collapse as a whole.
+      // Guarded on target so the walk can never spill into later sections.
+      if (heading && target) {
+        var extra = heading.nextElementSibling;
+        while (extra && extra !== target) {
+          extra.style.display = hidden ? 'none' : '';
+          extra = extra.nextElementSibling;
+        }
       }
     }
     var cards = table.parentElement && table.parentElement.classList.contains('vocab-table-wrap')
@@ -405,9 +420,31 @@ document.addEventListener('DOMContentLoaded', function() {
     emptyState.hidden = true;
     emptyState.setAttribute('role', 'status');
     emptyState.textContent = isVocabPage
-      ? 'No vocabulary matches your search or filters. Try different spellings — Devanagari or Latin forms both work.'
+      ? 'No matching vocabulary entries. Try a different spelling or filter — Devanagari and Latin spellings both work.'
       : 'No roots match your search or filters in either group. Try different spellings — Devanagari, English, or Gujarati.';
     searchInput.parentNode.parentNode.appendChild(emptyState);
+  }
+
+  // ── Vocabulary section map ───────────────────────────────
+  // Sections on the vocabulary page are '## Heading' + table, separated by
+  // '---' horizontal rules (each section's rule sits directly above its
+  // heading). While a search/filter is active, every section with zero
+  // matching rows collapses entirely, so only matching sections remain —
+  // in their original order — starting right below the search/filter panel.
+  // Built once, after buildVocabCards() has wrapped the tables.
+  var vocabHeadings = []; // heading element per table index, or null
+  var vocabHrBefore = []; // '---' separator directly above each section, or null
+
+  function buildVocabSections() {
+    vocabHeadings = [];
+    vocabHrBefore = [];
+    if (!isVocabPage) return;
+    for (var t = 0; t < tables.length; t++) {
+      var heading = groupHeading(tables[t]);
+      vocabHeadings.push(heading || null);
+      var hrb = heading && heading.previousElementSibling;
+      vocabHrBefore.push(hrb && hrb.tagName === 'HR' ? hrb : null);
+    }
   }
 
   function wireClearControls() {
@@ -576,13 +613,14 @@ document.addEventListener('DOMContentLoaded', function() {
 
       totalVisible += sectionVisible;
 
-      var heading = findHeading(table);
-      if (heading) {
+      var heading = isVocabPage ? vocabHeadings[t] : findHeading(table);
+      if (!isVocabPage && heading) {
         heading.style.display = sectionVisible > 0 ? '' : 'none';
       }
-      // Hide the whole group (table + cards) when nothing matches — do this via
-      // a class so the desktop-table / mobile-cards decision stays in CSS.
-      setGroupHidden(table, sectionVisible === 0);
+      // Hide the whole group (heading + table + cards) when nothing matches —
+      // collapse at the Material scrollwrap level so no empty bordered box,
+      // spacing, or separator remains (see setGroupHidden).
+      setGroupHidden(table, sectionVisible === 0, heading);
       sectionCounts[t] = sectionVisible;
     }
 
@@ -610,6 +648,19 @@ document.addEventListener('DOMContentLoaded', function() {
         if (msg) {
           msg.hidden = !(itsCount === 0 && othersCount > 0 && (query || currentFilter !== 'all'));
         }
+      }
+    }
+
+    // Vocabulary page: a '---' section separator stays visible only when BOTH
+    // the section that precedes it and the section that follows it remain, so
+    // collapsed sections leave no stray rules or double gaps behind.
+    if (isVocabPage && vocabHeadings.length) {
+      for (var s = 0; s < vocabHeadings.length; s++) {
+        var hrEl = vocabHrBefore[s];
+        if (!hrEl) continue;
+        var beforeVisible = s > 0 ? sectionCounts[s - 1] > 0 : true;
+        var afterVisible = sectionCounts[s] > 0;
+        hrEl.style.display = beforeVisible && afterVisible ? '' : 'none';
       }
     }
 
@@ -649,6 +700,7 @@ document.addEventListener('DOMContentLoaded', function() {
   }
 
   buildVocabCards();
+  buildVocabSections();
   determineRootTables();
   rootEmptyMessages = ensureRootGroupEmptyMessages();
   ensureEmptyState();
