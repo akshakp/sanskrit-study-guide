@@ -73,8 +73,8 @@ consolidated into one page.
     | **[संज्ञा / नाम](nouns.md)** | Noun | Names a person, place, thing, or idea | रामः, पुस्तकम् |
     | **[क्रियापदम्](verbs.md)** | Verb | Shows action, occurrence, or state | पठति, गच्छति |
     | **[विशेषणम्](adjectives.md)** | Adjective | Describes a noun | सुन्दरः, स्वस्थः |
-    | **सर्वनाम** | Pronoun | Stands in place of noun | सः, सा, तत् |
-    | **[अव्ययम्](../reference/vocabulary.md#adverbs-particles)** | Indeclinable | Adds meaning to a word or sentence without changing its form | अत्र, तत्र, च, न, अन्यत्र |
+    | **[सर्वनाम](#core-pronouns)** | Pronoun | Stands in place of noun | सः, सा, तत् |
+    | **[अव्ययम्](#indeclinables)** | Indeclinable | Adds meaning to a word or sentence without changing its form | अत्र, तत्र, च, न, अन्यत्र |
 
     !!! tip "Every Sanskrit word is either विकारी (Variable) or अविकारी (Invariable)"
 
@@ -126,3 +126,24 @@ consolidated into one page.
     | **प्रथम Neuter** | तत् | ते | तानि |
     | **मध्यम** | त्वम् | युवाम् | यूयम् |
     | **उत्तम** | अहम् | आवाम् | वयम् |
+
+
+    ---
+
+    ## Indeclinables (अव्ययम्)
+
+    **अव्ययम्** is an indeclinable word whose form remains unchanged across all three genders (लिङ्ग), eight cases (विभक्ति), and three numbers (वचन).
+
+    **The associated noun changes its case, but the अव्ययम् itself never changes.**
+
+    For the complete list of words and meanings, see [Vocabulary — Adverbs & Particles](../reference/vocabulary.md#adverbs-particles).
+
+    !!! note "द्वितीया विभक्ति with specific अव्यय"
+
+        When the following अव्ययानि are used in a sentence, **the noun or pronoun governed by the अव्ययम्** (object) takes **द्वितीया विभक्ति**.
+
+         **उभयतः · परितः · सर्वतः · विना · अन्तरेण · ऋते · अन्तरा · प्रति · धिक्**
+
+        अहं **मन्दिरं प्रति** गच्छामि। (*I go towards the temple.*)
+
+        - With प्रति **मन्दिरं** → द्वितीया विभक्ति is used and not  **मन्दिरस्य** → षष्ठी विभक्ति

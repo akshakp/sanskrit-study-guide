@@ -10,9 +10,12 @@
 (function () {
   // page-path-suffix → conversion config. A plain array of heading ids uses
   // the original stacked-label card; an object with gridLayout:true renders
-  // the approved two-column label/value grid (currently Language Essentials
-  // only, pending visual approval). Headings whose FOLLOWING table is
-  // converted:
+  // the approved two-column label/value grid page-wide. Each entry may
+  // alternatively be an object { id, neutralCards, gridCards }: the record
+  // pattern for that one table, optionally (a) without the amber left
+  // accent — one shared neutral pattern for whole rule-reference groups —
+  // and (b) with the two-column label/value grid instead of stacked labels
+  // (currently the Formation & Sandhi Rules tables on the Verbs page).
   var RECORD_TABLES = {
     'topics/language-essentials/': {
       gridLayout: true,
@@ -28,12 +31,30 @@
       ]
     },
     'topics/nouns/': ['#3rd-case-singular', '#6th-case-plural'],
-    'topics/verbs/': [
-      '#6-when-is-the-action',
-      '#based-on-number-of-objects',
-      '#formation-rules-for-parasmaipada-verb-forms',
-      '#examples'
-    ],
+    'topics/verbs/': {
+      headings: [
+        // Overview tab
+        { id: '#4-what-is-the-speakers-intention', neutralCards: true, gridCards: true },
+        { id: '#6-when-is-the-action', neutralCards: true, gridCards: true },
+        // Verb Classes tab
+        { id: '#verb-classes', neutralCards: true, gridCards: true },
+        { id: '#based-on-number-of-objects', neutralCards: true, gridCards: true },
+        // परस्मैपदी tab (conjugation matrices → one card per पुरुष row)
+        { id: '#parasmaipadi-pratyayah', neutralCards: true, gridCards: true, plainValues: true },
+        { id: '#conj-nam', neutralCards: true, gridCards: true, plainValues: true },
+        { id: '#conj-as', neutralCards: true, gridCards: true, plainValues: true },
+        { id: '#conj-kr', neutralCards: true, gridCards: true, plainValues: true },
+        // आत्मनेपदी tab
+        { id: '#atmanepadi-pratyayah', neutralCards: true, gridCards: true, plainValues: true },
+        { id: '#conj-ram', neutralCards: true, gridCards: true, plainValues: true },
+        { id: '#formation', neutralCards: true, gridCards: true },
+        // Formation & Sandhi Rules tab (approved baseline)
+        { id: '#common-suffix-combination-rules', neutralCards: true, gridCards: true },
+        { id: '#upadha-guna-changes', neutralCards: true, gridCards: true },
+        { id: '#ending-vowel-changes', neutralCards: true, gridCards: true },
+        { id: '#ordered-roots', neutralCards: true, gridCards: true }
+      ]
+    },
     'topics/writing-rules/': ['#when-a-word-ends-in', '#sandhi-1-3-rule'],
     'topics/sandhi/': ['#master-summary-table']
   };
@@ -104,7 +125,8 @@
       if (useGrid) {
         gridRows = document.createElement('div');
         gridRows.className = 'md-record-grid';
-        card.appendChild(gridRows);
+        // deferred: the heading must land FIRST in the card, so the grid is
+        // appended after the cell loop below (head + divider + aligned rows).
       }
       cells.forEach(function (cell, i) {
         if (i === headIdx) {
@@ -139,6 +161,9 @@
           card.appendChild(field);
         }
       });
+      if (gridRows) {
+        card.appendChild(gridRows);
+      }
       block.appendChild(card);
     });
     // insert after the Material wrapper; hide the wrapper on mobile only
@@ -159,15 +184,44 @@
     var ids = Array.isArray(cfg) ? cfg : (cfg && cfg.headings) || [];
     var useGrid = !!(cfg && !Array.isArray(cfg) && cfg.gridLayout);
     var matched = 0;
-    ids.forEach(function (id) {
+    var gridUsed = useGrid;
+    ids.forEach(function (entryOrId) {
+      var id = typeof entryOrId === 'string' ? entryOrId : entryOrId.id;
+      var neutral = typeof entryOrId === 'object' && !!entryOrId.neutralCards;
+      var entryGrid = typeof entryOrId === 'object' && !!entryOrId.gridCards;
+      if (entryGrid) gridUsed = true;
       var heading = document.getElementById(id.replace(/^#/, ''));
       if (!heading) return;
       var table = tableAfterHeading(heading);
       if (!table) return;
-      buildRecords(table, useGrid);
+      buildRecords(table, useGrid || entryGrid);
+      if (neutral) {
+        var wrap = table.closest('.md-typeset__scrollwrap') || table.parentElement;
+        var block = wrap && wrap.nextElementSibling;
+        if (block && block.classList && block.classList.contains('md-records')) {
+          block.classList.add('md-records-neutral');
+          if (typeof entryOrId === 'object' && entryOrId.plainValues) {
+            // Conjugation values normalise to regular weight here (the
+            // आत्मनेपदी Markdown emphasis stays in the source but renders at
+            // 400 on the cards); पुरुष card headings stay styled by CSS.
+            block.classList.add('md-records-plain-values');
+          }
+          // Neutral grids only: drop label/value pairs whose value cell is
+          // empty (e.g. the काल table's intentional placeholder middle
+          // column) so no blank field label is rendered. Scoped to neutral
+          // blocks; the Language Essentials grid pages keep their data.
+          Array.prototype.forEach.call(block.querySelectorAll('.md-record-grid .md-record-label'), function (lab) {
+            var val = lab.nextElementSibling;
+            if (val && val.classList.contains('md-record-value') && val.textContent.trim() === '') {
+              lab.remove();
+              val.remove();
+            }
+          });
+        }
+      }
       matched++;
     });
-    if (useGrid && matched) {
+    if (gridUsed && matched) {
       // Page-scoped grid styling: the class enables the label/value grid CSS
       // only on pages whose config opted in, so other pages keep their
       // approved card look until the new pattern is approved.
