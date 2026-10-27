@@ -23,6 +23,7 @@ desktop.ini
 syllabus/
 reports/
 .pageserve-*/
+tools/
 
 # MkDocs build output / local validation venv
 site/
