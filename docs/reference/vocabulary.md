@@ -52,23 +52,23 @@ hide:
 | Sanskrit | Meaning | Gujarati | Gender | Synonyms |
 |---|---|---|---|---|
 | आतपत्रम् | Umbrella | છત્રી | N | छत्रम् (N) |
-| आस्तरणम् | Bed | પલંગ | N | शय्या (F) |
-| आसन्दः | Chair | ખુરશી | M | — |
 | आसनम् | Seat | આસન | N | — |
+| आसन्दः | Chair | ખુરશી | M | — |
+| आस्तरणम् | Bed | પલંગ | N | शय्या (F) |
 | इन्द्रकोषः | Sofa | સોફા | M | — |
 | उत्पीठिका | Table | ટેબલ | F | — |
 | उपधानम् | Pillow | ઓશીકું | N | — |
 | उपनेत्रम् | Spectacles | ચશ્મા | N | — |
 | ऊरुकम् | Pant | પેન્ટ | N | — |
-| क्रीडनकम् | Toy | રમકડું | N | — |
 | कक्षम् | Room | ઓરડો | N | — |
 | कङ्कतम् | Comb | કાંસકો | N | — |
-| कर्पूरम् | Camphor | કપૂર | N | — |
 | करण्डकम् | Basket | ટોપલી | N | — |
 | करवस्त्रम् | Handkerchief | રૂમાલ | N | — |
+| कर्पूरम् | Camphor | કપૂર | N | — |
 | काष्ठम् | Wood / Firewood | લાકડું | N | — |
 | कुम्भः | Pot | ઘડો | M | कलशः (M), घटः (M) |
 | केन्द्रम् | Center | કેન્દ્ર | N | — |
+| क्रीडनकम् | Toy | રમકડું | N | — |
 | चक्रम् | Wheel | પૈડું | N | — |
 | चर्मम् | Leather | ચામડું | N | — |
 | चषकः | Cup | કપ | M | — |
@@ -77,9 +77,9 @@ hide:
 | तन्त्रम् | System | તંત્ર | N | — |
 | तूलम् | Cotton | રૂ / કપાસ | N | — |
 | तैलम् | Oil | તેલ | N | — |
+| दर्पण: | Mirror | દર્પણ | M | — |
 | द्वारम् | Door | દરવાજો | N | — |
 | द्विचक्रिका | Bicycle | સાયકલ | F | — |
-| दर्पण: | Mirror | દર્પણ | M | — |
 | पात्रम् | Vessel / Utensil | વાસણ | N | — |
 | पादत्राणम् | Shoes | જૂતા | N | — |
 | पादुका |Sandal, footwear | પાદુકા, ચંપલ, પગરખાં | F | - |
@@ -100,9 +100,9 @@ hide:
 | वातायनम् | Window | બારી | N | जवनीका (F) |
 | वीणा | Veena (instrument) | વીણા | F | — |
 | शस्त्रम् | Weapon | શસ્ત્ર / હથિયાર | N | अस्त्रम् (N) |
+| सूत्रम् | Thread | સૂત્ર / દોરી | N | तन्तुः (M) |
 | स्तोत्रम् | Hymn | સ્તોત્ર | N | — |
 | स्यूतः | Purse | પર્સ | M | — |
-| सूत्रम् | Thread | સૂત્ર / દોરી | N | तन्तुः (M) |
 
 ---
 
@@ -155,29 +155,29 @@ hide:
 | अधिवक्ता | अधिवक्त्री | Advocate / Lawyer | વકીલ | — |
 | अभिनेता | अभिनेत्री | Actor | અભિનેતા | — |
 | अभियन्ता | अभियन्त्री | Engineer | એન્જિનિયર | — |
-| आचार्यः | आचार्या | Teacher (esp. preceptor/guru) | શિક્ષક | अध्यापकः / अध्यापिका (instructor) |
+| आचार्यः | आचार्या | Teacher (esp. preceptor/guru) | શિક્ષક | अध्यापकः / अध्यापिका |
 | आपणिकः | आपणिका | Merchant / Trader | વેપારી | — |
 | कुमारः | कुमारी | Teenager | કિશોર | — |
 | कृषकः | — | Farmer | ખેડૂત | — |
 | गायकः | गायिका | Singer | ગાયક | — |
 | चालकः | चालिका | Driver | ડ્રાઈવર | — |
-| छात्रः | छात्रा | Student | વિદ્યાર્થી | शिष्यः / शिष्या (Disciple — under a guru) |
+| छात्रः | छात्रा | Student | વિદ્યાર્થી | शिष्यः / शिष्या |
 | जनः | — | Person | જન | — |
 | तापसः | — | Anchorite / Ascetic | તપસ્વી | — |
 | नर्तकः | नर्तकी | Dancer | નર્તક | — |
 | नायकः | नायिका | Hero | નાયક | — |
-| प्राध्यापकः | प्राध्यापिका | Professor | પ્રોફેસર | — |
 | पुरुषः | — | Man | પુરુષ | नरः (M) |
+| प्राध्यापकः | प्राध्यापिका | Professor | પ્રોફેસર | — |
 | बालः | Boy / Child | બાળક | M | — |
 | भारतीयः | भारतीया | Indian | ભારતીય | — |
-| मित्रम् (N) | मित्रम् (N) | Friend | મિત્ર | *Grammatically neuter and used for a friend of any gender* |
+| मित्रम् (N) | मित्रम् (N) | Friend | મિત્ર | - |
 | यवनः | Foreigner / Yavana | યવન | M | — |
 | युवकः | युवती | Youth | યુવાન | — |
 | राजा | — | King | રાજા | भूपः (M) |
 | लेखकः | लेखिका | Writer | લેખક | — |
 | लोकः | — | People / World | લોક | भुवनम् (N) |
-| व्याख्याता | व्याख्यात्री | Commentator | ટીકાકાર | — |
 | वृद्धः | वृद्धा | Elderly | વૃદ્ધ | — |
+| व्याख्याता | व्याख्यात्री | Commentator | ટીકાકાર | — |
 | सचिवः | — | Minister | મંત્રી | अमात्यः (M) |
 | सज्जनः | — | Gentleman / Noble Person | સજ્જન | — |
 | सेवकः | सेविका | Servant | સેવક | दासः / दासी, किङ्करः (M) |
@@ -193,7 +193,6 @@ hide:
 | आकाशगङ्गा | Galaxy | આકાશગંગા | F | — |
 | आतपः | Sunshine | તડકો | M | — |
 | ऋषभः | Bull | બળદ | M | — |
-| क्षीरम् | Milk | દૂધ | N | पयः (N), दुग्धम् (N) |
 | कन्दुकः | Ball | બોલ | M | — |
 | कपोतः | Pigeon | કબૂતર | M | — |
 | कमलम् | Lotus | કમળ | N | — |
@@ -201,9 +200,10 @@ hide:
 | कीटः | Insect / Worm | કીડો | M | — |
 | कुञ्जरः | Elephant | હાથી | M | गजः (M) |
 | कोकिलः | Male Cuckoo | નર કોયલ | M | — |
+| क्षीरम् | Milk | દૂધ | N | पयः (N), दुग्धम् (N) |
 | खगः | Bird | પક્ષી | M | — |
-| ग्रहः | Planet | ગ્રહ | M | — |
 | गर्दभः | Donkey | ગધેડો | M | खरः (M) |
+| ग्रहः | Planet | ગ્રહ | M | — |
 | चटकः | Sparrow | ચકલી | M | — |
 | चन्द्रः | Moon | ચંદ્ર | M | — |
 | जलम् | Water | જળ | N | नीरम् (N) |
@@ -212,11 +212,11 @@ hide:
 | दर्भः | Darbha grass | દર્ભ | M | कुशः (M) |
 | नक्षत्रम् | Star | નક્ષત્ર | N | — |
 | नभः | Sky | આકાશ | N | गगनम् (N) |
-| प्राणवायुः | Oxygen | ઓક્સિજન | M | — |
 | पर्णम् | Leaf | પર્ણ | N | — |
 | पर्वतः | Mountain | પર્વત | M | — |
 | पादपः | Plant | છોડ | M | — |
 | पुष्पम् | Flower | પુષ્પ | N | — |
+| प्राणवायुः | Oxygen | ઓક્સિજન | M | — |
 | मत्स्यः | Fish | માછલી | M | — |
 | मरालः | Swan | હંસ | M | — |
 | यव: | Barley | જવ | M | — |
@@ -237,16 +237,16 @@ hide:
 | Sanskrit | Meaning | Gujarati | Gender | Synonyms |
 |---|---|---|---|---|
 | अङ्गणम् | Courtyard | આંગણું | N | — |
-| क्षेत्रम् | Field | ખેતર | N | — |
 | कूपः | Well | કૂવો | M | — |
 | कोटः | Fort | કિલ્લો | M | — |
-| ग्रामः | Village | ગામ | M | — |
+| क्षेत्रम् | Field | ખેતર | N | — |
 | गृहम् | House / Home | ઘર | N | सदनम् (N), निवासः (M) |
+| ग्रामः | Village | ગામ | M | — |
 | तीर्थम् | Holy place / Pilgrimage site | તીર્થ | N | — |
 | दोला | Swing | ઝૂલો | F | — |
 | नगरम् | City | નગર | N | पुरम् (N) |
-| प्रासादः | Palace | મહેલ | M | — |
 | पाठशाला | School | શાળા | F | — |
+| प्रासादः | Palace | મહેલ | M | — |
 | भवः | Worldly existence / Saṃsāra | સંસાર | M | — |
 | मञ्चः | Platform | માંચડો | M | — |
 | मन्दिरम् | Temple | મંદિર | N | — |
@@ -268,6 +268,7 @@ hide:
 | अन्तरायः | Obstacle | અવરોધ | M | — |
 | अन्नम् | Food | અન્ન / ભોજન | N | — |
 | अमरः | Deva / Immortal | દેવ | M | सुरः (M) |
+| अरुचिकरम् | Unpleasant | અપ્રિય | N | - |
 | आयः | Income | આવક | M | — |
 | ईशः | God | ભગવાન | M | — |
 | उद्यमः | Effort | પ્રયત્ન | M | प्रयत्नः (M) |
@@ -281,22 +282,23 @@ hide:
 | कुलम् | Family / Lineage | કુળ, વંશ | N | — |
 | कूपी | Bottle | બોટલ | F | — |
 | कोणः | Angle | ખૂણો | M | — |
-| ग्रन्थः | Scripture / Treatise | શાસ્ત્ર | M | शास्त्रम् (N) |
 | गणः | Group | સમૂહ | M | कलापः (M), पुञ्जः (M, heap), गुच्छः (M, bunch/cluster) |
+| ग्रन्थः | Scripture / Treatise | શાસ્ત્ર | M | शास्त्रम् (N) |
 | चमसः | Spoon | ચમચી | M | — |
 | चरित्रम् | Character / Biography | ચરિત્ર | N | आचरणम् (N, conduct), चारित्र्यम् (N, moral character), शीलम् (N) |
 | छलम् | Deceit | કપટ, છળ | N | — |
-| द्विजः | Brāhmaṇa | બ્રાહ્મણ | M | विप्रः (M) |
 | दूतः | Messenger | દૂત | M | — |
+| द्विजः | Brāhmaṇa | બ્રાહ્મણ | M | विप्रः (M) |
 | धूमः | Smoke | ધુમાડો | M | — |
 | नाटकम् | Drama / Play | નાટક | N | — |
+| पदार्थः | Item / Substance | વસ્તુ | M | — |
+| परामर्शः | Consultation | વિમર્શ | M | — |
+| पुरस्कारः | Award | પુરસ્કાર | M | — |
 | प्रणयः | Affection / Love | સ્નેહ | M | — |
 | प्रणवः | Om (sacred syllable) | ૐ | M | — |
 | प्रसादः | Prasād | પ્રસાદ | M | — |
 | प्रातःकालः | Morning | સવાર | M | — |
-| पदार्थः | Item / Substance | વસ્તુ | M | — |
-| परामर्शः | Consultation | વિમર્શ | M | — |
-| पुरस्कारः | Award | પુરસ્કાર | M | — |
+| यथायाचित | As requested | વિનંતી મુજબ | N | - |
 | यागः | Yajña (sacrificial rite) | યજ્ઞ | M | — |
 | यानम् | Vehicle | વાહન | N | — |
 | युद्धम् | War / Battle | યુદ્ધ | N | — |
@@ -305,20 +307,20 @@ hide:
 | रात्रिः | Night | રાત્રિ | F | निशा (F) |
 | रुग्णः / रुग्णा | Injured (adjective) | બીમાર | M/F | — |
 | लक्षणम् | Characteristic / Sign | લક્ષણ | N | — |
-| व्ययः | Expense | ખર્ચ | M | — |
-| व्याख्यानम् | Explanation / Lecture | વ્યાખ્યાન / પ્રવચન | N | — |
-| व्यूहः | Formation / Strategy | વ્યૂહ | M | — |
 | वचनम् | Speech / Statement | વચન | N | — |
 | वन्दनम् | Salutation | વંદન | N | — |
 | विचित्रम् | Strange / Wonderful (adjective) | વિચિત્ર | N | — |
 | विरामः | Rest / Pause | વિરામ | M | — |
 | विवादः | Dispute / Controversy | વિવાદ | M | — |
 | वेशः | Dress / Attire | પોશાક | M | — |
+| व्ययः | Expense | ખર્ચ | M | — |
+| व्याख्यानम् | Explanation / Lecture | વ્યાખ્યાન / પ્રવચન | N | — |
+| व्यूहः | Formation / Strategy | વ્યૂહ | M | — |
 | शाखा | Branch / Division | શાખા | F | — |
-| स्वस्तिकः | Swastika | સાથિયો | M | — |
 | सम्मार्जनी | Broom | ઝાડૂ | F | — |
-| संन्यासः | Renunciation | સંન્યાસ / ત્યાગ | M | — |
 | सूचिका | Needle | સૂઈ | F | — |
+| स्वस्तिकः | Swastika | સાથિયો | M | — |
+| संन्यासः | Renunciation | સંન્યાસ / ત્યાગ | M | — |
 | हलाहलम् | Deadly poison | હળાહળ ઝેર | N | — |
 
 ---
@@ -332,15 +334,15 @@ hide:
 | अकस्मात् | Suddenly | અચાનક | — |
 | अग्रे | Ahead; In front | આગળ | अग्रतः, पुरतः, पुरः, पुरस्तात्, समक्षम्, सम्मुखम् |
 | अजस्त्रम् | Continuously | નિરંતર, સતત | निरन्तरम् |
+| अतीव | Very; Extremely | અતિશય | भृशम्, नितराम् |
 | अत्र | Here | અહીં | इह |
 | अत्रान्तरे | Meanwhile | એટલામાં | — |
 | अतः | Therefore | એટલા માટે | तस्मात् |
-| अतीव | Very; Extremely | અતિશય | भृशम्, नितराम् |
 | अथ | Now; Then; Next | હવે | — |
 | अद्य | Today | આજે | — |
-| अधः | Below | નીચે | अधस्तात् |
 | अधि अधि | Directly below | બરાબર નીચે | — |
 | अधुना | Now; At present | હમણાં | इदानीम्, सम्प्रति |
+| अधः | Below | નીચે | अधस्तात् |
 | अन्ततः | Finally; At last | છેલ્લે | — |
 | अन्तः | Inside; Within | અંદર, માં | अन्तरे |
 | अन्यच्च | And also | અને પણ | — |
@@ -356,8 +358,8 @@ hide:
 | आ | From; Up to; Until | ત્યાંથી, ત્યાં સુધી | — |
 | आम् | Yes; Certainly | હા, એમ જ | अथ किम् |
 | इतस्ततः | Here and there | અહીં તહીં | — |
-| इतः | From here | અહીંથી | — |
 | इति | Thus; In this manner | આ રીતે | इत्थम्, तथा |
+| इतः | From here | અહીંથી | — |
 | इव | Like; as in a simile | ની જેમ (ઉપમા) | — |
 | ईषत् | A little | થોડું | — |
 | उच्चैः | High; aloud | ઊંચેથી | — |
@@ -368,17 +370,17 @@ hide:
 | एतावत् | This much / So much | આટલું | — |
 | एव | Only; Indeed | જ | — |
 | एवम् | Thus; in this way | આ રીતે | — |
-| कालान्तरेण | After some time | થોડા સમય પછી | — |
-| क्व | Where | ક્યાં | — |
 | कथम् | How? | કેવી રીતે? | — |
 | कदा | When? | ક્યારે? | — |
 | कदापि | Ever; At any time | ક્યારેય, ક્યારેક | — |
+| कालान्तरेण | After some time | થોડા સમય પછી | — |
 | किञ्च | And moreover | અને વળી, બીજું | — |
 | किन्तु | But; However | પરંતુ | — |
 | किमर्थम् | Why; for what purpose | શા માટે? | — |
 | कुत्र | Where? | ક્યાં? | — |
 | कुतः | From where | ક્યાંથી? | — |
 | कृते | For; For the sake of | ને માટે | — |
+| क्व | Where | ક્યાં | — |
 | च | And | અને | — |
 | चेत् | If | જો | यत् |
 | जातु | At any time | ક્યારેય | — |
@@ -400,11 +402,6 @@ hide:
 | नाम | Namely; that is | એટલે, અર્થાત્ | — |
 | नीचैः | Below | નીચે | — |
 | नूनम् | Certainly | અવશ્ય | — |
-| प्रति | Towards; In the direction of | ની તરફ | — |
-| प्रतिदिनम् | Every day; Daily | દરરોજ | — |
-| प्रभृति | Beginning from | થી માંડીને | — |
-| प्रातः | In the morning | સવારે | — |
-| प्रायः | Generally; Mostly | મોટા ભાગે | — |
 | परितः | Around; On all sides | ચારે બાજુ | अभितः, सर्वतः |
 | पश्चात् | After; Afterwards | પછી | अनन्तरम्, परम् |
 | पार्श्वम् | Beside; At the side | બાજુમાં | — |
@@ -413,6 +410,11 @@ hide:
 | पूर्वम् | Before | પહેલાં | — |
 | पृथक् | Separately; Apart | અલગ | — |
 | पृष्ठतः | Behind; From behind | પાછળથી | — |
+| प्रति | Towards; In the direction of | ની તરફ | — |
+| प्रतिदिनम् | Every day; Daily | દરરોજ | — |
+| प्रभृति | Beginning from | થી માંડીને | — |
+| प्रातः | In the morning | સવારે | — |
+| प्रायः | Generally; Mostly | મોટા ભાગે | — |
 | बहिः | Outside | બહાર | — |
 | बहुधा | In many ways | ઘણી રીતે | — |
 | मध्ये | In the middle; Between | ની વચ્ચે | अन्तरा |
@@ -431,22 +433,22 @@ hide:
 | वामतः | On the left side | ડાબી બાજુ | — |
 | विना | Without; Except | વગર, સિવાય | अन्तरेण, ऋते |
 | वृथा | In vain | વ્યર્થ, નકામું | — |
-| श्वः | Tomorrow | આવતી કાલે | — |
 | शनैः | Slowly; Gradually | ધીરેથી | — |
 | शीघ्रम् | Quickly; Immediately | જલદી | झटिति |
-| स्वयम् | Oneself; Self | પોતે | — |
-| स्वस्ति | Blessings; Good fortune | કલ્યાણ | — |
-| स्वेच्छम् | According to one's own wish | ઇચ્છાનુસાર | — |
+| श्वः | Tomorrow | આવતી કાલે | — |
 | सकाशात् | From near; From the presence of | પાસેથી | — |
-| सद्यः | Immediately | તરત | — |
 | सदा | Always | હંમેશા | सर्वदा, नित्यम् |
-| सम्यक् | Properly; Correctly | સરસ, સારી રીતે | सुष्ठु, समीचीनम् |
+| सद्यः | Immediately | તરત | — |
 | समीपे | Near; Beside | પાસે, બાજુમાં | आरात्, अन्तिकम्, निकषा, सकाशम्, समया |
+| सम्यक् | Properly; Correctly | સરસ, સારી રીતે | सुष्ठु, समीचीनम् |
 | सर्वत्र | Everywhere | બધે જ | — |
 | सह | With; Together with | સાથે | साकम्, सार्धम्, समम् |
 | सायम् | In the evening | સાંજે | — |
-| ह्यः | Yesterday | ગઈ કાલે | — |
+| स्वयम् | Oneself; Self | પોતે | — |
+| स्वस्ति | Blessings; Good fortune | કલ્યાણ | — |
+| स्वेच्छम् | According to one's own wish | ઇચ્છાનુસાર | — |
 | हि | Indeed; Surely | ખરેખર | खलु, किल |
+| ह्यः | Yesterday | ગઈ કાલે | — |
 
 ---
 
@@ -460,26 +462,26 @@ hide:
 | अमृतम् | Nectar | અમૃત | N | सुधा (F) |
 | अलङ्कारः | Ornament | અલંકાર | M | — |
 | अवस्था | State / Condition | હાલત | F | — |
-| आज्ञा | Command | આજ્ઞા | F | — |
 | आजीविका | Livelihood | જીવનવૃત્તિ | F | — |
+| आज्ञा | Command | આજ્ઞા | F | — |
 | आत्मज्ञानम् | Self-knowledge | આત્મજ્ઞાન | N | — |
+| आशा | Hope | આશા | F | — |
 | आश्चर्यम् | Wonder | આશ્ચર્ય | N | — |
 | आश्रयः | Refuge | આશ્રય | M | शरणम् (N) |
-| आशा | Hope | આશા | F | — |
 | आस्था | Faith | શ્રદ્ધા | F | श्रद्धा (F) |
 | उपकारः | Help / Kindness | ઉપકાર | M | — |
 | उपेक्षा | Neglect | ઉપેક્ષા | F | — |
 | ऊर्जा | Energy | ઊર્જા | F | — |
 | ऐक्यम् | Unity | એકતા | N | — |
-| क्षमा | Forgiveness | ક્ષમા | F | — |
-| कल्याणम् | Welfare / Auspiciousness | કલ્યાણ | N | — |
 | कलङ्कः | Stain / Blemish | કલંક | M | — |
-| कार्यम् | Work / Task | કામ | N | — |
+| कल्याणम् | Welfare / Auspiciousness | કલ્યાણ | N | — |
 | कारणम् | Cause / Reason | કારણ | N | निमित्तम् (N) |
+| कार्यम् | Work / Task | કામ | N | — |
 | कुतूहलम् | Curiosity | જિજ્ઞાસા | N | — |
 | कृपा | Mercy | કૃપા | F | — |
-| ज्ञानम् | Knowledge | જ્ઞાન | N | विद्या (F) |
+| क्षमा | Forgiveness | ક્ષમા | F | — |
 | जीवनम् | Life | જીવન | N | — |
+| ज्ञानम् | Knowledge | જ્ઞાન | N | विद्या (F) |
 | तत्त्वम् | Truth / Principle | તત્ત્વ | N | — |
 | तेजः | Brilliance | તેજ | N | — |
 | दर्शनम् | Vision / Philosophy / Sight | દર્શન | N | — |
@@ -489,12 +491,12 @@ hide:
 | धान्यम् | Grain / Food grain | અનાજ | N | — |
 | धारा | Stream | ધારા | F | — |
 | नृत्यम् | Dance | નૃત્ય | N | — |
+| परम्परा | Tradition | પરંપરા | F | — |
+| परीक्षा | Examination | પરીક્ષા | F | — |
 | प्रतीक्षा | Waiting | પ્રતીક્ષા | F | — |
 | प्रयोजनम् | Purpose | પ્રયોજન | N | उद्देशः (M) |
 | प्रार्थना | Prayer | પ્રાર્થના | F | — |
 | प्रेरणा | Inspiration | પ્રેરણા | F | — |
-| परम्परा | Tradition | પરંપરા | F | — |
-| परीक्षा | Examination | પરીક્ષા | F | — |
 | बलम् | Strength | બળ | N | — |
 | भाषा | Language | ભાષા | F | — |
 | महत्त्वम् | Importance | મહત્વ | N | — |
@@ -509,12 +511,12 @@ hide:
 | शिक्षा | Education | શિક્ષા | F | — |
 | शौर्यम् | Bravery / Heroism | શૌર્ય | N | — |
 | सभा | Assembly | સભા | F | — |
-| संख्या | Number | સંખ્યા | F | — |
-| संस्था | Institution | સંસ્થા | F | — |
 | सुखम् | Happiness | સુખ | N | — |
 | सुगन्धः | Fragrance | સુગંધ | M | — |
 | सेना | Army | સેના | F | — |
 | सेवा | Service | સેવા | F | — |
+| संख्या | Number | સંખ્યા | F | — |
+| संस्था | Institution | સંસ્થા | F | — |
 | हास्यम् | Laughter / Humor | હાસ્ય | N | — |
 | हिंसा | Violence | હિંસા | F | — |
 
@@ -528,39 +530,36 @@ hide:
 | अचलम् | Immovable | સ્થિર |
 | अद्भुतम् | Wonderful | અદ્ભુત, વિશિષ્ટ |
 | अधिकम् | More | વધારે |
+| अनुकूलम् | Favorable | અનુકૂળ |
 | अन्तिमम् | Last | છેલ્લું |
 | अन्धम् | Blind | આંધળું |
-| अनुकूलम् | Favorable | અનુકૂળ |
 | अरुणम् | Red | લાલ |
 | अलङ्कृतम् | Decorated | શોભેલું |
-| अल्पम् | Small / Little | તુચ્છ, ઓછું |
 | अलम् | Enough | ઘણું |
 | अलसम् | Lazy | આળસુ |
+| अल्पम् | Small / Little | તુચ્છ, ઓછું |
 | असलीलम् | Obscene | ગંદું |
 | असितम् | Black | કાળું |
 | आकुलम् | Distressed | ગભરાયેલું, પીડિત |
 | आतुरम् | Distressed / Eager | પીડિત, ગ્રસ્ત |
 | आर्द्रम् | Wet | ભીનું |
 | उग्रम् | Fierce | કૂર |
-| उच्छम् | High | ઊંચું |
 | उचितम् | Proper | યોગ્ય |
+| उच्छम् | High | ઊંચું |
 | उज्ज्वलम् | Bright | ઉજ્જવળ |
+| उतुङ्गम् | Lofty | ઊંચું |
 | उत्तमम् | Excellent | શ્રેષ્ઠ |
 | उत्सुकम् | Eager | તત્પર |
-| उतुङ्गम् | Lofty | ઊંચું |
 | उदारम् | Generous | ઉદાર |
 | उष्णम् | Hot | ગરમ |
-| क्रूरम् | Cruel | કઠોર, નિર્દય |
-| क्षारम् | Salty | ખારું |
-| क्षुद्रम् | Mean / Petty | નિમ્ન, તુચ્છ |
 | कठिनम् | Difficult | સખત, કઠણ |
 | कठोरम् | Hard | કઠોર |
 | कपिलम् | Brown | આસમાની *(as in source)* |
 | कपिशम् | Brown | ખાખી |
-| कर्कशम् | Rough / Harsh | કાબરચીતરું *(as in source)* |
-| कर्कशम् | Harsh | કઠોર |
 | करालम् | Terrible | વિકરાળ |
 | करुणम् | Pitiful / Compassionate | દયનીય |
+| कर्कशम् | Harsh | કઠોર |
+| कर्कशम् | Rough / Harsh | કાબરચીતરું *(as in source)* |
 | कलुषम् | Dirty | મલિન |
 | काणम् | One-eyed | કાણું |
 | कातरम् | Timid | ડરપોક, બાયલો |
@@ -577,6 +576,9 @@ hide:
 | कृशम् | Thin | દુર્બળ, પાતળું |
 | कृष्णम् | Black | કાળું |
 | कोमलम् | Soft | સુકુમાર, મૃદુ |
+| क्रूरम् | Cruel | કઠોર, નિર્દય |
+| क्षारम् | Salty | ખારું |
+| क्षुद्रम् | Mean / Petty | નિમ્ન, તુચ્છ |
 | खञ्जम् | Lame | લંગડું |
 | गभीरम् | Deep / Serious | ગંભીર |
 | गम्भीरम् | Serious | ગંભીર |
@@ -604,13 +606,12 @@ hide:
 | दीर्घम् | Long | લાંબું |
 | दूरम् | Far | દૂર |
 | दृढम् | Firm | દઢ, મજબૂત |
-| ध्रुवम् | Fixed | સ્થિર, સ્થાયી |
 | धन्यम् | Blessed | ધન્ય |
 | धवलम् | White | ધોળું, સફેદ |
 | धीरम् | Steady | સ્થિર |
 | धूर्तम् | Clever / Cunning | ધૂર્તાચારી |
 | धूसरम् | Gray | રાખોડી |
-| न्यूनम् | Less | ઓછું |
+| ध्रुवम् | Fixed | સ્થિર, સ્થાયી |
 | नग्नम् | Naked | નિર્વસ્ત્ર |
 | नम्रम् | Humble | નમ્ર |
 | नवम् | New | નવું |
@@ -619,16 +620,11 @@ hide:
 | नित्यम् | Eternal | શાશ્વત |
 | नीलम् | Blue | આસમાની |
 | नूतनम् | New | નવું |
-| पवित्रीभूतम् | Purified | પવિત્ર થયેલું |
-| प्रकटम् | Manifest | પ્રત્યક્ષ |
-| प्रतिकूलम् | Unfavorable | પ્રતિકૂળ |
-| प्रधानम् | Principal | મુખ્ય |
-| प्रसन्नम् | Happy | ખુશ |
-| प्राचीनम् | Ancient | પુરાતન |
-| प्रियम् | Dear | પ્રિય |
+| न्यूनम् | Less | ઓછું |
 | पण्डितम् | Learned | પંડિત |
 | परमम् | Supreme | મોટું, ઉત્તમ |
 | पवित्रम् | Holy | પવિત્ર |
+| पवित्रीभूतम् | Purified | પવિત્ર થયેલું |
 | पामरम् | Ignorant | પામર |
 | पीतम् | Yellow | પીળું |
 | पीनम् | Fat / Stout | સ્થૂળ, જાડું |
@@ -638,12 +634,18 @@ hide:
 | पुरातनम् | Ancient | પ્રાચીન |
 | पुष्कलम् | Abundant | પુષ્કળ |
 | पूर्णम् | Full | પૂર્ણ |
+| प्रकटम् | Manifest | પ્રત્યક્ષ |
+| प्रतिकूलम् | Unfavorable | પ્રતિકૂળ |
+| प्रधानम् | Principal | મુખ્ય |
+| प्रसन्नम् | Happy | ખુશ |
+| प्राचीनम् | Ancient | પુરાતન |
+| प्रियम् | Dear | પ્રિય |
 | बधिरम् | Deaf | બહેરું |
 | भद्रम् | Auspicious | શુભ, સુખદ |
 | भीषणम् | Terrible | ભયાનક |
 | मङ्गलम् | Auspicious | શુભ |
-| मध्यमम् | Middle | વચ્ચેનું |
 | मधुरम् | Sweet | ગળ્યું, મીઠું |
+| मध्यमम् | Middle | વચ્ચેનું |
 | मन्दम् | Slow | ધીમું |
 | मलिनम् | Dirty | મલિન |
 | मुख्यम् | Main | મુખ્ય |
@@ -661,7 +663,6 @@ hide:
 | रोहितम् | Red | લાલ |
 | लवणम् | Salty | ખારું |
 | लोलम् | Restless | ચપળ, અસ્થિર |
-| व्यर्थम् | Useless | નકામું |
 | वक्रम् | Crooked | કુટિલ, વાંકું |
 | वदान्यम् | Generous | ઉદાર |
 | वल्लभम् | Beloved | પ્રિય |
@@ -679,8 +680,7 @@ hide:
 | विशालम् | Huge | મોટું |
 | वीरम् | Brave | શૂર |
 | वृद्धम् | Old | વૃદ્ધ |
-| श्यामम् | Black / Dark | કાળું |
-| श्वेतम् | White | ધોળું, સફેદ |
+| व्यर्थम् | Useless | નકામું |
 | शान्तम् | Peaceful | શાંત |
 | शारम् | Variegated | કાબરચીતરું |
 | शिथिलम् | Loose | ઢીલું, ધીલું |
@@ -688,17 +688,15 @@ hide:
 | शीतलम् | Cool | ઠંડું |
 | शुक्लम् | White | ધોળું, સફેદ |
 | शुद्धम् | Pure | પવિત્ર |
-| शुभ्रम् | White | સફેદ |
 | शुभम् | Auspicious | મંગળકારી |
-| शूर्यम् | Brave | બહાદુર |
+| शुभ्रम् | White | સફેદ |
 | शूरम् | Brave | શૂર |
+| शूर्यम् | Brave | બહાદુર |
 | शोणम् | Vermilion Red | સિંદૂરિયું |
 | शोभनम् | Beautiful | શાનદાર, મનોહર |
 | शोषम् | Dry | બાંડી |
-| संयुक्तम् | Joined / Combined | જોડાયેલું / મળેલું |
-| स्थिरम् | Stable | દઢ, સ્થિર |
-| स्थूलम् | Large / Fat | મોટું |
-| स्वच्छम् | Clean | શુદ્ધ, ચોખ્ખું |
+| श्यामम् | Black / Dark | કાળું |
+| श्वेतम् | White | ધોળું, સફેદ |
 | सकलम् | Entire | બધું, સર્વસ્વ |
 | सज्जम् | Ready | તત્પર, તૈયાર |
 | सततम् | Constant | શાશ્વત |
@@ -714,6 +712,10 @@ hide:
 | सितम् | White | ધોળું, સફેદ |
 | सूक्ष्मम् | Subtle | ઝીણું |
 | सौख्यम् | Pleasant | સૌખ્ય |
+| स्थिरम् | Stable | દઢ, સ્થિર |
+| स्थूलम् | Large / Fat | મોટું |
+| स्वच्छम् | Clean | શુદ્ધ, ચોખ્ખું |
 | स्वास्थ्यप्रदम् | Health-giving | સ્વાસ્થ્ય આપનારું |
-| ह्रस्वम् | Short | નાનું, અલ્પ |
+| संयुक्तम् | Joined / Combined | જોડાયેલું / મળેલું |
 | हरितम् | Green | લીલું |
+| ह्रस्वम् | Short | નાનું, અલ્પ |
